@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    top: 66px;
+    /*arreglo*/
+    font-family: 'Comic Sans MS';
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: #18191F;
+}
+
+body {
+    background: #FFFFF8;
+}
+
+div#general {
+    display: flex;
+    flex-direction: row;
+    background-color: #D5FCE5;
+    margin-right: 6%;
+    margin-left: 6%;
+
+}
+
+#imagenmision {
+    width: 300px;
+    height: 200px;
+    margin-top: 8%;
+}
+
+#contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    width: 381px;
+    height: 265px;
+
+}
+
+#subtitulo1 {
+    margin-left: 100%;
+}
+#pmision{
+    margin-left: 600%;
+}
+
+div#general2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #DEF5F4;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+
+#imagenvision {
+    width: 300px;
+    height: 200px;
+    margin-top: 8%;
+}
+
+#contenido2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    width: 381px;
+    height: 265px;
+}
+
+footer {
+    background-color: #18191F;
+    background-size: cover;
+    color: #fff;
+    height: 360px;
+}
+
+
+div#footer {
+    display: flex;
+    flex-direction: column;
+}
+
+div#logo-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+div#enlaces-footer>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+div#colum-alig {
+    display: flex;
+    flex-direction: row;
+    margin: 2% 10% 0% 10%;
+}
+
+
+div#enlaces-footer>ul>li {
+    padding: 20px;
+}
+
+div#derechos-reservados {
+    display: flex;
+    width: 50%;
+    justify-content: left;
+}
+
+div#redes-sociales {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+div#redes-sociales>img {
+    padding-right: 3%;
+}
