@@ -1,11 +1,11 @@
-/*Reinicio */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
-
-
 
 /* Estilos de HR*/
 hr.lines {
@@ -24,24 +24,33 @@ hr.lines {
 header {
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
     margin-bottom: 2%;
 }
 
+/* Divs Principales*/
 div#Menusito {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 35px;
-    flex-basis: 70%;
-    margin-left: 10%;
+    padding-top: 1vw;
+    padding-left: 3vw;
 }
 
+div#buttonsIR {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: right;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    width: 35%;
+    
+}
 nav {
     display: flex;
     flex-wrap: wrap;
 }
-
 nav>ul>li {
     float: left;
     list-style: none;
@@ -49,15 +58,6 @@ nav>ul>li {
 }
 
 
-div#buttonsIR {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: right;
-    flex-basis: 30%;
-    margin-right: 5%;
-    
-}
 .button {
     padding: 10px 20px;
     margin-right: 10px;
@@ -80,6 +80,21 @@ button.registro {
 
 
 /*Content styles*/
+
+
+/**/
+/* Arreglar esto cuando llegue a la casa */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #19B03B;
+}
+/* Arreglar esto cuando llegue a la casa */
+/**/
+s
 
 h2 {
     text-align: center;
@@ -156,16 +171,13 @@ div#general2 {
 /* ESTILOS DEL FOOTER*/
 
 footer {
+    margin-top: 5%;
     background-color: #18191F;
     background-size: cover;
     color: #fff;
-    height: 360px;
-    margin-top: 2%;
-}
-
-div#footer {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2vw;
 }
 
 div#logo-footer {
@@ -181,16 +193,16 @@ div#enlaces-footer>ul {
     justify-content: center;
 }
 
-
-div#colum-alig {
-    display: flex;
-    flex-direction: row;
-    margin: 2% 10% 0% 10%;
+div#enlaces-footer>ul>li {
+    padding: 20px;
 }
 
 
-div#enlaces-footer>ul>li {
-    padding: 20px;
+div#extras-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 2% 10% 0% 10%;
+    padding-bottom: 1vw;
 }
 
 div#derechos-reservados {
@@ -206,5 +218,6 @@ div#redes-sociales {
 }
 
 div#redes-sociales>img {
-    padding-right: 3%;
+    padding-right: 1.5vw;
 }
+
