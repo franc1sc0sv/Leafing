@@ -13,6 +13,7 @@
 header {
     display: flex;
     flex-direction: row;
+
 }
 
 /* DIVS Principales*/
@@ -40,8 +41,9 @@ div#buttonsIR {
     justify-content: right;
     margin-top: 1vw;
     margin-right: 1vw;
-    
+
 }
+
 .button {
     padding: 10px 20px;
     margin-right: 10px;
@@ -61,6 +63,7 @@ button.registro {
     color: #fff;
     font-weight: bold;
 }
+
 /**/
 
 div#texto-de-intro {
@@ -75,7 +78,7 @@ div#texto-de-intro {
 
 
 
-div#texto-de-intro > h1 {
+div#texto-de-intro>h1 {
     font-weight: 900;
     font-size: 5vw;
 }
@@ -96,6 +99,11 @@ nav>ul>li {
     padding-right: 50px;
 }
 
+nav>ul>li:hover {
+    transition: all .5s ease;
+    transform: scale(1.2);
+}
+
 /**/
 /* Arreglar esto cuando llegue a la casa */
 a {
@@ -106,6 +114,7 @@ a {
 a:hover {
     color: #19B03B;
 }
+
 /* Arreglar esto cuando llegue a la casa */
 /**/
 
@@ -130,6 +139,7 @@ hr.lines-footer {
     width: 78vw;
     margin-left: 10%;
 }
+
 div#Articulo-1>div#contenido-1 h1 {
     font-weight: 800;
     font-size: 40px;
