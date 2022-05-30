@@ -37,8 +37,8 @@
 
 #R-icon {
     gap: 20px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr max-content;
     justify-content: space-between;
 }
 
