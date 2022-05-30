@@ -1,27 +1,67 @@
-#menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+header {
+    font-family: 'Montserrat';
+
 }
 
-#buttons-header {
-    place-self: center  flex-end;
+#menu {
+    display: grid;
+    grid-template-columns: auto 1fr max-content;
+    margin-bottom: 10%;
+    padding: 1rem 0rem;
 }
 
 .menu-header {
     list-style: none;
     display: flex;
+    gap: 40px;
 }
 
 .li-menu {
     padding: 10px;
 }
 
-.links-header {
+#buttons-header {
     place-self: flex-start;
 }
 
+#LEAFING {
+    font-size: 35px;
+
+    color: #484848;
+}
+
+#links-header{
+    place-self: flex-start;
+}
+.a-header {
+    text-decoration: none;
+    color: #484848;
+    font-size: 16px;
+}
+
+#buttons-header {
+    display: flex;
+    gap: 20px;
+}
+
+.text-button {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.buttons-header {
+    border-radius: 23px;
+    padding: 10px;
+    border: none;
+    padding:  10px 25px;
+    background: #8AB694;
+}
+
 #leafing-header {
-    place-self: center center ;
+    place-self: center;
 }
 
 .img-menu {
@@ -29,10 +69,10 @@
 }
 
 
-@media screen and (max-width: 738px){
+@media screen and (max-width: 820px) {
 
     #menu {
-        grid-template-columns: max-content 1fr;
+        grid-template-columns: minmax(min-content 0.5fr) 1fr;
     }
 
     #links-header {
