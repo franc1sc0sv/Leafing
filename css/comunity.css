@@ -4,15 +4,21 @@
     box-sizing: border-box;
 }
 
-.contenedor{
-    display: grid;
-    grid-template-columns: repeat(2, 0.3fr);
-    grid-template-rows: max-content;
-    gap: 1em;
 
 
+/*TEMPORAL*/
+header {
+    margin-bottom: 10%;
 }
 
-.card {
+footer {
+    margin-top: 10%;
+}
 
+/**/
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
 }
