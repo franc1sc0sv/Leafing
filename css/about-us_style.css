@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
 
 * {
     margin: 0;
@@ -9,12 +10,133 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat';
+}
 
 header {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
 footer {
-    margin-bottom: 20%;
+    margin-top: 10%;
 }
 
+/*sobre nosotros*/
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: max-content 0.5fr;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.sobre-nosotros>div {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hr_about {
+    border: 0.2px solid #000000;
+    opacity: 0.1;
+    width: 100%;
+}
+
+.sobre-nosotros :first-child {
+    font-family: 'Pavanam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+    color: #484848;
+}
+
+.sobre-nosotros>div>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #4F9466;
+}
+
+.sobre-nosotros>div>p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
+
+/*nuestra-mision*/
+
+.nuestra-mision {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 0.47fr max-content;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+.nuestra-mision>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nuestra-mision>div>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #4F9466;
+}
+
+.nuestra-mision>div>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #737373;
+}
+
+/*nuestra-vision*/
+
+.nuestra-vision {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns:max-content 0.47fr ;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+
+.nuestra-vision>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nuestra-vision>div>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #4F9466;
+}
+
+.nuestra-vision>div>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #737373;
+    text-align: right;
+}
