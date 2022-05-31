@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,600;0,800;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+
+
+#menu {
+    grid-template-columns: 1fr;
+}
+
+.container-general {
+    background-color: #e9edfd
+    ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#leafing-header {
+    display: flex;
+    padding: 0.5rem;
+}
+
+#LEAFING {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35.4792px;
+    line-height: 57px;
+    color: #0B4654;
+    font-family: 'Athiti';
+
+}
+
+
+.container-2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto max-content;
+
+    justify-content: center;
+
+    background-color: #fff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    gap: 5rem;
+
+}
+
+
+.formulario_registro {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.formulario_registro>input {
+    border: 1.4783px solid rgba(11, 70, 84, 0.25);
+    border-radius: 5.91319px;
+    padding: 1rem;
+    width: 330px;
+}
+
+#submit-registrer {
+    background: #07B464;
+    box-shadow: 0px 2.9566px 2.9566px rgba(0, 0, 0, 0.25), inset 0px 1.4783px 2.9566px rgba(255, 255, 255, 0.25), inset 0px -1.4783px 2.9566px rgba(0, 0, 0, 0.25);
+    border-radius: 11.8264px;
+}
+
+.formulario_registro>h1 {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29.566px;
+    line-height: 47px;
+    color: #0B4654;
+
+    margin-bottom: 1.5rem;
+}
+
+.formulario_registro>input::placeholder {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.formulario_registro>div>label {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.8264px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.formulario_registro>div>label>a {
+    color: #07B464;
+    text-decoration: none;
+}
+
+.formulario_registro>input[type="submit"] {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+
+    margin-top: 20vh;
+    padding: 0.5rem 0rem;
+    color: #FFFFFF;
+}
+
+.formulario_registro>p {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17.7396px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin: 4rem 0;
+
+    text-align: center;
+}
+
+.formulario_registro>p>a {
+    color: rgba(20, 48, 147, 0.5);
+    text-decoration: none;
+}
+
+
+
+
+/*
+
+Al registrarse  la parte vere se cambiara al otro lado y se le peira la verificacion del correo electronico
+
+*/
