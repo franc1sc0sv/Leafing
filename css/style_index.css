@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
 
 
 * {
@@ -7,20 +10,25 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat';
+
+}
+
 header {
-    background-image: url(../img/imagenes/bg_index.svg);
+    background: url(../img/imagenes/bg_index.svg) no-repeat center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     width: 100%;
     height: 550px;
-    background-position: center center;
-    background-size: cover;
-    background-size: cover ;
-    background-repeat: no-repeat;
 
 
-    margin-bottom: 2rem;
-    font-family: 'Montserrat';
-
+    margin-bottom: 8rem;
     display: grid;
     grid-template-rows: max-content 1fr;
 
@@ -48,7 +56,6 @@ header {
 }
 
 .header-container>p {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -76,6 +83,398 @@ header {
 
 }
 
-@media screen and (max-width: 900px) {
+
+/*¿Qué son estos eventos?*/
+
+.que-eventos {
+    display: grid;
+    grid-template-columns: 0.7fr auto;
+
+    justify-content: space-around;
+
+    margin-bottom: 10rem;
+}
+
+.contenido_que-eventos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#hr1_que-evento>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #484848;
+}
+
+
+.contenido_que-eventos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #9A9A9A;
+}
+
+.preguntas_eventos-eventos {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: #484848;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.button_que-eventos {
+    background-color: #8AB694;
+    border: none;
+
+    padding: 20px 50px;
+    border-radius: 30px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#img_que-eventos {
+    /* width: 382px;
+    height: 437px; */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hr_que-eventos {
+    margin-top: 1.5rem;
+    width: 10vw;
+    border: 2px #484848 solid;
+    border-radius: 3px;
+}
+
+/* @media screen and (max-width: 1115px) {
+
+    .que-eventos {
+        display: grid;
+        grid-template-columns: 0.8fr auto;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 870px) {
+
+    .que-eventos {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .img_que-eventos {
+        display: flex;
+    }
+
+} */
+
+/*slider_content*/
+
+.slider_content {
+    display: grid;
+    grid-template-columns: max-content;
+    align-content: space-between;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin-bottom: 15%;
+    padding-left: 5vw;
+
+}
+
+.hr1_slider-content>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #484848;
+}
+
+.hr1_slider-content>hr {
+    margin-top: 1rem;
+    width: 10vw;
+    border: 2px #484848 solid;
+    border-radius: 3px;
+}
+
+.hr1_slider-content {
+    margin-bottom: 2rem;
+}
+
+
+
+.enlace_slider-content>a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: #484848;
+}
+
+.enlace_slider-content {
+    margin-top: 2rem;
+}
+
+.slider_container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 500%;
+    overflow: hidden;
+}
+
+.slider_screen {
+    display: flex;
+    flex-direction: row;
+
+    background-color: #FBF8F3;
+
+}
+
+.content_slider_screen>h2 {
+    font-family: 'Montserrat Subrayada';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: #484848;
+}
+
+.content_slider_screen>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #484848;
+    width: 70%;
+
+}
+
+.content_slider_screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.button_slider {
+    border: 1px solid #000000;
+    padding: 0.5rem 2rem;
+    background-color: none;
+
+
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+}
+
+
+#img_slider_1 {
+    width: 570px;
+    height: 534px;
+    filter: drop-shadow(7px 3px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+.titulos-generales {
+    display: grid;
+    grid-template-columns: auto 0.7fr;
+    justify-content: space-around;
+
+    margin-bottom: 5%;
+}
+
+.titulo_generales>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #484848;
+
+}
+
+.titulo_generales>hr {
+    margin-top: 1rem;
+    width: 10vw;
+    border: 2px #484848 solid;
+    border-radius: 3px;
+}
+
+.titulo_generales {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container_recomendaciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.contribute_recomendaciones>h1,
+.habitos_recomendaciones>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 52px;
+    color: #484848;
+
+}
+
+.contribute_recomendaciones>p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
+
+
+.contribute_recomendaciones>button,
+.habitos_recomendaciones>button {
+    background-color: #8AB694;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contribute_recomendaciones {
+    border-radius: 12px;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 20rem;
+
+    background: url(../img/imagenes/Rectangle\ 65.svg) no-repeat center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.habitos_recomendaciones {
+    border-radius: 12px;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 20rem;
+
+    background: url(../img/imagenes/Rectangle\ 66.svg) no-repeat center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.container_recomendaciones {
+    display: grid;
+    grid-template-rows: max-content max-content;
+
+
+    padding: 0 5rem;
+
+    gap: 50px;
+
+
+
+    margin-bottom: 10rem;
+}
+
+.Datos-curiosos_container {
+    display: grid;
+    grid-template-columns: repeat(2, 0.4fr);
+    grid-auto-rows: max-content;
+    justify-content: center;
+
+    row-gap:30px;
+    gap: 81px;
+    margin-bottom: 10%;
+}
+
+.Datos_cards {
+    border: 1px solid #A1AEBF;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.Datos_cards>p {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #0D0E14;
+}
+
+.Datos_cards> div > h1 {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: #0D0E14;
+}
+
+.Datos_cards> div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width:670px ) {
+    .Datos-curiosos_container {
+        display: grid;
+        grid-template-columns: 0.7fr;
+        grid-auto-rows: max-content;
+        justify-content: center;
+        gap: 81px;
+        row-gap:30px;
+
+        margin-bottom: 10%;
+    }
     
 }
