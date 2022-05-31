@@ -99,6 +99,16 @@
     text-decoration: none;
 }
 
+.formulario_registro>input[type="submit"] {
+    font-family: 'Athiti';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+
+    color: #FFFFFF;
+}
+
 .formulario_registro>div>input {
     border: 0.739149px solid rgba(11, 70, 84, 0.24);
     border-radius: 2.9566px;
