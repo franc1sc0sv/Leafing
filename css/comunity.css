@@ -19,6 +19,181 @@ footer {
 
 .contenedor {
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    margin: 0 30px;
+
+}
+
+.card {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.divcard>div>p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+    letter-spacing: 0.02em;
+    /* Black */
+    color: #000000;
+    opacity: 0.7;
+}
+
+.img {
+    width: 293px;
+    height: 363px;
+}
+
+.first {
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.first1 {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.first-text>button {
+    max-width: 15rem;
+}
+
+.hr {
+    width: 140px;
+    height: 6px;
+    left: 69px;
+    top: 23px;
+    background: #484848;
+    border-radius: 3px;
+}
+
+.buttonxd {
+    display: flex;
+    justify-content: center;
+    background: #484848;
+    color: white;
+    max-width: 8rem;
+    padding: 0.5rem;
+    gap: 1rem;
+    user-select: none;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+
+
+.line-button {
+    max-width: max-content;
+    align-items: center;
+    background: none;
+    color: #484848;
+    font-weight: bold;
+    text-decoration: underline;
+    align-self: center;
+    border-radius: 1rem;
+
+
+}
+
+.button-eventos {
+    background-color: #8AB694;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+}
+
+.buttons {
+    background-color: #8AB694;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 20rem;
+}
+
+
+.buttonxd:hover {
+    background-color: #23EEA0;
+}
+
+.cardtext {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    justify-content: space-between;
+    margin: 40px 0px;
+
+
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 10rem;
+}
+.second2>p:first-child{
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 30rem;
+
+    
+}
+.second2{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+}
+
+.notunderline {
+    text-decoration: none;
+}
+@media (max-width: 768px){
+    .contenedor-botones {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    
+    }
+}
+.line-button:hover{
+    background-color: #8AB694;
+    color: white;
 }
