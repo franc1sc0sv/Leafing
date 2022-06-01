@@ -6,13 +6,14 @@
 
 
 #menu {
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content;
 }
 
 .container-general {
     background-color: #edffe9;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
 }
 
 #leafing-header {
@@ -39,8 +40,8 @@
     justify-content: center;
 
     background-color: #fff;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-top-left-radius: 75px;
+    border-bottom-left-radius: 75px;
 
 }
 

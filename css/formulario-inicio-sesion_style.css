@@ -10,10 +10,10 @@
 }
 
 .container-general {
-    background-color: #e9edfd
-    ;
+    background-color: #e9edfd;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
 }
 
 #leafing-header {
