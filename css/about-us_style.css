@@ -14,6 +14,7 @@ body {
     font-family: 'Montserrat';
 }
 
+
 header {
     margin-bottom: 5%;
 }
@@ -22,37 +23,71 @@ footer {
     margin-top: 10%;
 }
 
-/*sobre nosotros*/
-.sobre-nosotros {
-    display: grid;
-    grid-template-columns: max-content 0.5fr;
-    justify-content: center;
-    margin-bottom: 5rem;
-}
 
-.sobre-nosotros>div {
-    padding: 2rem;
+/*Sobre nosotros design*/
 
+#container {
+    margin: 1em auto;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10rem;
+
 }
 
-.hr_about {
-    border: 0.2px solid #000000;
-    opacity: 0.1;
+#about_us {
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-nosotros {
+    display: flex;
+    max-width: 1000px;
+}
+
+.img_sobre-nosotros {
+    flex: 1;
+    order: 2;
+    display: flex;
+}
+
+.text_sobre-nosotros {
+    flex: 1;
+    order: 1;
+    padding: 0rem 5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.img_sobre-nosotros>img {
     width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
-.sobre-nosotros :first-child {
-    font-family: 'Pavanam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 48px;
-    color: #484848;
+
+
+
+.our-mision {
+    order: 1 !important;
 }
 
+.text-our-mision {
+    order: 2 !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.text-our-vision {
+    justify-content: center;
+    gap: 4rem;
+    text-align: left;
+}
+
+/*Estilos de fuente*/
 .sobre-nosotros>div>h1 {
     font-style: normal;
     font-weight: 700;
@@ -69,24 +104,6 @@ footer {
     color: #000000;
 }
 
-/*nuestra-mision*/
-
-.nuestra-mision {
-    margin-top: 10%;
-    display: grid;
-    grid-template-columns: 0.47fr max-content;
-    grid-template-rows: 1fr;
-    justify-content: center;
-}
-
-.nuestra-mision>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
 .nuestra-mision>div>h1 {
     font-style: normal;
     font-weight: 700;
@@ -96,34 +113,8 @@ footer {
     color: #4F9466;
 }
 
-.nuestra-mision>div>p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
-    color: #737373;
-}
-
-/*nuestra-vision*/
-
-.nuestra-vision {
-    margin-top: 10%;
-    display: grid;
-    grid-template-columns:max-content 0.47fr ;
-    grid-template-rows: 1fr;
-    justify-content: center;
-}
-
-
-.nuestra-vision>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
-.nuestra-vision>div>h1 {
+.nuestra-vision>div>h1,
+.nuestra-mision>div>h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -132,11 +123,58 @@ footer {
     color: #4F9466;
 }
 
-.nuestra-vision>div>p {
+.nuestra-vision>div>p ,
+.nuestra-mision>div>p  {
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
     line-height: 26px;
     color: #737373;
     text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .sobre-nosotros {
+        flex-direction: column;
+        width:90%;
+    }
+
+    .img_sobre-nosotros {
+        justify-content: center;
+    }
+
+    .img_sobre-nosotros >img {
+        max-width: 300px;
+
+    }
+    #container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    
+    }
+
+    .text_sobre-nosotros {
+        padding: 0;
+    }
+
+    .our-mision {
+        order: 2 !important;
+    }
+    
+    .text-our-mision {
+        order: 1 !important;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .text_sobre-nosotros {
+        padding: 0rem;
+    }
+    .sobre-nosotros {
+        justify-content: center;
+        align-items: center;
+    }
 }

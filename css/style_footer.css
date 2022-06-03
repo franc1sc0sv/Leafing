@@ -84,9 +84,22 @@
     
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .ul-footer {
         grid-template-columns: repeat(3, 0.01fr);
         justify-items: center;
     } 
 }
+
+@media screen and (max-width:320px)  {
+    .links-footer {
+        display: none;
+    }
+    #socialIcons-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    } 
+}
+

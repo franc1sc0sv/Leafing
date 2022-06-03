@@ -12,7 +12,6 @@
 
 body {
     font-family: 'Montserrat';
-
 }
 
 header {
@@ -427,9 +426,9 @@ header {
     }
 
 
-    /* .img_que-eventos {
+    .img_que-eventos {
         clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    } */
+    }
 }
 
 .material-symbols-outlined {
@@ -451,16 +450,13 @@ header {
 
 
 /*Slider evnetos recomendados*/
-    .container_container {
-    overflow: hidden;
-}
-
 .container-slider {
     width: 500%;
     height: 70vh;
 
     margin-bottom: 10%;
-    /* margin-left: 2.9vw; */
+    margin-left: 2vw;
+
 
     background-color: #fff;
 
@@ -469,33 +465,32 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    transition: all .5s ease;
-    transform: translateX(-40%);
+    /* transition: all .5s ease; */
+    transform: translateX(-60.5%);
+
+}
+
+.container_container {
+    max-width: 40rem;
+    overflow: hidden;
 
 }
 
 .slider_screen {
-    width: 100vw;
+    width: calc(100%/5);
     height: 70vh;
-    display: flex;
-    justify-content: center;
-    /* margin-left: 2.9vw; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
 }
 
-.text_slider {
-    width: 45%;
-    height: 70vh;
-    background-color: #0D0E14;
-
-}
 
 .imgen_slider {
-    width: 45%;
+    /* width: 40vw; */
     background-color: #484848;
-    height: 70vh;
+    /* height: 70vh; */
 }
 
-/* .Primero {
+.Primero {
     background-color: aqua;
 }
 
@@ -516,15 +511,4 @@ header {
 
 .Quinto {
     background-color: chocolate;
-} */
-
-@media screen and (max-width:768px) {
-
-    .imgen_slider {
-        display: none;
-    }
-
-    .text_slider {
-        width: 80%;
-    }
 }
