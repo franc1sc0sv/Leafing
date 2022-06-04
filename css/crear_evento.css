@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,600;0,800;1,400;1,700&family=Roboto:ital,wght@0,500;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+header {
+    margin-bottom: 5%;
+}
+
+footer {
+    margin-top: 5%;
+}
+
+
+.titulos-generales {
+    display: grid;
+    grid-template-columns: auto 0.7fr;
+    justify-content: space-around;
+
+    margin-bottom: 5%;
+}
+
+.titulo_generales>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #484848;
+
+}
+
+.titulo_generales>hr {
+    margin-top: 1rem;
+    width: 10vw;
+    border: 2px #484848 solid;
+    border-radius: 3px;
+}
+
+.titulo_generales {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    justify-content: center;
+
+}
+
+.container_1 {
+    display: flex;
+    width: 72vw;
+    justify-content: center;
+    gap: 12vw;
+}
+
+.side-generalidades {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.side-datos {
+    display: grid;
+    grid-template-rows: max-content max-content auto;
+
+    /* flex-direction: column; */
+    /* gap: 1em; */
+}
+
+.transporte_forms-eventos {
+    align-self: flex-end;
+}
+.fecha_form-eventos {
+    padding: 2em;
+}
+
+.input_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+
+.fecha_form-eventos {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+#fecha_eventos,
+#hora_eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.label_forms {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16.3184px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.input_datos {
+    width: 26vw;
+    height: 5vh;
+
+    background: transparent;
+    border: 0.858861px solid rgba(81, 81, 81, 0.4);
+    border-radius: 4.2943px;
+}
+
+.input_genralidades {
+    width: 38.23vw;
+    height: 5.10vh;
+    background: transparent;
+    border: 0.858861px solid rgba(81, 81, 81, 0.4);
+    border-radius: 4.2943px;
+}
+
+.input_fecha {
+    width: 10.13vw;
+    height: 5.10vh;
+    background: transparent;
+    border: 0.858861px solid rgba(81, 81, 81, 0.4);
+    border-radius: 4.2943px;
+}
+
+.input_comentario {
+    height: 23.82vh;
+
+}
+
+.input_requisitos {
+    height: 12.82vh;
+}
+
+.transporte_forms-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.transporte_forms-eventos>div {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.transporte_forms-eventos>div>div {
+    width: 50%;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+
+
+.transporte_forms-eventos>div>div>div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.container_2 {
+    width: 72vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_subir-imagen {
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+    align-items: center;
+}
+
+.subir-imagen {
+    display: flex;
+    gap: 5vw;
+    height: 444.47px;
+    width: 444.47px;
+    align-items: center;
+}
+
+.imagen-side {
+    background: rgba(224, 247, 230, 0.39);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.subir-imagen>p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17.1772px;
+    line-height: 27px;
+
+    color: #000000;
+}
+
+.submit{
+    background-color: #8AB694;
+    border: none;
+
+    padding: 15px 60px;
+    border-radius: 30px;
+
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* @media screen and (max-width: 900px) {
+    .container_1 {
+        flex-direction: column;
+    }
+} */

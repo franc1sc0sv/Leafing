@@ -16,15 +16,21 @@
         <div class="container-1">
             <header>
                 <nav id="menu">
-                    <div class="img-menu">
-                        <img id="img-menu" src="../img/iconos/menu.png" width="30px" height="30px">
+                    <div class="burger">
+                        <img src="../img/iconos/burger_img.svg" class="burger_icon">
                     </div>
 
                     <div id="links-header">
                         <ul class="menu-header">
-                            <li class="li-menu"><a href="../html/index.html" class="a-header">Inicio</a></li>
-                            <li class="li-menu"><a href="../html/about_us.html" class="a-header">Nosotros</a></li>
-                            <li class="li-menu"><a href="#" class="a-header">Ayuda al planeta</a></li>
+                            <li class="li-menu item-menu-desplegable"><a href="../html/index.html" class="a-header">Inicio</a></li>
+                            <li class="li-menu item-menu-desplegable"><a href="../html/about_us.html" class="a-header">Nosotros</a></li>
+                            <li class="li-menu item-menu-desplegable"><a href="#" class="a-header">Ayuda al planeta <img src="../img/iconos/flechita.svg" class="menu_arrow"> </a>
+                                <ul class="menu_desplegable">
+                                    <li class="li_menu-despleagble"><a href="../html/comunity.html" class="a-header a-header-desplegable">Eventos</a></li>
+                                    <li class="li_menu-despleagble"><a href="../html/crear_evento.html" class="a-header a-header-desplegable" >Crea tus eventos</a></li>
+                                    <li class="li_menu-despleagble"><a href="#" class="a-header a-header-desplegable">Concientízate</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -91,6 +97,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/app_burger.js"></script>
 </body>
 
 </html>

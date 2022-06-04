@@ -10,10 +10,15 @@
 }
 
 .container-general {
-    background-color: #e9edfd;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+}
+
+.container-1 {
+    background-image: url(../img/imagenes/bg-inicio-sesion.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
 #leafing-header {
@@ -51,7 +56,7 @@
 .formulario_registro {
     display: flex;
     flex-direction: column;
-    
+
     justify-content: space-between;
     gap: 5px;
 }
