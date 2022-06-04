@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.hr {
+    width: 140px;
+    height: 6px;
+    left: 69px;
+    top: 23px;
+    background: #484848;
+    border-radius: 3px;
+}
