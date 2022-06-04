@@ -165,6 +165,11 @@ footer {
     .text-our-mision {
         order: 1 !important;
     }
+
+    .text-our-vision > h1{
+        text-align: center;
+    }
+
     
 }
 
