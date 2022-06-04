@@ -32,6 +32,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10rem;
+    padding-top: 2em;
 
 }
 
