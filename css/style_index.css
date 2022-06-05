@@ -12,7 +12,10 @@
 
 body {
     font-family: 'Montserrat';
+}
 
+a {
+    text-decoration: none;
 }
 
 header {
@@ -261,9 +264,9 @@ header {
 }
 
 
-.recomendacion>button,
-.informacion>button {
-    background-color: #8AB694;
+.recomendacion>a>button,
+.informacion>a>button {
+    background-color: #484848;
     border: none;
     padding: 1rem 2rem;
 
@@ -275,6 +278,15 @@ header {
     text-align: center;
     color: #FFFFFF;
 }
+
+.recomendacion>a>button:hover,
+.informacion>a>button:hover {
+    cursor: pointer;
+    background-color: #8AB694;
+    transform: scale(1.01);
+    transition: all .5s ease-in-out;
+}
+
 
 .recomendacion {
     display: flex;
@@ -520,7 +532,7 @@ header {
     text-align: center;
 }
 
-.text_slider>button {
+.text_slider>a>button {
     border: 1px solid;
     padding: 0.5vh 5vw;
 
@@ -530,8 +542,14 @@ header {
     font-size: 36px;
     line-height: 48px;
     background-color: transparent;
-
     color: #000000;
+}
+
+.text_slider>a>button:hover {  
+     cursor: pointer;
+    transform: scale(1.01);
+    transition: all .5s ease-in-out;
+
 }
 
 .t_Primero,
@@ -545,14 +563,28 @@ header {
     align-items: center;
 }
 
-.titulo_generales>p {
+.titulo_generales>a>p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
     color: #484848;
+}
 
+.titulo_generales > a>p {
+    display: flex;
+    align-items: center;
+}
+.menu_arrow-eventos {
+    width: 25px;
+    height: 25px;
+    transform: rotate(-90deg);
+}
+.titulo_generales > a>p:hover {
+    
+    transition: all .5s ease-in-out;
+    transform: scale(1.02);
 }
 
 @media screen and (max-width:768px) {
