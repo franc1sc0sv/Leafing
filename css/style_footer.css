@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+footer{
+    margin-top: 5%;
+}
+
 .container {
     background-color: #0B0D17;
     background-size: cover;
