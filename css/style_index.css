@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background: url(../img/imagenes/BG-3_index.svg) no-repeat center center;
+    background: url(../img/imagenes/bg-3_index.svg) no-repeat center center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -146,10 +146,10 @@ header {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px ;
+    gap: 60px;
 }
 
-.preguntas_eventos-eventos >p>a {
+.preguntas_eventos-eventos>p>a {
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
@@ -158,10 +158,11 @@ header {
     text-decoration: none;
 }
 
-.preguntas_eventos-eventos >p>a:hover {
+.preguntas_eventos-eventos>p>a:hover {
     color: #8AB694;
     transition: all .4s ease-in-out;
 }
+
 .button_que-eventos:hover {
     cursor: pointer;
     background-color: #8AB694;
@@ -213,7 +214,7 @@ header {
 .titulo_generales>h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 48px;
     color: #484848;
 
@@ -229,38 +230,43 @@ header {
 .titulo_generales {
     display: flex;
     flex-direction: column;
-
 }
 
 .container_recomendaciones {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    /* grid-template-columns: clamp(200px, 61vw, 80vw);
+    grid-template-rows: repeat(2, max-content); */
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+
 }
 
-.contribute_recomendaciones>h1,
-.habitos_recomendaciones>h1 {
+.recomendacion>h1,
+.informacion>h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 38px;
-    line-height: 52px;
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
     color: #484848;
-
 }
 
-.contribute_recomendaciones>p {
+.recomendacion>p {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-    line-height: 26px;
     color: #000000;
 }
 
 
-.contribute_recomendaciones>button,
-.habitos_recomendaciones>button {
+.recomendacion>button,
+.informacion>button {
     background-color: #8AB694;
     border: none;
-    padding: 20px 50px;
+    padding: 1rem 2rem;
+
     border-radius: 30px;
     font-style: normal;
     font-weight: 700;
@@ -270,62 +276,40 @@ header {
     color: #FFFFFF;
 }
 
-.contribute_recomendaciones {
-    border-radius: 12px;
-    padding: 2rem 3rem;
-
+.recomendacion {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: space-around;
-    height: 20rem;
+    gap: 1rem;
+    width: 80vw;
+    z-index: 9999;
 
-    background: url(../img/imagenes/Rectangle\ 65.svg) no-repeat center center;
+}
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 80vw;
+    z-index: 9999;
+
+}
+
+.contribute_recomendaciones {
+    padding: 2rem;
+    border-radius: 12px;
+    background: url(../img/imagenes/foto-informacion.svg) no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
-
-
 }
 
 .habitos_recomendaciones {
+    padding: 2rem;
     border-radius: 12px;
-    padding: 2rem 3rem;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    height: 20rem;
-
-    background: url(../img/imagenes/Rectangle\ 66.svg) no-repeat center center;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(../img/imagenes/foto-recomendaciones.svg) no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
-
-
-}
-
-.container_recomendaciones {
-    display: grid;
-    grid-template-rows: max-content max-content;
-
-
-    padding: 0 5rem;
-
-    gap: 50px;
-
-
-
-    margin-bottom: 10rem;
 }
 
 .Datos-curiosos_container {
@@ -417,12 +401,14 @@ header {
     .titulo_generales {
         justify-self: center;
         text-align: center;
+        align-items: center;
     }
 
     .titulo_generales>hr {
-        width: 100%;
+        width: 80%;
     }
 }
+
 /*Slider evnetos recomendados*/
 .container_container {
     overflow: hidden;
@@ -453,8 +439,9 @@ header {
     display: flex;
     justify-content: center;
     /* margin-left: 2.9vw; */
-
+    align-items: center;
 }
+
 
 .text_slider {
     order: 1;
@@ -463,6 +450,14 @@ header {
 
     background-color: #FBF8F3;
     box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width:425px) {
+
+    .text_slider {
+        height: 55vh;
+    }
+
 }
 
 .imgen_slider {
@@ -527,7 +522,7 @@ header {
 
 .text_slider>button {
     border: 1px solid;
-    padding: 0.2rem 5rem;
+    padding: 0.5vh 5vw;
 
     font-family: 'Sen';
     font-style: normal;
@@ -567,6 +562,6 @@ header {
     }
 
     .text_slider {
-        width: 80%;
+        width: 90%;
     }
 }
