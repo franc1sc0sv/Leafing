@@ -80,7 +80,13 @@ header {
     text-align: center;
 
     color: #FFFFFF;
+    cursor: pointer;
+}
 
+.header-button_index:hover {
+    background-color: #8AB694;
+    transform: scale(1.02);
+    transition: all .5s ease-in-out;
 }
 
 
@@ -136,18 +142,37 @@ header {
 }
 
 .preguntas_eventos-eventos {
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px ;
+}
+
+.preguntas_eventos-eventos >p>a {
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
     color: #484848;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
 }
 
-.button_que-eventos {
+.preguntas_eventos-eventos >p>a:hover {
+    color: #8AB694;
+    transition: all .4s ease-in-out;
+}
+.button_que-eventos:hover {
+    cursor: pointer;
     background-color: #8AB694;
+    transform: scale(1.01);
+    transition: all .5s ease-in-out;
+}
+
+
+
+.button_que-eventos {
+    background-color: #484848;
     border: none;
 
     padding: 20px 50px;
