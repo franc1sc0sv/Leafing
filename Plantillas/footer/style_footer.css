@@ -82,6 +82,15 @@
     
 }
 
+.agradecimientos {
+    display: flex;  
+}
+
+.img-freepik {
+    width: 5rem;
+    height: 5rem;
+}
+
 @media screen and (max-width: 500px) {
     .ul-footer {
         grid-template-columns: repeat(3, 0.01fr);
