@@ -108,6 +108,60 @@
     gap: 0.5rem;
 }
 
+.container-end {
+    display: flex;
+    width: 60vw;
+    min-height: 100vh;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.end__side1,
+.end__side2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 50%;
+    gap: 5rem;
+}
+
+
+.end__side1>p,
+.end__side2>p {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    text-align: right;
+    color: #000000;
+}
+.end__side2>p{
+    text-align: left;
+}
+
+.end__side2>div {
+    background-image: url(../img/imagenes/conzientizate_grilla-img-.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+
+}
+
+
+.end__side1 >div{
+    height: 60vh;
+    background-image: url(../img/imagenes/conzientizate_grilla-img-1.svg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 @media screen and (max-width:768px) {
     .intro__information {
         flex-direction: column;
@@ -117,8 +171,28 @@
         background-position: center center;
     }
 
-    .container-info-page,.container-intro-page {
+    .container-info-page,
+    .container-intro-page {
         width: 90vw;
     }
-    
+
+    .container-end  {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .end__side1,
+    .end__side2  {
+        width: 80%;
+        gap: 2rem;
+    }
+
+    .end__side1 > div {
+        order: 2;
+    }
+    .end__side1 >p {
+
+        text-align: left;
+    }
+
 }
