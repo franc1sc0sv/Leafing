@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter&family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.hr {
+    width: 140px;
+    height: 6px;
+    left: 69px;
+    top: 23px;
+    background: #484848;
+    border-radius: 3px;
+}
+.h2-start{
+    margin-bottom: 8rem;
+    margin-top: 14rem;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 2rem;
+}
+
+.container-text1 {
+    display: grid;
+    background-color: #E1F2E4;
+    grid-template-columns: 0.5fr 1fr;
+    max-width: 88rem;
+}
+.container-text>img{
+    width: 1px;
+}
+
+.container-perfil {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container-perfil > img {
+    width: 70px;
+    height: 70px;
+}
+
+#profile-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-descripcion {
+    margin: 2rem;
+    margin-top: 45px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container-text2 {
+    margin: 2.1rem;
+}
+
+.container-img1 {}
+
+.general {
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+
+}
+.caminocfp{
+    margin-top: 4rem;
+}
+
+.container-text2>ul>li {
+    list-style: circle;
+}
+
+.container-text2>ul {
+    margin: auto;
+    list-style-type: circle;
+    margin: 2rem;
+}
+
+.nuevoinicio {
+  margin: 7rem;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.form {}
+
+
+.buttonxd {
+    background-color: #8AB694;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 490;
+    font-size: 19px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 12rem;
+}
+
+.iniciodelinicio {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+
+}
+
+.iniciocfp {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.iniciocfp>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.iniciocfp>form>div{
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.form5>img {
+    height: 40rem;
+
+}
+.form3>p{
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 720px) {
+    .container-text1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0rem 2rem;
+        
+    }
+    .iniciodelinicio{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nuevoinicio{
+        margin: 1rem;
+    }
+    .iniciocfp{
+        align-items: center;
+        gap: 2rem;
+    }
+    .iniciocfp>form{
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .iniciocfp>form>input[type="submit"]{
+        align-self: center;
+    }
+}
