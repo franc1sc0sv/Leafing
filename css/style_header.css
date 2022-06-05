@@ -6,6 +6,7 @@
 
 header {
     font-family: 'Montserrat';
+    margin-bottom: 8% !important;
 }
 
 #menu {
@@ -121,7 +122,17 @@ li {
 }
 
 
+.iniciar-sesion-burger,
+.registro-sesion-burger {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
+
+    .iniciar-sesion-burger,
+    .registro-sesion-burger {
+        display: block;
+    }
 
     .li-menu {
         --clip: 0;
@@ -162,7 +173,7 @@ li {
 
     .menu-header_show {
         transform: unset;
-        width: 100%;
+        width: 55%;
     }
 
     .a-header {
@@ -192,11 +203,6 @@ li {
     .sub_menu-activo {
         transform: rotate(0);
     }
-
-    /* .item-menu-desplegable {
-        background-color: var(--background);
-    } */
-
 }
 
 a:hover {

@@ -9,9 +9,6 @@
     grid-template-columns: max-content;
 }
 
-
-
-
 .container-general {
     display: grid;
     grid-template-columns: 1fr 1fr;

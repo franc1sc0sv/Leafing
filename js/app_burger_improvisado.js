@@ -1,7 +1,7 @@
 (function () {
     const ListsItems = document.querySelectorAll('.item-menu-desplegable');
-    const menuheader = document.querySelector('.menu-header');
-    const burger = document.querySelector('.burger');
+    const menuheader = document.querySelector('.menu-header-2');
+    const burger = document.querySelector('.burger-2');
 
     const addClick = () => {
         ListsItems.forEach(Element => {
@@ -53,5 +53,3 @@
 
     burger.addEventListener('click', () => menuheader.classList.toggle('menu-header_show'))
 })();
-
-
