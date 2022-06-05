@@ -85,6 +85,7 @@ footer {
 .transporte_forms-eventos {
     align-self: flex-end;
 }
+
 .fecha_form-eventos {
     padding: 2em;
 }
@@ -93,7 +94,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    
+
 }
 
 .fecha_form-eventos {
@@ -223,7 +224,7 @@ footer {
     color: #000000;
 }
 
-.submit{
+.submit {
     background-color: #8AB694;
     border: none;
 
@@ -239,8 +240,57 @@ footer {
     cursor: pointer;
 }
 
-/* @media screen and (max-width: 900px) {
+.fecha_form-eventos {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+
+@media screen and (max-width: 640px) {
     .container_1 {
         flex-direction: column;
+        width: 287.66px;
     }
-} */
+
+    .input_datos {
+        width: 100%;
+    }
+
+    .input_genralidades {
+        width: 100%;
+    }
+
+    .input_fecha {
+        width:114px;
+    }
+
+    .titulos-generales {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo_generales {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titulo_generales>hr {
+        width: 80%;
+    }
+
+    .titulo_generales>h1 {
+        text-align: center;
+    }
+
+    .subir-imagen >p{
+        display: none;
+    }
+
+    .subir-imagen {
+        width: 300px;
+        height: 300px;
+    }
+    .general_subir-imagen {
+        gap: 10vh;
+    }
+}
