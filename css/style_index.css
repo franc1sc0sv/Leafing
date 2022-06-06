@@ -587,6 +587,13 @@ header {
     transform: scale(1.02);
 }
 
+.slider_article {
+    margin-bottom: 10rem;
+}
+.Recomendaciones-informacion {
+    margin-bottom: 10rem;
+}
+
 @media screen and (max-width:768px) {
 
     .imgen_slider {
