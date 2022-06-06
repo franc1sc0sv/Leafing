@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400;500;600&family=Inter:wght@500&family=Montserrat:ital,wght@0,300;0,600;0,800;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;1,400&family=Raleway&family=Roboto:ital,wght@0,500;1,100;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
@@ -8,7 +8,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+
 }
 
 .hr {
@@ -19,12 +19,18 @@
     background: #484848;
     border-radius: 3px;
 }
-.h2-start{
-    margin-bottom: 8rem;
-    margin-top: 14rem;
-    text-align: center;
+
+.h2-start {
+    margin-bottom: 3rem;
     font-family: 'Poppins';
-    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    color: #000000;
+
 }
 
 .container-text1 {
@@ -33,7 +39,8 @@
     grid-template-columns: 0.5fr 1fr;
     max-width: 88rem;
 }
-.container-text>img{
+
+.container-text>img {
     width: 1px;
 }
 
@@ -44,7 +51,7 @@
     gap: 2rem;
 }
 
-.container-perfil > img {
+.container-perfil>img {
     width: 70px;
     height: 70px;
 }
@@ -67,8 +74,6 @@
     margin: 2.1rem;
 }
 
-.container-img1 {}
-
 .general {
 
     display: flex;
@@ -76,7 +81,8 @@
     font-family: 'Inter', sans-serif;
 
 }
-.caminocfp{
+
+.caminocfp {
     margin-top: 4rem;
 }
 
@@ -91,14 +97,11 @@
 }
 
 .nuevoinicio {
-  margin: 7rem;
-  font-family: 'Roboto', sans-serif;
+    margin: 7rem;
+    font-family: 'Roboto', sans-serif;
 
 
 }
-
-.form {}
-
 
 .buttonxd {
     background-color: #8AB694;
@@ -126,7 +129,7 @@
 .iniciocfp {
     display: flex;
     flex-direction: column;
- 
+
 }
 
 .iniciocfp>form {
@@ -135,7 +138,8 @@
     justify-content: space-around;
     height: 100%;
 }
-.iniciocfp>form>div{
+
+.iniciocfp>form>div {
     display: flex;
     flex-direction: column;
     max-width: 20rem;
@@ -150,7 +154,8 @@ img {
     height: 40rem;
 
 }
-.form3>p{
+
+.form3>p {
     margin-bottom: 2rem;
 }
 
@@ -160,25 +165,29 @@ img {
         flex-direction: column;
         align-items: center;
         margin: 0rem 2rem;
-        
+
     }
-    .iniciodelinicio{
+
+    .iniciodelinicio {
         flex-direction: column;
         align-items: center;
     }
 
-    .nuevoinicio{
+    .nuevoinicio {
         margin: 1rem;
     }
-    .iniciocfp{
+
+    .iniciocfp {
         align-items: center;
         gap: 2rem;
     }
-    .iniciocfp>form{
+
+    .iniciocfp>form {
         gap: 2rem;
         margin-bottom: 2rem;
     }
-    .iniciocfp>form>input[type="submit"]{
+
+    .iniciocfp>form>input[type="submit"] {
         align-self: center;
     }
 }
