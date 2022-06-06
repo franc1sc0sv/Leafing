@@ -246,6 +246,13 @@ footer {
     padding: 1em 0;
 }
 
+.submit:hover{
+    background-color: #484848;
+    color: #FFFFFF;
+    font-size: 19px;
+    max-width: 20rem;
+    transition: ease-in-out 0.5s;
+}
 
 @media screen and (max-width: 640px) {
     .container_1 {

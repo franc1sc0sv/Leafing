@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
 
 * {
     margin: 0;
@@ -8,6 +11,8 @@
 
 footer{
     margin-top: 5%;
+    font-family: 'Montserrat';
+    font-weight: 500;
 }
 
 .container {
@@ -87,18 +92,54 @@ footer{
     padding: 0.5rem;
     
 }
+.agradecimientos {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+    width:100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.agradecimientos>p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 46px;
+    color: #484848;
+    width: max-content;
+    text-align: right;
+}
+
+/* .agradecimientos>p>img {
+    width: 40vw;
+
+} */
+
+.agradecimientos>p>a{
+    color: #8AB694;
+}
+
+.img-freepik {
+    max-width: 250px;
+    height: auto;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
 
 @media screen and (max-width: 550px) {
     .ul-footer {
-        grid-template-columns: repeat(3, 0.01fr);
+        grid-template-columns: repeat(2, 0.01fr);
         justify-items: center;
     } 
 }
 
 @media screen and (max-width:320px)  {
-    .links-footer {
-        display: none;
-    }
     #socialIcons-footer {
         display: flex;
         flex-direction: column;
