@@ -76,8 +76,7 @@ footer {
     font-family: 'Roboto';
     font-weight: bold;
 }
-
-.p2 {
+.p2{
     font-family: 'Montserrat';
 }
 
@@ -99,7 +98,7 @@ footer {
     justify-content: center;
     background: #484848;
     color: white;
-    max-width: 9rem;
+    max-width: 8rem;
     padding: 0.5rem;
     gap: 1rem;
     user-select: none;
@@ -115,9 +114,9 @@ footer {
     background: none;
     color: #484848;
     font-weight: bold;
+    text-decoration: underline;
     align-self: center;
     border-radius: 1rem;
-    font-family: 'Montserrat'
 
 
 }
@@ -136,21 +135,6 @@ footer {
     margin-bottom: 2%;
 }
 
-.button-eventos:hover {
-    background-color: #484848;
-    user-select: none;
-    text-decoration: none;
-    transition: ease-in-out 0.3s;
-    cursor: pointer;
-}
-
-.first-text>button:hover {
-    background-color: #484848;
-    user-select: none;
-    text-decoration: none;
-    transition: ease-in-out 0.3s;
-}
-
 .buttons {
     background-color: #8AB694;
     border: none;
@@ -162,23 +146,12 @@ footer {
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
-    max-width: 22rem;
-}
-
-.buttons:hover {
-    background-color: #484848;
-    color: #FFFFFF;
-    transition: ease-in-out 0.5s;
-    user-select: none;
-    text-decoration: none;
-    cursor: pointer;
+    max-width: 20rem;
 }
 
 
 .buttonxd:hover {
-    background-color: #8AB694;
-    color: #FFFFFF;
-    font-size: 18px;
+    background-color: #23EEA0;
 }
 
 .cardtext {
@@ -188,6 +161,8 @@ footer {
     justify-content: space-between;
     margin: 40px 0px;
     font-family: 'Roboto';
+
+
 }
 
 .second {
