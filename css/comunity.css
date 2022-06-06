@@ -76,7 +76,8 @@ footer {
     font-family: 'Roboto';
     font-weight: bold;
 }
-.p2{
+
+.p2 {
     font-family: 'Montserrat';
 }
 
@@ -98,11 +99,10 @@ footer {
     justify-content: center;
     background: #484848;
     color: white;
-    max-width: 8rem;
+    max-width: 10rem;
     padding: 0.5rem;
     gap: 1rem;
     user-select: none;
-    text-decoration: none;
     transition: ease-in-out 0.3s;
 }
 
@@ -114,9 +114,9 @@ footer {
     background: none;
     color: #484848;
     font-weight: bold;
-    text-decoration: underline;
     align-self: center;
     border-radius: 1rem;
+    font-size: 19px;
 
 
 }
@@ -151,7 +151,18 @@ footer {
 
 
 .buttonxd:hover {
-    background-color: #23EEA0;
+    background-color: #8AB694;
+    user-select: none;
+    transition: ease-in-out 0.3s;
+    font-size: 19px;
+    max-width: 12rem;
+
+}
+
+.line-button:hover {
+    background-color: #8AB694;
+    color: white;
+    font-size: 20px;
 }
 
 .cardtext {
