@@ -94,20 +94,23 @@ li {
     gap: 1rem;
 }
 
-.text-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-
-}
-
 .buttons-header {
     border-radius: 23px;
     padding: 10px;
     border: none;
     padding: 10px 25px;
-    background: #8AB694;
+    background-color: #484848;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+.buttons-header:hover {
+    cursor: pointer;
+    background-color: #8AB694;
+    transform: scale(1.01);
+    transition: all .5s ease-in-out;
 }
 
 #leafing-header {
@@ -205,7 +208,7 @@ li {
     }
 }
 
-a:hover {
+li>a:hover {
     transition: all .3s ease;
     color: #4F9466;
 }
