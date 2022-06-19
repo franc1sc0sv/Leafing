@@ -1,3 +1,8 @@
+<?php
+    //Footer unico que sera añadido a cada pagina con el include
+
+?>
+
 <footer>
     <div class="agradecimientos">
         <p>Imagenes gracias a <a href="https://www.freepik.es/home" target="_blank">freepik</a></p>

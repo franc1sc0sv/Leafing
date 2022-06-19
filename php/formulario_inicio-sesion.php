@@ -96,38 +96,10 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <div class="image-footer">
-                <img src="../img/logo/Logo_Negativo.png" alt="Logo-footer" id="img-footer">
-            </div>
-            <div class="links-footer">
-                <ul class="ul-footer">
-                    <li class="li-footer"><a href="../html/about_us.html" class="a-footer">Nosotros</a></li>
-                    <li class="li-footer"><a href="..//html/comunity.html" class="a-footer">Comunidad</a></li>
-                    <li class="li-footer"><a href="../html/concientizate.html" class="a-footer">Concientízate</a></li>
-                    <li class="li-footer"><a href="../html/categorias.html" class="a-footer">Eventos</a></li>
-                </ul>
-            </div>
+    
+    
+    <?php include_once("./footer.php") ?>
 
-            <div class="Rights-SocialIcons">
-                <div class="hr-footer">
-                    <hr id="hr-footer">
-                </div>
-
-                <div id="R-icon">
-                    <div id="Rights">
-                        <p id="p-footer">©2022 Todos los derechos reservados</p>
-                    </div>
-                    <div id="socialIcons-footer">
-                        <img src="../img/iconos/Social Icons_fb.svg" alt="fbIcon" class="SocialIcons">
-                        <img src="../img/iconos/Social Icons_tw.svg" alt="twIcon" class="SocialIcons">
-                        <img src="../img/iconos/Social Icons_ig.svg" alt="igIcon" class="SocialIcons">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="../js/app_burger.js"></script>
     <script src="../js/app_burger_improvisado.js"></script>
 </body>
