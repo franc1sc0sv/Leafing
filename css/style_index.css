@@ -20,12 +20,7 @@ a {
 
 header {
     background: url(../img/imagenes/bg-3_index.svg) no-repeat center center;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
 
     width: 100%;
     min-height: 100vh;
