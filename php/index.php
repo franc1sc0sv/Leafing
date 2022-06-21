@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+    <?php include_once("header.php"); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="descripción" content="LEAFING">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style_footer.css">
-    <link rel="stylesheet" href="../css/style_header.css">
-    <link rel="stylesheet" href="../css/style_index.css">
-    <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
-    <title>Leafing</title>
-</head>
-
-<body>
-    <header>
-        <?php include_once("header.php"); ?>
-
-        <div class="header-container">
-            <h1>Sé parte de la solución</h1>
-            <p>El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios </p>
-            <a href="../html/categorias.html"><button class="header-button_index">Eventos</button></a>
-        </div>
-    </header>
-    
     <section>
         <article class="Qué-son-estos-eventos">
             <div class="que-eventos">
@@ -241,8 +217,3 @@
     </section>
 
     <?php include_once("footer.php"); ?>
-
-    <script src="../js/app_burger.js"> </script>
-</body>
-
-</html>

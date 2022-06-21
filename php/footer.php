@@ -1,5 +1,5 @@
 <?php
-    //Footer unico que sera añadido a cada pagina con el include
+//Footer unico que sera añadido a cada pagina con el include
 
 ?>
 
@@ -40,3 +40,8 @@
         </div>
     </div>
 </footer>
+<script src="../js/app_burger.js"> </script>
+<script src="../js/app_burger_improvisado.js"></script>
+</body>
+
+</html>
