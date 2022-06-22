@@ -1,0 +1,14 @@
+#btnMode{
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+.darkmode{
+    background-color: #0B0D17;
+    color: #EDEDED;
+}
+#btnMode.on{
+    color: orange;
+}
+.font-mode{
+    color: #F4F0EE;
+}

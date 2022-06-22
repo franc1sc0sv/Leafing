@@ -1,4 +1,6 @@
 <?php include_once("header.php"); ?>
+<body class="darkmode">
+    
 
 <section>
     <article>
@@ -88,5 +90,6 @@
         </form>
     </article>
 </section>
+</body>
 
 <?php include_once("footer.php"); ?>

@@ -1,5 +1,6 @@
 <?php include_once("header.php"); ?>
-
+<body class="darkmode">
+    
 <div class="first">
     <div class="first1">
         <h2>Eventos de la comunidad</h2>
@@ -186,5 +187,6 @@
     </div>
 
 </div>
+</body>
 
 <?php include_once("footer.php"); ?>

@@ -1,5 +1,6 @@
 <?php include_once("header.php"); ?>
 
+<body class="darkmode">
 <section>
     <div class="segmento1">
         <div class="segmento2">
@@ -8,7 +9,7 @@
                 <hr class="hr">
             </div>
             <div>
-                <a href="../html/comunity.html" class="line-button buttonxd notunderline">
+                <a href="../php/comunity.php" class="line-button buttonxd notunderline">
                     <p>
                         Ver los eventos de la comunidad
                     </p>
@@ -66,5 +67,6 @@
         </div>
     </div>
 </section>
+</body>
 
 <?php include_once("footer.php"); ?>

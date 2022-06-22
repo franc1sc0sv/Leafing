@@ -1,3 +1,4 @@
+<?php echo $_SERVER['SCRIPT_NAME']; ?>
 <?php if (($_SERVER['SCRIPT_NAME'] !== "/LEAFING/Crea-J-2022/php/formulario_registro.php") && ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/php/formulario_inicio-sesion.php")) { ?>
         <!DOCTYPE html>
         <html lang="es">
@@ -7,7 +8,7 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="descripción" content="LEAFING">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <!-- Estilos del header y footer-->
+                <!-- Estilos del headegitr y footer-->
                 <link rel="stylesheet" href="../css/style_footer.css">
                 <link rel="stylesheet" href="../css/style_header.css">
                 <!-- Estilos de index-->
@@ -20,16 +21,21 @@
                 <link rel="stylesheet" href="../css/categorias.css">
                 <!-- Estilos de comunity-->
                 <link rel="stylesheet" href="../css/comunity.css">
+                <!--Estilos de concientizate-->
+                <link rel="stylesheet" href="../css/conzientizate_styles.css">
                 <!-- Estilos de crear evento-->
                 <link rel="stylesheet" href="../css/crear_evento.css">
                 <!-- Estilos de evento especifico-->
                 <link rel="stylesheet" href="../css/inscripcion.css">
-
                 <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
+                <!--Aqui inicia el modo oscuro-->
+                <link rel="stylesheet" href="../css/darkmode.css">
+                <script src="../js/darkmode.js" defer> </script>
+                <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
                 <title>Leafing</title>
         </head>
 
-        <body>
+        <body class="darkmode">
                 <header>
                         <nav id="menu">
                                 <div class="burger">
@@ -48,7 +54,7 @@
                                                                 <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable">Concientízate</a></li>
                                                         </ul>
                                                 </li>
-
+                                                <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
                                                 <li class="li-menu item-menu-desplegable iniciar-sesion-burger"><a href="../php/formulario_inicio-sesion.php" class="a-header">Iniciar sesión</a></li>
                                                 <li class="li-menu item-menu-desplegable registro-sesion-burger"><a href="../php/formulario_registro.php" class="a-header">Registro</a></li>
                                         </ul>
@@ -68,7 +74,7 @@
                                 <div class="header-container">
                                         <h1>Sé parte de la solución</h1>
                                         <p>El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios </p>
-                                        <a href="../html/categorias.html"><button class="header-button_index">Eventos</button></a>
+                                        <a href="../php/categorias.php"><button class="header-button_index">Eventos</button></a>
                                 </div>
                         <?php } ?>
 

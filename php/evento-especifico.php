@@ -1,5 +1,6 @@
 <?php include_once("header.php"); ?>
-
+<body class="darkmode">
+    
 <h2 class="h2-start">Recolección de basura</h2>
 <div class="general">
     <div class="container-text1">
@@ -67,5 +68,6 @@
         </form>
     </div>
 </div>
+</body>
 
 <?php include_once("footer.php"); ?>
