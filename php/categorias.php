@@ -8,7 +8,7 @@
                 <hr class="hr">
             </div>
             <div>
-                <a href="../html/comunity.html" class="line-button buttonxd notunderline">
+                <a href="../php/comunity.php" class="line-button buttonxd notunderline">
                     <p>
                         Ver los eventos de la comunidad
                     </p>
