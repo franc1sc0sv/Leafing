@@ -13,7 +13,7 @@
             research,
             increasing efficiency and producing solution for food, quality, automation and software.</p>
         <p class="p2">¿Deseas organizar un evento?</p>
-        <a href="../html/crear_evento.html"><button class="button-eventos">Crear tu evento</button></a>
+        <a href="../php/crear_evento.php"><button class="button-eventos">Crear tu evento</button></a>
     </div>
 </div>
 </div>
@@ -31,7 +31,7 @@
                 voluptatibus quisquam, doloremque voluptatem repellat deserunt ex temporibus. Eius voluptatibus
                 libero
                 blanditiis.</p>
-            <a href="../html/evento-especifico.html" class="buttonxd">
+            <a href="./evento-especifico.php" class="buttonxd">
                 <p>
                     Inscribirse
                 </p>

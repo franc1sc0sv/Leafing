@@ -18,7 +18,10 @@
                 <!-- Estilos de sobre nosotros-->
                 <link rel="stylesheet" href="../css/about-us_style.css">
                 <!-- Estilos de categorias-->
-                <link rel="stylesheet" href="../css/categorias.css">
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/categorias.php") { ?>
+                        <link rel="stylesheet" href="../css/categorias.css">
+                <?php } ?>
+                
                 <!-- Estilos de comunity-->
                 <link rel="stylesheet" href="../css/comunity.css">
                 <!--Estilos de concientizate-->
@@ -26,7 +29,12 @@
                 <!-- Estilos de crear evento-->
                 <link rel="stylesheet" href="../css/crear_evento.css">
                 <!-- Estilos de evento especifico-->
-                <link rel="stylesheet" href="../css/inscripcion.css">
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/evento-especifico.php") { ?>
+                        <link rel="stylesheet" href="../css/inscripcion.css">
+                <?php } ?>
+                <!-- Estilos de conzinetizate-->
+                <link rel="stylesheet" href="../css/conzientizate_styles.css">
+
                 <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="../css/darkmode.css">

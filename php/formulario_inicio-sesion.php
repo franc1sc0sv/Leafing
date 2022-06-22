@@ -1,8 +1,7 @@
 <?php include_once("./header.php") ?>
-<!-- <link rel="stylesheet" href="../css/formulario-inicio-sesion_style.css"> -->
 
 <div class="formulario_container-2">
-    <form action="#" method="post" class="formulario_registro">
+    <form action="formulario_inicio-sesion.php" method="post" class="formulario_registro">
         <h1>Iniciar sesión</h1>
 
         <input type="email" placeholder="Correo electrónico" name="email"> <br>
@@ -17,4 +16,4 @@
 </div>
 
 
-<?php include_once("./footer.php") ?>
+<?php include_once("./footer.php") ?>S
