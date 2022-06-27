@@ -470,7 +470,7 @@ header {
 .imgen_slider {
     order: 2;
     width: 40%;
-    background-color: #484848;
+    background-size: cover;
     height: 70vh;
     box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
 
@@ -540,8 +540,8 @@ header {
     color: #000000;
 }
 
-.text_slider>a>button:hover {  
-     cursor: pointer;
+.text_slider>a>button:hover {
+    cursor: pointer;
     transform: scale(1.01);
     transition: all .5s ease-in-out;
 
@@ -567,17 +567,19 @@ header {
     color: #484848;
 }
 
-.titulo_generales > a>p {
+.titulo_generales>a>p {
     display: flex;
     align-items: center;
 }
+
 .menu_arrow-eventos {
     width: 25px;
     height: 25px;
     transform: rotate(-90deg);
 }
-.titulo_generales > a>p:hover {
-    
+
+.titulo_generales>a>p:hover {
+
     transition: all .5s ease-in-out;
     transform: scale(1.02);
 }
@@ -585,6 +587,7 @@ header {
 .slider_article {
     margin-bottom: 10rem;
 }
+
 .Recomendaciones-informacion {
     margin-bottom: 10rem;
 }
