@@ -56,6 +56,23 @@
                             </div>
                             <div class="imgen_slider i_Primero">
                             </div>
+                            <div class="container_slider_puntos">
+                                <div class="container_individual_punto">
+                                    <div class="slider-punto active"></div>
+                                </div>
+                                <div class="container_individual_punto">
+                                    <div class="slider-punto non-active"></div>
+                                </div>
+                                <div class="container_individual_punto">
+                                    <div class="slider-punto non-active"></div>
+                                </div>
+                                <div class="container_individual_punto">
+                                    <div class="slider-punto non-active"></div>
+                                </div>
+                                <div class="container_individual_punto">
+                                    <div class="slider-punto non-active"></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="slider_screen Segundo">

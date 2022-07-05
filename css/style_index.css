@@ -440,6 +440,30 @@ header {
 
 }
 
+.container_slider_puntos {
+    display: flex;
+    position: absolute;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10px;
+    gap: 7px;
+}
+
+.slider-punto {
+    cursor: pointer;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 50%;
+}
+
+.active {
+    background: #484848;
+}
+
+.non-active {
+    background: #48484879;
+}
+
 .slider_screen {
     width: 100vw;
     height: 70vh;
@@ -473,6 +497,7 @@ header {
     background-color: #484848;
     height: 70vh;
     box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    background-size: cover
 
 }
 
