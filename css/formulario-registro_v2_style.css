@@ -24,7 +24,6 @@
 }
 
 #leafing-header {
-    display: flex;
     padding: 0.5rem;
 }
 
@@ -38,22 +37,20 @@
 
 }
 
-
 .container-2 {
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-rows: auto max-content;
-
-    justify-content: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #fff;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-
-    gap: 5rem;
-
+    height: 100vh;
 }
 
+
+/* .container_general_fomrms {
+    overflow: hidden; 
+} */
 
 .formulario_registro {
     display: flex;
@@ -180,7 +177,7 @@
     .formulario_registro>input {
         width: 250px;
     }
-    
+
 
 }
 

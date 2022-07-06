@@ -1,4 +1,8 @@
-<?php include_once("header.php"); ?>
+<?php 
+include_once 'include.php';
+include_once("header.php"); 
+?>
+
 <body class="darkmode">
     
 <div class="first">

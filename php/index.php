@@ -1,51 +1,177 @@
-    <?php include_once("header.php"); ?>
+<?php
+include_once 'include.php';
+include_once("conexion.php");
 
-    <body>
-        <section>
-            <article class="Qué-son-estos-eventos">
-                <div class="que-eventos">
+$objconexion_numbers= new conection();
+$maxIdData = $objconexion_numbers -> consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");
+//$maxIdData[0]['MAX(id_curious_data)']
+////Codigo para datos curiosos randomizados
 
-                    <div id="hr1_que-evento">
-                        <h1>¿Qué son estos eventos?</h1>
-                        <hr class="hr_que-eventos">
+# definimos las 5 variables que contendrán los 5 números 
+$n1 = $n2 = $n3 = $n4 = $n5 = $n6 = 0;
+
+# buscamos 5 números aleatorios, verificando que no se repitan 
+$pos = 1;
+while (1) {
+    $rand = rand(1, $maxIdData[0]['MAX(id_curious_data)']);
+    $repetido = false;
+
+    for ($i = 1; $i <= $pos; $i++) {
+        if (${"n" . $i} == $rand) {
+            $repetido = true;
+        }
+    }
+
+    if ($repetido == false) {
+        ${"n" . $pos} = $rand;
+        $pos++;
+        if ($pos == 7) {
+            break;
+        }
+    }
+}
+// echo $n1."<br>";
+// echo $n2."<br>";
+// echo $n3."<br>";
+// echo $n4."<br>";
+// echo $n5."<br>";
+// echo $n6."<br>";
+?>
+
+<?php include_once("header.php");?>
+
+<body>
+    <section>
+        <article class="Qué-son-estos-eventos">
+            <div class="que-eventos">
+
+                <div id="hr1_que-evento">
+                    <h1>¿Qué son estos eventos?</h1>
+                    <hr class="hr_que-eventos">
+                </div>
+
+                <div class="contenido_que-eventos">
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
+                        non
+                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                        dolorum fuga.
+                    </p>
+
+                    <div class="preguntas_eventos-eventos">
+                        <p><a href="../php/about_us.php">¿Quiénes sómos?</a> </p>
+                        <p><a href="../php/crear_evento.php">Crea un evento</a></p>
                     </div>
 
-                    <div class="contenido_que-eventos">
-                        <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-                            non
-                            provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
-                            dolorum fuga.
-                        </p>
+                    <a href="../php/comunity.php"><button class="button_que-eventos">Explorar más</button></a>
 
-                        <div class="preguntas_eventos-eventos">
-                            <p><a href="../php/about_us.php">¿Quiénes sómos?</a> </p>
-                            <p><a href="../php/crear_evento.php">Crea un evento</a></p>
+                </div>
+
+                <div class="img_que-eventos">
+                    <img id="img_que-eventos" src="../img/imagenes/que-eventos_img.svg" alt="imagen-que-eventos">
+                </div>
+
+            </div>
+        </article>
+
+        <article class="slider_article">
+            <div class="titulos-generales">
+                <div class="titulo_generales">
+                    <h1>Próximos eventos de la <br> comunidad </h1>
+                    <hr>
+                </div>
+                <div></div>
+            </div>
+
+
+            <div class="container_container">
+                <article class="container-slider">
+                    <div class="slider_screen Primero">
+                        <div class="text_slider t_Primero">
+                            <h2>Martha</h2>
+                            <h1>Recolección de basura</h1>
+                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
                         </div>
-
-                        <a href="../php/comunity.php"><button class="button_que-eventos">Explorar más</button></a>
-
+                        <div class="imgen_slider i_Primero">
+                        </div>
                     </div>
 
-                    <div class="img_que-eventos">
-                        <img id="img_que-eventos" src="../img/imagenes/que-eventos_img.svg" alt="imagen-que-eventos">
+                    <div class="slider_screen Segundo">
+                        <div class="text_slider t_Segundo">
+                            <h2>Joseph</h2>
+                            <h1>Liberación de tortugas</h1>
+                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                        </div>
+                        <div class="imgen_slider i_Segundo">
+                        </div>
                     </div>
 
+                    <div class="slider_screen Tercero">
+                        <div class="text_slider t_Tercero">
+                            <h2>Esteban</h2>
+                            <h1>Capacitación en línea de taxonomía</h1>
+                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                        </div>
+                        <div class="imgen_slider i_Tercero">
+                        </div>
+                    </div>
+
+
+                    <div class="slider_screen Cuarto">
+                        <div class="text_slider t_Cuarto">
+                            <h2>Leví</h2>
+                            <h1>Plantamiento de árboles</h1>
+                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                        </div>
+                        <div class="imgen_slider i_Cuarto">
+                        </div>
+                    </div>
+
+                    <div class="slider_screen Quinto">
+                        <div class="text_slider t_Quinto">
+                            <h2>Mario</h2>
+                            <h1>Capacitación de cultivo</h1>
+                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                        </div>
+                        <div class="imgen_slider i_Quinto">
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="titulos-generales">
+                <div class="titulo_generales">
+                    <a href="../php/comunity.php">
+                        <p>Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
+                    </a>
                 </div>
-            </article>
+                <div></div>
+            </div>
+        </article>
 
-            <article class="slider_article">
-                <div class="titulos-generales">
-                    <div class="titulo_generales">
-                        <h1>Próximos eventos de la <br> comunidad </h1>
-                        <hr>
+        <article class="Recomendaciones-informacion">
+            <div class="titulos-generales">
+                <div class="titulo_generales">
+                    <h1>Información y <br> recomendaciones</h1>
+                    <hr>
+                </div>
+                <div></div>
+            </div>
+            <div class="container_recomendaciones">
+
+                <div class="contribute_recomendaciones">
+                    <div class="recomendacion">
+                        <h1>Contribuye al cuido <br> medioambiental desde casa</h1>
+                        <p>Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa</p>
+                        <a href="../php/concientizate.php"><button>Saber más</button></a>
                     </div>
-                    <div></div>
                 </div>
 
 
+<<<<<<< HEAD
                 <div class="container_container">
                     <article class="container-slider">
                         <div class="slider_screen Primero">
@@ -116,122 +242,47 @@
                             </div>
                         </div>
                     </article>
+=======
+                <div class="habitos_recomendaciones">
+                    <div class="informacion">
+                        <h1>Hábitos para aprovechar los <br> recursos naturales</h1>
+                        <a href="../php/concientizate.php"><button>Saber más</button></a>
+                    </div>
+>>>>>>> 73e6e0bdf10f47ae0930ce7f85cf4a9409d2b5ce
                 </div>
 
+            </div>
+        </article>
 
-                <div class="titulos-generales">
-                    <div class="titulo_generales">
-                        <a href="../php/comunity.php">
-                            <p>Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
-                        </a>
-                    </div>
-                    <div></div>
+
+        <article class="¿Sabias-qué?">
+            <div class="titulos-generales">
+                <div class="titulo_generales">
+                    <h1>¿Sabías qué?</h1>
+                    <hr>
                 </div>
-            </article>
-
-            <article class="Recomendaciones-informacion">
-                <div class="titulos-generales">
-                    <div class="titulo_generales">
-                        <h1>Información y <br> recomendaciones</h1>
-                        <hr>
-                    </div>
-                    <div></div>
-                </div>
-                <div class="container_recomendaciones">
-
-                    <div class="contribute_recomendaciones">
-                        <div class="recomendacion">
-                            <h1>Contribuye al cuido <br> medioambiental desde casa</h1>
-                            <p>Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa</p>
-                            <a href="../php/concientizate.php"><button>Saber más</button></a>
-                        </div>
-                    </div>
+                <div></div>
+            </div>
 
 
-                    <div class="habitos_recomendaciones">
-                        <div class="informacion">
-                            <h1>Hábitos para aprovechar los <br> recursos naturales</h1>
-                            <a href="../php/concientizate.php"><button>Saber más</button></a>
-                        </div>
-                    </div>
+            <div class="Datos-curiosos_container font-mode">
 
-                </div>
-            </article>
+                <?php
+                $Datos_cards = new conection();
+                $Datos = $Datos_cards->consultar("SELECT * FROM `random_curious_data` WHERE id_curious_data  IN ('$n1', '$n2', '$n3', '$n4', '$n5', '$n6')");
+                ?>
 
-
-            <article class="¿Sabias-qué?">
-                <div class="titulos-generales">
-                    <div class="titulo_generales">
-                        <h1>¿Sabías qué?</h1>
-                        <hr>
-                    </div>
-                    <div></div>
-                </div>
-
-
-                <div class="Datos-curiosos_container font-mode">
+                <?php foreach ($Datos as $Dato) { ?>
                     <div class="Datos_cards">
                         <div>
-                            <h1>¿Islas de basura?</h1>
+                            <h1> <?php echo $Dato['title_curious_data'] ?> </h1>
                             <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
                         </div>
-                        <p>
-                            Lamentablemente, existen islas basura formadas por microplásticos. Dos de ellas se encuentran en
-                            el Pacífico, dos en el Atlántico y una en el Índico.
-                        </p>
-                    </div>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1>Basura en los océanos</h1>
-                            <img src="../img/imagenes/icono_1-datos.png" alt="icon_datos">
-                        </div>
-                        <p>
-                            8 millones de toneladas de basura al año llegan a los mares y océanos. Una cantidad equivalente
-                            al peso de 800 de la Torres Eiffeles o el peso de 14,285 aviones Airbus A380.
-                        </p>
-                    </div>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1>Los plásticos</h1>
-                            <img src="../img/imagenes/icono_3-datos.png" alt="icon_datos">
-                        </div>
-                        <p>
-                            El 50% de los plásticos que llegan a los sistemas de gestión de residuos terminan en los
-                            vertederos sin ser reciclados.
-                        </p>
-                    </div>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1>Computadoras nadando</h1>
-                            <img src="../img/imagenes/icono_4-datos.png" alt="icon_datos">
-                        </div>
-                        <p>
-                            La mayoría de la basura plástica que cae a los océanos es tecnológica. (celulares, videojuegos,
-                            tablets).
-                        </p>
-                    </div>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1> ¡¡¡900%!!!</h1>
-                            <img src="../img/imagenes/icono_5-datos.png" alt="icon_datos">
-                        </div>
-                        <p>
-                            Para 2020 se espera que la producción de plásticos aumente en un 900% con respecto a niveles de
-                            1980.
-                        </p>
-                    </div>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1>¿China amenaza?</h1>
-                            <img src="../img/imagenes/icono_6-datos.png" alt="icon_datos">
-                        </div>
+                        <p> <?php echo $Dato['content_curious_data'] ?> </p>
 
-                        <p>China es el principal productor de plásticos, seguido de Europa, Norte América y Asia. Dentro de
-                            Europa, más de dos tercios de la demanda de plásticos se concentran en cinco países: Alemania
-                            (24,9%), Italia (14,3%), Francia (9,6%), Reino Unido (7,7%) y España (7,4%).</p>
                     </div>
-                </div>
-            </article>
-        </section>
-    </body>
-    <?php include_once("footer.php"); ?>
+                <?php }  ?>
+        </article>
+    </section>
+</body>
+<?php include_once("footer.php"); ?>

@@ -1,4 +1,13 @@
-<?php echo $_SERVER['SCRIPT_NAME']; ?>
+<?php
+// if (isset($_SESSION['estatus'])) {
+//         print_r($_SESSION['estatus']);
+//         echo " - Logeado";
+// } else {
+//         echo "deslogeado";
+// }
+?>
+
+
 <?php if (($_SERVER['SCRIPT_NAME'] !== "/LEAFING/Crea-J-2022/php/formulario_registro.php") && ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/php/formulario_inicio-sesion.php")) { ?>
         <!DOCTYPE html>
         <html lang="es">
@@ -21,7 +30,7 @@
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/categorias.php") { ?>
                         <link rel="stylesheet" href="../css/categorias.css">
                 <?php } ?>
-                
+
                 <!-- Estilos de comunity-->
                 <link rel="stylesheet" href="../css/comunity.css">
                 <!--Estilos de concientizate-->
@@ -72,12 +81,21 @@
                                         <h1 id="LEAFING">Leafing</h1>
                                 </div>
 
-                                <div id="buttons-header">
-                                        <a href="./formulario_registro.php" class="text-button"><button class="buttons-header">Registrarse</button></a>
-                                        <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header">Iniciar sesión</button></a>
-                                </div>
+                                <?php if (!isset($_SESSION['estatus'])) { ?>
+                                        <div id="buttons-header">
+                                                <a href="./formulario_registro.php" class="text-button"><button class="buttons-header">Registrarse</button></a>
+                                                <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header">Iniciar sesión</button></a>
+                                        </div>
+                                <?php } else { ?>
+                                        <div id="buttons-header">
+                                                <a href="./close.php"><button>CLOSE SESSION</button></a>
+                                                <p><?php echo $_SESSION['mail'] ?></p>
+                                        </div>
+
+                                <?php } ?>
 
                         </nav>
+
                         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                                 <div class="header-container">
                                         <h1>Sé parte de la solución</h1>

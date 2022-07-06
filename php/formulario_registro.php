@@ -1,24 +1,47 @@
-<?php include_once("./header.php") ?>
+<?php
+include_once 'include.php';
+include_once("conexion.php");
 
-<div class="formulario_container-2">
-    <form action="./" method="post" class="formulario_registro">
-        <h1>Crea una cuenta</h1>
+if ($_POST) {
+    if (empty($_POST['email'])) {
+        echo "<script> alert('ALL FIELDS IS REQUERED')</script>";
+    } else {
+        $mail = $_POST['email'];
+        $password = $_POST['password'];
 
-        <input type="text" placeholder="Nombre completo" name="name"> <br>
-        <input type="email" placeholder="Correo electrónico" name="name"> <br>
-        <input type="text" placeholder="Contraseña" name="name"> <br>
-        <input type="text" placeholder="Confirmar contraseña" name="name"> <br>
-        <div>
-            <input type="checkbox" name="terms-conditions">
-            <label for="terms-conditions">Estoy de acuerdo con los <a href="#"> Terminos de
-                    privacidad</a></label> <br>
-        </div>
-        <input type="submit" name="submit" value="Registrarse" id="submit-registrer">
+        $objconexion = new conection();
+        $emailrepetido =  $objconexion->consultarform("SELECT * FROM `user_credentials` WHERE mail_user	='$mail'");
+        // echo $emailrepetido . " ";
+        if ($emailrepetido != 1) {
+            $_SESSION['mail'] = $mail;
+            $_SESSION['password'] = $password;
+            $_SESSION['code'] = true;
+            header('location:code.php');
+        } else {
+            echo "<script> alert('El correo esta repetido')</script>";
+        }
+    }
+}
 
-        <p>Ya tienes una cuenta? <a href="./formulario_inicio-sesion.php">Inicia sesión</a></p>
-    </form>
 
+
+?>
+
+<?php include_once("header.php"); ?>
+
+<div class="container_general_fomrms">
+    <h1>Crea tu cuenta</h1>
+
+    <div class="container_forms">
+        <form action="formulario_registro.php" method="post">
+            <p> Paso 1: Tu correo y Contraseña</p>
+            <input type="text" name="email" placeholder="mail"><br><br>
+            <input type="password" name="password" placeholder="password"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </div>
+
 </div>
 </div>
 
