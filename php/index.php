@@ -2,8 +2,8 @@
 include_once 'include.php';
 include_once("conexion.php");
 
-$objconexion_numbers= new conection();
-$maxIdData = $objconexion_numbers -> consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");
+$objconexion_numbers = new conection();
+$maxIdData = $objconexion_numbers->consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");
 //$maxIdData[0]['MAX(id_curious_data)']
 ////Codigo para datos curiosos randomizados
 
@@ -38,7 +38,7 @@ while (1) {
 // echo $n6."<br>";
 ?>
 
-<?php include_once("header.php");?>
+<?php include_once("header.php"); ?>
 
 <body>
     <section>
@@ -96,6 +96,23 @@ while (1) {
                         </div>
                         <div class="imgen_slider i_Primero">
                         </div>
+                        <div class="container_slider_puntos">
+                            <div class="container_individual_punto">
+                                <div class="slider-punto active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="slider_screen Segundo">
@@ -106,6 +123,23 @@ while (1) {
                         </div>
                         <div class="imgen_slider i_Segundo">
                         </div>
+                        <div class="container_slider_puntos">
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="slider_screen Tercero">
@@ -115,6 +149,23 @@ while (1) {
                             <a href="../html/evento-especifico.html"><button>Detalles</button></a>
                         </div>
                         <div class="imgen_slider i_Tercero">
+                        </div>
+                        <div class="container_slider_puntos">
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -127,6 +178,23 @@ while (1) {
                         </div>
                         <div class="imgen_slider i_Cuarto">
                         </div>
+                        <div class="container_slider_puntos">
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="slider_screen Quinto">
@@ -137,19 +205,37 @@ while (1) {
                         </div>
                         <div class="imgen_slider i_Quinto">
                         </div>
+                        <div class="container_slider_puntos">
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto non-active"></div>
+                            </div>
+                            <div class="container_individual_punto">
+                                <div class="slider-punto active"></div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
+        </article>
 
 
-            <div class="titulos-generales">
-                <div class="titulo_generales">
-                    <a href="../php/comunity.php">
-                        <p>Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
-                    </a>
-                </div>
-                <div></div>
+        <div class="titulos-generales">
+            <div class="titulo_generales">
+                <a href="../php/comunity.php">
+                    <p>Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
+                </a>
             </div>
+            <div></div>
+        </div>
         </article>
 
         <article class="Recomendaciones-informacion">
@@ -170,90 +256,14 @@ while (1) {
                     </div>
                 </div>
 
-
-<<<<<<< HEAD
-                <div class="container_container">
-                    <article class="container-slider">
-                        <div class="slider_screen Primero">
-                            <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button>Detalles</button></a>
-                            </div>
-                            <div class="imgen_slider i_Primero">
-                            </div>
-                            <div class="container_slider_puntos">
-                                <div class="container_individual_punto">
-                                    <div class="slider-punto active"></div>
-                                </div>
-                                <div class="container_individual_punto">
-                                    <div class="slider-punto non-active"></div>
-                                </div>
-                                <div class="container_individual_punto">
-                                    <div class="slider-punto non-active"></div>
-                                </div>
-                                <div class="container_individual_punto">
-                                    <div class="slider-punto non-active"></div>
-                                </div>
-                                <div class="container_individual_punto">
-                                    <div class="slider-punto non-active"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slider_screen Segundo">
-                            <div class="text_slider t_Segundo">
-                                <h2>Joseph</h2>
-                                <h1>Liberación de tortugas</h1>
-                                <a href="../html/evento-especifico.html"><button>Detalles</button></a>
-                            </div>
-                            <div class="imgen_slider i_Segundo">
-                            </div>
-                        </div>
-
-                        <div class="slider_screen Tercero">
-                            <div class="text_slider t_Tercero">
-                                <h2>Esteban</h2>
-                                <h1>Capacitación en línea de taxonomía</h1>
-                                <a href="../html/evento-especifico.html"><button>Detalles</button></a>
-                            </div>
-                            <div class="imgen_slider i_Tercero">
-                            </div>
-                        </div>
-
-
-                        <div class="slider_screen Cuarto">
-                            <div class="text_slider t_Cuarto">
-                                <h2>Leví</h2>
-                                <h1>Plantamiento de árboles</h1>
-                                <a href="../html/evento-especifico.html"><button>Detalles</button></a>
-                            </div>
-                            <div class="imgen_slider i_Cuarto">
-                            </div>
-                        </div>
-
-                        <div class="slider_screen Quinto">
-                            <div class="text_slider t_Quinto">
-                                <h2>Mario</h2>
-                                <h1>Capacitación de cultivo</h1>
-                                <a href="../html/evento-especifico.html"><button>Detalles</button></a>
-                            </div>
-                            <div class="imgen_slider i_Quinto">
-                            </div>
-                        </div>
-                    </article>
-=======
                 <div class="habitos_recomendaciones">
                     <div class="informacion">
                         <h1>Hábitos para aprovechar los <br> recursos naturales</h1>
                         <a href="../php/concientizate.php"><button>Saber más</button></a>
                     </div>
->>>>>>> 73e6e0bdf10f47ae0930ce7f85cf4a9409d2b5ce
                 </div>
-
             </div>
         </article>
-
 
         <article class="¿Sabias-qué?">
             <div class="titulos-generales">
@@ -263,26 +273,24 @@ while (1) {
                 </div>
                 <div></div>
             </div>
-
-
-            <div class="Datos-curiosos_container font-mode">
-
-                <?php
-                $Datos_cards = new conection();
-                $Datos = $Datos_cards->consultar("SELECT * FROM `random_curious_data` WHERE id_curious_data  IN ('$n1', '$n2', '$n3', '$n4', '$n5', '$n6')");
-                ?>
-
-                <?php foreach ($Datos as $Dato) { ?>
-                    <div class="Datos_cards">
-                        <div>
-                            <h1> <?php echo $Dato['title_curious_data'] ?> </h1>
-                            <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
-                        </div>
-                        <p> <?php echo $Dato['content_curious_data'] ?> </p>
-
-                    </div>
-                <?php }  ?>
         </article>
+        <div class="Datos-curiosos_container font-mode">
+            <?php
+            $Datos_cards = new conection();
+            $Datos = $Datos_cards->consultar("SELECT * FROM `random_curious_data` WHERE id_curious_data  IN ('$n1', '$n2', '$n3', '$n4', '$n5', '$n6')");
+            ?>
+
+            <?php foreach ($Datos as $Dato) { ?>
+                <div class="Datos_cards">
+                    <div>
+                        <h1> <?php echo $Dato['title_curious_data'] ?> </h1>
+                        <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
+                    </div>
+                    <p> <?php echo $Dato['content_curious_data'] ?> </p>
+
+                </div>
+            <?php }  ?>
+        </div>
     </section>
 </body>
 <?php include_once("footer.php"); ?>
