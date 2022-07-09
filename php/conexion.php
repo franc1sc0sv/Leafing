@@ -11,7 +11,7 @@ class conection{
 
     public function __construct(){
         try {
-            $this->conection= new PDO("mysql:host=$this->server; dbname=leafing", $this->user, $this->password);
+            $this->conection= new PDO("mysql:host=$this->server; dbname=leafing; charset=utf8mb4", $this->user, $this->password);
             $this->conection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             return "fallo de conexion".$e;

@@ -1,7 +1,7 @@
 <?php
 
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
-echo $user_agent . "<br>";
+//echo $user_agent . "<br>";
 function getBrowser($user_agent){
 
 if(strpos($user_agent, 'MSIE') !== FALSE)
@@ -29,6 +29,6 @@ if(strpos($user_agent, 'MSIE') !== FALSE)
 
 $navegador = getBrowser($user_agent);
  
-echo "El navegador con el que estás visitando esta web es: ".$navegador;
-
+echo "<br>"."El navegador con el que estás visitando esta web es: ".$navegador. "<br>";
+echo $user_agent;
 ?>
