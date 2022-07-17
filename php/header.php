@@ -48,6 +48,8 @@
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="../css/darkmode.css">
                 <script src="../js/darkmode.js" defer> </script>
+                <!--El slider del Index-->
+                <script src="../js/slider.js" defer></script>
                 <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
                 <title>Leafing</title>
         </head>

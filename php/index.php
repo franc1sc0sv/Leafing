@@ -86,9 +86,10 @@ while (1) {
             </div>
 
 
-            <div class="container_container">
+          <div class="slider-center">
+          <div class="container_container">
                 <article class="container-slider">
-                    <div class="slider_screen Primero">
+                    <div class="slider_screen">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
@@ -96,135 +97,69 @@ while (1) {
                         </div>
                         <div class="imgen_slider i_Primero">
                         </div>
-                        <div class="container_slider_puntos">
-                            <div class="container_individual_punto">
-                                <div class="slider-punto active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="slider_screen Segundo">
-                        <div class="text_slider t_Segundo">
-                            <h2>Joseph</h2>
-                            <h1>Liberación de tortugas</h1>
-                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                    </div>
+                    <div class="slider_screen">
+                        <div class="text_slider t_Primero">
+                            <h2>Martha</h2>
+                            <h1>Recolección de basura</h1>
+                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
                         </div>
                         <div class="imgen_slider i_Segundo">
                         </div>
-                        <div class="container_slider_puntos">
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="slider_screen Tercero">
-                        <div class="text_slider t_Tercero">
-                            <h2>Esteban</h2>
-                            <h1>Capacitación en línea de taxonomía</h1>
-                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                    </div>
+                    <div class="slider_screen">
+                        <div class="text_slider t_Primero">
+                            <h2>Martha</h2>
+                            <h1>Recolección de basura</h1>
+                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
                         </div>
                         <div class="imgen_slider i_Tercero">
                         </div>
-                        <div class="container_slider_puntos">
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                        </div>
+
                     </div>
-
-
-                    <div class="slider_screen Cuarto">
-                        <div class="text_slider t_Cuarto">
-                            <h2>Leví</h2>
-                            <h1>Plantamiento de árboles</h1>
-                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                    <div class="slider_screen">
+                        <div class="text_slider t_Primero">
+                            <h2>Martha</h2>
+                            <h1>Recolección de basura</h1>
+                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
                         </div>
                         <div class="imgen_slider i_Cuarto">
                         </div>
-                        <div class="container_slider_puntos">
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="slider_screen Quinto">
-                        <div class="text_slider t_Quinto">
-                            <h2>Mario</h2>
-                            <h1>Capacitación de cultivo</h1>
-                            <a href="../html/evento-especifico.html"><button>Detalles</button></a>
+                    </div>
+                    <div class="slider_screen">
+                        <div class="text_slider t_Primero">
+                            <h2>Martha</h2>
+                            <h1>Recolección de basura</h1>
+                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
                         </div>
                         <div class="imgen_slider i_Quinto">
                         </div>
-                        <div class="container_slider_puntos">
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto non-active"></div>
-                            </div>
-                            <div class="container_individual_punto">
-                                <div class="slider-punto active"></div>
-                            </div>
-                        </div>
+
                     </div>
+
                 </article>
+                <div class="container_slider_puntos">
+                    <div class="container_individual_punto Btn1">
+                        <div class="slider-punto active" data-estres="1"></div>
+                    </div>
+                    <div class="container_individual_punto Btn2">
+                        <div class="slider-punto" data-estres="2"></div>
+                    </div>
+                    <div class="container_individual_punto Btn3">
+                        <div class="slider-punto" data-estres="3"></div>
+                    </div>
+                    <div class="container_individual_punto Btn4">
+                        <div class="slider-punto" data-estres="4"></div>
+                    </div>
+                    <div class="container_individual_punto Btn5">
+                        <div class="slider-punto" data-estres="5"></div>
+                    </div>
+                </div>
             </div>
+          </div>
         </article>
 
 
