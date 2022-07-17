@@ -10,7 +10,9 @@
     box-sizing: border-box;
 }
 
-
+h1{
+    font-weight: 300;
+}
 
 /*TEMPORAL*/
 header {
@@ -213,6 +215,68 @@ footer {
     flex-direction: column;
     margin-left: 5rem;
     font-family: 'Montserrat';
+}
+
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.xD223 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#xD {
+    display: flex;
+}
+
+.filtros {
+    width: 50vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#Buscador {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+    background-size: 24px;
+    width: 500px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+    border-radius: 50px;
+}
+
+.first-text {
+    margin-bottom: 5rem;
 }
 
 @media (max-width: 768px) {
