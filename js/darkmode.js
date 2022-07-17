@@ -1,14 +1,26 @@
+let body = document.querySelector("body")
 let btnMode = document.getElementById("btnMode");
-let body = document.body;
+if (!localStorage.dark) {
+    localStorage.setItem("dark", "no")
+}
 
-btnMode.addEventListener("click", function(){
+btnMode.addEventListener("click", function () {
     let val = body.classList.toggle("darkmode")
-    localStorage.setItem("btnMode", val)
-})
-let valor = localStorage.getItem("darkmode")
+    let val1 = body.classList.toggle("font-mode")
+    console.log(val)
+    console.log("xd")
 
-if(valor=="true") {
+    if (val) {
+        localStorage.dark = "si"//El primero es de asignacion, segundo comparacion y tercero comparacion de variables y tipos de datos//
+    } else {
+        localStorage.dark = "no"
+    }
+})
+
+if (localStorage.dark == "si") {
     body.classList.add("darkmode")
+    body.classList.add("font-mode")
 } else {
     body.classList.remove("darkmode")
+    body.classList.remove("font-mode")
 }
