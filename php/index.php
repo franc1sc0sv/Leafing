@@ -4,7 +4,7 @@ include_once("conexion.php");
 
 $objconexion_numbers = new conection();
 $maxIdData = $objconexion_numbers->consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");
-//$maxIdData[0]['MAX(id_curious_data)']
+$maxIdData[0]['MAX(id_curious_data)'];
 ////Codigo para datos curiosos randomizados
 
 # definimos las 5 variables que contendrán los 5 números 
@@ -30,12 +30,6 @@ while (1) {
         }
     }
 }
-// echo $n1."<br>";
-// echo $n2."<br>";
-// echo $n3."<br>";
-// echo $n4."<br>";
-// echo $n5."<br>";
-// echo $n6."<br>";
 ?>
 
 <?php include_once("header.php"); ?>

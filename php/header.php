@@ -17,9 +17,17 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="descripción" content="LEAFING">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <!-- Estilos del headegitr y footer-->
+
+                <meta http-equiv="Expires" content="0">
+                <meta http-equiv="Last-Modified" content="0">
+                <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+                <meta http-equiv="Pragma" content="no-cache">
+
+                <!-- Estilos del header y footer-->
                 <link rel="stylesheet" href="../css/style_footer.css">
+
                 <link rel="stylesheet" href="../css/style_header.css">
+
                 <!-- Estilos de index-->
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                         <link rel="stylesheet" href="../css/style_index.css">
@@ -30,7 +38,6 @@
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/categorias.php") { ?>
                         <link rel="stylesheet" href="../css/categorias.css">
                 <?php } ?>
-
                 <!-- Estilos de comunity-->
                 <link rel="stylesheet" href="../css/comunity.css">
                 <!--Estilos de concientizate-->
@@ -47,10 +54,7 @@
                 <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="../css/darkmode.css">
-                <script src="../js/darkmode.js" defer> </script>
-                <!--El slider del Index-->
-                <script src="../js/slider.js" defer></script>
-                <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+
                 <title>Leafing</title>
         </head>
 

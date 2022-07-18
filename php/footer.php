@@ -40,6 +40,9 @@
         </div>
     </div>
 </footer>
+<script src="../js/darkmode.js" defer> </script>
+<script src="../js/slider.js" defer></script>
+<script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_burger_improvisado.js"></script>
 </body>
