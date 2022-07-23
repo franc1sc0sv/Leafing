@@ -156,7 +156,7 @@ if (!isset($_POST['date_filtro'])) {
 
                 for ($i = 1; $i < count($resultsearch); $i++) {
                     if (!empty($resultsearch[$i])) {
-                        $sql .= " OR name_event LIKE LOWER('%" . $resultsearch[$i] . "%')";
+                        $sql .= " AND name_event LIKE LOWER('%" . $resultsearch[$i] . "%')";
                     }
                 }
             }
