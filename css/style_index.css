@@ -26,7 +26,6 @@ header {
     min-height: 100vh;
 
 
-    margin-bottom: 8rem;
     display: grid;
     grid-template-rows: max-content 1fr;
 

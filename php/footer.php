@@ -42,6 +42,8 @@
 </footer>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_burger_improvisado.js"></script>
+<script src="../js/app_profile.js"></script>
+
 </body>
 
 </html>
