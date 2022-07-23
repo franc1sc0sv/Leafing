@@ -15,16 +15,16 @@ if (isset($_SESSION['estatus'])) {
 
             $objconexion = new conection();
             $result = $objconexion->consultarform("SELECT * FROM user_credentials WHERE mail_user = '$email' AND password_user = '$password'");
-            print_r($result);
+            //print_r($result);
 
             if ($result == 1) {
-                $_SESSION['mail'] = $_POST['email'];
-                $result2 = $objconexion->consultar("SELECT rol_id FROM user_credentials WHERE mail_user = '$email' AND password_user = '$password'");
+                $result2 = $objconexion->consultar("SELECT * FROM user_credentials WHERE mail_user = '$email' AND password_user = '$password'");
                 if ($result2[0]['rol_id'] == 1) {
                     header("location:index_admin.php");
                 } else {
                     header("location:index.php");
                     $_SESSION['estatus'] = true;
+                    $_SESSION['dataID'] = $result2[0]['id'];
                 }
             } else {
                 echo "<script> alert('MAIL OR PASSWORD INCORRECT')</script>";

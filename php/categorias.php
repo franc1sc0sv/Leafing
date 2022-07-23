@@ -1,6 +1,7 @@
 <?php 
-include_once 'include.php';
-include_once("header.php"); 
+include_once ('include.php');
+include_once('conexion.php');
+include_once('header.php'); 
 ?>
 <body class="darkmode">
 <section>

@@ -1,10 +1,6 @@
 <?php
-// if (isset($_SESSION['estatus'])) {
-//         print_r($_SESSION['estatus']);
-//         echo " - Logeado";
-// } else {
-//         echo "deslogeado";
-// }
+//echo $_SERVER['SCRIPT_NAME'];
+//print_r($_SESSION);
 ?>
 
 
@@ -22,77 +18,75 @@
                 <meta http-equiv="Last-Modified" content="0">
                 <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
                 <meta http-equiv="Pragma" content="no-cache">
-                <!-- Estilos del headegitr y footer-->
-                <link rel="stylesheet" href="../css/style_footer.css">
 
-                <!-- Estilos del header y footer-->
-                <link rel="stylesheet" href="../css/style_footer.css">
-
-                <link rel="stylesheet" href="../css/style_header.css">
-
-                <!-- Estilos del header y footer-->
-                <link rel="stylesheet" href="../css/style_footer.css">
-
-                <link rel="stylesheet" href="../css/style_header.css">
-
-                <!-- Estilos de index-->
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
+                        <!-- Estilos de index-->
                         <link rel="stylesheet" href="../css/style_index.css">
                 <?php } ?>
-                <!-- Estilos de sobre nosotros-->
-                <link rel="stylesheet" href="../css/about-us_style.css">
-                <!-- Estilos de categorias-->
+
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/about_us.php") { ?>
+                        <!-- Estilos de sobre nosotros-->
+                        <link rel="stylesheet" href="../css/about-us_style.css">
+                <?php } ?>
+
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/categorias.php") { ?>
+                        <!-- Estilos de categorias-->
                         <link rel="stylesheet" href="../css/categorias.css">
                 <?php } ?>
-                <!-- Estilos de comunity-->
-                <link rel="stylesheet" href="../css/comunity.css">
-                <!--Estilos de concientizate-->
-                <link rel="stylesheet" href="../css/conzientizate_styles.css">
-                <!-- Estilos de crear evento-->
-                <link rel="stylesheet" href="../css/crear_evento.css">
-                <!-- Estilos de evento especifico-->
+
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/comunity.php") { ?>
+                        <!-- Estilos de comunity-->
+                        <link rel="stylesheet" href="../css/comunity.css">
+                <?php } ?>
+
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/concientizate.php") { ?>
+                        <!--Estilos de concientizate-->
+                        <link rel="stylesheet" href="../css/conzientizate_styles.css">
+                <?php } ?>
+
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/crear_evento.php") { ?>
+                        <!-- Estilos de crear evento-->
+                        <link rel="stylesheet" href="../css/crear_evento.css">
+                <?php } ?>
+
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/evento-especifico.php") { ?>
+                        <!-- Estilos de evento especifico-->
                         <link rel="stylesheet" href="../css/inscripcion.css">
                 <?php } ?>
-                <!-- Estilos de conzinetizate-->
-                <link rel="stylesheet" href="../css/conzientizate_styles.css">
 
-                <!--Estilos para el perfil - cuenta -->
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php") { ?>
+                        <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
+                        <link rel="stylesheet" href="../css/footer-style-perfil-usuario.css">
+                <?php } else { ?>
+                        <link rel="stylesheet" href="../css/style_header.css">
+                        <link rel="stylesheet" href="../css/style_footer.css">
+                <?php } ?>
+
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php") { ?>
+                        <!--Estilos para el perfil - cuenta -->
                         <link rel="stylesheet" href="../css/cuenta-style.css">
                 <?php } ?>
 
-                <!--Estilos para perfil - contraseña -->
-
-                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php" ) { ?>
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php") { ?>
+                        <!--Estilos para perfil - contraseñas -->
                         <link rel="stylesheet" href="../css/contraseña.css">
-                        <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
-                <?php } else { ?>
-                        <link rel="stylesheet" href="../css/style_header.css">
                 <?php } ?>
 
-                <!--Estilos para perfil - mis eventos -->
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php") { ?>
+                        <!--Estilos para perfil - mis eventos -->
                         <link rel="stylesheet" href="../css/mis_eventos.css">
                 <?php } ?>
 
-                <!--Estilos para perfil - eventos inscritos -->
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php") { ?>
+                        <!--Estilos para perfil - eventos inscritos -->
                         <link rel="stylesheet" href="../css/eventos_inscritos.css">
                 <?php } ?>
 
-                <!--Estilos para perfil - header -->
-                <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
-
-                <!--Estilos para perfil - footer -->
-                <link rel="stylesheet" href="../css/footer-style-perfil-usuario.css">
-                
-
-
-                <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="../css/darkmode.css">
+                <!--Favicon-->
+                <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
+
 
                 <title>Leafing</title>
         </head>
@@ -109,7 +103,7 @@
                                                 <li class="li-menu item-menu-desplegable"><a href="../php/index.php" class="a-header">Inicio</a>
                                                 </li>
                                                 <li class="li-menu item-menu-desplegable"><a href="../php/about_us.php" class="a-header">Nosotros</a></li>
-                                                <li class="li-menu item-menu-desplegable"><a href="#" class="a-header">Ayuda al planeta <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </a>
+                                                <li class="li-menu item-menu-desplegable"><p class="a-header">Ayuda al planeta <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                         <ul class="menu_desplegable">
                                                                 <li class="li_menu-despleagble"><a href="../php/categorias.php" class="a-header a-header-desplegable">Eventos</a></li>
                                                                 <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable">Crea tus eventos</a></li>
@@ -131,10 +125,22 @@
                                                 <a href="./formulario_registro.php" class="text-button"><button class="buttons-header">Registrarse</button></a>
                                                 <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header">Iniciar sesión</button></a>
                                         </div>
-                                <?php } else { ?>
+                                <?php } else {
+                                        $IDuserdata = $_SESSION['dataID'];
+                                        $objconexion = new conection();
+                                        $datauser = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data ='$IDuserdata'");
+                                        //print_r($datauser);
+                                ?>
                                         <div id="buttons-header">
-                                                <a href="./close.php"><button>CLOSE SESSION</button></a>
-                                                <p><?php echo $_SESSION['mail'] ?></p>
+                                                <!-- <a href="./close.php"><button>CLOSE SESSION</button></a> -->
+                                                <ul class="menu-header-perfil">
+                                                        <li class="li-menu_perfil"><img src="../img/iconos/usuario.png" alt="iconouser" height="50px" width="50px">
+                                                        <ul class="menu_desplegable-peril">
+                                                                <li class="li-menu_perfil-desplegable"-><a class="a-header" href="./cuenta.php">Mi perfil</a></li>
+                                                                <li class="li-menu_perfil-desplegable"><a class="a-header" href="./close.php">Cerrar Sesion</a></li>
+                                                        </ul>
+                                                </li>
+                                                </ul>
                                         </div>
 
                                 <?php } ?>

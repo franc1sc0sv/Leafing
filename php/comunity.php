@@ -1,7 +1,7 @@
 <?php
 include_once('include.php');
-include_once('header.php');
 include_once('conexion.php');
+include_once('header.php');
 
 function resaltar_frase($string, $frase, $taga = '<b>', $tagb = '</b>')
 {

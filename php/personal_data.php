@@ -1,19 +1,21 @@
 <?php
 include_once('include.php');
-include_once("conexion.php");
+include_once('conexion.php');
 if ($_POST) {
     $objconexion = new conection();
     $mail = $_SESSION['mail'];
     $password = $_SESSION['password'];
-    $sql1 = "INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `rol_id`) VALUES (NULL, '$mail', '$password', '2')";
-    $objconexion->ejecutar($sql1);
 
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
     $borndate = $_POST['borndate'];
 
-    $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`) VALUES (NULL, '$name', '$lastname', '$borndate')";
+    $sql1 = "INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `rol_id`) VALUES (NULL, '$mail', '$password', '2')";
+    $lastID = $objconexion->ejecutar($sql1);
+    echo $lastID;
+    $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`) VALUES ($lastID, '$name', '$lastname', '$borndate')";
     $objconexion->ejecutar($sql);
+    
     header('location:index.php');
     session_destroy();
 }

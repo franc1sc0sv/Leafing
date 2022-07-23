@@ -1,6 +1,7 @@
 <?php
-include_once 'include.php';
-include_once("conexion.php");
+include_once ('include.php');
+include_once('conexion.php');
+
 
 $objconexion_numbers = new conection();
 $maxIdData = $objconexion_numbers->consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");

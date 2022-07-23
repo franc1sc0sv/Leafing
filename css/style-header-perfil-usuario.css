@@ -11,7 +11,7 @@ header {
 
 #menu {
     display: grid;
-    grid-template-columns: auto 1fr max-content;
+    grid-template-columns: 1.5fr 1fr 1fr;
     padding: 1rem 1rem;
 }
 
@@ -76,9 +76,7 @@ li {
     align-items: center;
 }
 
-#buttons-header {
-    place-self: flex-start;
-}
+
 
 #LEAFING {
     font-size: 33px;
@@ -92,8 +90,9 @@ li {
 #buttons-header {
     display: flex;
     gap: 1rem;
+    width: 90%;
+    justify-content: flex-end
 }
-
 .buttons-header {
     border-radius: 23px;
     padding: 10px;
@@ -128,6 +127,42 @@ li {
 .iniciar-sesion-burger,
 .registro-sesion-burger {
     display: none;
+}
+
+.menu-header-perfil {
+    height: 100%;
+    display: flex;
+    transition: transform .5s;
+    gap: 2.5vw;
+    align-items: center;
+}
+
+
+.li-menu_perfil {
+    height: 100%;
+    position: relative;
+
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.li-menu_perfil:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.li-menu_perfil-desplegable>a {
+    padding: 0.8rem;
+    justify-content: flex-end;
+}
+
+.menu_desplegable-peril {
+    clip-path: var(--clip);
+    transition: clip-path .3s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+
 }
 
 @media screen and (max-width: 900px) {

@@ -4,11 +4,11 @@
 ?>
 
 <footer>
-    <div class="agradecimientos">
+    <!-- <div class="agradecimientos">
         <p>Imagenes gracias a <a href="https://www.freepik.es/home" target="_blank">freepik</a></p>
         <a href="https://www.freepik.es/home" target="_blank"><img src="../img/logo/freepik-logo.png" alt="freepik-logo" class="img-freepik"></a>
 
-    </div>
+    </div> -->
     <div class="container">
         <div class="image-footer">
             <img src="../img/logo/Logo_Negativo.png" alt="Logo-footer" id="img-footer">
