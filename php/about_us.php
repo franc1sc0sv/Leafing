@@ -10,7 +10,7 @@ include_once("header.php");
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros">
-                    <img src="../img/imagenes/sobre-nosotros_img.svg" alt="menu_arrow">
+                    <img src="../img/imagenes/sobre-nosotros_img.png" alt="menu_arrow">
                 </div>
                 <div class="text_sobre-nosotros">
                     <p>SOBRE NOSOTROS</p>
@@ -29,7 +29,7 @@ include_once("header.php");
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros our-mision">
-                    <img src="../img/imagenes/our-mision_img.svg" alt="img-nuestra_mision">
+                    <img src="../img/imagenes/our-mision_img.png" alt="img-nuestra_mision">
                 </div>
                 <div class="text_sobre-nosotros text-our-mision">
                     <h1>Nuestra misión</h1>
@@ -46,7 +46,7 @@ include_once("header.php");
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros">
-                    <img src="../img/imagenes/our-vision_img.svg" alt="img-nuestra_vision">
+                    <img src="../img/imagenes/our-vision_img.png" alt="img-nuestra_vision">
                 </div>
                 <div class="text_sobre-nosotros text-our-vision">
                     <h1>Nuestra visión</h1>

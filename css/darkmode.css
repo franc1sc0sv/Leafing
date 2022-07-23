@@ -1,14 +1,42 @@
-#btnMode{
-   font-size: 1.5rem;
-   cursor: pointer;
+#btnMode {
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.darkmode{
+
+.darkmode {
     background-color: #0B0D17;
-    color: #EDEDED;
 }
-#btnMode.on{
+
+#btnMode.on {
     color: orange;
 }
-.font-mode{
+
+/* .font-mode {
     color: #F4F0EE;
+}
+
+.darkmode .sobre-nosotros>div>p,
+.darkmode .title-page>h1,
+.darkmode .intro__information>p,
+.darkmode .container-info-page>h2,
+.darkmode .container-info-page h3,
+.darkmode .info__consejos>p,
+.darkmode .end__side1>p,
+.darkmode .end__side2>p {
+    color: #F4F0EE;
+} */
+
+body.darkmode * {
+    color: #F4F0EE!important;
+}
+
+body.darkmode #menu a{
+    color: #A8FC80!important;
+}
+body.darkmode #menu a:hover{
+    color: #F4F0EE!important;
+}
+
+body.darkmode .preguntas_eventos-eventos>p>a:hover{
+    color: #4F9466!important;
 }

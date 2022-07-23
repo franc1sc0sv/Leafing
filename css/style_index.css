@@ -19,7 +19,7 @@ a {
 }
 
 header {
-    background: url(../img/imagenes/bg-3_index.svg) no-repeat center center;
+    background: url(../img/imagenes/salvacion.png) no-repeat center center;
     background-size: cover;
 
     width: 100%;
@@ -415,43 +415,45 @@ header {
     }
 }
 
-/*Slider evnetos recomendados*/
+/*Slider eventos recomendados*/
 .container_container {
     overflow: hidden;
+    max-width: 80rem;
+
 }
 
+.slider-center{
+    display: flex;
+    justify-content: center;
+}
+
+
 .container-slider {
-    width: 500%;
     height: 70vh;
-
-    margin-bottom: 5%;
-    /* margin-left: 2.9vw; */
-
     background-color: #fff;
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-
     transition: all .5s ease;
     transform: translateX(-0%);
+    width: 500%;
 
 }
 
 .container_slider_puntos {
     display: flex;
-    position: absolute;
-    justify-self: center;
+    justify-content: center;
     align-self: end;
-    margin-bottom: 10px;
     gap: 7px;
+    padding: 2rem 0;
 }
 
 .slider-punto {
     cursor: pointer;
     padding: 8px;
     margin: 4px;
+    background: #48484879;
     border-radius: 50%;
 }
 
@@ -459,16 +461,11 @@ header {
     background: #484848;
 }
 
-.non-active {
-    background: #48484879;
-}
-
 .slider_screen {
-    width: 100vw;
-    height: 70vh;
+
+width: calc(100%/5);
     display: flex;
     justify-content: center;
-    /* margin-left: 2.9vw; */
     align-items: center;
 }
 
@@ -497,7 +494,6 @@ header {
     height: 70vh;
     box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
     background-size: cover
-
 }
 
 .i_Primero {
@@ -607,6 +603,7 @@ header {
     transition: all .5s ease-in-out;
     transform: scale(1.02);
 }
+
 /* 
 .slider_article {
     margin-bottom: 10rem;
