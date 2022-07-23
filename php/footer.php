@@ -45,6 +45,8 @@
 <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_burger_improvisado.js"></script>
+<script src="../js/app_profile.js"></script>
+
 </body>
 
 </html>

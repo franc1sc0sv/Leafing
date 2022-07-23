@@ -13,14 +13,9 @@ body {
     font-family: 'Montserrat';
 }
 
-header {
-    margin-bottom: 5%;
-}
-
 footer {
     margin-top: 5%;
 }
-
 
 .titulos-generales {
     display: grid;

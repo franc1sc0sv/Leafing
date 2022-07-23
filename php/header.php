@@ -22,6 +22,13 @@
                 <meta http-equiv="Last-Modified" content="0">
                 <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
                 <meta http-equiv="Pragma" content="no-cache">
+                <!-- Estilos del headegitr y footer-->
+                <link rel="stylesheet" href="../css/style_footer.css">
+
+                <!-- Estilos del header y footer-->
+                <link rel="stylesheet" href="../css/style_footer.css">
+
+                <link rel="stylesheet" href="../css/style_header.css">
 
                 <!-- Estilos del header y footer-->
                 <link rel="stylesheet" href="../css/style_footer.css">
@@ -50,6 +57,38 @@
                 <?php } ?>
                 <!-- Estilos de conzinetizate-->
                 <link rel="stylesheet" href="../css/conzientizate_styles.css">
+
+                <!--Estilos para el perfil - cuenta -->
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php") { ?>
+                        <link rel="stylesheet" href="../css/cuenta-style.css">
+                <?php } ?>
+
+                <!--Estilos para perfil - contraseña -->
+
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php" ) { ?>
+                        <link rel="stylesheet" href="../css/contraseña.css">
+                        <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
+                <?php } else { ?>
+                        <link rel="stylesheet" href="../css/style_header.css">
+                <?php } ?>
+
+                <!--Estilos para perfil - mis eventos -->
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php") { ?>
+                        <link rel="stylesheet" href="../css/mis_eventos.css">
+                <?php } ?>
+
+                <!--Estilos para perfil - eventos inscritos -->
+                <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php") { ?>
+                        <link rel="stylesheet" href="../css/eventos_inscritos.css">
+                <?php } ?>
+
+                <!--Estilos para perfil - header -->
+                <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
+
+                <!--Estilos para perfil - footer -->
+                <link rel="stylesheet" href="../css/footer-style-perfil-usuario.css">
+                
+
 
                 <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
                 <!--Aqui inicia el modo oscuro-->
