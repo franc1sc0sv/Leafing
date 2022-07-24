@@ -1,6 +1,7 @@
 <?php
 include_once('include.php');
 include_once('conexion.php');
+include_once('eventospaginacion.php');
 include_once('header.php');
 
 function resaltar_frase($string, $frase, $taga = '<b>', $tagb = '</b>')
@@ -113,29 +114,13 @@ if (!isset($_POST['date_filtro'])) {
                                     if ($_POST["orden"] == '3') {
                                         echo 'Lugar';
                                     }
-                                    // if ($_POST["orden"] == '4') {
-                                    //     echo 'Ordenar por precio de menor a mayor';
-                                    // }
-                                    // if ($_POST["orden"] == '5') {
-                                    //     echo 'Ordenar por precio de mayor a menor';
-                                    // }
-                                    // if ($_POST["orden"] == '6') {
-                                    //     echo 'Ordenar por fecha de reciente';
-                                    // }
-                                    // if ($_POST["orden"] == '7') {
-                                    //     echo 'Ordenar por fecha de antigua';
-                                    // }
                                     ?>
                                 </option>
                             <?php } ?>
                             <option value=""></option>
                             <option value="1">Categorias ACS</option>
                             <option value="2">Nombre ASC</option>
-                            <option value="3">Lugar ACS</option>
-                            <!-- <option value="4">Ordenar por precio de menor a mayor</option>
-                            <option value="5">Ordenar por precio de mayor a menor</option>
-                            <option value="6">Ordenar por fecha de reciente</option>
-                            <option value="7">Ordenar por fecha de antigua</option> -->
+                            <option value="3">Lugar ACS</option>   
                         </select>
                         <input type="submit" value="ENVIAR">
                     </div>
@@ -148,11 +133,11 @@ if (!isset($_POST['date_filtro'])) {
         $resultsearch = explode(" ", $_POST['busca']);
 
         if ($_POST['busca'] == '' && $_POST['lugar'] == '' && $_POST['categorias'] == '' && $_POST['date_filtro'] == '') {
-            $sql = "SELECT * FROM `events`";
+            $sql = "SELECT * FROM `events` WHERE id_state_events  = 1";
         } else {
-            $sql = "SELECT * FROM `events`";
+            $sql = "SELECT * FROM `events` WHERE id_state_events  = 1";
             if ($_POST["busca"] != '') {
-                $sql .= " WHERE name_event LIKE LOWER('%" . $resultsearch[0] . "%')";
+                $sql .= " AND name_event LIKE LOWER('%" . $resultsearch[0] . "%')";
 
                 for ($i = 1; $i < count($resultsearch); $i++) {
                     if (!empty($resultsearch[$i])) {
@@ -188,24 +173,27 @@ if (!isset($_POST['date_filtro'])) {
             }
 
         }
-        echo $sql . "<br>";
         $datos_eventos = new conection();
         $events = $datos_eventos->consultar($sql);
-
         $numeroEvents =  count($events);
-        for ($i = 0; $i < $numeroEvents; $i++) {
-            if ($events[$i]['id_state_events'] != 1) {
-                unset($events[$i]);
-            }
-        }
+
+        $objconexionpaginas = new Paginacion(6, $numeroEvents);
+
+        $limits = $objconexionpaginas -> limits();
+        $indece = $limits['indice'];
+        $resultadosperPage = $limits['resultadosperPage'];
+        $sql .= " LIMIT $indece, $resultadosperPage";
+
+        $ALLevents = $datos_eventos->consultar($sql);
+
         ?>
 
         <div class="xDD">
             <?php
 
-            $numeroEventss =  count($events);
+            $numeroEvents =  count($events);
             if ($numeroEvents > 0 and $_POST['busca'] != '') {
-                echo "Resultados encontrados:<b> " . $numeroEventss . "</b>";
+                echo "Resultados encontrados:<b> " . $numeroEvents . "</b>";
             }
 
             ?>
@@ -215,41 +203,12 @@ if (!isset($_POST['date_filtro'])) {
     </div>
 
     <div class="contenedor">
-        <?php foreach ($events as $event) { ?>
-            <div class="card">
-                <div>
-                    <img src="../img/imagenes/limpieza1.png" class="img">
-                </div>
-                <div class="cardtext">
-                    <h1><?php echo resaltar_frase($event['name_event'], $_POST['busca']) ?></h1>
-                    <p><?php echo $event['description_event']
-                        ?></p>
-                    <a href="./evento-especifico.php" class="buttonxd">
-                        <p>
-                            Inscribirse
-                        </p>
-                        <p>
-                            <img src="../img/imagenes/menor2.svg">
-                        </p>
-                    </a>
-                </div>
-            </div>
-        <?php } ?>
+        <?php $objconexionpaginas->showevents($ALLevents) ?>
+    </div>
+    </div>
+    <div class="pagination">
+    <?php $objconexionpaginas->showpages() ?>
 
-    </div>
-    </div>
-    <div class="xD223">
-        <ul class="pagination">
-            <li><a href="#">«</a></li>
-            <li><a class="active" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">»</a></li>
-        </ul>
     </div>
 </body>
 

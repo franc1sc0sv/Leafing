@@ -246,7 +246,7 @@ ul.pagination li a:hover:not(.active) {
     background-color: #ddd;
 }
 
-.xD223 {
+ul.pagination {
     display: flex;
     justify-content: center;
     margin: 50px 0;
