@@ -6,7 +6,7 @@
         <h1><?php echo resaltar_frase($event['name_event'], $_POST['busca']) ?></h1>
         <p><?php echo $event['description_event']
             ?></p>
-        <a href="./evento-especifico.php" class="buttonxd">
+        <a href="./evento-especifico.php?estiben=<?php echo $event['id_events']?>" class="buttonxd" target="_blank">
             <p>
                 Inscribirse
             </p>

@@ -1,51 +1,61 @@
-<?php include_once 'include.php'; ?>
-<?php
-if (!isset($_SESSION['estatus'])) {
-    header('location:formulario_inicio-sesion.php');
-} else { ?>
-    <?php include_once("header.php"); ?>
-    
-    <body class="darkmode">
-    
-    <h2 class="h2-start">Recolección de basura</h2>
+<?php include_once 'include.php';
+include_once('conexion.php');
+include_once('header.php');
+
+$error = false;
+//estiben = id del evento
+if (isset($_GET['estiben'])) {
+    $idevent = $_GET['estiben'];
+    if (is_numeric($idevent)) {
+        $objconexion = new conection;
+        $eventsmaxid = $objconexion->consultar("SELECT MAX(id_events) FROM `events` WHERE id_state_events = 1");
+        if ($idevent >= 1 && $idevent <= $eventsmaxid[0][0]) {
+            $event = $objconexion->consultar("SELECT * FROM `events` WHERE id_events = $idevent");
+            $idcreator = $event[0]['id_user_data'];
+            $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
+        } else {
+            echo "El evento no existe";
+            $error = true;
+        }
+    } else {
+        echo "WTF un error validado";
+        $error = true;
+    }
+}
+
+
+if (!$error) { ?>
+
+    <h2 class="h2-start"><?php echo $event[0]['name_event'] ?></h2>
     <div class="general">
         <div class="container-text1">
-            <img src="../img/imagenes/inscriccion.png">
+            <img src="../img/imagenes/inscriccion.png"> <!-- XD-->
             <div class="levicfp">
                 <div class="container-img2">
                     <div class="container-perfil">
-    
+
                         <img src="../img/imagenes/inscriccion2.png">
-                        <p id="profile-name">Bessie Cooper</p>
+                        <p id="profile-name"><?php echo $creatrinfo[0]['name'] . " " . $creatrinfo[0]['lastname'] ?></p>
                     </div>
                     <div class="container-descripcion">
-    
+
                         <p class="bold">Descripción</p><br>
-                        <p>Dasilva is a 30year old Visual Recording artist that works approximately 12-15hours a day as
-                            a
-                            Freelancer for
-                            Contract Jobs, he seeks to expand his reach and get more customers easily without having to
-                            leave
-                            his
-                            Studio, seeking for an App with easy and affordable Advertisement for his services.</p>
+                        <p><?php echo $event[0]['description_event'] ?></p>
                     </div>
                 </div>
                 <div class="container-text2">
                     <p class="bold">Requisitos para asistir</p>
-                    <ul>
-                        <li>Guantes</li>
-                        <li>Sombrero</li>
-                        <li>Escobas</li>
-                    </ul>
+                    <p><?php echo $event[0]['requirements_event'] ?></p>
+
                     <p class="bold">Lugar y fecha</p><br>
-                    <p>Calle Puentezuelas, 55, Granada, España</p>
-                    <p>25 de mayo - 8:30 a.m</p>
+                    <p><?php echo $event[0]['place_event'] ?></p>
+                    <p><?php echo $event[0]['date_event'] ?></p>
                 </div>
             </div>
         </div>
     </div>
     <!--Parte II-->
-    <div class="nuevoinicio">
+    <!-- <div class="nuevoinicio">
         <div class="iniciodelinicio">
             <div class="iniciocfp">
                 <div class="caminocfp">
@@ -73,9 +83,8 @@ if (!isset($_SESSION['estatus'])) {
             </div>
             </form>
         </div>
-    </div>
+    </div> -->
     </body>
-    
-    <?php include_once("footer.php"); ?>
-
 <?php } ?>
+
+<?php include_once("footer.php"); ?>
