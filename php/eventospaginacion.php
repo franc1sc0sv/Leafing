@@ -44,7 +44,7 @@ class Paginacion extends conection
                     $this->error = -true;
                 }
             } else {
-                echo "WTF un error valdado";
+                echo "WTF un error validado";
                 $this->error = -true;
             }
         }
