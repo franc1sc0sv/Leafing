@@ -15,7 +15,7 @@ if ($_POST) {
     echo $lastID;
     $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`) VALUES ($lastID, '$name', '$lastname', '$borndate')";
     $objconexion->ejecutar($sql);
-    
+
     header('location:index.php');
     session_destroy();
 }
@@ -23,6 +23,83 @@ if ($_POST) {
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/personal_data.css" rel="stylesheet" type="text/css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div class="haventsignup">
+
+            </div>
+            <div class="container-form">
+                <div class="form">
+                    <div class="littleX">
+
+                    </div>
+                    <div class="title">
+                        <p class="leafing">
+                            LEAFING
+                        </p>
+                    </div>
+                    <div class="logo">
+                    </div>
+
+                    <!-- <div class="containerinfo1"> -->
+                    <div class="createaccount">
+                        <p>Completa tu información</p>
+                    </div>
+                    <div class="inputs">
+                        <form action="personal_data.php" method="post">
+
+                            <div class="yeprow">
+                                <div class="nonrow">
+                                    <label for="name">Nombre</label><br>
+                                    <input type="text" name="name" id="name"><br>
+                                </div>
+
+                                <div class="nonrow">
+                                    <label for="lastname">Apellido</label><br>
+                                    <input type="text" name="lastname" id="lastname"><br>
+                                </div>
+                            </div>
+
+                            <label for="user">Nombre de usuario</label><br>
+                            <input type="text" name="user" id="user"><br>
+
+                            <div class="yeprow">
+                                <div class="nonrow">
+                                    <label for="borndate">Fecha de nacimiento</label><br>
+                                    <input type="date" name="borndate" id="borndate"><br>
+                                </div>
+
+                                <div class="nonrow">
+                                    <label for="gender">Género</label><br>
+                                    <input type="text" name="gender" id="gender" id="borndate"><br>
+                                </div>
+                            </div>
+                            <div class="send">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,4 +121,4 @@ if ($_POST) {
     </form>
 </body>
 
-</html>
+</html> -->

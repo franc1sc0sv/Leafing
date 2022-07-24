@@ -23,13 +23,86 @@ if ($_POST) {
     }
 }
 
-
-
 ?>
 
-<?php include_once("header.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container_general_fomrms">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/register.css" rel="stylesheet" type="text/css">
+    <script src="../js/register_slider.js"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div class="alreadysignup">
+
+            </div>
+            <div class="container-form">
+                <div class="form">
+                    <div class="littleX">
+
+                    </div>
+                    <div class="title">
+                        <p class="leafing">
+                            LEAFING
+                        </p>
+                    </div>
+                    <div class="logo">
+                    </div>
+                    <div class="slide">
+                        <div class="containerinfo1 showcode">
+                            <div class="emailpass">
+                                <div class="createaccount">
+                                    <p>Crea una cuenta</p>
+                                </div>
+                                <div class="inputs">
+                                    <form action="formulario_registro.php" method="post">
+                                        <label for="email">Email</label><br>
+                                        <input type="email" class="mitexto" id="email" name="email"><br>
+                                        <label for="password">Constraseña</label><br>
+                                        <input type="password" class="mitexto" id="password" name="password">
+                                    </form>
+                                </div>
+                                <div class="next">
+                                    <button class="nexto">Siguiente</button>
+                                </div>
+                            </div>
+                            <div class="code">
+                                <div class="createaccount">
+                                    <p>Comprobar el correo electrónico</p>
+                                </div>
+                                <div class="textcode">
+                                    <p>Para verificar tu correo electrónico
+                                        te hemos enviado un código de confirmación a correoejemplo@gmail.com.
+                                    </p>
+                                </div>
+                                <div class="inputs">
+                                    <input type="text" class="mitexto">
+
+                                    <div class="sendagain">
+                                        <p>Enviar de nuevo el código de nuevo</p>
+                                    </div>
+                                </div>
+                                <div class="next">
+                                    <button>Siguiente</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <div class="container_general_fomrms">
     <h1>Crea tu cuenta</h1>
 
     <div class="container_forms">
@@ -43,6 +116,4 @@ if ($_POST) {
 </div>
 
 </div>
-</div>
-
-<?php include_once("./footer.php") ?>
+</div> -->

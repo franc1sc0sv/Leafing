@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter&family=Montserrat:wght@200;400&family=Noto+Sans&family=Poppins&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/imagenes/wavesbg.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-form {
+    background-color: #fff;
+    width: 500px;
+    height: 680px;
+    border-radius: 10px;
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.title {
+    padding-top: 2.5rem;
+    padding-bottom: .8rem;
+}
+
+.leafing {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.logo {
+    background: url(../img/iconos/leaf.svg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 50px;
+}
+
+.createaccount {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.createaccount p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.inputs label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13.6364px;
+    line-height: 20px;
+}
+
+.inputs input {
+    font-family: 'Poppins';
+    background: #F3F3F4;
+    border-radius: 9.62567px;
+    border: none;
+    width: 100%;
+    height: 44.92px;
+    margin-bottom: 2rem;
+    padding-left: 17px;
+    padding-right: 20px;
+}
+
+.inputs input:hover {
+    border: 3px solid rgba(77, 135, 83, 0.2);
+    background: #fff;
+    transition: all ease-out;
+}
+
+.inputs input:focus {
+    border: 3px solid rgba(77, 135, 83, 0.2);
+    outline: 1px solid #8db191;
+    background: #fff;
+}
+
+.yeprow {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.send {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input[type="submit"] {
+    background: #ABD0B2;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin-top: 1rem;
+
+    font-family: 'Poppins';
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.inputs input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgba(171, 208, 178, 0.5);
+}
+
+
+@media screen and (max-width: 604px) {
+    .container-form {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .yeprow {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .inputs input {
+        margin-bottom: 2rem;
+    }
+}
