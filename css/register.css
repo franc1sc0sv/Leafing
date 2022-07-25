@@ -14,6 +14,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.alreadysignup {
+    display: flex;
+    align-self: flex-end;
+    color: #fff;
+    gap: 1rem;
+    position: absolute;
+    top: 35px;
+    right: 25px;
+}
+
+.question {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16.2474px;
+    line-height: 27px;
+    align-self: center;
+}
+
+.login {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18.0526px;
+    line-height: 27px;
+    border: #fff solid 1px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.login:hover {
+    transform: scale(1.02);
+    transition: all .3s ease-in-out;
 }
 
 .container-form {
@@ -224,6 +259,8 @@
 .next button:hover {
     cursor: pointer;
     background: rgba(171, 208, 178, 0.5);
+    transform: scale(1.02);
+    transition: all .5s ease-in-out;
 }
 
 @media screen and (max-width: 604px) {
