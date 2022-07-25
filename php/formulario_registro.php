@@ -41,7 +41,7 @@ if ($_POST) {
     <div class="container">
         <div class="alreadysignup">
             <p class="question">Ya tienes una cuenta?</p>
-            <p class="login">Inicia sesión</p>
+            <a href="../php/formulario_inicio-sesion.php" class="login">Inicia sesión</a>
         </div>
         <div class="container2">
 

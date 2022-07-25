@@ -37,7 +37,7 @@ if ($_POST) {
     <div class="container">
         <div class="haventsignup">
             <p class="question">Ya tienes una cuenta?</p>
-            <p class="login">Regístrate</p>
+            <p class="login">Inicia sesión</p>
         </div>
         <div class="container2">
             <div class="container-form">
