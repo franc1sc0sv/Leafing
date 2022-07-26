@@ -39,10 +39,12 @@ if ($_POST) {
 
 <body>
     <div class="container">
+        <div class="alreadysignup">
+            <p class="question">Ya tienes una cuenta?</p>
+            <a href="../php/formulario_inicio-sesion.php" class="login">Inicia sesión</a>
+        </div>
         <div class="container2">
-            <div class="alreadysignup">
 
-            </div>
             <div class="container-form">
                 <div class="form">
                     <div class="littleX">
@@ -56,7 +58,7 @@ if ($_POST) {
                     <div class="logo">
                     </div>
                     <div class="slide">
-                        <div class="containerinfo1 showcode">
+                        <div class="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
                                     <p>Crea una cuenta</p>

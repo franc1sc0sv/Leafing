@@ -34,9 +34,70 @@ if (isset($_SESSION['estatus'])) {
 
 
     ?>
-    <?php include_once("./header.php") ?>
 
-    <div class="formulario_container-2">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <title>LogIn</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="alreadysignup">
+            <p class="question">Aún no tienes una cuenta?</p>
+            <a href="../php/formulario_registro.php" class="login">Regístrate</a>
+        </div>
+        <div class="container2">
+
+            <div class="container-form">
+                <div class="form">
+                    <div class="littleX">
+
+                    </div>
+                    <div class="title">
+                        <p class="leafing">
+                            LEAFING
+                        </p>
+                    </div>
+                    <div class="logo">
+                    </div>
+                    <div class="slide">
+                        <div class="containerinfo1">
+                            <div class="emailpass">
+                                <div class="createaccount">
+                                    <p>Inicia sesión</p>
+                                </div>
+                                <div class="inputs">
+                                    <form action="formulario_inicio-sesion.php" method="post">
+                                        <label for="email">Correo electrónico</label><br>
+                                        <input type="email" class="mitexto" id="email" name="email"><br>
+                                        <label for="password">Constraseña</label><br>
+                                        <input type="password" class="mitexto" id="password" name="password">
+                                        <div class="send">
+                                            <input type="submit" name="submit" value="Inicia sesión" id="submit-registrer">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- <div class="next">
+                                    <button class="nexto">Siguiente</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+    <!-- <div class="formulario_container-2">
         <form action="formulario_inicio-sesion.php" method="post" class="formulario_registro">
             <h1>Iniciar sesión</h1>
             <input type="email" placeholder="Correo electrónico" name="email"> <br>
@@ -48,8 +109,7 @@ if (isset($_SESSION['estatus'])) {
 
     </div>
     </div>
-    </div>
+    </div> -->
 
 
-    <?php include_once("./footer.php") ?>
 <?php } ?>
