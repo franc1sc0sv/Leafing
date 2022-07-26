@@ -4,6 +4,15 @@ include_once('conexion.php');
 include_once('eventospaginacion.php');
 include_once('header.php');
 
+$actualpage = 1;
+
+if (isset($_GET['pagination'])) {
+    //echo $_GET['pagination'];
+    $actualpage = $_GET['pagination'];
+}
+
+
+
 function resaltar_frase($string, $frase, $taga = '<b>', $tagb = '</b>')
 {
     return ($string !== '' && $frase !== '')
@@ -11,21 +20,21 @@ function resaltar_frase($string, $frase, $taga = '<b>', $tagb = '</b>')
         : $string;
 }
 
-if (!isset($_POST['busca'])) {
-    $_POST['busca'] = '';
+if (!isset($_GET['busca'])) {
+    $_GET['busca'] = '';
 }
-if (!isset($_POST["orden"])) {
-    $_POST["orden"] = '';
+if (!isset($_GET["orden"])) {
+    $_GET["orden"] = '';
 }
-if (!isset($_POST["lugar"])) {
-    $_POST["lugar"] = '';
+if (!isset($_GET["lugar"])) {
+    $_GET["lugar"] = '';
 }
-if (!isset($_POST["categorias"])) {
-    $_POST["categorias"] = '';
+if (!isset($_GET["categorias"])) {
+    $_GET["categorias"] = '';
 }
 
-if (!isset($_POST['date_filtro'])) {
-    $_POST['date_filtro'] = '';
+if (!isset($_GET['date_filtro'])) {
+    $_GET['date_filtro'] = '';
 }
 
 ?>
@@ -40,12 +49,12 @@ if (!isset($_POST['date_filtro'])) {
                 <hr class="hr">
             </div>
         </div>
-        <form action="comunity.php" method="post">
+        <form action="comunity.php" method="get">
             <div class="containerFiltros">
                 <div class="first-text">
                     <h1>Buscador</h1>
                     <p>Evento a buscar</p>
-                    <input type="search" placeholder="Busca tu evento" id="Buscador" name="busca" value="<?php echo $_POST['busca'] ?>" />
+                    <input type="search" placeholder="Busca tu evento" id="Buscador" name="busca" value="<?php echo $_GET['busca'] ?>" />
                 </div>
                 <div class="filtros">
                     <h1>Filtros</h1>
@@ -53,8 +62,8 @@ if (!isset($_POST['date_filtro'])) {
                         <div>
                             <p>Categorias: </p>
                             <select name="categorias" class="Categorias_filtros" id="Categorias">
-                                <?php if ($_POST["categorias"] != '') { ?>
-                                    <option value="<?php echo $_POST["categorias"]; ?>"><?php echo $_POST["categorias"]; ?></option>
+                                <?php if ($_GET["categorias"] != '') { ?>
+                                    <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
                                 <?php } ?>
                                 <option value="">Todas</option>
 
@@ -70,13 +79,13 @@ if (!isset($_POST['date_filtro'])) {
                         </div>
                         <div>
                             <p>Fecha limite de inscripcion: </p>
-                            <input type="date" name="date_filtro" value="<?php echo $_POST["date_filtro"]; ?>">
+                            <input type="date" name="date_filtro" value="<?php echo $_GET["date_filtro"]; ?>">
                         </div>
                         <div>
                             <p>Lugar: </p>
                             <select name="lugar" class="Lugar_filtros" id="Lugar">
-                                <?php if ($_POST["lugar"] != '') { ?>
-                                    <option value="<?php echo $_POST["lugar"]; ?>"><?php echo $_POST["lugar"]; ?> </option>
+                                <?php if ($_GET["lugar"] != '') { ?>
+                                    <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
                                 <?php } ?>
                                 <option value="">Todos</option>
                                 <option value="Ahuachapán">Ahuachapán</option>
@@ -102,16 +111,16 @@ if (!isset($_POST['date_filtro'])) {
                     <p>Selecciona el orden: </p>
                     <div>
                         <select id="orden" name="orden">
-                            <?php if ($_POST["orden"] != '') { ?>
-                                <option value="<?php echo $_POST["orden"]; ?>">
+                            <?php if ($_GET["orden"] != '') { ?>
+                                <option value="<?php echo $_GET["orden"]; ?>">
                                     <?php
-                                    if ($_POST["orden"] == '1') {
+                                    if ($_GET["orden"] == '1') {
                                         echo 'Categorias';
                                     }
-                                    if ($_POST["orden"] == '2') {
+                                    if ($_GET["orden"] == '2') {
                                         echo 'Nombre';
                                     }
-                                    if ($_POST["orden"] == '3') {
+                                    if ($_GET["orden"] == '3') {
                                         echo 'Lugar';
                                     }
                                     ?>
@@ -120,23 +129,23 @@ if (!isset($_POST['date_filtro'])) {
                             <option value=""></option>
                             <option value="1">Categorias ACS</option>
                             <option value="2">Nombre ASC</option>
-                            <option value="3">Lugar ACS</option>   
+                            <option value="3">Lugar ACS</option>
                         </select>
                         <input type="submit" value="ENVIAR">
                     </div>
                 </div>
         </form>
         <?php
-        if ($_POST['busca'] == '') {
-            $_POST['busca'] = ' ';
+        if ($_GET['busca'] == '') {
+            $_GET['busca'] = ' ';
         }
-        $resultsearch = explode(" ", $_POST['busca']);
+        $resultsearch = explode(" ", $_GET['busca']);
 
-        if ($_POST['busca'] == '' && $_POST['lugar'] == '' && $_POST['categorias'] == '' && $_POST['date_filtro'] == '') {
+        if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' && $_GET['date_filtro'] == '') {
             $sql = "SELECT * FROM `events` WHERE id_state_events  = 1";
         } else {
             $sql = "SELECT * FROM `events` WHERE id_state_events  = 1";
-            if ($_POST["busca"] != '') {
+            if ($_GET["busca"] != '') {
                 $sql .= " AND name_event LIKE LOWER('%" . $resultsearch[0] . "%')";
 
                 for ($i = 1; $i < count($resultsearch); $i++) {
@@ -146,44 +155,43 @@ if (!isset($_POST['date_filtro'])) {
                 }
             }
 
-            if ($_POST['categorias'] != '') {
-                $sql .= " AND id_categories_events = '" . $_POST['categorias'] . "' ";
+            if ($_GET['categorias'] != '') {
+                $sql .= " AND id_categories_events = '" . $_GET['categorias'] . "' ";
             }
 
-            if ($_POST['date_filtro'] != '') {
-                $originalDate = $_POST['date_filtro'];
+            if ($_GET['date_filtro'] != '') {
+                $originalDate = $_GET['date_filtro'];
                 $newDate = date("Y-m-a", strtotime($originalDate));
                 $sql .= " AND date_event >= '" . $originalDate . "' ";
             }
 
-            if ($_POST['lugar'] != '') {
-                $sql .= " AND place_event = '" . $_POST['lugar'] . "' ";
+            if ($_GET['lugar'] != '') {
+                $sql .= " AND place_event = '" . $_GET['lugar'] . "' ";
             }
 
-            if ($_POST["orden"] == '1') {
+            if ($_GET["orden"] == '1') {
                 $sql .= " ORDER BY id_categories_events ASC ";
             }
 
-            if ($_POST["orden"] == '2') {
+            if ($_GET["orden"] == '2') {
                 $sql .= " ORDER BY name_event ASC ";
             }
 
-            if ($_POST["orden"] == '3') {
+            if ($_GET["orden"] == '3') {
                 $sql .= " ORDER BY place_event ASC ";
             }
-
         }
         $datos_eventos = new conection();
         $events = $datos_eventos->consultar($sql);
         $numeroEvents =  count($events);
 
-        $objconexionpaginas = new Paginacion(6, $numeroEvents);
+        $objconexionpaginas = new Paginacion(4, $numeroEvents, $actualpage);
 
-        $limits = $objconexionpaginas -> limits();
+        $limits = $objconexionpaginas->limits();
         $indece = $limits['indice'];
         $resultadosperPage = $limits['resultadosperPage'];
         $sql .= " LIMIT $indece, $resultadosperPage";
-
+        
         $ALLevents = $datos_eventos->consultar($sql);
 
         ?>
@@ -192,7 +200,7 @@ if (!isset($_POST['date_filtro'])) {
             <?php
 
             $numeroEvents =  count($events);
-            if ($numeroEvents > 0 and $_POST['busca'] != '') {
+            if ($numeroEvents > 0 and $_GET['busca'] != '') {
                 echo "Resultados encontrados:<b> " . $numeroEvents . "</b>";
             }
 
@@ -207,9 +215,13 @@ if (!isset($_POST['date_filtro'])) {
     </div>
     </div>
     <div class="pagination">
-    <?php $objconexionpaginas->showpages() ?>
+        <form action="comunity.php" method="post">
+            <?php $objconexionpaginas->showpages() ?>
+        </form>
 
     </div>
 </body>
 
-<?php include_once("footer.php"); ?>
+<?php include_once("footer.php"); 
+
+?>

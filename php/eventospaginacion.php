@@ -30,7 +30,6 @@ class Paginacion extends conection
 
     function CalcPages()
     {
-        //$this->calcpages =  $this->consultar("SELECT COUNT(*) AS totalevents FROM events WHERE id_state_events = 1");
         $this->TotalPage = ceil($this->calcpages / $this->ResultsPerPage);
 
         if (isset($_GET['page'])) {
@@ -75,6 +74,27 @@ class Paginacion extends conection
     function showpages()
     {
         $actual = '';
+        $si = false;
+        $url = $_SERVER["REQUEST_URI"];
+        $filtrosget = explode('?', $url);
+
+
+        if (count($filtrosget) == 2) {
+            $xD = array(0 => $filtrosget[1]);
+            unset($filtrosget[1]);
+            $filtrosget = array_replace($filtrosget, $xD);
+            $filtrosget = explode('&page=', $filtrosget[0]);
+            if (count($filtrosget) == 2) {
+                unset($filtrosget[1]);
+            } else {
+                $filtrosget = explode('page=', $filtrosget[0]);
+                if (count($filtrosget) == 2) {
+                    $filtrosget[0] = "/LEAFING/Crea-J-2022/php/comunity.php";
+                    unset($filtrosget[1]);
+                }
+            }
+        }
+
         echo '<ul class="pagination">';
         for ($i = 0; $i < $this->TotalPage; $i++) {
             if (($i + 1) == $this->ActualPage) {
@@ -82,11 +102,12 @@ class Paginacion extends conection
             } else {
                 $actual = '';
             }
-            echo '<li><a ' . $actual . 'href="?page='.($i + 1).'">'.($i + 1). '</a></li>';
+            if ($filtrosget[0] == "/LEAFING/Crea-J-2022/php/comunity.php" || $filtrosget[0] == "page") {
+                echo '<li><a ' . $actual . 'href="?page=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+            } else {
+                echo '<li><a ' . $actual . 'href="?' . $filtrosget[0] . '&page=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+            }
         }
         echo '</ul>';
-
     }
 }
-
-?>
