@@ -138,6 +138,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
+    position: relative;
 }
 
 .inputs label {
@@ -172,7 +173,19 @@
     margin-bottom: 3rem;
 }
 
-.inputs input[type="password"] {
+.eye {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 80px;
+}
+
+.eye:hover {
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+}
+
+.idk  {
     margin-bottom: 4.2rem;
 }
 

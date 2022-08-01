@@ -77,7 +77,8 @@ if (isset($_SESSION['estatus'])) {
                                         <label for="email">Correo electrónico</label><br>
                                         <input type="email" class="mitexto" id="email" name="email"><br>
                                         <label for="password">Constraseña</label><br>
-                                        <input type="password" class="mitexto" id="password" name="password">
+                                        <img class="eye" src="../img/iconos/eye.svg" alt="">
+                                        <input type="password" class="mitexto idk" id="password" name="password">
                                         <div class="send">
                                             <input type="submit" name="submit" value="Inicia sesión" id="submit-registrer">
                                         </div>
@@ -93,6 +94,7 @@ if (isset($_SESSION['estatus'])) {
             </div>
         </div>
     </div>
+    <script src="../js/showpassword.js"></script>
 </body>
 
 </html>
