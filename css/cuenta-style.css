@@ -180,7 +180,8 @@ footer {
     outline: none;
     height: 40px;
     border-radius: 5px;
-    font-size: 15px
+    font-size: 15px;
+    padding-left: .8rem;
 }
 
 .large-label label {
@@ -197,6 +198,8 @@ footer {
     border-radius: 5px;
     font-size: 15px;
     resize: none;
+    padding: .8rem;
+    font-family: "Poppins";
 }
 
 .Nombre {
