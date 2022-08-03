@@ -8,10 +8,10 @@ include_once('./header.php');
         
         <?php include_once('./onlymenu.php') ?>
 
-        <div id="onlyConfig" class="configuracion-cuenta-container mostrar-2 no-mostrar-2">
+        <div id="onlyConfig" class="configuracion-cuenta-container no-mostrar">
             <div class="grid-container">
                 <div class="back">
-                    <a href="#"  id="showConfig" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
+                    <a href="#"  id="showMenu" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
                 </div>
                 <div class="configuracion-name">
                     Configuración de la cuenta
@@ -60,5 +60,6 @@ include_once('./header.php');
             </div>
         </div>
     </div>
+    <script src="../js/app_profile.js"></script>
 
     <?php include_once('./footer.php');?>
