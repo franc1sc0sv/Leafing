@@ -283,7 +283,7 @@ footer {
     transition: all .5s ease-out;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
     
     .user-menu-container {
         max-width: none;

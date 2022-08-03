@@ -17,7 +17,7 @@
     </div>
     <div>
         <div class="menu-opciones">
-            <a href="#">
+            <a href="./cuenta.php">
                 <div id="showConfig" class="opciones-item home">
                     <img src="../img/iconos/Home.svg" class="opciones-icon">
                     <p class="nombre-opcion">Cuenta</p>
