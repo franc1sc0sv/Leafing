@@ -14,7 +14,7 @@ include_once("header.php");
                 </div>
                 <div class="text_sobre-nosotros">
                     <p>SOBRE NOSOTROS</p>
-                    <h1>Salvando al medio ambiente con tu ayuda</h1>
+                    <h1 class="green">Salvando al medio ambiente con tu ayuda</h1>
                     <p>
                         No hay un planeta B, la Tierra está muriendo. Leafing intenta solucionar este problema con la
                         ayuda de las personas, incentivándolas y estimulándolas para que sean parte de la solución.
@@ -32,7 +32,7 @@ include_once("header.php");
                     <img src="../img/imagenes/our-mision_img.png" alt="img-nuestra_mision">
                 </div>
                 <div class="text_sobre-nosotros text-our-mision">
-                    <h1>Nuestra misión</h1>
+                    <h1 class="green">Nuestra misión</h1>
                     <p>
                         Fomentar y contribuir a la conservación del medio ambiente y al manejo responsable de los
                         recursos, apoyando iniciativas destinadas a reducir el impacto de la contaminación en el
@@ -49,7 +49,7 @@ include_once("header.php");
                     <img src="../img/imagenes/our-vision_img.png" alt="img-nuestra_vision">
                 </div>
                 <div class="text_sobre-nosotros text-our-vision">
-                    <h1>Nuestra visión</h1>
+                    <h1 class="green">Nuestra visión</h1>
                     <p>
                         Ser una organización que tenga gran repercusión positiva en el ambiente, con la ayuda de las
                         personas potenciando y desarrollando estilos de vida sostenibles.
