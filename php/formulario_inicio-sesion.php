@@ -1,39 +1,5 @@
-<?php
-include_once 'include.php';
-include_once("conexion.php");
-
-if (isset($_SESSION['estatus'])) {
-    header("location:index.php");
-} else { ?>
-    <?php
-    if ($_POST) {
-        if (empty($_POST['email']) || empty($_POST['password'])) {
-            echo "<script> alert('ALL FIELDS IS REQUERED')</script>";
-        } else {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-            $objconexion = new conection();
-            $result = $objconexion->consultarform("SELECT * FROM user_credentials WHERE mail_user = '$email' AND password_user = '$password'");
-            //print_r($result);
-
-            if ($result == 1) {
-                $result2 = $objconexion->consultar("SELECT * FROM user_credentials WHERE mail_user = '$email' AND password_user = '$password'");
-                if ($result2[0]['rol_id'] == 1) {
-                    header("location:index_admin.php");
-                } else {
-                    header("location:index.php");
-                    $_SESSION['estatus'] = true;
-                    $_SESSION['dataID'] = $result2[0]['id'];
-                }
-            } else {
-                echo "<script> alert('MAIL OR PASSWORD INCORRECT')</script>";
-            }
-        }
-    }
-
-
-    ?>
+<?php //XD 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,18 +8,18 @@ if (isset($_SESSION['estatus'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/login.css" rel="stylesheet" type="text/css">
-    <title>LogIn</title>
+    <link href="../css/login_.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
+    <title>Register</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="alreadysignup">
-            <p class="question">Aún no tienes una cuenta?</p>
-            <a href="../php/formulario_registro.php" class="login">Regístrate</a>
-        </div>
         <div class="container2">
-
+            <div class="alreadysignup">
+                <p class="question">Aún no tienes una cuenta?</p>
+                <a href="../php/formulario_registro.php" class="login">Regístrate</a>
+            </div>
             <div class="container-form">
                 <div class="form">
                     <div class="littleX">
@@ -70,23 +36,50 @@ if (isset($_SESSION['estatus'])) {
                         <div class="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
-                                    <p>Inicia sesión</p>
+                                    <p>Inicia sesion</p>
                                 </div>
                                 <div class="inputs">
-                                    <form action="formulario_inicio-sesion.php" method="post">
-                                        <label for="email">Correo electrónico</label><br>
-                                        <input type="email" class="mitexto" id="email" name="email"><br>
-                                        <label for="password">Constraseña</label><br>
-                                        <img class="eye" src="../img/iconos/eye.svg" alt="">
-                                        <input type="password" class="mitexto idk" id="password" name="password">
-                                        <div class="send">
-                                            <input type="submit" name="submit" value="Inicia sesión" id="submit-registrer">
+                                    <form action="formulario_inicio-sesion.php" method="post" id="formCredentials">
+                                        <div class="emailInput">
+                                            <label for="email">Email</label><br>
+                                            <input type="email" class="mitexto" id="email" name="email"><br>
                                         </div>
+
+                                        <div class="passwordInput">
+                                            <label for="password">Constraseña</label><br>
+                                            <input type="password" class="mitexto" id="password" name="password">
+                                            <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
+                                        </div>
+
+                                        <div class="alert" id="alert">
+
+                                        </div>
+                                        <div class="next">
+                                            <button class="nexto" type="submit">Siguiente</button>
+                                        </div>
+
                                     </form>
                                 </div>
-                                <!-- <div class="next">
-                                    <button class="nexto">Siguiente</button>
-                                </div> -->
+                            </div>
+                            <div class="code">
+                                <div class="createaccount">
+                                    <p>Comprobar el correo electrónico</p>
+                                </div>
+                                <div class="textcode">
+                                    <p>Para verificar tu correo electrónico
+                                        te hemos enviado un código de confirmación a correoejemplo@gmail.com.
+                                    </p>
+                                </div>
+                                <div class="inputs">
+                                    <input type="text" class="mitexto">
+
+                                    <div class="sendagain">
+                                        <p>Enviar de nuevo el código de nuevo</p>
+                                    </div>
+                                </div>
+                                <div class="next">
+                                    <button>Siguiente</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,24 +87,7 @@ if (isset($_SESSION['estatus'])) {
             </div>
         </div>
     </div>
-    <script src="../js/showpassword.js"></script>
+    <script src="../js/login.js"> </script>
 </body>
 
 </html>
-
-    <!-- <div class="formulario_container-2">
-        <form action="formulario_inicio-sesion.php" method="post" class="formulario_registro">
-            <h1>Iniciar sesión</h1>
-            <input type="email" placeholder="Correo electrónico" name="email"> <br>
-            <input type="password" placeholder="Contraseña" name="password"> <br>
-            <input type="submit" name="submit" value="Inicia sesión" id="submit-registrer">
-
-            <p>Ya tienes una cuenta? <a href="./formulario_registro.php">Registrate</a></p>
-        </form>
-
-    </div>
-    </div>
-    </div> -->
-
-
-<?php } ?>

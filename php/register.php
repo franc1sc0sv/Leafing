@@ -20,6 +20,7 @@ if ($_GET['estatus'] == "stage1") {
 } else if ($_GET['estatus'] == "stage2") {
     if (!empty($_GET['Dataemail']) && !empty($_GET['Datapassword']) && !empty($_GET['borndate']) && !empty($_GET['gender']) && !empty($_GET['lastname']) && !empty($_GET['name']) && !empty($_GET['user'])) {
         $objconexion = new conection();
+
         $Dataemail = $_GET['Dataemail'];
         $Datapassword = $_GET['Datapassword'];
 
@@ -28,9 +29,10 @@ if ($_GET['estatus'] == "stage1") {
         $lastname = $_GET['lastname'];
         $name = $_GET['name'];
         $user_name = $_GET['user'];
-
+        //Password Hashed
+        $passwordHashed = password_hash($Datapassword, PASSWORD_DEFAULT, ['cost' => 10]);
         //Tabla de las credenciales del usuarios
-        $sql1 = "INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `rol_id`) VALUES (NULL, '$Dataemail', '$Datapassword', '2')";
+        $sql1 = "INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `rol_id`) VALUES (NULL, '$Dataemail', '$passwordHashed', '2')";
         $lastID = $objconexion->ejecutar($sql1);
         //Tabla de la data del usuarios
         $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`) VALUES ($lastID, '$name', '$lastname', '$borndate', '$user_name', '$gender');";

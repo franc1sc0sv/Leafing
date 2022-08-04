@@ -1,5 +1,4 @@
-<?php //xd
-?>
+<?php //XD ?>
 <!DOCTYPE html>
 <html lang="en">
 
