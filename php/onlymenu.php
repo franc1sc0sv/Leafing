@@ -3,7 +3,7 @@
 
 ?>
 
-<div id="onlyMenu" class="user-menu-container mostrar no-mostrar">
+<div id="onlyMenu" class="user-menu-container mostrar">
     <div class="menu-img">
         <div class="behind-menu-img">
             <img src="../img/imagenes/rei3.jpg" class="img-profile" alt="Foto de perfil">
@@ -18,7 +18,7 @@
     <div>
         <div class="menu-opciones">
             <a href="./cuenta.php">
-                <div id="showMenu" class="opciones-item home">
+                <div id="showConfig" class="opciones-item home">
                     <img src="../img/iconos/Home.svg" class="opciones-icon">
                     <p class="nombre-opcion">Cuenta</p>
                 </div>

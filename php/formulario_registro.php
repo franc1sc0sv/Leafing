@@ -1,30 +1,4 @@
-<?php
-include_once 'include.php';
-include_once("conexion.php");
-
-if ($_POST) {
-    if (empty($_POST['email'])) {
-        echo "<script> alert('ALL FIELDS IS REQUERED')</script>";
-    } else {
-        $mail = $_POST['email'];
-        $password = $_POST['password'];
-
-        $objconexion = new conection();
-        $emailrepetido =  $objconexion->consultarform("SELECT * FROM `user_credentials` WHERE mail_user	='$mail'");
-        // echo $emailrepetido . " ";
-        if ($emailrepetido != 1) {
-            $_SESSION['mail'] = $mail;
-            $_SESSION['password'] = $password;
-            $_SESSION['code'] = true;
-            header('location:code.php');
-        } else {
-            echo "<script> alert('El correo esta repetido')</script>";
-        }
-    }
-}
-
-?>
-
+<?php //XD ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +6,9 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/personal_data.css">
     <link href="../css/register.css" rel="stylesheet" type="text/css">
-    <script src="../js/register_slider.js"></script>
+    <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
     <title>Register</title>
 </head>
 
@@ -58,23 +33,35 @@ if ($_POST) {
                     <div class="logo">
                     </div>
                     <div class="slide">
-                        <div class="containerinfo1">
+                        <div class="containerinfo1" id="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
                                     <p>Crea una cuenta</p>
                                 </div>
                                 <div class="inputs">
-                                    <form action="formulario_registro.php" method="post">
-                                        <label for="email">Email</label><br>
-                                        <input type="email" class="mitexto" id="email" name="email"><br>
-                                        <label for="password">Constraseña</label><br>
-                                        <img class="eye" src="../img/iconos/eye.svg" alt="">
-                                        <input type="password" class="mitexto idk" id="password" name="password">
+                                    <form action="formulario_registro.php" method="post" id="formEmail">
+                                        <div class="emailInput">
+                                            <label for="email">Email</label><br>
+                                            <input type="email" class="mitexto inpuxD" id="email" name="email"><br>
+                                        </div>
+
+                                        <div class="passwordinput">
+                                            <label for="password">Constraseña</label><br>
+                                            <input type="password" class="mitexto idk inpuxD" id="password" name="password">
+                                            <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
+
+                                        </div>
+
+                                        <div class="alert" id="alert">
+
+                                        </div>
+
+                                        <div class="next">
+                                            <button class="nexto" type="submit">Siguiente</button>
+                                        </div>
                                     </form>
                                 </div>
-                                <div class="next">
-                                    <button class="nexto">Siguiente</button>
-                                </div>
+
                             </div>
                             <div class="code">
                                 <div class="createaccount">
@@ -82,18 +69,68 @@ if ($_POST) {
                                 </div>
                                 <div class="textcode">
                                     <p>Para verificar tu correo electrónico
-                                        te hemos enviado un código de confirmación a correoejemplo@gmail.com.
+                                        te hemos enviado un código de confirmación a <span id="correoEnviado"> correoejemplo@gmail.com. </span>
                                     </p>
                                 </div>
-                                <div class="inputs">
-                                    <input type="text" class="mitexto">
-
+                                <form action="formulario_registro.php" method="post" id="formCode">
+                                    <div class="inputs">
+                                        <input type="number" class="mitexto inpuxD" name="codeEmail">
+                                    </div>
                                     <div class="sendagain">
                                         <p>Enviar de nuevo el código de nuevo</p>
                                     </div>
+
+                                    <div class="alertCode" id="alertCode">
+
+                                    </div>
+
+                                    <div class="next">
+                                        <button type="submit">Siguiente</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="YourInfo">
+                                <div class="createaccount">
+                                    <p>Completa tu información</p>
                                 </div>
-                                <div class="next">
-                                    <button>Siguiente</button>
+                                <div class="inputs">
+                                    <form action="formulario_registro.php" method="post" id="formData">
+
+                                        <div class="yeprow">
+                                            <div class="nonrow">
+                                                <label for="name">Nombre</label><br>
+                                                <input type="text" name="name" id="name"><br>
+                                            </div>
+
+                                            <div class="nonrow">
+                                                <label for="lastname">Apellido</label><br>
+                                                <input type="text" name="lastname" id="lastname"><br>
+                                            </div>
+                                        </div>
+
+                                        <label for="user">Nombre de usuario</label><br>
+                                        <input type="text" name="user" id="user"><br>
+
+                                        <div class="yeprow">
+                                            <div class="nonrow">
+                                                <label for="borndate">Fecha de nacimiento</label><br>
+                                                <input type="date" name="borndate" id="borndate"><br>
+                                            </div>
+
+                                            <div class="nonrow">
+                                                <label for="gender">Género</label><br>
+                                                <input type="text" name="gender" id="gender" id="borndate"><br>
+                                            </div>
+                                        </div>
+
+                                        <div class="alertData" id="alertData">
+
+                                        </div>
+
+                                        <div class="send">
+                                            <input type="submit" value="Enviar">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -102,22 +139,7 @@ if ($_POST) {
             </div>
         </div>
     </div>
-    <script src="../js/showpassword.js"></script>
+    <script src="../js/register.js" defer></script>
 </body>
 
 </html>
-<!-- <div class="container_general_fomrms">
-    <h1>Crea tu cuenta</h1>
-
-    <div class="container_forms">
-        <form action="formulario_registro.php" method="post">
-            <p> Paso 1: Tu correo y Contraseña</p>
-            <input type="text" name="email" placeholder="mail"><br><br>
-            <input type="password" name="password" placeholder="password"><br><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
-</div>
-
-</div>
-</div> -->

@@ -14,16 +14,14 @@ p {
 
 }
 
-.container {
-    height: 100vh;
-    width: 100vw;
-    background: url(../img/imagenes/bganother.svg);
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.eye {
+    cursor: pointer;
+    margin-left: -40px;
+    margin-bottom: -8px;
+    filter: opacity(0.4);
 }
+
+
 
 .alreadysignup {
     display: flex;
@@ -62,10 +60,33 @@ p {
     transition: all .3s ease-in-out;
 }
 
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/imagenes/wavesbg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#formCredentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+}
+
+
+
 .container-form {
     background-color: #fff;
     width: 500px;
-    height: 680px;
+    height: 620px;
     border-radius: 10px;
 }
 
@@ -105,11 +126,11 @@ p {
     align-items: center;
     justify-content: center;
     transition: all .5s ease;
-    width: 300%;
+    width: 200%;
 }
 
 .showcode {
-    transform: translateX(-30%);
+    transform: translateX(-50%);
 }
 
 
@@ -130,7 +151,7 @@ p {
 }
 
 .createaccount {
-    margin-top: 1.7rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -146,7 +167,6 @@ p {
     display: flex;
     flex-direction: column;
     width: 70%;
-    position: relative;
 }
 
 .inputs label {
@@ -165,28 +185,17 @@ p {
     height: 44.92px;
 }
 
-.inpuxD {
-    margin-bottom: 0 !important;
-
-}
-
-/* .inputs input:hover {
+.inputs input:hover {
     border: 3px solid rgba(77, 135, 83, 0.2);
     background: #fff;
     transition: all ease-out;
-} */
+}
 
 .inputs input:focus {
     border: 3px solid rgba(77, 135, 83, 0.2);
     outline: 1px solid #8db191;
     background: #fff;
 }
-
-
-/* .inputs input:hover {
-    transform: scale(1.05);
-    transition: all .3s ease-in-out;
-} */
 
 .mitexto {
     padding-left: 17px;
@@ -237,6 +246,8 @@ p {
 .sendagain {
     align-self: flex-start;
     width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .sendagain p {
@@ -273,36 +284,6 @@ p {
 .next button:hover {
     cursor: pointer;
     background: rgba(171, 208, 178, 0.5);
-    transform: scale(1.02);
-    transition: all .5s ease-in-out;
-}
-
-#formEmail {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40vh;
-}
-
-#formCode {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.sendagain {
-    display: flex;
-    justify-content: center;
-}
-
-.eye {
-    cursor: pointer;
-    margin-left: -40px;
-    margin-bottom: -8px;
-    filter: opacity(0.4);
 }
 
 .alertDivEmpty {
@@ -337,22 +318,7 @@ p {
     transition: 0.3s;
 }
 
-.YourInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
 
-
-.alertCode {
-    width: 50%;
-}
-
-.closebtn:hover {
-    color: black;
-}
 
 @media screen and (max-width: 604px) {
     .container-form {
