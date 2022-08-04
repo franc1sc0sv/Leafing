@@ -84,7 +84,7 @@ while (1) {
           <div class="slider-center">
           <div class="container_container">
                 <article class="container-slider">
-                    <div class="slider_screen">
+                    <div class="slider_screen primeroxd">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
@@ -94,7 +94,7 @@ while (1) {
                         </div>
 
                     </div>
-                    <div class="slider_screen">
+                    <div class="slider_screen segundoxd">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
@@ -104,7 +104,7 @@ while (1) {
                         </div>
 
                     </div>
-                    <div class="slider_screen">
+                    <div class="slider_screen terceroxd">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
@@ -114,7 +114,7 @@ while (1) {
                         </div>
 
                     </div>
-                    <div class="slider_screen">
+                    <div class="slider_screen cuartoxd">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
@@ -124,7 +124,7 @@ while (1) {
                         </div>
 
                     </div>
-                    <div class="slider_screen">
+                    <div class="slider_screen quintoxd">
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>

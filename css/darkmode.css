@@ -31,12 +31,38 @@ body.darkmode * {
 }
 
 body.darkmode #menu a{
-    color: #A8FC80!important;
+    color: #3FDC86!important;
 }
 body.darkmode #menu a:hover{
     color: #F4F0EE!important;
 }
+body.darkmode #menu span{
+    color: #3FDC86!important;
+}
+body.darkmode #menu span:hover{
+    color: #F4F0EE!important;
+}
 
 body.darkmode .preguntas_eventos-eventos>p>a:hover{
+    color: #4F9466!important;
+}
+
+body.darkmode #menu img.menu_arrow{
+    filter: brightness(100);
+}
+
+body.darkmode .primeroxd, body.darkmode .segundoxd, body.darkmode .terceroxd, body.darkmode .cuartoxd, body.darkmode .quintoxd{
+    background-color: #0B0D17!important;
+}
+
+body.darkmode .slider-center .container_container .container-slider .slider_screen .text_slider * {
+    color: #040504!important;
+}
+
+body.darkmode .header-container .green{
+    color: #0B0D17!important;
+}
+
+body.darkmode, #container, #about_us, .sobre-nosotros, .text_sobre-nosotros>h1{
     color: #4F9466!important;
 }

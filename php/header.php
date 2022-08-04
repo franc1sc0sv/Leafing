@@ -103,14 +103,21 @@
                                         </li>
                                         <li class="li-menu item-menu-desplegable"><a href="../php/about_us.php" class="a-header">Nosotros</a></li>
                                         <li class="li-menu item-menu-desplegable">
-                                                <p class="a-header">Ayuda al planeta <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <p class="a-header"><span>Ayuda al planeta</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
                                                         <li class="li_menu-despleagble"><a href="../php/categorias.php" class="a-header a-header-desplegable">Eventos</a></li>
                                                         <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable">Crea tus eventos</a></li>
                                                         <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable">Concientízate</a></li>
                                                 </ul>
                                         </li>
-                                        <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
+                                        <li class="li-menu item-menu-desplegable">
+                                                <p class="a-header"><span>Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <ul class="menu_desplegable">
+                                                        <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
+                                                        <li class="li_menu-despleagble"><button id="change">Cambiar xd</button></li>
+                                                        <li class="li_menu-despleagble"><button id="change">Cambiar 2 xd</button></li>
+                                                </ul>
+                                        </li>
                                         <li class="li-menu item-menu-desplegable iniciar-sesion-burger"><a href="../php/formulario_inicio-sesion.php" class="a-header">Iniciar sesión</a></li>
                                         <li class="li-menu item-menu-desplegable registro-sesion-burger"><a href="../php/formulario_registro.php" class="a-header">Registro</a></li>
                                 </ul>
@@ -149,8 +156,8 @@
 
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                         <div class="header-container">
-                                <h1>Sé parte de la solución</h1>
-                                <p>El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios </p>
+                                <h1 class="green" class="h1">Sé parte de la solución.</h1>
+                                <p class="green" class="p">El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios </p>
                                 <a href="../php/categorias.php"><button class="header-button_index">Eventos</button></a>
                         </div>
                 <?php } ?>
