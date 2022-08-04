@@ -41,26 +41,21 @@ while (1) {
             <div class="que-eventos">
 
                 <div id="hr1_que-evento">
-                    <h1>¿Qué son estos eventos?</h1>
+                    <h1 class="translate">¿Qué son estos eventos?</h1>
                     <hr class="hr_que-eventos">
                 </div>
 
                 <div class="contenido_que-eventos">
-                    <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        voluptatum
-                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-                        non
-                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
-                        dolorum fuga.
+                    <p class="translate">
+                        Los presentes eventos tienen la finalidad de ayudar al medio ambiente, usando a los usuarios de Leafing como medio conectivo entre la interacción de eventos creados por ustedes mismos donde podrán contribuir por medio de la inscripción y registro de los mismos
                     </p>
 
                     <div class="preguntas_eventos-eventos">
-                        <p><a href="../php/about_us.php">¿Quiénes sómos?</a> </p>
-                        <p><a href="../php/crear_evento.php">Crea un evento</a></p>
+                        <p class="translate"><a href="../php/about_us.php">¿Quiénes somos?</a> </p>
+                        <p class="translate"><a href="../php/crear_evento.php">Crea un evento</a></p>
                     </div>
 
-                    <a href="../php/comunity.php"><button class="button_que-eventos">Explorar más</button></a>
+                    <a href="../php/comunity.php"><span><button class="button_que-eventos" class="translate">Explorar más</button></span></a>
 
                 </div>
 
@@ -74,7 +69,7 @@ while (1) {
         <article class="slider_article">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1>Próximos eventos de la <br> comunidad </h1>
+                    <h1 class="translate">Próximos eventos de la <br> comunidad </h1>
                     <hr>
                 </div>
                 <div></div>
@@ -161,7 +156,7 @@ while (1) {
         <div class="titulos-generales">
             <div class="titulo_generales">
                 <a href="../php/comunity.php">
-                    <p>Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
+                    <p class="translate">Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos"></p>
                 </a>
             </div>
             <div></div>
@@ -171,7 +166,7 @@ while (1) {
         <article class="Recomendaciones-informacion">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1>Información y <br> recomendaciones</h1>
+                    <h1 class="translate">Información y <br> recomendaciones</h1>
                     <hr>
                 </div>
                 <div></div>
@@ -180,16 +175,16 @@ while (1) {
 
                 <div class="contribute_recomendaciones">
                     <div class="recomendacion">
-                        <h1>Contribuye al cuido <br> medioambiental desde casa</h1>
-                        <p>Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa</p>
-                        <a href="../php/concientizate.php"><button>Saber más</button></a>
+                        <h1 class="translate">Contribuye al cuido <br> medioambiental desde casa</h1>
+                        <p class="translate">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa</p>
+                        <a href="../php/concientizate.php"><span><button class="translate">Saber más</button></span></a>
                     </div>
                 </div>
 
                 <div class="habitos_recomendaciones">
                     <div class="informacion">
-                        <h1>Hábitos para aprovechar los <br> recursos naturales</h1>
-                        <a href="../php/concientizate.php"><button>Saber más</button></a>
+                        <h1 class="translate">Hábitos para aprovechar los <br> recursos naturales</h1>
+                        <a href="../php/concientizate.php"><span><button class="translate">Saber más</button></span></a>
                     </div>
                 </div>
             </div>
@@ -198,7 +193,7 @@ while (1) {
         <article class="¿Sabias-qué?">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1>¿Sabías qué?</h1>
+                    <h1 class="translate">¿Sabías qué?</h1>
                     <hr>
                 </div>
                 <div></div>

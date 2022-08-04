@@ -66,3 +66,9 @@ body.darkmode .header-container .green{
 body.darkmode, #container, #about_us, .sobre-nosotros, .text_sobre-nosotros>h1{
     color: #4F9466!important;
 }
+
+@media screen and (max-width: 425px) {
+   body.darkmode, .slider-center, .container_container, .container-slider, .slider_screen  {
+        background-color: #0B0D17;
+    } 
+}

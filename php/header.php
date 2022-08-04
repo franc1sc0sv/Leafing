@@ -114,8 +114,7 @@
                                                 <p class="a-header"><span>Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
                                                         <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
-                                                        <li class="li_menu-despleagble"><button id="change">Cambiar xd</button></li>
-                                                        <li class="li_menu-despleagble"><button id="change">Cambiar 2 xd</button></li>
+                                                        <li class="li_menu-despleagble"><button id="buttonChange">Cambiar xd</button></li>
                                                 </ul>
                                         </li>
                                         <li class="li-menu item-menu-desplegable iniciar-sesion-burger"><a href="../php/formulario_inicio-sesion.php" class="a-header">Iniciar sesión</a></li>

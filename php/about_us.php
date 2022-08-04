@@ -13,9 +13,9 @@ include_once("header.php");
                     <img src="../img/imagenes/sobre-nosotros_img.png" alt="menu_arrow">
                 </div>
                 <div class="text_sobre-nosotros">
-                    <p>SOBRE NOSOTROS</p>
-                    <h1 class="green">Salvando al medio ambiente con tu ayuda</h1>
-                    <p>
+                    <p class="translate">SOBRE NOSOTROS</p>
+                    <h1 class="green translate" >Salvando al medio ambiente con tu ayuda</h1>
+                    <p class="translate">
                         No hay un planeta B, la Tierra está muriendo. Leafing intenta solucionar este problema con la
                         ayuda de las personas, incentivándolas y estimulándolas para que sean parte de la solución.
                         Organizamos eventos y ayudamos a las personas para crear sus propios eventos para así ayudar al
@@ -32,8 +32,8 @@ include_once("header.php");
                     <img src="../img/imagenes/our-mision_img.png" alt="img-nuestra_mision">
                 </div>
                 <div class="text_sobre-nosotros text-our-mision">
-                    <h1 class="green">Nuestra misión</h1>
-                    <p>
+                    <h1 class="green translate">Nuestra misión</h1>
+                    <p class="translate">
                         Fomentar y contribuir a la conservación del medio ambiente y al manejo responsable de los
                         recursos, apoyando iniciativas destinadas a reducir el impacto de la contaminación en el
                         planeta.
@@ -49,8 +49,8 @@ include_once("header.php");
                     <img src="../img/imagenes/our-vision_img.png" alt="img-nuestra_vision">
                 </div>
                 <div class="text_sobre-nosotros text-our-vision">
-                    <h1 class="green">Nuestra visión</h1>
-                    <p>
+                    <h1 class="green translate">Nuestra visión</h1>
+                    <p class="translate"> 
                         Ser una organización que tenga gran repercusión positiva en el ambiente, con la ayuda de las
                         personas potenciando y desarrollando estilos de vida sostenibles.
                     </p>
