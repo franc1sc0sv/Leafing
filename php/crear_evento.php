@@ -11,7 +11,7 @@ include_once('header.php');
         <article>
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1>Crea tu propio evento</h1>
+                    <h1 class="translate">Crea tu propio evento</h1>
                     <hr>
                 </div>
                 <div></div>
@@ -22,15 +22,15 @@ include_once('header.php');
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
-                        <label for="title" class="label_forms label_generalidaes">Título del evento
-                            *</label>
-                        <input type="text" name="title" class="input_genralidades">
+                        <label for="title" class="label_forms label_generalidaes" class="translate">Título del evento
+                        </label>
+                        <input type="text" name="title" class="input_genralidades" class="translate">
 
-                        <label for="title" class="label_forms label_generalidaes">¿Que se realizará en el
-                            evento? *</label>
+                        <label for="title" class="label_forms label_generalidaes" class="translate">¿Qué se realizará en el
+                            evento? </label>
                         <input type="text" name="title" class="input_genralidades input_comentario">
 
-                        <label for="title" class="label_forms label_generalidaes">Requisitos para asitir
+                        <label for="title" class="label_forms label_generalidaes" class="translate">Requisitos para asistir
                             al evento</label>
                         <input type="text" name="title" class="input_genralidades input_requisitos">
 
@@ -38,35 +38,35 @@ include_once('header.php');
                     </div>
                     <div class="side_2 side-datos">
                         <div class="input_1">
-                            <label for="title" class="label_forms label_datos">Lugar de organización
-                                *</label>
+                            <label for="title" class="label_forms label_datos" class="translate">Lugar de organización
+                            </label>
                             <input type="text" name="title" class="input_datos">
 
                         </div>
 
                         <div class="fecha_form-eventos">
                             <div id="fecha_eventos">
-                                <label for="" class="classfecha-hora label_forms">Fecha *</label>
+                                <label for="" class="classfecha-hora label_forms" class="translate">Fecha </label>
                                 <input type="text" name="title" class="input_fecha">
                             </div>
 
                             <div id="hora_eventos">
-                                <label for="" class="classfecha-hora label_forms">Hora *</label>
+                                <label for="" class="classfecha-hora label_forms" class="translate">Hora </label>
                                 <input type="text" name="title" class="input_fecha">
                             </div>
                         </div>
 
                         <div class="transporte_forms-eventos">
-                            <h1>Transporte:</h1>
-                            <p>¿Su evento contará con transporte disponible para las personas que se inscriban?</p>
+                            <h1 class="translate">Transporte:</h1>
+                            <p class="translate">¿Su evento contará con transporte disponible para las personas que se inscriban?</p>
 
                             <div>
                                 <div>
                                     <div>
-                                        <input type="radio" name="trasporte-eventos"><label for="trasporte-eventos">Si</label>
+                                        <input type="radio" name="trasporte-eventos"><label for="trasporte-eventos"><span class="translate">Sí</span></label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="trasporte-eventos"><label for="trasporte-eventos">No</label>
+                                        <input type="radio" name="trasporte-eventos"><label for="trasporte-eventos"><span class="translate">No</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ include_once('header.php');
                     <div class="general_subir-imagen">
                         <div class="subir-imagen">
 
-                            <p>Imagen</p>
+                            <p class="translate">Imagen</p>
 
                             <div class="imagen-side">
                                 <img src="../img/imagenes/img_icon.svg" alt="">

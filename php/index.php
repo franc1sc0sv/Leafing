@@ -47,15 +47,15 @@ while (1) {
 
                 <div class="contenido_que-eventos">
                     <p class="translate">
-                        Los presentes eventos tienen la finalidad de ayudar al medio ambiente, usando a los usuarios de Leafing como medio conectivo entre la interacción de eventos creados por ustedes mismos donde podrán contribuir por medio de la inscripción y registro de los mismos
+                        Los presentes eventos tienen la finalidad de ayudar al medio ambiente, usando a los usuarios de Leafing como medio conectivo entre la interacción de eventos creados por ustedes mismos donde podrán contribuir por medio de la inscripción y registro de los mismos.
                     </p>
 
                     <div class="preguntas_eventos-eventos">
-                        <p class="translate"><a href="../php/about_us.php">¿Quiénes somos?</a> </p>
-                        <p class="translate"><a href="../php/crear_evento.php">Crea un evento</a></p>
+                        <p><a href="../php/about_us.php"><span class="translate">¿Quiénes somos?</span></a> </p>
+                        <p><a href="../php/crear_evento.php"><span class="transla">Crea un evento</span></a></p>
                     </div>
 
-                    <a href="../php/comunity.php"><span><button class="button_que-eventos" class="translate">Explorar más</button></span></a>
+                    <a href="../php/comunity.php"><button class="button_que-eventos" class="translate"><span class="translate">Explorar más</span></button></a>
 
                 </div>
 
@@ -83,7 +83,7 @@ while (1) {
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                            <a href="../php/evento-especifico.php"><button><span class="translate">Detalles</span></button></a>
                         </div>
                         <div class="imgen_slider i_Primero">
                         </div>
@@ -93,7 +93,7 @@ while (1) {
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                            <a href="../php/evento-especifico.php"><button><span class="translate">Detalles</span></button></a>
                         </div>
                         <div class="imgen_slider i_Segundo">
                         </div>
@@ -103,7 +103,7 @@ while (1) {
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                            <a href="../php/evento-especifico.php"><button><span class="translate">Detalles</span></button></a>
                         </div>
                         <div class="imgen_slider i_Tercero">
                         </div>
@@ -113,7 +113,7 @@ while (1) {
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                            <a href="../php/evento-especifico.php"><button><span class="translate">Detalles</span></button></a>
                         </div>
                         <div class="imgen_slider i_Cuarto">
                         </div>
@@ -123,7 +123,7 @@ while (1) {
                         <div class="text_slider t_Primero">
                             <h2>Martha</h2>
                             <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                            <a href="../php/evento-especifico.php"><button><span class="translate">Detalles</span></button></a>
                         </div>
                         <div class="imgen_slider i_Quinto">
                         </div>
@@ -175,15 +175,15 @@ while (1) {
 
                 <div class="contribute_recomendaciones">
                     <div class="recomendacion">
-                        <h1 class="translate">Contribuye al cuido <br> medioambiental desde casa</h1>
-                        <p class="translate">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa</p>
+                        <h1 class="translate">Contribuye al cuido <br> medioambiental desde casa.</h1>
+                        <p class="translate">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa.</p>
                         <a href="../php/concientizate.php"><span><button class="translate">Saber más</button></span></a>
                     </div>
                 </div>
 
                 <div class="habitos_recomendaciones">
                     <div class="informacion">
-                        <h1 class="translate">Hábitos para aprovechar los <br> recursos naturales</h1>
+                        <h1 class="translate">Hábitos para aprovechar los <br> recursos naturales.</h1>
                         <a href="../php/concientizate.php"><span><button class="translate">Saber más</button></span></a>
                     </div>
                 </div>

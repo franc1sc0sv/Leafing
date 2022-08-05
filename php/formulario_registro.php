@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="../css/personal_data.css">
     <link href="../css/register.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
-    <title>Register</title>
+    <title>Registro</title>
 </head>
 
 <body>
     <div class="container">
         <div class="alreadysignup">
-            <p class="question">Ya tienes una cuenta?</p>
-            <a href="../php/formulario_inicio-sesion.php" class="login">Inicia sesión</a>
+            <p class="question translate">¿Ya tienes una cuenta?</p>
+            <a href="../php/formulario_inicio-sesion.php" class="login"><span class="translate">Inicia sesión</span></a>
         </div>
         <div class="container2">
 
@@ -36,17 +36,17 @@
                         <div class="containerinfo1" id="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
-                                    <p>Crea una cuenta</p>
+                                    <p class="translate">Crea una cuenta</p>
                                 </div>
                                 <div class="inputs">
                                     <form action="formulario_registro.php" method="post" id="formEmail">
                                         <div class="emailInput">
-                                            <label for="email">Email</label><br>
+                                            <label for="email" class="translate">Email</label><br>
                                             <input type="email" class="mitexto inpuxD" id="email" name="email"><br>
                                         </div>
 
                                         <div class="passwordinput">
-                                            <label for="password">Constraseña</label><br>
+                                            <label for="password" class="translate">Constraseña</label><br>
                                             <input type="password" class="mitexto idk inpuxD" id="password" name="password">
                                             <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
 
@@ -57,7 +57,7 @@
                                         </div>
 
                                         <div class="next">
-                                            <button class="nexto" type="submit">Siguiente</button>
+                                            <button class="nexto" type="submit"><span class="translate">Siguiente</span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -65,10 +65,10 @@
                             </div>
                             <div class="code">
                                 <div class="createaccount">
-                                    <p>Comprobar el correo electrónico</p>
+                                    <p class="translate">Comprobar el correo electrónico</p>
                                 </div>
                                 <div class="textcode">
-                                    <p>Para verificar tu correo electrónico
+                                    <p class="translate">Para verificar tu correo electrónico
                                         te hemos enviado un código de confirmación a <span id="correoEnviado"> correoejemplo@gmail.com. </span>
                                     </p>
                                 </div>
@@ -77,7 +77,7 @@
                                         <input type="number" class="mitexto inpuxD" name="codeEmail">
                                     </div>
                                     <div class="sendagain">
-                                        <p>Enviar de nuevo el código de nuevo</p>
+                                        <p class="translate">Enviar de nuevo el código de nuevo</p>
                                     </div>
 
                                     <div class="alertCode" id="alertCode">
@@ -85,40 +85,40 @@
                                     </div>
 
                                     <div class="next">
-                                        <button type="submit">Siguiente</button>
+                                        <button type="submit"><span class="translate">Siguiente</span></button>
                                     </div>
                                 </form>
                             </div>
                             <div class="YourInfo">
                                 <div class="createaccount">
-                                    <p>Completa tu información</p>
+                                    <p class="translate">Completa tu información</p>
                                 </div>
                                 <div class="inputs">
                                     <form action="formulario_registro.php" method="post" id="formData">
 
                                         <div class="yeprow">
                                             <div class="nonrow">
-                                                <label for="name">Nombre</label><br>
+                                                <label for="name" class="translate">Nombre</label><br>
                                                 <input type="text" name="name" id="name"><br>
                                             </div>
 
                                             <div class="nonrow">
-                                                <label for="lastname">Apellido</label><br>
+                                                <label for="lastname" class="translate">Apellido</label><br>
                                                 <input type="text" name="lastname" id="lastname"><br>
                                             </div>
                                         </div>
 
-                                        <label for="user">Nombre de usuario</label><br>
+                                        <label for="user" class="translate">Nombre de usuario</label><br>
                                         <input type="text" name="user" id="user"><br>
 
                                         <div class="yeprow">
                                             <div class="nonrow">
-                                                <label for="borndate">Fecha de nacimiento</label><br>
+                                                <label for="borndate" class="translate">Fecha de nacimiento</label><br>
                                                 <input type="date" name="borndate" id="borndate"><br>
                                             </div>
 
                                             <div class="nonrow">
-                                                <label for="gender">Género</label><br>
+                                                <label for="gender" class="translate">Género</label><br>
                                                 <input type="text" name="gender" id="gender" id="borndate"><br>
                                             </div>
                                         </div>

@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/login_.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
-    <title>Register</title>
+    <title>Registrarse</title>
 </head>
 
 <body>
     <div class="container">
         <div class="container2">
             <div class="alreadysignup">
-                <p class="question">Aún no tienes una cuenta?</p>
-                <a href="../php/formulario_registro.php" class="login">Regístrate</a>
+                <p class="question" class="translate">¿Aún no tienes una cuenta?</p>
+                <a href="../php/formulario_registro.php" class="login"><span class="translate">Regístrate</span></a>
             </div>
             <div class="container-form">
                 <div class="form">
@@ -36,17 +36,17 @@
                         <div class="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
-                                    <p>Inicia sesion</p>
+                                    <p class="translate">Inicia sesión</p>
                                 </div>
                                 <div class="inputs">
                                     <form action="formulario_inicio-sesion.php" method="post" id="formCredentials">
                                         <div class="emailInput">
-                                            <label for="email">Email</label><br>
+                                            <label for="email" class="translate">Email</label><br>
                                             <input type="email" class="mitexto" id="email" name="email"><br>
                                         </div>
 
                                         <div class="passwordInput">
-                                            <label for="password">Constraseña</label><br>
+                                            <label for="password" class="translate">Contraseña</label><br>
                                             <input type="password" class="mitexto" id="password" name="password">
                                             <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
                                         </div>
@@ -55,7 +55,7 @@
 
                                         </div>
                                         <div class="next">
-                                            <button class="nexto" type="submit">Siguiente</button>
+                                            <button class="nexto" type="submit"><span class="translate">Siguiente</span></button>
                                         </div>
 
                                     </form>
@@ -63,10 +63,10 @@
                             </div>
                             <div class="code">
                                 <div class="createaccount">
-                                    <p>Comprobar el correo electrónico</p>
+                                    <p class="translate">Comprobar el correo electrónico</p>
                                 </div>
                                 <div class="textcode">
-                                    <p>Para verificar tu correo electrónico
+                                    <p class="translate">Para verificar tu correo electrónico
                                         te hemos enviado un código de confirmación a correoejemplo@gmail.com.
                                     </p>
                                 </div>
@@ -74,11 +74,11 @@
                                     <input type="text" class="mitexto">
 
                                     <div class="sendagain">
-                                        <p>Enviar de nuevo el código de nuevo</p>
+                                        <p class="translate">Enviar el código de nuevo</p>
                                     </div>
                                 </div>
                                 <div class="next">
-                                    <button>Siguiente</button>
+                                    <button><span class="translate">Siguiente</span></button>
                                 </div>
                             </div>
                         </div>
