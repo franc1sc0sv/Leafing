@@ -185,7 +185,7 @@ if (!isset($_GET['date_filtro'])) {
         $events = $datos_eventos->consultar($sql);
         $numeroEvents =  count($events);
 
-        $objconexionpaginas = new Paginacion(4, $numeroEvents, $actualpage);
+        $objconexionpaginas = new Paginacion(6, $numeroEvents, $actualpage);
 
         $limits = $objconexionpaginas->limits();
         $indece = $limits['indice'];

@@ -105,7 +105,7 @@
                                         <li class="li-menu item-menu-desplegable">
                                                 <p class="a-header"><span class="translate-header">Ayuda al planeta</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
-                                                        <li class="li_menu-despleagble"><a href="../php/categorias.php" class="a-header a-header-desplegable">Eventos</a></li>
+                                                        <li class="li_menu-despleagble"><a href="../php/comunity.php" class="a-header a-header-desplegable">Eventos</a></li>
                                                         <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable">Crea tus eventos</a></li>
                                                         <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable">Concientízate</a></li>
                                                 </ul>
