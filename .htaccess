@@ -1,1 +1,5 @@
 ErrorDocument 404 http://localhost/LEAFING/Crea-J-2022/php/404.php
+<FilesMatch "\.(css|js|svg|png|jpg|ai)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
