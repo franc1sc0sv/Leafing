@@ -1,5 +1,5 @@
 <?php
-include_once ('include.php');
+include_once('include.php');
 include_once('conexion.php');
 
 
@@ -76,87 +76,87 @@ while (1) {
             </div>
 
 
-          <div class="slider-center">
-          <div class="container_container">
-                <article class="container-slider">
-                    <div class="slider_screen primeroxd">
-                        <div class="text_slider t_Primero">
-                            <h2>Martha</h2>
-                            <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+            <div class="slider-center">
+                <div class="container_container">
+                    <article class="container-slider">
+                        <div class="slider_screen primeroxd">
+                            <div class="text_slider t_Primero">
+                                <h2>Martha</h2>
+                                <h1>Recolección de basura</h1>
+                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                            </div>
+                            <div class="imgen_slider i_Primero">
+                            </div>
+
                         </div>
-                        <div class="imgen_slider i_Primero">
+                        <div class="slider_screen segundoxd">
+                            <div class="text_slider t_Primero">
+                                <h2>Martha</h2>
+                                <h1>Recolección de basura</h1>
+                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                            </div>
+                            <div class="imgen_slider i_Segundo">
+                            </div>
+
+                        </div>
+                        <div class="slider_screen terceroxd">
+                            <div class="text_slider t_Primero">
+                                <h2>Martha</h2>
+                                <h1>Recolección de basura</h1>
+                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                            </div>
+                            <div class="imgen_slider i_Tercero">
+                            </div>
+
+                        </div>
+                        <div class="slider_screen cuartoxd">
+                            <div class="text_slider t_Primero">
+                                <h2>Martha</h2>
+                                <h1>Recolección de basura</h1>
+                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                            </div>
+                            <div class="imgen_slider i_Cuarto">
+                            </div>
+
+                        </div>
+                        <div class="slider_screen quintoxd">
+                            <div class="text_slider t_Primero">
+                                <h2>Martha</h2>
+                                <h1>Recolección de basura</h1>
+                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                            </div>
+                            <div class="imgen_slider i_Quinto">
+                            </div>
+
                         </div>
 
-                    </div>
-                    <div class="slider_screen segundoxd">
-                        <div class="text_slider t_Primero">
-                            <h2>Martha</h2>
-                            <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                    </article>
+                    <div class="container_slider_puntos">
+                        <div class="container_individual_punto Btn1">
+                            <div class="slider-punto active" data-estres="1"></div>
                         </div>
-                        <div class="imgen_slider i_Segundo">
+                        <div class="container_individual_punto Btn2">
+                            <div class="slider-punto" data-estres="2"></div>
                         </div>
-
-                    </div>
-                    <div class="slider_screen terceroxd">
-                        <div class="text_slider t_Primero">
-                            <h2>Martha</h2>
-                            <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                        <div class="container_individual_punto Btn3">
+                            <div class="slider-punto" data-estres="3"></div>
                         </div>
-                        <div class="imgen_slider i_Tercero">
+                        <div class="container_individual_punto Btn4">
+                            <div class="slider-punto" data-estres="4"></div>
                         </div>
-
-                    </div>
-                    <div class="slider_screen cuartoxd">
-                        <div class="text_slider t_Primero">
-                            <h2>Martha</h2>
-                            <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
+                        <div class="container_individual_punto Btn5">
+                            <div class="slider-punto" data-estres="5"></div>
                         </div>
-                        <div class="imgen_slider i_Cuarto">
-                        </div>
-
-                    </div>
-                    <div class="slider_screen quintoxd">
-                        <div class="text_slider t_Primero">
-                            <h2>Martha</h2>
-                            <h1>Recolección de basura</h1>
-                            <a href="../php/evento-especifico.php"><button>Detalles</button></a>
-                        </div>
-                        <div class="imgen_slider i_Quinto">
-                        </div>
-
-                    </div>
-
-                </article>
-                <div class="container_slider_puntos">
-                    <div class="container_individual_punto Btn1">
-                        <div class="slider-punto active" data-estres="1"></div>
-                    </div>
-                    <div class="container_individual_punto Btn2">
-                        <div class="slider-punto" data-estres="2"></div>
-                    </div>
-                    <div class="container_individual_punto Btn3">
-                        <div class="slider-punto" data-estres="3"></div>
-                    </div>
-                    <div class="container_individual_punto Btn4">
-                        <div class="slider-punto" data-estres="4"></div>
-                    </div>
-                    <div class="container_individual_punto Btn5">
-                        <div class="slider-punto" data-estres="5"></div>
                     </div>
                 </div>
             </div>
-          </div>
         </article>
 
 
         <div class="titulos-generales">
             <div class="titulo_generales">
-                <a href="../php/comunity.php">
-                    <p class="translate">Ver todos los eventos de la comunidad <img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion"></p>
+                <a href="../php/comunity.php" class="comunitySlider">
+                    <p class="translate">Ver todos los eventos de la comunidad </p><img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion">
                 </a>
             </div>
             <div></div>
@@ -177,14 +177,14 @@ while (1) {
                     <div class="recomendacion">
                         <h1 class="translate">Contribuye al cuido <br> medioambiental desde casa.</h1>
                         <p class="translate">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa.</p>
-                        <a href="../php/concientizate.php"><span class="translate"><button>Saber más</button></span></a>
+                        <a href="../php/concientizate.php"><button><span class="translate">Saber más</span></button></a>
                     </div>
                 </div>
 
                 <div class="habitos_recomendaciones">
                     <div class="informacion">
                         <h1 class="translate">Hábitos para aprovechar los <br> recursos naturales.</h1>
-                        <a href="../php/concientizate.php"><span class="translate"><button>Saber más</button></span></a>
+                        <a href="../php/concientizate.php"><button><span class="translate">Saber más</span></button></a>
                     </div>
                 </div>
             </div>

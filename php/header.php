@@ -99,25 +99,19 @@
 
                         <div id="links-header">
                                 <ul class="menu-header">
-                                        <li class="li-menu item-menu-desplegable"><a href="../php/index.php" class="a-header"><span class="translate-template">Inicio</span></a>
+                                        <li class="li-menu item-menu-desplegable"><a href="../php/index.php" class="a-header"><span class="translateHeader">Inicio</span></a>
                                         </li>
-                                        <li class="li-menu item-menu-desplegable"><a href="../php/about_us.php" class="a-header"><span class="translate-template">Nosotros</span></a></li>
+                                        <li class="li-menu item-menu-desplegable"><a href="../php/about_us.php" class="a-header"><span class="translateHeader">Nosotros</span></a></li>
                                         <li class="li-menu item-menu-desplegable">
-                                                <p class="a-header"><span class="translate-template">Ayuda al planeta</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <p class="a-header"><span class="translateHeader">Ayuda al planeta</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
-<<<<<<< HEAD
-                                                        <li class="li_menu-despleagble"><a href="../php/comunity.php" class="a-header a-header-desplegable">Eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable">Crea tus eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable">Concientízate</a></li>
-=======
-                                                        <li class="li_menu-despleagble"><a href="../php/categorias.php" class="a-header a-header-desplegable translate-template">Eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable translate-template">Crea tus eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable translate-template">Concientízate</a></li>
->>>>>>> 144ccc6c58dbff63bcd39733e8f6646c2eec6338
+                                                        <li class="li_menu-despleagble"><a href="../php/comunity.php" class="a-header a-header-desplegable translateHeader">Eventos</a></li>
+                                                        <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable translateHeader">Crea tus eventos</a></li>
+                                                        <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable translateHeader">Concientízate</a></li>
                                                 </ul>
                                         </li>
                                         <li class="li-menu item-menu-desplegable">
-                                                <p class="a-header"><span class="translate-template">Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <p class="a-header"><span class="translateHeader">Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
                                                         <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
                                                         <li class="li_menu-despleagble"><button id="buttonChange">Cambiar xd</button></li>
@@ -132,8 +126,8 @@
 
                         <?php if (!isset($_SESSION['estatus'])) { ?>
                                 <div id="buttons-header">
-                                        <a href="./formulario_registro.php" class="text-button"><button class="buttons-header"><span class="translate-template"> Registrarse</span></button></a>
-                                        <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header"><span class="translate-template">Iniciar sesión</span></button></a>
+                                        <a href="./formulario_registro.php" class="text-button"><button class="buttons-header"><span class="translateHeader"> Registrarse</span></button></a>
+                                        <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header"><span class="translateHeader">Iniciar sesión</span></button></a>
                                 </div>
                         <?php } else {
                                 $IDuserdata = $_SESSION['dataID'];
@@ -146,8 +140,8 @@
                                         <ul class="menu-header-perfil">
                                                 <li class="li-menu_perfil"><img src="../img/iconos/usuario.png" alt="iconouser" height="50px" width="50px" class="img-perfil">
                                                         <ul class="menu_desplegable-peril">
-                                                                <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./cuenta.php"><span class="translate-template"> Mi perfil</span></a></li>
-                                                                <li class="li-menu_perfil-desplegable"><a class="a-header" href="./close.php"><span  class="translate-template">Cerrar sesión</span></a></li>
+                                                                <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./cuenta.php"><span class="translateHeader"> Mi perfil</span></a></li>
+                                                                <li class="li-menu_perfil-desplegable"><a class="a-header" href="./close.php"><span class="translateHeader">Cerrar sesión</span></a></li>
                                                         </ul>
                                                 </li>
                                         </ul>
@@ -160,8 +154,8 @@
                 <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                         <div class="header-container">
                                 <h1 class="green translate">Sé parte de la solución.</h1>
-                                <p class="green translate" >El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios.</p>
-                                <a href="../php/categorias.php"><button class="header-button_index"><span class="translate">Eventos</span></button></a>
+                                <p class="green translate">El medio amiente está muriendo, sé parte de la solución apoyando y creando eventos comunitarios.</p>
+                                <a href="../php/comunity.php"><button class="header-button_index"><span class="translate">Eventos</span></button></a>
                         </div>
                 <?php } ?>
 
