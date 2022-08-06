@@ -22,9 +22,7 @@
 
             <div class="container-form">
                 <div class="form">
-                    <div class="littleX">
-
-                    </div>
+                    <a class="littleX" href="../php/index.php"><img src="../img/iconos/x.svg" alt=""></a>
                     <div class="title">
                         <p class="leafing">
                             LEAFING

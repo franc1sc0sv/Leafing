@@ -74,6 +74,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.littleX {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .title {
@@ -281,7 +288,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 40vh;
+    height: 300px;
 }
 
 #formCode {

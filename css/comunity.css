@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Roboto:wght@100&family=Sen&display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@600 & display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@600 & family= Roboto+Mono & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Archivo:wght@200;400;600&family=Inter&family=Montserrat:wght@200;400&family=Noto+Sans&family=Poppins&family=Roboto:wght@400;500&display=swap');
 
 * {
     margin: 0px;
@@ -10,9 +11,21 @@
     box-sizing: border-box;
 }
 
-h1{
-    font-weight: 300;
+.title{
+    font-size: 21px;
+    line-height: 24px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    color: #1a0a1e;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+.title:hover {
+    color: #96caa0;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 
 /*TEMPORAL*/
 header {
@@ -25,18 +38,40 @@ footer {
 
 /**/
 
-.contenedor {
+/* .contenedor {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 30px;
 
+} */
+
+.contenedor {
+    width: 70%;
+    margin: auto;
+
 }
 
 .card {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 80px;
+    position: relative;
+    padding-left: 100px;
+    align-items: center;
+    padding-top: 1rem;
 
+}
+
+.card::before {
+    content: "";
+    width: 2px;
+    height: 140%;
+    background-color: #ebebeb;
+    position: absolute;
+    left: 22px;
+    top: 0;
+    z-index: -1;
 }
 
 .divcard>div>p {
@@ -52,9 +87,45 @@ footer {
     opacity: 0.7;
 }
 
+.event-img a {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: .4rem;
+    
+}
+
 .img {
-    width: 293px;
-    height: 363px;
+    width: 340px;
+    height: 200px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.img:hover {
+    transform: scale(1.15);
+}
+
+.specificInfo {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    gap: 30px;
+}
+
+.location {
+    margin-top: 1px;
+    width: 12px;
+    height: 12px;
+    filter: invert(92%) sepia(13%) saturate(856%) hue-rotate(69deg) brightness(85%) contrast(84%);
+}
+
+.cardtext p {
+    font-family: 'Open sans', sans-serif;
+    font-size: 15px;
+    word-spacing: 1px;
+    line-height: 23px;
+    text-align: justify;
 }
 
 .first {
@@ -73,7 +144,6 @@ footer {
 
 .first-text {
     display: flex;
-    flex-direction: column;
     gap: 1rem;
     font-family: 'Roboto';
     font-weight: bold;
@@ -96,16 +166,11 @@ footer {
     border-radius: 3px;
 }
 
-.buttonxd {
+.button {
     display: flex;
-    justify-content: center;
-    background: #484848;
-    color: white;
-    max-width: 9rem;
-    padding: 0.5rem;
-    gap: 1rem;
-    user-select: none;
-    text-decoration: none;
+    font-weight: 700;
+    color: #96caa0;
+    text-decoration: underline;
     transition: ease-in-out 0.3s;
 }
 
@@ -188,8 +253,32 @@ footer {
     flex-direction: column;
     justify-items: space-between;
     justify-content: space-between;
-    margin: 40px 0px;
     font-family: 'Roboto';
+    /* margin-bottom: 4rem; */
+    justify-items: center;
+    gap: 1rem;
+}
+
+.event-time {
+    width: 45px;
+    height: 45px;
+    line-height: 16px;
+    text-align: center;
+    background: #96caa0;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    padding: 8px;
+}
+
+.day-time {
+    font-size: 16px;
 }
 
 .second {
@@ -298,7 +387,29 @@ ul.pagination {
     border-radius: 50px;
 }
 
+@media (max-width: 1276px) {
+    .contenedor {
+        width: 85%;
+    }
+}
 
+@media (max-width: 1000px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .card {
+        padding-left: 60px;
+    }
+    
+
+}
+
+/* 
 @media (max-width: 768px) {
     .contenedor {
         grid-template-columns: 1fr;
@@ -320,7 +431,7 @@ ul.pagination {
         flex-direction: column;
 
     }
-}
+} */
 
 .line-button:hover {
     background-color: #8AB694;
