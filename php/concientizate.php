@@ -9,7 +9,7 @@ include_once('header.php');
 <div class="container_content">
     <div class="container-intro-page">
         <div class="title-page">
-            <h1 class="translate">Contribuye al cuido medioambiental <br>desde casa</h1>
+            <h1 class="translate">Contribuye al cuido medio ambiente <br>desde casa</h1>
         </div>
 
         <div class="image-board">
@@ -25,7 +25,7 @@ include_once('header.php');
     </div>
 
     <div class="container-info-page">
-        <h2 id="h2-space translate">Consejos y acciones para cuidar el medioambiente desde casa</h2>
+        <h2 id="h2-space" class="translate">Consejos y acciones para cuidar el medioambiente desde casa</h2>
         <div class="info__consejos">
             <h3 class="translate">Separa la basura.</h3>
             <p class="translate">Desde pequeños es bueno que los niños aprendan a separar los residuos para que se puedan

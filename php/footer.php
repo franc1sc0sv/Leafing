@@ -15,10 +15,10 @@
         </div>
         <div class="links-footer">
             <ul class="ul-footer">
-                <li class="li-footer"><a href="../html/about_us.html" class="a-footer">Nosotros</a></li>
-                <li class="li-footer"><a href="..//html/comunity.html" class="a-footer">Comunidad</a></li>
-                <li class="li-footer"><a href="../html/concientizate.html" class="a-footer">Concientízate</a></li>
-                <li class="li-footer"><a href="../html/categorias.html" class="a-footer">Eventos</a></li>
+                <li class="li-footer"><a href="../php/about_us.php" class="a-footer translateFooter">Nosotros</a></li>
+                <li class="li-footer"><a href="..//php/comunity.php" class="a-footer translateFooter">Comunidad</a></li>
+                <li class="li-footer"><a href="../php/concientizate.php" class="a-footer translateFooter">Concientízate</a></li>
+                <li class="li-footer"><a href="../php/crear_evento.php" class="a-footer translateFooter">Eventos</a></li>
             </ul>
         </div>
 
@@ -29,7 +29,7 @@
 
             <div id="R-icon">
                 <div id="Rights">
-                    <p id="p-footer">©2022 Todos los derechos reservados</p>
+                    <p id="p-footer" class="translateFooter">©2022 Todos los derechos reservados</p>
                 </div>
                 <div id="socialIcons-footer">
                     <img src="../img/iconos/Social Icons_fb.svg" alt="fbIcon" class="SocialIcons">
@@ -40,13 +40,15 @@
         </div>
     </div>
 </footer>
-<script src="../js/translate.js"></script>
+<script src="../js/translate.js" type="module"></script>
 <script src="../js/darkmode.js"> </script>
 <script src="../js/slider.js"></script>
 <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_burger_improvisado.js"></script>
 <script src="../js/app_profile.js"></script>
+<script src="../js/especific_event.js"></script>
+<script src="../js/model.js"> </script>
 
 </body>
 

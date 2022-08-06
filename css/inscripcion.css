@@ -8,8 +8,207 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 
 }
+
+.alertDivEmpty {
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 9.62567px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*:::Boton-Modal:::*/
+/* .boton-modal{
+    padding: 40px;
+    background-color: #fff;
+} */
+.boton-modal label {
+    border-radius: 23px;
+    padding: 10px;
+    padding: 10px 25px;
+    background-color: #484848;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: all 500ms ease-out;
+}
+
+/*:::Fin Boton-Modal:::*/
+
+/*:::Ventana Modal:::*/
+#btn-modal {
+    display: none;
+}
+
+#XModal {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(9%) saturate(100%) hue-rotate(177deg) brightness(87%) contrast(86%);
+    transition: all 500ms ease-out;
+
+}
+
+#XModal:hover {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(510%) hue-rotate(212deg) brightness(117%) contrast(100%);
+}
+
+#arrorBack {
+    display: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(9%) saturate(100%) hue-rotate(177deg) brightness(87%) contrast(86%);
+    transition: all 500ms ease-out;
+}
+
+#arrorBack:hover {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(510%) hue-rotate(212deg) brightness(117%) contrast(100%);
+
+}
+
+
+.headerModal>h1 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.reportes {
+    padding: 1rem 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+.reportes:hover {
+    background-color: #3a3b3c;
+}
+
+#flechitaModel {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(12%) saturate(77%) hue-rotate(169deg) brightness(89%) contrast(85%);
+}
+
+
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+
+}
+
+/* #btn-modal:checked~.container-modal {
+    display: flex;
+} */
+
+.content-modal {
+    width: 100%;
+    max-width: 50vw;
+    background-color: #242526;
+    border-radius: 15px;
+    color: white;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+}
+
+.container-modal p {
+    color: #b0b3b8;
+}
+
+.container-modal h2 {
+    font-family: inherit;
+}
+
+/* .content-modal h2 {
+    margin-bottom: 15px;
+} */
+
+.contentModel {
+    padding: 15px 0px;
+    border-top: 1px solid #2f3031;
+    border-bottom: 1px solid #2f3031;
+    padding: 1rem;
+    display: flex;
+    width: 300%;
+    gap: 2rem;
+    transition: all .5s ease;
+    /*transform: translateX(-66%);*/
+}
+
+.headerModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contentModelReportes {
+    width: 100%;
+}
+
+.sendReport {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width:800px) {
+    .content-modal {
+        width: 90%;
+    }
+}
+
+/*:::Fin Ventana Modal:::*/
+
 
 .hr {
     width: 140px;
@@ -49,6 +248,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .container-perfil>img {
@@ -99,8 +299,6 @@
 .nuevoinicio {
     margin: 7rem;
     font-family: 'Roboto', sans-serif;
-
-
 }
 
 .buttonxd {
@@ -157,6 +355,108 @@ img {
 
 .form3>p {
     margin-bottom: 2rem;
+}
+
+#imgProfile {
+    width: 70px;
+    height: 70px;
+    max-width: 100%;
+}
+
+.userData {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.ul-reporte {
+    padding-left: 2rem;
+}
+
+.li-report {
+    font-size: .9375rem;
+    color: #b0b3b8;
+    padding: 0.4rem 0;
+    list-style: disc;
+}
+
+.button-report {
+    background-color: #484848;
+    border: none;
+    padding: 10px 38px;
+    border-radius: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.sendReport {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-report:hover {
+    /* transform: scale(1.1); */
+    background-color: #666161;
+
+}
+
+.MensajeReport {
+    width: 100%;
+}
+
+#checkIcon {
+    height: 70px;
+    width: 70px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1677%) hue-rotate(103deg) brightness(95%) contrast(110%);
+}
+
+.contentMensaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1rem;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#ModalOpen {
+    border-radius: 23px;
+    padding: 10px;
+    padding: 10px 25px;
+    background-color: #484848;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+#ModalOpen:hover {
+    background-color: #8AB694;
+}
+
+
+.MensajesExtra {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 485px) {
+    .container-perfil {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 720px) {
