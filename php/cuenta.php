@@ -68,31 +68,31 @@ include_once('./header.php');; ?>
                 <div class="form__grid-labels">
                     <div class="short-labels Nombre">
                         <label for="name" class="translate">Nombre</label>
-                        <input id="name" type="text" name="name">
+                        <input id="name" class="diseñoGod" type="text" name="name">
                     </div>
                     <div class="short-labels Apellido">
                         <label for="lastname" class="translate">Apellido</label>
-                        <input id="lastname" type="text" name="lastname">
+                        <input id="lastname"class="diseñoGod" type="text" name="lastname">
                     </div>
                     <div class="short-labels Nombre-de-usuario">
                         <label for="usuario" class="translate">Nombre de usuario</label>
-                        <input id="usuario" type="text" name="usuario">
+                        <input id="usuario" class="diseñoGod" type="text" name="usuario">
                     </div>
                     <div class="short-labels nose-algo">
                         <label for="nose" class="translate">Apodo</label>
-                        <input id="nose" type="text" name="nose">
+                        <input id="nose" class="diseñoGod" type="text" name="nose">
                     </div>
                     <div class="short-labels Email">
                         <label for="email" class="translate">Email</label>
-                        <input id="email" type="email" name="email">
+                        <input id="email" class="diseñoGod" type="email" name="email">
                     </div>
                     <div class="short-labels Telefono">
                         <label for="telefono" class="translate">Número de teléfono</label>
-                        <input id="telefono" type="text" name="telefono">
+                        <input id="telefono" class="diseñoGod" type="text" name="telefono">
                     </div>
                     <div class="large-label sobre-mi">
                         <label for="sobre-mi" class="translate">Sobre mí</label>
-                        <textarea name="sobre-mi" id="sobre-mi"></textarea>
+                        <textarea name="sobre-mi" class="diseñoGod" id="sobre-mi"></textarea>
                     </div>
                 </div>
 

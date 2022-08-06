@@ -268,7 +268,7 @@ footer {
 
 
 .cancelar-button button {
-    background-color: rgb(255, 255, 255);
+    background-color: #5B4545;
     border: none;
     padding: 10px 60px;
     border-radius: 30px;
@@ -281,7 +281,7 @@ footer {
 
 .cancelar-button button:hover {
     cursor: pointer;
-    background-color: rgb(238, 238, 238);
+    background-color: #fff;
     transform: scale(1.01);
     transition: all .5s ease-out;
 }

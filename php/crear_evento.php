@@ -22,15 +22,15 @@ include_once('header.php');
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
-                        <label for="title" class="label_forms label_generalidaes" class="translate">Título del evento
+                        <label for="title" class="label_forms label_generalidaes translate">Título del evento
                         </label>
-                        <input type="text" name="title" class="input_genralidades" class="translate">
+                        <input type="text" name="title" class="input_genralidades">
 
-                        <label for="title" class="label_forms label_generalidaes" class="translate">¿Qué se realizará en el
+                        <label for="title" class="label_forms label_generalidaes translate">¿Qué se realizará en el
                             evento? </label>
                         <input type="text" name="title" class="input_genralidades input_comentario">
 
-                        <label for="title" class="label_forms label_generalidaes" class="translate">Requisitos para asistir
+                        <label for="title" class="label_forms label_generalidaes translate">Requisitos para asistir
                             al evento</label>
                         <input type="text" name="title" class="input_genralidades input_requisitos">
 
@@ -38,7 +38,7 @@ include_once('header.php');
                     </div>
                     <div class="side_2 side-datos">
                         <div class="input_1">
-                            <label for="title" class="label_forms label_datos" class="translate">Lugar de organización
+                            <label for="title" class="label_forms label_datos translate">Lugar de organización
                             </label>
                             <input type="text" name="title" class="input_datos">
 
@@ -46,12 +46,12 @@ include_once('header.php');
 
                         <div class="fecha_form-eventos">
                             <div id="fecha_eventos">
-                                <label for="" class="classfecha-hora label_forms" class="translate">Fecha </label>
+                                <label for="" class="classfecha-hora label_forms translate">Fecha </label>
                                 <input type="text" name="title" class="input_fecha">
                             </div>
 
                             <div id="hora_eventos">
-                                <label for="" class="classfecha-hora label_forms" class="translate">Hora </label>
+                                <label for="" class="classfecha-hora label_forms translate">Hora </label>
                                 <input type="text" name="title" class="input_fecha">
                             </div>
                         </div>
@@ -88,7 +88,7 @@ include_once('header.php');
                         </div>
 
                         <div class="publish">
-                            <input type="submit" name="submit" class="submit" value="Publicar">
+                           <span class="submit translate"> <input type="submit" name="submit" value="Publicar"> </span>
                         </div>
                     </div>
                 </div>
