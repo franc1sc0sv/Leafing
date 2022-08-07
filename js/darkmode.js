@@ -7,6 +7,7 @@ if (!localStorage.dark) {
 btnMode.addEventListener("click", function () {
     let val = body.classList.toggle("darkmode")
     let val1 = body.classList.toggle("font-mode")
+    body.style.transition = '3s'; 
     console.log(val)
     console.log("xd")
 

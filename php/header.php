@@ -119,7 +119,7 @@ if (!isset($_SESSION['lang'])) {
                                         <li class="li-menu item-menu-desplegable">
                                                 <p class="a-header"><span class="translateHeader">Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
-                                                        <li> <i class="fas fa-toggle-on on" id="btnMode"></i> </li>
+                                                        <li><img src="../img/imagenes/luna.png" alt="" id="btnMode" class="arreglar"></li>
                                                         <li class="li_menu-despleagble"><button id="buttonSpanish" class="BanderaEspaña"><img class="imgBandera" src="../img/imagenes/Bandera_de_Españapng.png" alt=""></button></li>
                                                         <li class="li_menu-despleagble"><button id="buttonEnglish" class="BanderaIngles"><img class="imgBandera" src="../img/imagenes/Bandera-del-Reino-Unid.png" alt=""></button></li>
 

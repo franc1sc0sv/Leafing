@@ -134,3 +134,12 @@ body.darkmode,
 .container-text2 {
     color: #0B0D17;
 }
+
+header.darkmode {
+    background: url(../img/imagenes/imagen-dark.jpg)!important;
+}
+
+.arreglar{
+    width: 2rem;
+    height: 2rem;
+}
