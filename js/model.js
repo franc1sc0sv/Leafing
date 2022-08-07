@@ -151,3 +151,6 @@ arrorBack.addEventListener('click', function () {
     setTimeout(arrowNone, 200);
 
 })
+
+
+

@@ -302,7 +302,7 @@
 }
 
 .buttonxd {
-    background-color: #8AB694;
+    background-color: #484848;
     border: none;
     padding: 15px 20px;
     border-radius: 30px;
@@ -312,8 +312,15 @@
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
-    max-width: 12rem;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
 }
+
+.buttonxd:hover {
+    background-color: #8AB694;
+}
+
 
 .iniciodelinicio {
     display: flex;
@@ -446,6 +453,47 @@ img {
     background-color: #8AB694;
 }
 
+
+.ModalOpen {
+    border-radius: 23px;
+    padding: 10px;
+    padding: 10px 25px;
+    background-color: #484848;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+.ModalOpen:hover {
+    background-color: #8AB694;
+}
+
+
+#Cancelar {
+    border-radius: 23px;
+    padding: 10px;
+    padding: 10px 25px;
+    background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+#Cancelar:hover {
+    background-color: rgb(189, 23, 23);
+}
+
+.inscribirseCancelar {
+    margin: 2.1rem;
+}
+
+/*Modal inscripcion*/
 
 .MensajesExtra {
     display: flex;

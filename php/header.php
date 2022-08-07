@@ -1,11 +1,12 @@
 <?php
-//echo $_SERVER['SCRIPT_NAME'];
-//print_r($_SESSION);
+if (!isset($_SESSION['lang'])) {
+        $_SESSION['lang'] = "es";
+}
 ?>
 
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang=<?php echo $_SESSION['lang'] ?>>
 
 <head>
         <meta charset="UTF-8">
@@ -80,6 +81,8 @@
                 <!--Estilos para perfil - eventos inscritos -->
                 <link rel="stylesheet" href="../css/eventos_inscritos.css">
         <?php } ?>
+
+        <link rel="stylesheet" href="../css/modal.css">
 
         <!--Aqui inicia el modo oscuro-->
         <link rel="stylesheet" href="../css/darkmode.css">

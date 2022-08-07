@@ -14,7 +14,7 @@ buttonChange.addEventListener("click", function () {
     function getID(path) {
         let id;
 
-        if (path == "index.php") {
+        if (path == "index.php" || path == "") {
             id = 0;
         } else if (path == "about_us.php") {
             id = 1;

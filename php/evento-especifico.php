@@ -56,10 +56,22 @@ if (!$error) { ?>
                     <p><?php echo $event[0]['place_event'] ?></p>
                     <p><?php echo $event[0]['date_event'] ?></p>
                 </div>
+
+                <div class="inscribirseCancelar" id="inscribirseCancelar">
+                    <!-- <button class="ModalOpen" id="inscribirse"> Inscribirse</button>
+                    <button id="Cancelar">Cancelar inscripcion</button> -->
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="modal_container" class="modal-container">
+        <div class="modal" id="modal">
+            <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+
+            </div>
+        </div>
+    </div>
 
     <div class="container-modal" id="containerModal">
         <div class="content-modal" id="contentModal">
@@ -67,9 +79,6 @@ if (!$error) { ?>
                 <img src="../img/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
                 <h1>Reportar</h1>
                 <img src="../img/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
-                <!-- <div class="btn-cerrar">
-                                            <label for="btn-modal">Cerrar</label>
-                                        </div> -->
             </div>
             <div class="contentModel" id="contentModel">
                 <div class="contentModelReportes">
