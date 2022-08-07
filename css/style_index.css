@@ -608,6 +608,11 @@ header {
     transform: scale(1.02);
 }
 
+.a-header {
+    cursor: pointer;
+
+}
+
 /* 
 .slider_article {
     margin-bottom: 10rem;

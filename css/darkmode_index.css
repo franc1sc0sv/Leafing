@@ -46,6 +46,10 @@ body.darkmode #menu span {
 
 }
 
+body.darkmode #menu span:hover {
+    color: #4F9466 !important;
+}
+
 body.darkmode .preguntas_eventos-eventos>p>a:hover {
     color: #4F9466 !important;
 }
@@ -112,7 +116,7 @@ body.darkmode .behind-menu-img {
 }
 
 body.darkmode .text_slider {
-    background-color: #28241c;
+    background-color: #181e2a;
 }
 
 body.darkmode .cancelar-button:hover {
@@ -136,7 +140,7 @@ body.darkmode,
 }
 
 body.darkmode header {
-    background: #0B0D17;
+    background-image: url(../img/imagenes/imagen-dark.jpg);
     transition: 3s;
 }
 
