@@ -49,7 +49,7 @@ if (html.lang == "es") {
     </div > `;
 
     NameNoValido = `
-    < div class="alertDivNice" >
+    < div class="alertDivRepetido" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Nombre no válido</p>
     </div > `
@@ -95,7 +95,7 @@ if (html.lang == "es") {
     </div > `;
 
     NameNoValido = `
-    <div class="alertDivNice" >
+    <div class="alertDivRepetido" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Invalid name</p>
     </div > `

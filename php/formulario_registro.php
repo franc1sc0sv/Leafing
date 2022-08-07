@@ -67,8 +67,8 @@
                                 </div>
                                 <div class="textcode">
                                     <p class="translate">Para verificar tu correo electrónico
-                                        te hemos enviado un código de confirmación a <span id="correoEnviado"> correoejemplo@gmail.com. </span>
-                                    </p>
+                                        te hemos enviado un código de confirmación a </p>
+                                    <span id="correoEnviado"> correoejemplo@gmail.com. </span>
                                 </div>
                                 <form action="formulario_registro.php" method="post" id="formCode">
                                     <div class="inputs">
