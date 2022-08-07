@@ -91,6 +91,7 @@ header {
 /*¿Qué son estos eventos?*/
 
 .que-eventos {
+    margin-top: 8rem;
     display: grid;
     /* grid-template-columns: 0.7fr auto; */
     grid-template:

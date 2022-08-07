@@ -57,9 +57,9 @@ function dataRandom() {
     fetch(`datosRandomi.php`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+           // console.log(data);
             let DatosRadom = Data(data)
-            console.log(DatosRadom)
+            //console.log(DatosRadom)
             Datos_curiosos_container.innerHTML = DatosRadom;
             
 
