@@ -17,7 +17,7 @@
     <div class="container">
         <div class="container2">
             <div class="alreadysignup">
-                <p class="question" class="translate">¿Aún no tienes una cuenta?</p>
+                <p class="question"> <span class="translate"> ¿Aún no tienes una cuenta?</span></p>
                 <a href="../php/formulario_registro.php" class="login"><span class="translate">Regístrate</span></a>
             </div>
             <div class="container-form">
@@ -85,6 +85,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/translate.js" type="module"></script>
     <script src="../js/login.js"> </script>
 </body>
 

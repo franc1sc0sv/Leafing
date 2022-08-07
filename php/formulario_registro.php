@@ -137,6 +137,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/translate.js" type="module"></script>
     <script src="../js/register.js" defer></script>
 </body>
 

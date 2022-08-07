@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* #close {
+    background-color: #47a386;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    cursor: pointer;
+} */
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal h1 {
+    margin: 0;
+}
+
+.modal p {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.BotonesRegistroInicio {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.question {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18.0526px;
+    line-height: 27px;
+    border: #fff solid 1px;
+    border-radius: 20px;
+    padding: 5px;
+    text-decoration: none;
+    color: #8AB694;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16.2474px;
+    line-height: 27px;
+    transition: all .5s ease;
+}
+
+.question:hover{
+    transform: scale(1.1);
+    border-bottom: 1px #8AB694 solid;
+}
+
+.contenidoModalInscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

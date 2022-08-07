@@ -21,7 +21,7 @@ formEmail.addEventListener('submit', function (e) {
     let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
 
-    console.log(expRegEmail.test(email))
+    //console.log(expRegEmail.test(email))
 
     //Fecth trabaja por defecto con get
 
