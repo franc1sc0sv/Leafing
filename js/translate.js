@@ -13,6 +13,9 @@ fetch(`APISessions.php?peticion=1`)
         if (data == 'ERROR') {
             translateGeneralEN[7][7] = "Log in";
             translateGeneralEN[7][8] = "Sing in";
+
+            translateGeneralES[7][7] = "Registrarse";
+            translateGeneralES[7][8] = "Inicio de sesion";
         }
     })
 
