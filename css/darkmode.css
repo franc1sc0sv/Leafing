@@ -82,7 +82,7 @@ body.darkmode .slider-center .container_container .container-slider .slider_scre
 
 
 body.darkmode .header-container .green {
-    color: #0B0D17 !important;
+    color: #F4F0EE!important;
 }
 
 body.darkmode,
@@ -133,4 +133,14 @@ body.darkmode,
 .container-descripcion,
 .container-text2 {
     color: #0B0D17;
+}
+
+body.darkmode header { 
+    background-image: url(../img/imagenes/imagen-dark.jpg);
+    transition: 3s;
+}
+
+.arreglar{
+    width: 2rem;
+    height: 2rem;
 }
