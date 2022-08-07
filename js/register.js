@@ -18,6 +18,10 @@ formEmail.addEventListener('submit', function (e) {
     let data = new FormData(formEmail);//Informacion del formulario de quien - form email
     let email = data.get('email')
     let passsword = data.get('password')
+    let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+
+    console.log(expRegEmail.test(email))
 
     //Fecth trabaja por defecto con get
 
@@ -41,7 +45,22 @@ formEmail.addEventListener('submit', function (e) {
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                 <p>Ya existe un correo con esta cuenta</p>
             </div>`
-            } else {
+            } 
+            else if (!expRegEmail.test(email)) {
+                alert.innerHTML = `
+                <div class="alertDivEmpty">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <p>Correo electrónico no válido</p>
+                </div>`
+            }
+            else if (passsword.length < 6 || passsword.length > 15) {
+                alert.innerHTML = `
+                <div class="alertDivEmpty">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <p>La contraseña debe tener más de 6 caracteres y menos de 15</p>
+                </div>`
+            }
+            else {
                 codeEmail = getCode(data)
                 data = getEmail(email, passsword)
                 correoEnviado.innerHTML = email;
@@ -69,7 +88,15 @@ formCode.addEventListener('submit', function (e) {
         if (codeEmail == codeVerification) {
             console.log("Codigo correcto");
             containerinfo1.style.transform = "translateX(-66%)"
-        } else {
+        } 
+        else if (codeEmail.length !== 4) {
+            alertCode.innerHTML = `
+            <div class="alertDivEmpty">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <p>El codigo debe tener 4 dígitos</p>
+            </div>`
+        }
+        else {
             alertCode.innerHTML = `
             <div class="alertDivEmpty">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -94,6 +121,9 @@ formData.addEventListener('submit', function (e) {
     let borndate = data.get('borndate');
     let gender = data.get('gender');
     let user = data.get('user');
+
+    let expRegUser = /^[a-zA-Z0-9\_\-]{4,16}$/;
+    let expRegName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 
     // console.log(Dataemail)
     // console.log(Datapassword)
@@ -121,7 +151,16 @@ formData.addEventListener('submit', function (e) {
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <p>Llena todos los campos</p>
                     </div>`
-                } else if (data == "niceYourAreLogin") {
+                } 
+                else if (!expRegName.test(name)) {
+                    alertData.innerHTML = `
+                    <div class="alertDivNice">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <p>Nombre no válido</p>
+                    </div>`
+                }
+                
+                else if (data == "niceYourAreLogin") {
                     alertData.innerHTML = `
                     <div class="alertDivNice">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>

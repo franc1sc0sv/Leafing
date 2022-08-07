@@ -96,6 +96,9 @@
                         <div class="burger">
                                 <img src="../img/iconos/burger_img.svg" class="burger_icon" alt="icon_burger">
                         </div>
+                        <div id="leafing-header">
+                                <h1 id="LEAFING">Leafing</h1>
+                        </div>
 
                         <div id="links-header">
                                 <ul class="menu-header">
@@ -120,9 +123,7 @@
                                 </ul>
                         </div>
 
-                        <div id="leafing-header">
-                                <h1 id="LEAFING">Leafing</h1>
-                        </div>
+
 
                         <?php if (!isset($_SESSION['estatus'])) { ?>
                                 <div id="buttons-header">
