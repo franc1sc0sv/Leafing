@@ -87,7 +87,7 @@ li {
 }
 
 #links-header {
-    place-self: flex-start;
+    align-self: center;
 }
 
 #buttons-header {
