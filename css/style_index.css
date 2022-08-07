@@ -319,7 +319,7 @@ header {
     background-size: cover;
 }
 
-.Datos-curiosos_container {
+.Datos_curiosos_container {
     display: grid;
     grid-template-columns: repeat(2, 0.4fr);
     grid-auto-rows: max-content;
@@ -361,7 +361,7 @@ header {
 
 
 @media screen and (max-width:670px) {
-    .Datos-curiosos_container {
+    .Datos_curiosos_container {
         display: grid;
         grid-template-columns: 0.7fr;
         grid-auto-rows: max-content;

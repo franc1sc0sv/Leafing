@@ -40,11 +40,10 @@
         </div>
     </div>
 </footer>
-<script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/translate.js" type="module"></script>
 <script src="../js/darkmode.js"> </script>
+<script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/slider.js"></script>
-<script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_profile.js"></script>
 <script src="../js/model.js"> </script>

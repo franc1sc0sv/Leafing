@@ -1,6 +1,6 @@
-<?php //XD ?>
+<?php session_start() ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?php echo $_SESSION['lang'] ?>>
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
                                     <form action="formulario_registro.php" method="post" id="formEmail">
                                         <div class="emailInput">
                                             <label for="email" class="translate">Email</label><br>
-                                            <input type="email" class="mitexto inpuxD" id="email" name="email"><br>
+                                            <input type="text" class="mitexto inpuxD" id="email" name="email"><br>
                                         </div>
 
                                         <div class="passwordinput">

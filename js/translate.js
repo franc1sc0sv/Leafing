@@ -5,36 +5,66 @@ const englishHeader = document.getElementsByClassName('translateHeader');
 const englishFooter = document.getElementsByClassName('translateFooter');
 const buttonSpanish = document.getElementById('buttonSpanish');
 const buttonEnglish = document.getElementById('buttonEnglish');
+const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
+let html = document.querySelector("html");
 
-console.log(english);
-console.log(translateGeneralEN[0].length);
+window.addEventListener("load", () => {
+    fetch(`APISessions.php?peticion=1`)
+        .then(res => res.json())
+        .then(data => {
+            if (data != 'ERROR') {
+                translateGeneralEN[7][7] = "My profile";
+                translateGeneralEN[7][8] = "Close session";
 
-fetch(`APISessions.php?peticion=1`)
-    .then(res => res.json())
-    .then(data => {
+                translateGeneralES[7][7] = " Mi perfil";
+                translateGeneralES[7][8] = "Cerrar sesión";
+            }
 
-        if (data == 'ERROR') {
-            translateGeneralEN[7][7] = "Log in";
-            translateGeneralEN[7][8] = "Sing in";
+            if (html.lang == "en") {
+                forInnerHTM(translateGeneralEN);
+                dataRandom()
 
-            translateGeneralES[7][7] = "Registrarse";
-            translateGeneralES[7][8] = "Inicio de sesion";
-        }
-    })
+            } else {
+                forInnerHTM(translateGeneralES);
+                dataRandom()
 
+            }
+        })
 
-fetch(`APISessions.php?peticion=3`)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        if (data == "en") {
-            forInnerHTM(translateGeneralEN);
-        } else {
-            forInnerHTM(translateGeneralES);
-        }
+})
 
-    })
+function Data(array) {
+    let liElemnet = '';
+    for (let index = 0; index < array.length; index++) {
+        liElemnet += `
+        
+        <div class="Datos_cards">
+            <div>
+                <h1> ${array[index][1]} </h1>
+                <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
+            </div>
+            <p> ${array[index][3]}</p>
+         </div>
+        
+        
+        \n`
+    }
 
+    return liElemnet;
+}
+
+function dataRandom() {
+    fetch(`datosRandomi.php`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            let DatosRadom = Data(data)
+            console.log(DatosRadom)
+            Datos_curiosos_container.innerHTML = DatosRadom;
+            
+
+        })
+}
 
 function getID(path) {
     let id;
@@ -81,44 +111,35 @@ function forInnerHTM(translate) {
     //Cambiar valores del footer
     for (let i = 0; i < englishFooter.length; i++) {
         englishFooter[i].innerHTML = translate[8][i];
+    }
+}
+
+
+function TraduccionEspañol() {
+
+    if (html.lang == "en") {
+        fetch(`APISessions.php?peticion=4&lang=es`);
+        forInnerHTM(translateGeneralES);
+        html.setAttribute("lang", "es")
+
+    }
+}
+function TraducirIngles() {
+
+    if (html.lang == "es") {
+        fetch(`APISessions.php?peticion=4&lang=en`);
+        forInnerHTM(translateGeneralEN);
+        html.setAttribute("lang", "en")
 
     }
 }
 
-function TraduccionEspañol() {
-    fetch(`APISessions.php?peticion=3`)
-        .then(res => res.json())
-        .then(data => {
-            if (data == "en") {
-                fetch(`APISessions.php?peticion=4&lang=es`);
-                forInnerHTM(translateGeneralES);
-                //console.log("Traduciendo a español")
-            } else {
-                console.log("Estas en español")
-            }
-        })
-}
-
-
-
-function TraducirIngles() {
-    fetch(`APISessions.php?peticion=3`)
-        .then(res => res.json())
-        .then(data => {
-            if (data == "es") {
-                fetch(`APISessions.php?peticion=4&lang=en`);
-                forInnerHTM(translateGeneralEN);
-                //console.log("Traduciendo a ingles")
-            } else {
-                console.log("Estas en ingles")
-            }
-        })
-}
-
 buttonSpanish.addEventListener('click', function () {
     TraduccionEspañol()
+    dataRandom()
 })
 
 buttonEnglish.addEventListener('click', function () {
     TraducirIngles()
+    dataRandom()
 })
