@@ -5,7 +5,10 @@ const englishHeader = document.getElementsByClassName('translateHeader');
 const englishFooter = document.getElementsByClassName('translateFooter');
 const buttonSpanish = document.getElementById('buttonSpanish');
 const buttonEnglish = document.getElementById('buttonEnglish');
+
 console.log(english);
+console.log(translateGeneralEN[0].length);
+
 fetch(`APISessions.php?peticion=1`)
     .then(res => res.json())
     .then(data => {
@@ -13,6 +16,9 @@ fetch(`APISessions.php?peticion=1`)
         if (data == 'ERROR') {
             translateGeneralEN[7][7] = "Log in";
             translateGeneralEN[7][8] = "Sing in";
+
+            translateGeneralES[7][7] = "Registrarse";
+            translateGeneralES[7][8] = "Inicio de sesion";
         }
     })
 
@@ -61,15 +67,18 @@ function forInnerHTM(translate) {
     let pathname = window.location.pathname;
     let arrayString = pathname.split("/");
     let id = getID(arrayString[4])
+    // console.log(pathname);
+    // console.log(arrayString);
 
+    //Cambiar valores del body
     for (let i = 0; i < english.length; i++) {
         english[i].innerHTML = translate[id][i];
     }
-
+    //Cambiar valores del header
     for (let i = 0; i < englishHeader.length; i++) {
         englishHeader[i].innerHTML = translate[7][i];
     }
-
+    //Cambiar valores del footer
     for (let i = 0; i < englishFooter.length; i++) {
         englishFooter[i].innerHTML = translate[8][i];
 

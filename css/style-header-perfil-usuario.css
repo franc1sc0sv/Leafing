@@ -20,6 +20,20 @@ li {
     list-style: none;
 }
 
+.imgBandera {
+    width: 90px;
+    height: 50px;
+}
+
+.BanderaEspaña {
+    border: none;
+    cursor: pointer;
+}
+
+.BanderaIngles {
+    border: none;
+    cursor: pointer;
+}
 
 .menu-header {
     height: 100%;
@@ -84,10 +98,6 @@ li {
 #LEAFING {
     font-size: 33px;
     color: #484848;
-}
-
-#links-header {
-    place-self: flex-start;
 }
 
 #buttons-header {
