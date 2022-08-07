@@ -16,7 +16,13 @@ export const translateGeneralEN = [
     //header
     ["Home", "About us", "Help the planet", "Events", "Create your events", "Become aware", "Special adjustments", "Log in", "Sing in"],
     //footer
-    ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"]
+    ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"],
+    //Contraseña
+    ["Password settings.", "Old password", "New password", "Confirm new password", "Save", "Cancelar"],
+    //Mis eventos
+    ["Mis eventos"],
+    //Eventos inscritos
+    ["Registered events "]
 ];
 
 export const translateGeneralES = [
@@ -37,5 +43,11 @@ export const translateGeneralES = [
     //header
     ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Ajustes especiales", "Registrarse", " Inicio de sesion"],
     //footer
-    ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"]
+    ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"],
+    //Contraseña
+    ["Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "Guardar", "Cancelar"],
+    //Mis eventos
+    ["Mis eventos"],
+    //Eventos inscritos
+    ["Eventos inscritos"]
 ]
