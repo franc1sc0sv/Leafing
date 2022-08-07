@@ -171,6 +171,20 @@ li {
 
 }
 
+.imgBandera {
+    width: 90px;
+    height: 50px;
+}
+
+.BanderaEspaña {
+    border: none;
+    cursor: pointer;
+}
+
+.BanderaIngles {
+    border: none;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 900px) {
 
@@ -186,7 +200,7 @@ li {
 
     #menu {
         display: grid;
-        grid-template-columns: max-content auto 1fr;
+        grid-template-columns: max-content 1fr;
         align-items: center;
         justify-content: center;
     }

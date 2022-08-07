@@ -1,9 +1,9 @@
 <div class="card">
     <div class="event-img">
-        <a href=""><img src="https://img.freepik.com/foto-gratis/equipo-voluntario-multietnico-quitando-basura-hierba_1262-21191.jpg?w=1380&t=st=1659765322~exp=1659765922~hmac=2d1e91e1c03ff53d2933078b1348599fad72b1d8114c449e011fc208f2eb6352" class="img"></a>
+        <a href="./evento-especifico.php?estiben=<?php echo $event['id_events'] ?>"><img src="https://img.freepik.com/foto-gratis/equipo-voluntario-multietnico-quitando-basura-hierba_1262-21191.jpg?w=1380&t=st=1659765322~exp=1659765922~hmac=2d1e91e1c03ff53d2933078b1348599fad72b1d8114c449e011fc208f2eb6352" class="img"></a>
     </div>
     <div class="cardtext">
-        <a href="../php/evento-especifico.php" class="title"><?php echo resaltar_frase($event['name_event'], $_GET['busca']) ?></a>
+        <a href="./evento-especifico.php?estiben=<?php echo $event['id_events'] ?>" class="title"><?php echo resaltar_frase($event['name_event'], $_GET['busca']) ?></a>
         <div class="specificInfo">
             <div class="date">
                 <img src="../img/iconos/location.svg" class="location" alt="">
@@ -11,7 +11,7 @@
             </div>
             <div class="place">
                 <img src="../img/iconos/location.svg" class="location" alt="">
-                San Salvador
+                <?php echo $event['place_event']?>
             </div>
         </div>
         <p><?php echo $event['description_event']
