@@ -8,6 +8,8 @@ const buttonEnglish = document.getElementById('buttonEnglish');
 const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
 let html = document.querySelector("html");
 
+console.log(english)
+
 window.addEventListener("load", () => {
     fetch(`APISessions.php?peticion=1`)
         .then(res => res.json())
@@ -57,11 +59,11 @@ function dataRandom() {
     fetch(`datosRandomi.php`)
         .then(res => res.json())
         .then(data => {
-           // console.log(data);
+            // console.log(data);
             let DatosRadom = Data(data)
             //console.log(DatosRadom)
             Datos_curiosos_container.innerHTML = DatosRadom;
-            
+
 
         })
 }
@@ -73,21 +75,23 @@ function getID(path) {
         id = 0;
     } else if (path == "about_us.php") {
         id = 1;
-    }
-    else if (path == "concientizate.php") {
+    } else if (path == "concientizate.php") {
         id = 2;
-    }
-    else if (path == "crear_evento.php") {
+    } else if (path == "crear_evento.php") {
         id = 3;
-    }
-    else if (path == "cuenta.php") {
+    } else if (path == "cuenta.php") {
         id = 4;
-    }
-    else if (path == "formulario_inicio-sesion.php") {
+    } else if (path == "formulario_inicio-sesion.php") {
         id = 5;
-    }
-    else if (path == "formulario_registro.php") {
+    } else if (path == "formulario_registro.php") {
         id = 6;
+    } else if (path == "contrase%C3%B1a.php") {
+        id = 9;
+    } else if (path == "mis_eventos.php") {
+        id = 10;
+    } else if (path == "eventos_inscritos.php") {
+        id = 11;
+
     }
 
     return id;
@@ -97,8 +101,8 @@ function forInnerHTM(translate) {
     let pathname = window.location.pathname;
     let arrayString = pathname.split("/");
     let id = getID(arrayString[4])
-    // console.log(pathname);
-    // console.log(arrayString);
+    console.log(pathname);
+    console.log(arrayString);
 
     //Cambiar valores del body
     for (let i = 0; i < english.length; i++) {

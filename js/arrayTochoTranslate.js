@@ -18,11 +18,11 @@ export const translateGeneralEN = [
     //footer
     ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"],
     //Contraseña
-    ["Password settings.", "Old password", "New password", "Confirm new password", "Save", "Cancelar"],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Password settings.", "Old password", "New password", "Confirm new password", "Save", "Cancelar"],
     //Mis eventos
-    ["Mis eventos"],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "My events"],
     //Eventos inscritos
-    ["Registered events "]
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "]
 ];
 
 export const translateGeneralES = [
@@ -45,9 +45,9 @@ export const translateGeneralES = [
     //footer
     ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"],
     //Contraseña
-    ["Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "Guardar", "Cancelar"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "Guardar", "Cancelar"],
     //Mis eventos
-    ["Mis eventos"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Mis eventos"],
     //Eventos inscritos
-    ["Eventos inscritos"]
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"]
 ]
