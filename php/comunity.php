@@ -62,7 +62,7 @@ if (!isset($_GET['date_filtro'])) {
                             <?php if ($_GET["categorias"] != '') { ?>
                                 <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
                             <?php } ?>
-                            <option value="">Todas</option>
+                            <option value="">Categorías</option>
 
                             <?php
                             $objconexionfiltros = new conection();
@@ -82,7 +82,7 @@ if (!isset($_GET['date_filtro'])) {
                             <?php if ($_GET["lugar"] != '') { ?>
                                 <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
                             <?php } ?>
-                            <option value="" class="optionColor">Todos</option>
+                            <option value="" class="optionColor">Lugar</option>
                             <option value="Ahuachapán">Ahuachapán</option>
                             <option value="Cabañas">Cabañas</option>
                             <option value="Chalatenango">Chalatenango</option>
