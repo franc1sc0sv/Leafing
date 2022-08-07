@@ -19,8 +19,9 @@ a {
 }
 
 header {
-    background: url(../img/imagenes/salvacion.png) no-repeat center center;
+    background: url(../img/imagenes/volunteer.jpg) no-repeat center center;
     background-size: cover;
+
 
     width: 100%;
     min-height: 100vh;
