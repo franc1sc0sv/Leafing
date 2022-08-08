@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
 
 
+
+
 header {
     font-family: 'Montserrat';
     /* margin-bottom: 8%; */
@@ -13,6 +15,26 @@ header {
     display: grid;
     grid-template-columns: .4fr 1.5fr .8fr;
     padding: 1.5rem 1.5rem;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.preloaderContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff4db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    transition: opacity 1s;
+}
+
+.preloaderContainer img {
+    height: 35vh;
 }
 
 

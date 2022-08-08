@@ -93,7 +93,10 @@ if (!isset($_SESSION['lang'])) {
         <title>Leafing</title>
 </head>
 
-<body class="darkmode">
+<body class="darkmode hidden" id="boddy">
+        <div class="preloaderContainer" id="onload">
+                <img src="../img/gif/leaf.gif" alt="">
+        </div>
         <header>
                 <nav id="menu">
                         <div class="burger">
