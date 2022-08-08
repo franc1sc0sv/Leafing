@@ -55,7 +55,7 @@ if (!isset($_GET['date_filtro'])) {
                     <div class="first-text">
                         <!-- <h1>Buscador</h1>
                     <p>Evento a buscar</p> -->
-                        <input type="search" class="inputs search" placeholder="Busca tu evento" id="Buscador" name="busca" value="<?php echo $_GET['busca'] ?>" />
+                        <input type="search" class="inputs search" id="Buscador" name="busca" value="<?php echo $_GET['busca'] ?>" />
                         <img src="../img/iconos/lupa.png" alt="" class="lupa">
                     </div>
                     <div>
