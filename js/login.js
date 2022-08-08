@@ -71,12 +71,12 @@ formCredentials.addEventListener('submit', function (e) {
                 </div>`
 
                 console.log(data)
-                // function redirec() {
-                //     window.location.href = "index.php";
-                // }
-                // setTimeout(redirec, 1000);
+                function redirec() {
+                    window.location.href = "index.php";
+                }
+                setTimeout(redirec, 1000);
 
-                //console.log(data);
+                console.log(data);
             }
         })
 
