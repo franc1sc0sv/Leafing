@@ -1,8 +1,7 @@
-<?php //XD 
-?>
+<?php session_start()?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?php echo $_SESSION['lang'] ?>>
 
 <head>
     <meta charset="UTF-8">

@@ -22,6 +22,7 @@ if (!isset($_SESSION['lang'])) {
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                 <!-- Estilos de index-->
                 <link rel="stylesheet" href="../css/style_index.css">
+                <link rel="stylesheet" href="../css/darkmode_index.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/about_us.php") { ?>
@@ -84,8 +85,12 @@ if (!isset($_SESSION['lang'])) {
 
         <link rel="stylesheet" href="../css/modal.css">
 
-        <!--Aqui inicia el modo oscuro-->
-        <link rel="stylesheet" href="../css/darkmode.css">
+        <?php if ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/php/index.php") { ?>
+                <!--Aqui inicia el modo oscuro-->
+                <link rel="stylesheet" href="../css/darkmode.css">
+        <?php } ?>
+
+
         <!--Favicon-->
         <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
 

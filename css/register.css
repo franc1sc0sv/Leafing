@@ -203,15 +203,16 @@ p {
 .textcode {
     width: 70%;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
-.textcode p {
+
+.textcode p,.textcode span  {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14.8037px;
     line-height: 22px;
-    text-align: center;
 }
 
 .insertcode input {

@@ -10,13 +10,19 @@ export const translateGeneralEN = [
     //4 = perfil de usuario
     ["Account", "Password", "My events", "Registered events", "Log out ", "Account settings", "Name", "Last name", "User name", "Nickname", "Email", "Telephone number", "About me", "Save", "Cancel"],
     //5 = inicio de sesion
-    ["Don't have an account yet?", "Register", "Log in", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to correoejemplo@gmail.com.", "Send the code again", "Next"],
+    ["Don't have an account yet?", "Register", "Log in", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next"],
     //6 = creacion de cuenta
-    ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to correoejemplo@gmail.com.", "Send the code again", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Genre"],
+    ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Gender"],
     //header
-    ["Home", "About us", "Help the planet", "Events", "Create your events", "Become aware", "Special adjustments", "My profile", "Close session"],
+    ["Home", "About us", "Help the planet", "Events", "Create your events", "Become aware", "Special adjustments", "Log in", "Sing in"],
     //footer
-    ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"]
+    ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"],
+    //Contraseña
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Password settings.", "Old password", "New password", "Confirm new password", "Save", "Cancelar"],
+    //Mis eventos
+    ["Account", "Password", "My events", "Registered events", "Log out ", "My events"],
+    //Eventos inscritos
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "]
 ];
 
 export const translateGeneralES = [
@@ -31,11 +37,17 @@ export const translateGeneralES = [
     //4 = perfil de usuario
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la cuenta", "Nombre", "Apellido", "Nombre de usuario", "Apodo", "Email", "Número de teléfonico", "Sobre mí", "Guardar", "Cancelar"],
     //5 = inicio de sesion
-    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a correoejemplo@gmail.com.", "Enviar el código de nuevo", "Siguiente"],
+    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente"],
     //6 = creacion de cuenta
-    ["¿Ya tienes una cuenta?", "Regístrate", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a correoejemplo@gmail.com.", "Enviar el código de nuevo", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
+    ["¿Ya tienes una cuenta?", "Regístrate", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
     //header
-    ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Ajustes especiales", "Mi perfil", "Cerrar sesión"],
+    ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Ajustes especiales", "Registrarse", " Inicio de sesion"],
     //footer
-    ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"]
+    ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"],
+    //Contraseña
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "Guardar", "Cancelar"],
+    //Mis eventos
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Mis eventos"],
+    //Eventos inscritos
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"]
 ]

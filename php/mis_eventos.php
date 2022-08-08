@@ -14,7 +14,7 @@ include_once('./header.php');
                     <a href="./cuenta.php" id="showConfig" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
                 </div>
                 <div class="configuracion-name">
-                    Mis eventos
+                    <span class="translate"> Mis eventos</span>
                 </div>
                 <div class="eventos-grid">
                     <div class="card">

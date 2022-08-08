@@ -1,39 +1,7 @@
 <?php
 include_once('include.php');
 include_once('conexion.php');
-
-
-$objconexion_numbers = new conection();
-$maxIdData = $objconexion_numbers->consultar("SELECT MAX(id_curious_data) FROM `random_curious_data`");
-$maxIdData[0]['MAX(id_curious_data)'];
-////Codigo para datos curiosos randomizados
-
-# definimos las 5 variables que contendrán los 5 números 
-$n1 = $n2 = $n3 = $n4 = $n5 = $n6 = 0;
-
-# buscamos 5 números aleatorios, verificando que no se repitan 
-$pos = 1;
-while (1) {
-    $rand = rand(1, $maxIdData[0]['MAX(id_curious_data)']);
-    $repetido = false;
-
-    for ($i = 1; $i <= $pos; $i++) {
-        if (${"n" . $i} == $rand) {
-            $repetido = true;
-        }
-    }
-
-    if ($repetido == false) {
-        ${"n" . $pos} = $rand;
-        $pos++;
-        if ($pos == 7) {
-            break;
-        }
-    }
-}
-?>
-
-<?php include_once("header.php"); ?>
+include_once("header.php"); ?>
 
 <body>
     <section>
@@ -199,22 +167,8 @@ while (1) {
                 <div></div>
             </div>
         </article>
-        <div class="Datos-curiosos_container font-mode">
-            <?php
-            $Datos_cards = new conection();
-            $Datos = $Datos_cards->consultar("SELECT * FROM `random_curious_data` WHERE id_curious_data  IN ('$n1', '$n2', '$n3', '$n4', '$n5', '$n6')");
-            ?>
+        <div class="Datos_curiosos_container font-mode" id="Datos_curiosos_container">
 
-            <?php foreach ($Datos as $Dato) { ?>
-                <div class="Datos_cards">
-                    <div>
-                        <h1> <?php echo $Dato['title_curious_data'] ?> </h1>
-                        <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
-                    </div>
-                    <p> <?php echo $Dato['content_curious_data'] ?> </p>
-
-                </div>
-            <?php }  ?>
         </div>
     </section>
 </body>

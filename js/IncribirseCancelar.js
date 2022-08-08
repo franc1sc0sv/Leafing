@@ -43,7 +43,8 @@ function inscribirse(id) {
         .then(res => res.json())
         .then(data => {
             if (data == 'ERROR') {
-                let contenidoModalInscripcionES = `<h1>Necesitas tener una cuenta para poder inscribirte al evento</h1>
+                let contenidoModalInscripcionES = `
+                <h1>Necesitas tener una cuenta para poder inscribirte al evento</h1>
                 <div class="BotonesRegistroInicio">
                         <a href="../php/formulario_inicio-sesion.php" class="question">¿Ya tienes una cuenta?</a>
                         <a href="../php/formulario_registro.php" class="question">¿Aún no tienes una cuenta?</a>
@@ -55,7 +56,10 @@ function inscribirse(id) {
 
                 contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;
             } else {
-                contenidoModalInscripcion.innerHTML = `<h1>Inscribete</h1>`;
+                contenidoModalInscripcion.innerHTML = `
+                <h1>Inscribete</h1>
+                <button id="close" class="buttonxd" onclick=closeModal()>Cerrar</button>
+                `;
             }
         })
 
@@ -63,7 +67,10 @@ function inscribirse(id) {
 
 function CancelarInscripcion(id) {
     modal_container.classList.add('show');
-    contenidoModalInscripcion.innerHTML = '<h1>Cancelar inscripcion</h1>';
+    contenidoModalInscripcion.innerHTML = `
+    <h1>Cancelar inscripcion</h1>
+    <button id="close" class="buttonxd" onclick=closeModal()>Cerrar</button>
+    `;
 
 }
 

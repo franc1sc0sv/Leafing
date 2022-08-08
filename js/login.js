@@ -2,6 +2,7 @@ const formCredentials = document.getElementById('formCredentials')
 const alert = document.getElementById('alert');
 const eye = document.getElementById('eye')
 const passwordInput = document.getElementById('password');
+let html = document.querySelector("html");
 
 eye.addEventListener('click', function () {
     if (passwordInput.type === "password") {
@@ -13,6 +14,45 @@ eye.addEventListener('click', function () {
         eye.style.filter = "opacity(0.4)"
     }
 })
+
+if (html.lang == "es") {
+    alertEmpty = `
+    <div class="alertDivEmpty">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Llena todos los campos</p>
+    </div>`;
+
+    CorreNoValido = `
+    <div class="alertDivEmpty" >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Correo electrónico o contraseña incorrectos</p>
+    </div > `;
+    Nice = `;
+    <div class="alertDivNice" >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Logeado</p>
+    </div > `;
+
+
+
+} else {
+    alertEmpty = `
+    <div class="alertDivEmpty">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Fill in all the fields</p>
+    </div>`;
+
+    CorreNoValido = `
+    <div class="alertDivEmpty" >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Incorrect email or password</p>
+    </div > `;
+    Nice = `;
+    <div class="alertDivNice" >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>Logged in</p>
+    </div > `;
+}
 
 formCredentials.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -29,17 +69,9 @@ formCredentials.addEventListener('submit', function (e) {
         .then(res => res.json())
         .then(data => {
             if (data == "empty") {
-                alert.innerHTML = `
-                    <div class="alertDivEmpty">
-                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        <p>Llena todos los campos</p>
-                    </div>`
+                alert.innerHTML = alertEmpty;
             } else if (data == "ErrorData") {
-                alert.innerHTML = `
-                    <div class="alertDivEmpty">
-                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        <p>Email o contraseña incorrectos</p>
-                    </div>`
+                alert.innerHTML = CorreNoValido;
             } else if (data == "LogeadoUSER") {
                 alert.innerHTML = `
                 <div class="alertDivNice">

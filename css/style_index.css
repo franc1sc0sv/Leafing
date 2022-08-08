@@ -19,7 +19,7 @@ a {
 }
 
 header {
-    background: url(../img/imagenes/volunteer.jpg) no-repeat center center;
+    background: url(../img/imagenes/imagen-light.jpg) no-repeat center center;
     background-size: cover;
     transition: 3s;
 
@@ -93,6 +93,7 @@ header {
 /*¿Qué son estos eventos?*/
 
 .que-eventos {
+    margin-top: 8rem;
     display: grid;
     /* grid-template-columns: 0.7fr auto; */
     grid-template:
@@ -321,7 +322,7 @@ header {
     background-size: cover;
 }
 
-.Datos-curiosos_container {
+.Datos_curiosos_container {
     display: grid;
     grid-template-columns: repeat(2, 0.4fr);
     grid-auto-rows: max-content;
@@ -363,7 +364,7 @@ header {
 
 
 @media screen and (max-width:670px) {
-    .Datos-curiosos_container {
+    .Datos_curiosos_container {
         display: grid;
         grid-template-columns: 0.7fr;
         grid-auto-rows: max-content;
@@ -607,6 +608,11 @@ header {
     transform: scale(1.02);
 }
 
+.a-header {
+    cursor: pointer;
+
+}
+
 /* 
 .slider_article {
     margin-bottom: 10rem;
@@ -629,4 +635,9 @@ header {
     .text_slider {
         width: 90%;
     }
+}
+
+.BanderaEspaña,
+.BanderaIngles {
+    background: transparent;
 }

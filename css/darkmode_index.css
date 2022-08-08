@@ -1,0 +1,150 @@
+#btnMode {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.darkmode {
+    background-color: #0B0D17;
+}
+
+#btnMode.on {
+    color: orange;
+}
+
+/* .font-mode {
+    color: #F4F0EE;
+}
+
+.darkmode .sobre-nosotros>div>p,
+.darkmode .title-page>h1,
+.darkmode .intro__information>p,
+.darkmode .container-info-page>h2,
+.darkmode .container-info-page h3,
+.darkmode .info__consejos>p,
+.darkmode .end__side1>p,
+.darkmode .end__side2>p {
+    color: #F4F0EE;
+} */
+
+body.darkmode * {
+    color: #F4F0EE !important;
+}
+
+body.darkmode #menu a {
+    color: #F4F0EE !important;
+    cursor: pointer;
+
+}
+
+body.darkmode #menu a:hover {
+    color: #4F9466 !important;
+}
+
+body.darkmode #menu span {
+    color: #F4F0EE !important;
+    cursor: pointer;
+
+}
+
+body.darkmode #menu span:hover {
+    color: #4F9466 !important;
+}
+
+body.darkmode .preguntas_eventos-eventos>p>a:hover {
+    color: #4F9466 !important;
+}
+
+body.darkmode #menu img.menu_arrow {
+    filter: brightness(100);
+}
+
+body.darkmode,
+.preguntas_eventos-eventos,
+.hover-xd:hover {
+    color: #4F9466 !important;
+}
+
+body.darkmode .img-perfil {
+    filter: invert(1);
+}
+
+/* body.darkmode, .titulos-generales, .titulos_generales img.menu_arrow-eventos {
+    filter: brightness(100);
+} */
+
+body.darkmode .primeroxd,
+body.darkmode .segundoxd,
+body.darkmode .terceroxd,
+body.darkmode .cuartoxd,
+body.darkmode .quintoxd {
+    background-color: #0B0D17 !important;
+}
+
+body.darkmode .slider-center .container_container .container-slider .slider_screen .text_slider * {
+    color: #CDCDCD !important;
+}
+
+
+body.darkmode .header-container .green {
+    color: #F4F0EE !important;
+}
+
+body.darkmode,
+#container,
+#about_us,
+.sobre-nosotros,
+.text_sobre-nosotros>h1 {
+    color: #4F9466 !important;
+}
+
+body.darkmode .short-labels .diseñoGod {
+    background-color: #403c3c;
+    color: #0B0D17;
+}
+
+body.darkmode .large-label .diseñoGod {
+    background-color: #403c3c !important;
+    color: #0B0D17 !important;
+}
+
+body.darkmode .container-slider {
+    background-color: #0B0D17 !important;
+}
+
+body.darkmode .behind-menu-img {
+    background-color: #0B0D17;
+}
+
+body.darkmode .text_slider {
+    background-color: #181e2a;
+}
+
+body.darkmode .cancelar-button:hover {
+    background-color: #4F9466;
+}
+
+body.darkmode .title.button {
+    color: #4BC172;
+}
+
+body.darkmode .title,
+.button:hover {
+    color: #4F9466;
+}
+
+body.darkmode,
+.container-img2,
+.container-descripcion,
+.container-text2 {
+    color: #0B0D17;
+}
+
+body.darkmode header {
+    background-image: url(../img/imagenes/imagen-dark.jpg);
+    transition: 3s;
+}
+
+.arreglar {
+    width: 2rem;
+    height: 2rem;
+}

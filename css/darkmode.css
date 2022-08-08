@@ -31,19 +31,24 @@ body.darkmode * {
 }
 
 body.darkmode #menu a {
-    color: #F19A00 !important;
+    color: #F4F0EE !important;
+    cursor: pointer;
+
 }
 
 body.darkmode #menu a:hover {
-    color: #F4F0EE !important;
+    color: #4F9466 !important;
 }
 
 body.darkmode #menu span {
-    color: #F19A00 !important;
-}
-
-body.darkmode #menu span:hover {
     color: #F4F0EE !important;
+    cursor: pointer;
+
+}
+body.darkmode #menu span:hover {
+    color: #4F9466 !important;
+    cursor: pointer;
+
 }
 
 body.darkmode .preguntas_eventos-eventos>p>a:hover {
@@ -82,7 +87,7 @@ body.darkmode .slider-center .container_container .container-slider .slider_scre
 
 
 body.darkmode .header-container .green {
-    color: #F4F0EE!important;
+    color: #F4F0EE !important;
 }
 
 body.darkmode,
@@ -135,12 +140,25 @@ body.darkmode,
     color: #0B0D17;
 }
 
-body.darkmode header { 
-    background-image: url(../img/imagenes/imagen-dark.jpg);
+body.darkmode header {
+    background: #0B0D17;
     transition: 3s;
 }
 
-.arreglar{
+.arreglar {
     width: 2rem;
     height: 2rem;
+}
+
+body.darkmode .general .container-text1 .levicfp * {
+    color: #0B0D17!important;
+}
+
+body.darkmode .backImage{
+    background-image: url(../img/imagenes/ecycle-activists-standing-forest.jpg);
+}
+
+body.darkmode .cancelar-button>:hover{
+background-color: #4BC172;
+border-radius: 4rem;
 }
