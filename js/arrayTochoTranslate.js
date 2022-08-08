@@ -22,7 +22,9 @@ export const translateGeneralEN = [
     //10 = Mis eventos
     ["Account", "Password", "My events", "Registered events", "Log out ", "My events"],
     //11 = Eventos inscritos
-    ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "]
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "],
+    //12 = comunity
+    ["Categories", "Oceanos", "Recycling", "Forests", "Cleanup", "Water treatment", "Tundras", "Place", "Order by", "Categories ACS", "Name ASC", "Place ACS", "Send", "Results found: "]
 ];
 
 export const translateGeneralES = [
@@ -50,4 +52,7 @@ export const translateGeneralES = [
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Mis eventos"],
     //Eventos inscritos
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"]
+    //
+    ["Categorias", "Oceanos", "Reciclaje", "Bosques", "Limpieza", "Tratamineto de aguas", "Tundras", "Lugar", "Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Enviar", "Resultados encontrados: "]
+
 ]

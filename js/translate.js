@@ -9,12 +9,13 @@ const englishHeader = document.getElementsByClassName('translateHeader');
 //englishFooter = elementos del footer
 const englishFooter = document.getElementsByClassName('translateFooter');
 
-// console.log(english);
-console.log(translateGeneralES[0]);
+console.log(english);
 
 const buttonSpanish = document.getElementById('buttonSpanish');
 const buttonEnglish = document.getElementById('buttonEnglish');
 const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
+const TranslateSetAtribute = document.getElementById('translateEspecial');
+
 let html = document.querySelector("html");
 
 //FETCH PETICIONES Y RESPUESTAS
@@ -108,6 +109,9 @@ function getID(path) {
     } else if (path == "eventos_inscritos.php") {
         id = 11;
 
+    } else if (path == "comunity.php") {
+        id = 12;
+
     }
 
     return id;
@@ -120,7 +124,13 @@ function forInnerHTM(translate) {
     let id = getID(arrayString[4])
     // console.log(pathname);
     console.log(arrayString);
+    // if (id == 12) {
+    //     if (html.lang == "en") {
+    //         TranslateSetAtribute.setAttribute()
+    //     } else {
 
+    //     }
+    // }
     //Cambiar valores del body
     for (let i = 0; i < english.length; i++) {
         english[i].innerHTML = translate[id][i];

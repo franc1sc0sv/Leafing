@@ -55,7 +55,7 @@ if (!isset($_GET['date_filtro'])) {
                     <div class="first-text">
                         <!-- <h1>Buscador</h1>
                     <p>Evento a buscar</p> -->
-                        <input type="search" class="inputs search" placeholder="Busca tu evento" id="Buscador" name="busca" value="<?php echo $_GET['busca'] ?>" />
+                        <input type="search" class="inputs search" id="Buscador" name="busca" value="<?php echo $_GET['busca'] ?>" />
                         <img src="../img/iconos/lupa.png" alt="" class="lupa">
                     </div>
                     <div>
@@ -63,14 +63,14 @@ if (!isset($_GET['date_filtro'])) {
                             <?php if ($_GET["categorias"] != '') { ?>
                                 <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
                             <?php } ?>
-                            <option value="">Categorías</option>
+                            <option value="" class="translate optionColor"> Categorías</option>
 
                             <?php
                             $objconexionfiltros = new conection();
                             $categoriasevents = $objconexionfiltros->consultar("SELECT * FROM `categories_events`");
 
                             foreach ($categoriasevents as $categoriaevents) { ?>
-                                <option value="<?php echo $categoriaevents['id_categories-events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
+                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories-events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
                             <?php } ?>
 
                         </select>
@@ -83,21 +83,21 @@ if (!isset($_GET['date_filtro'])) {
                             <?php if ($_GET["lugar"] != '') { ?>
                                 <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
                             <?php } ?>
-                            <option value="" class="optionColor">Lugar</option>
-                            <option value="Ahuachapán">Ahuachapán</option>
-                            <option value="Cabañas">Cabañas</option>
-                            <option value="Chalatenango">Chalatenango</option>
-                            <option value="Cuscatlán">Cuscatlán</option>
-                            <option value="La Libertad">La Libertad</option>
-                            <option value="La Paz">La Paz</option>
-                            <option value="La Unión">La Unión</option>
-                            <option value="Morazán">Morazán</option>
-                            <option value="San Salvador">San Salvador</option>
-                            <option value="San Vicente">San Vicente</option>
-                            <option value="Santa Ana">Santa Ana</option>
-                            <option value="Sonsonate">Sonsonate</option>
-                            <option value="Usulután">Usulután</option>
-                            <option value="San Miguel">San Miguel</option>
+                            <option value="" class="optionColor translate">Lugar</option>
+                            <option value="Ahuachapán" class="optionColor">Ahuachapán</option>
+                            <option value="Cabañas" class="optionColor">Cabañas</option>
+                            <option value="Chalatenango" class="optionColor">Chalatenango</option>
+                            <option value="Cuscatlán" class="optionColor">Cuscatlán</option>
+                            <option value="La Libertad" class="optionColor">La Libertad</option>
+                            <option value="La Paz" class="optionColor">La Paz</option>
+                            <option value="La Unión" class="optionColor">La Unión</option>
+                            <option value="Morazán" class="optionColor">Morazán</option>
+                            <option value="San Salvador" class="optionColor">San Salvador</option>
+                            <option value="San Vicente" class="optionColor">San Vicente</option>
+                            <option value="Santa Ana" class="optionColor">Santa Ana</option>
+                            <option value="Sonsonate" class="optionColor">Sonsonate</option>
+                            <option value="Usulután" class="optionColor">Usulután</option>
+                            <option value="San Miguel" class="optionColor">San Miguel</option>
                         </select>
                     </div>
                     <div>
@@ -117,14 +117,14 @@ if (!isset($_GET['date_filtro'])) {
                                     ?>
                                 </option>
                             <?php } ?>
-                            <option value="" class="optionColor">Ordenar por</option>
-                            <option value="1">Categorias ACS</option>
-                            <option value="2">Nombre ASC</option>
-                            <option value="3">Lugar ACS</option>
+                            <option value="" class="optionColor translate">Ordenar por</option>
+                            <option value="1" class="optionColor translate">Categorias ACS</option>
+                            <option value="2" class="optionColor translate">Nombre ASC</option>
+                            <option value="3" class="optionColor translate">Lugar ACS</option>
                         </select>
                     </div>
                     <div>
-                        <input type="submit" value="ENVIAR" class="send">
+                        <button type="submit" value="ENVIAR" class="send"> <span class="translate"> Enviar</span> </button>
                     </div>
                 </div>
             </form>
@@ -194,7 +194,7 @@ if (!isset($_GET['date_filtro'])) {
 
                 $numeroEvents =  count($events);
                 if ($numeroEvents > 0 and $_GET['busca'] != '') {
-                    echo "Resultados encontrados:<b> " . $numeroEvents . "</b>";
+                    echo '<span class="translate">Resultados encontrados:</span><b> ' . $numeroEvents . '</b>';
                 }
 
                 ?>
