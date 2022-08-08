@@ -22,11 +22,6 @@ function getEstatusUser()
     }
 }
 
-function getLang()
-{
-    echo json_encode($_SESSION['lang']);
-}
-
 function changeSession($lang)
 {
     $_SESSION['lang'] = $lang;
@@ -38,7 +33,7 @@ if ($_GET['peticion'] == 1) {
 } elseif ($_GET['peticion'] == 2) {
     verifyInscriptionUser($_GET['estiben']);
 } elseif ($_GET['peticion'] == 3) {
-    getLang();
+    echo "xd ya no se usa esto";
 } elseif ($_GET['peticion'] == 4) {
     changeSession($_GET['lang']);
 }
