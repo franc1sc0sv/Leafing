@@ -47,6 +47,7 @@
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_profile.js"></script>
 <script src="../js/model.js"> </script>
+<script src="../js/preloader.js"></script>
 
 </body>
 
