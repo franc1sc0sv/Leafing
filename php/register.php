@@ -38,6 +38,3 @@ if ($_GET['estatus'] == "stage1") {
     $objconexion->ejecutar($sql);
     echo json_encode('niceYourAreLogin');
 }
-
-
-// } else if (!empty($_GET['Dataemail']) && !empty($_GET['Datapassword']) && !empty($_GET['borndate']) && !empty($_GET['gender']) && !empty($_GET['lastname']) && !empty($_GET['name']) && !empty($_GET['user'])) {

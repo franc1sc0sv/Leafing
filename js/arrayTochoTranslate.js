@@ -13,15 +13,15 @@ export const translateGeneralEN = [
     ["Don't have an account yet?", "Register", "Log in", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next"],
     //6 = creacion de cuenta
     ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Gender"],
-    //header
+    //7 =header
     ["Home", "About us", "Help the planet", "Events", "Create your events", "Become aware", "Special adjustments", "Log in", "Sing in"],
-    //footer
+    //8 = footer
     ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"],
-    //Contraseña
+    //9 = Contraseña
     ["Account", "Password", "My events", "Registered events", "Log out ", "Password settings.", "Old password", "New password", "Confirm new password", "Save", "Cancelar"],
-    //Mis eventos
+    //10 = Mis eventos
     ["Account", "Password", "My events", "Registered events", "Log out ", "My events"],
-    //Eventos inscritos
+    //11 = Eventos inscritos
     ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "]
 ];
 

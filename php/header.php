@@ -2,6 +2,7 @@
 if (!isset($_SESSION['lang'])) {
         $_SESSION['lang'] = "es";
 }
+//print_r($_SESSION);
 ?>
 
 

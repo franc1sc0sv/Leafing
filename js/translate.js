@@ -1,19 +1,35 @@
 import { translateGeneralEN, translateGeneralES } from "./arrayTochoTranslate.js";
 
+//Definicon de variables
+//Todos los elementos a traducir individuales
+//English = body cada pagina
 const english = document.getElementsByClassName('translate');
+//englishHeader = elementos del header
 const englishHeader = document.getElementsByClassName('translateHeader');
+//englishFooter = elementos del footer
 const englishFooter = document.getElementsByClassName('translateFooter');
+
+// console.log(english);
+console.log(translateGeneralES[0]);
+
 const buttonSpanish = document.getElementById('buttonSpanish');
 const buttonEnglish = document.getElementById('buttonEnglish');
 const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
 let html = document.querySelector("html");
 
-console.log(english)
+//FETCH PETICIONES Y RESPUESTAS
+//Las API permiten que una aplicación extraiga archivos o datos preexistentes dentro de un software 
+//y los use en otro programa o en uno de sus otros niveles.
 
+// console.log(html)
+// console.log(html.lang)
+
+//Esto va a traducir la pagina dependiendo que valor tenga htmml.lang por defecto es ES
 window.addEventListener("load", () => {
     fetch(`APISessions.php?peticion=1`)
         .then(res => res.json())
         .then(data => {
+
             if (data != 'ERROR') {
                 translateGeneralEN[7][7] = "My profile";
                 translateGeneralEN[7][8] = "Close session";
@@ -29,12 +45,11 @@ window.addEventListener("load", () => {
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
-
             }
         })
 
 })
-
+//Me va almacenar todos en una varaiable lo que haya que imprimir
 function Data(array) {
     let liElemnet = '';
     for (let index = 0; index < array.length; index++) {
@@ -55,6 +70,7 @@ function Data(array) {
     return liElemnet;
 }
 
+//Me va a traducir los DATOS RANDOM LIVE
 function dataRandom() {
     fetch(`datosRandomi.php`)
         .then(res => res.json())
@@ -67,7 +83,7 @@ function dataRandom() {
 
         })
 }
-
+//me para saber en que pagina estamos
 function getID(path) {
     let id;
 
@@ -97,11 +113,12 @@ function getID(path) {
     return id;
 }
 
+//Esto es la funcion que me va acambiar los valores de ingles a español y viceversa
 function forInnerHTM(translate) {
     let pathname = window.location.pathname;
     let arrayString = pathname.split("/");
     let id = getID(arrayString[4])
-    console.log(pathname);
+    // console.log(pathname);
     console.log(arrayString);
 
     //Cambiar valores del body
