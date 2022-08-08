@@ -37,6 +37,18 @@
     display: none;
 }
 
+.lupa {
+    position: absolute;
+    width: 25px;
+    right: 1rem;
+    top: .8rem;
+    filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(356deg) brightness(101%) contrast(99%);
+}
+
+.search {
+    padding-left: 2rem;
+}
+
 option {
     color: #000000;
 }
@@ -217,6 +229,7 @@ footer {
     gap: 1rem;
     font-family: 'Roboto';
     font-weight: bold;
+    position: relative;
 }
 
 .p2 {
