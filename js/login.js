@@ -4,17 +4,7 @@ const eye = document.getElementById('eye')
 const passwordInput = document.getElementById('password');
 let html = document.querySelector("html");
 
-eye.addEventListener('click', function () {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eye.style.filter = "opacity(1.0)"
-    }
-    else {
-        passwordInput.type = "password";
-        eye.style.filter = "opacity(0.4)"
-    }
-})
-
+///DEFINICION DE LOS MENSAJES DE ERROR DEPENDIENDO DEL IDIOMA
 if (html.lang == "es") {
     alertEmpty = `
     <div class="alertDivEmpty">
@@ -54,6 +44,7 @@ if (html.lang == "es") {
     </div > `;
 }
 
+
 formCredentials.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formCredentials);
@@ -72,20 +63,34 @@ formCredentials.addEventListener('submit', function (e) {
                 alert.innerHTML = alertEmpty;
             } else if (data == "ErrorData") {
                 alert.innerHTML = CorreNoValido;
-            } else if (data == "LogeadoUSER") {
+            } else {
                 alert.innerHTML = `
                 <div class="alertDivNice">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <p>Logeado</p>
                 </div>`
-                function redirec() {
-                    window.location.href = "index.php";
-                }
-                setTimeout(redirec, 1000);
+
+                console.log(data)
+                // function redirec() {
+                //     window.location.href = "index.php";
+                // }
+                // setTimeout(redirec, 1000);
 
                 //console.log(data);
             }
         })
 
 
+})
+
+//Ojito para ver la contraseña
+eye.addEventListener('click', function () {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eye.style.filter = "opacity(1.0)"
+    }
+    else {
+        passwordInput.type = "password";
+        eye.style.filter = "opacity(0.4)"
+    }
 })

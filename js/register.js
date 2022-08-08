@@ -13,8 +13,10 @@ const alertData = document.getElementById('alertData');
 let codeVerification;
 var Dataemail;
 var Datapassword;
+var codigoCorrecto;
 let html = document.querySelector("html");
 
+///DEFINICION DE LOS MENSAJES DE ERROR DEPENDIENDO DEL IDIOMA
 if (html.lang == "es") {
     alertEmpty =
         `<div class="alertDivEmpty">
@@ -30,7 +32,7 @@ if (html.lang == "es") {
     CorreNoValido = `
     < div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Correo electrónico no válido</p>
+        <p>Datos Invalidos</p>
     </div > `;
     passswordNot = `
     < div class="alertDivEmpty" >
@@ -76,7 +78,7 @@ if (html.lang == "es") {
     CorreNoValido = `
     <div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Invalid e-mail address</p>
+        <p>Invalid data</p>
     </div > `;
     passswordNot = `
     <div class="alertDivEmpty" >
@@ -106,15 +108,18 @@ if (html.lang == "es") {
     </div > `;
 }
 
+//Es el primer slider del formulario - correo y contraseña
 formEmail.addEventListener('submit', function (e) {
     e.preventDefault();//Evite que se ejecute lo que viene por defecto en el navegador que es procesar el formualrio
     let data = new FormData(formEmail);//Informacion del formulario de quien - form email
     let email = data.get('email')
     let passsword = data.get('password')
     let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    //console.log(data)
+    // console.log(email)
+    // console.log(passsword)
 
-
-    //console.log(expRegEmail.test(email))
+    // console.log(expRegEmail.test(email))
 
     //Fecth trabaja por defecto con get
 
@@ -132,13 +137,11 @@ formEmail.addEventListener('submit', function (e) {
             //Promesas
             .then(res => res.json())
             .then(data => {
-                if (data == 'empty') {
-                    alert.innerHTML = alertEmpty;
-                } else if (data == 'repetido') {
+                if (data == 'repetido') {
                     alert.innerHTML = alertRepietido;
                 } else {
-                    codeEmail = getCode(data)
-                    data = getEmail(email, passsword)
+                    getCode(data)
+                    getEmail(email, passsword)
                     correoEnviado.innerHTML = email;
                     containerinfo1.style.transform = "translateX(-33%)"
                 }
@@ -146,6 +149,7 @@ formEmail.addEventListener('submit', function (e) {
     }
 })
 
+//funciones para obtener datos privados de un addeventlisener - voy a sacar codigo de verificacion, email y correo
 function getCode(code) {
     codeVerification = code;
 }
@@ -154,10 +158,12 @@ function getEmail(email, password) {
     Datapassword = password;
 }
 
+//Funcion del codigo
 formCode.addEventListener('submit', function (e) {
     e.preventDefault();
 
     let data = new FormData(formCode);
+    ///Codigop ingresado por el usuario
     let codeEmail = data.get('codeEmail');
 
     if (codeEmail != '') {
@@ -165,6 +171,7 @@ formCode.addEventListener('submit', function (e) {
         if (codeEmail == codeVerification) {
             console.log("Codigo correcto");
             containerinfo1.style.transform = "translateX(-66%)"
+            codigoCorrecto = true;
         }
         else if (codeEmail.length !== 4) {
             alertCode.innerHTML = fourDigits;
@@ -178,6 +185,7 @@ formCode.addEventListener('submit', function (e) {
     }
 })
 
+//Funcion de los datos del usuario
 formData.addEventListener('submit', function (e) {
     e.preventDefault();
     let data = new FormData(formData);
@@ -190,7 +198,7 @@ formData.addEventListener('submit', function (e) {
     // let expRegUser = /^[a-zA-Z0-9\_\-]{4,16}$/;
     let expRegName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 
-    if (Datapassword == undefined || Dataemail == undefined) {
+    if (Datapassword == undefined || Dataemail == undefined || codigoCorrecto == undefined) {
         alertData.innerHTML = alertEmpty;
     } else if (Dataemail == "" || Datapassword == "" || name == " " || lastname == "" || borndate == "" || gender == "" || user == "") {
         alertData.innerHTML = alertEmpty;
@@ -208,7 +216,7 @@ formData.addEventListener('submit', function (e) {
     }
 })
 
-
+//Ojito de del password
 eye.addEventListener('click', function () {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
