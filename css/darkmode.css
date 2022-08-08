@@ -45,6 +45,7 @@ body.darkmode #menu span {
     cursor: pointer;
 
 }
+
 body.darkmode #menu span:hover {
     color: #4F9466 !important;
     cursor: pointer;
@@ -151,14 +152,18 @@ body.darkmode header {
 }
 
 body.darkmode .general .container-text1 .levicfp * {
-    color: #0B0D17!important;
+    color: #0B0D17 !important;
 }
 
-body.darkmode .backImage{
+body.darkmode .backImage {
     background-image: url(../img/imagenes/ecycle-activists-standing-forest.jpg);
 }
 
-body.darkmode .cancelar-button>:hover{
-background-color: #4BC172;
-border-radius: 4rem;
+body.darkmode .cancelar-button>:hover {
+    background-color: #4BC172;
+    border-radius: 4rem;
+}
+
+body.darkmode option.optionColor {
+    color: #000000 !important;
 }

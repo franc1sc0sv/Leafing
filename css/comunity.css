@@ -41,9 +41,9 @@ option {
     color: #000000;
 }
 
-.optionColor {
+/* .optionColor {
     color: #fff;
-}
+} */
 
 ::-webkit-calendar-picker-indicator {
     filter: invert(100%) sepia(0%) saturate(6%) hue-rotate(197deg) brightness(103%) contrast(104%);

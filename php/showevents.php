@@ -16,9 +16,7 @@
         </div>
         <p><?php echo $event['description_event']
             ?></p>
-        <a href="./evento-especifico.php?estiben=<?php echo $event['id_events'] ?>" class="button" target="_blank">
-            Inscribirse
-        </a>
+
     </div>
     <span class="event-time">
         <span class="day-time">27</span>
