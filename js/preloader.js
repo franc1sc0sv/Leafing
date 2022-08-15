@@ -11,10 +11,10 @@ window.addEventListener('load', function fadeOutEffect() {
         // if (fadeTarget.style.opacity > 0) {
         //     fadeTarget.style.opacity -= 0.1;
         // } 
-        // else {
+        // else {s
         //     clearInterval(fadeEffect);
         // }
-    }, 300);
+    }, 1000);
 
     // this.setTimeout(displayNone, 1300)
     // function displayNone(){

@@ -135,6 +135,7 @@
 .content-modal {
     width: 100%;
     max-width: 50vw;
+    height: 90%;
     background-color: #242526;
     border-radius: 15px;
     color: white;

@@ -167,3 +167,6 @@ body.darkmode .cancelar-button>:hover {
 body.darkmode option.optionColor {
     color: #000000 !important;
 }
+body.darkmode .opciones-item{
+    border-left: 8px solid #0B0D17;
+}

@@ -1,7 +1,7 @@
 <?php
 include_once('./include.php');
 include_once('./conexion.php');
-include_once('./header.php');; ?>
+include_once('./header.php'); ?>
 <div class="flex-container">
     <?php include_once('./onlymenu.php') ?>
 

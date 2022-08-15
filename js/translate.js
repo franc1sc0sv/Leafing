@@ -108,10 +108,8 @@ function getID(path) {
         id = 10;
     } else if (path == "eventos_inscritos.php") {
         id = 11;
-
     } else if (path == "comunity.php") {
         id = 12;
-
     }
 
     return id;
@@ -123,14 +121,9 @@ function forInnerHTM(translate) {
     let arrayString = pathname.split("/");
     let id = getID(arrayString[4])
     // console.log(pathname);
-    console.log(arrayString);
-    // if (id == 12) {
-    //     if (html.lang == "en") {
-    //         TranslateSetAtribute.setAttribute()
-    //     } else {
-
-    //     }
-    // }
+    //console.log(arrayString);
+    console.log(id);
+    console.log(translate[11])
     //Cambiar valores del body
     for (let i = 0; i < english.length; i++) {
         english[i].innerHTML = translate[id][i];
