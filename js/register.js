@@ -25,38 +25,38 @@ if (html.lang == "es") {
     </div>`;
 
     alertRepietido =
-        ` < div class="alertDivRepetido" >
+        ` <div class="alertDivRepetido" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Ya existe un correo con esta cuenta</p>
     </div >`;
     CorreNoValido = `
-    < div class="alertDivEmpty" >
+    <div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Datos Invalidos</p>
     </div > `;
     passswordNot = `
-    < div class="alertDivEmpty" >
+    <div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>La contraseña debe tener más de 6 caracteres y menos de 15</p>
     </div > `;
     DatosIncorrectos = `
-    < div class="alertDivEmpty" >
+    <div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Datos Incorrecots</p>
     </div > `;
     fourDigits = `
-    < div class="alertDivEmpty" >
+    <div class="alertDivEmpty" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>El codigo debe tener 4 dígitos</p>
     </div > `;
 
     NameNoValido = `
-    < div class="alertDivRepetido" >
+    <div class="alertDivRepetido" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Nombre no válido</p>
     </div > `
     Nice = `;
-    < div class="alertDivNice" >
+    <div class="alertDivNice" >
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <p>Tu cuenta ha sido creada</p>
     </div > `;
