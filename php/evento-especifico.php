@@ -37,9 +37,11 @@ if (!$error) { ?>
                             <img src="../img/imagenes/inscriccion2.png" id="imgProfile">
                             <p id="profile-name"><?php echo $creatrinfo[0]['name'] . " " . $creatrinfo[0]['lastname'] ?></p>
                         </div>
-                        <div class="reporte">
-                            <button id="ModalOpen"> Reportar</button>
-                        </div>
+                        <?php if (isset($_SESSION['estatus'])) { ?>
+                            <div class="reporte">
+                                <button id="ModalOpen"> Reportar</button>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="container-descripcion">
@@ -72,97 +74,101 @@ if (!$error) { ?>
             </div>
         </div>
     </div>
+    <?php if (isset($_SESSION['estatus'])) { ?>
 
-    <div class="container-modal" id="containerModal">
-        <div class="content-modal" id="contentModal">
-            <div class="headerModal" id="headerModal">
-                <img src="../img/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
-                <h1>Reportar</h1>
-                <img src="../img/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
-            </div>
-            <div class="contentModel" id="contentModel">
-                <div class="contentModelReportes">
-                    <h2>Selecciona un problema</h2>
-                    <p>Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!</p>
-                    <div class="reportesModel">
-                        <div class="reportes" id="desnudos" onclick=identifyReport(this)>
-                            <h3>Desnudos</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="violencia" onclick=identifyReport(this)>
-                            <h3>Violencia</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="acoso" onclick=identifyReport(this)>
-                            <h3>Acoso</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="suicidio" onclick=identifyReport(this)>
-                            <h3>Suicidio</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="informacion_falsa" onclick=identifyReport(this)>
-                            <h3>Informacion falsa</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="spam" onclick=identifyReport(this)>
-                            <h3>Spam</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="lenguaje" onclick=identifyReport(this)>
-                            <h3>Lenguaje que incita al odio</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-
-                        <div class="reportes" id="terrorismo" onclick=identifyReport(this)>
-                            <h3>Terrorismo</h3>
-                            <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
-                        </div>
-                    </div>
+        <div class="container-modal" id="containerModal">
+            <div class="content-modal" id="contentModal">
+                <div class="headerModal" id="headerModal">
+                    <img src="../img/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
+                    <h1>Reportar</h1>
+                    <img src="../img/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
                 </div>
-
-                <div class="sendReport">
-                    <div class="content">
-                        <h2 class="changeInfo">Nombre reporte</h2>
-                        <p class="changeInfo">Descripcion del reporte:</p>
-                        <ul class="ul-reporte changeInfo">
-                            <li class="li-report changeInfo">Cosas que no permitimos(li).</li>
-                        </ul>
-
-                        <div class="alert" id="alert">
-                        </div>
-                    </div>
-                    <div class="sendbutton">
-                        <button class="button-report" id="buttonReport">Enviar</button>
-                    </div>
-                </div>
-
-                <div class="MensajeReport">
-                    <div class="contentMensaje">
-                        <img src="../img/iconos/check_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="checkIcon">
-                        <h2>Gracias. Recibimos tu reporte.</h2>
-                        <div class="MensajesExtra">
-                            <div>
-                                <h3>Se recibio el reporte</h3>
-                                <p>Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.</p>
+                <div class="contentModel" id="contentModel">
+                    <div class="contentModelReportes">
+                        <h2>Selecciona un problema</h2>
+                        <p>Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!</p>
+                        <div class="reportesModel">
+                            <div class="reportes" id="desnudos" onclick=identifyReport(this)>
+                                <h3>Desnudos</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
-                            <div>
-                                <h3>Esperando revisión</h3>
-                                <p>Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.</p>
+
+                            <div class="reportes" id="violencia" onclick=identifyReport(this)>
+                                <h3>Violencia</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="acoso" onclick=identifyReport(this)>
+                                <h3>Acoso</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="suicidio" onclick=identifyReport(this)>
+                                <h3>Suicidio</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="informacion_falsa" onclick=identifyReport(this)>
+                                <h3>Informacion falsa</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="spam" onclick=identifyReport(this)>
+                                <h3>Spam</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="lenguaje" onclick=identifyReport(this)>
+                                <h3>Lenguaje que incita al odio</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                            </div>
+
+                            <div class="reportes" id="terrorismo" onclick=identifyReport(this)>
+                                <h3>Terrorismo</h3>
+                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
                         </div>
-                        <button class="button-report" id="buttonSalirReport">Aceptar</button>
+                    </div>
+
+                    <div class="sendReport">
+                        <div class="content">
+                            <h2 class="changeInfo">Nombre reporte</h2>
+                            <p class="changeInfo">Descripcion del reporte:</p>
+                            <ul class="ul-reporte changeInfo">
+                                <li class="li-report changeInfo">Cosas que no permitimos(li).</li>
+                            </ul>
+
+                            <div class="alert" id="alert">
+                            </div>
+                        </div>
+                        <div class="sendbutton">
+                            <button class="button-report" id="buttonReport">Enviar</button>
+                        </div>
+                    </div>
+
+                    <div class="MensajeReport">
+                        <div class="contentMensaje">
+                            <img src="../img/iconos/check_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="checkIcon">
+                            <h2>Gracias. Recibimos tu reporte.</h2>
+                            <div class="MensajesExtra">
+                                <div>
+                                    <h3>Se recibio el reporte</h3>
+                                    <p>Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.</p>
+                                </div>
+                                <div>
+                                    <h3>Esperando revisión</h3>
+                                    <p>Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.</p>
+                                </div>
+                            </div>
+                            <button class="button-report" id="buttonSalirReport">Aceptar</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php }else{
+        echo "xdd";
+    } ?>
 <?php } ?>
 
 <?php include_once("footer.php"); ?>

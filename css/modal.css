@@ -76,9 +76,8 @@
     transition: all .5s ease;
 }
 
-.question:hover{
+.question:hover {
     transform: scale(1.1);
-    border-bottom: 1px #8AB694 solid;
 }
 
 .contenidoModalInscripcion {

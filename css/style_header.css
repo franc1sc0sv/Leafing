@@ -30,7 +30,35 @@ header {
     align-items: center;
     position: absolute;
     z-index: 1000;
-    transition: opacity 1s;
+    /* transition: fade-out-5023c08d-5bd5-40ce-95c1-6a5e0b8a9e9f 1s infinite; */
+    background: transparent;
+    backdrop-filter: blur(4px);
+    background-color: rgba(50, 50, 50, 0.5);
+    z-index: 999;
+    transition: backdrop-filter 1s ease;
+}
+
+/* @keyframes blur-out-feb63119-9b86-47c4-bfdc-eddeab303dad {
+    0% {
+        filter: blur(0);
+        opacity: 1
+    }
+
+    100% {
+        filter: blur(10px);
+        opacity: 0
+    }
+} */
+
+@keyframes fade-out-5023c08d-5bd5-40ce-95c1-6a5e0b8a9e9f {
+    0% {
+        animation-timing-function: cubic-bezier(0.2242, 0.7499, 0.3142, 0.8148);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .preloaderContainer img {
@@ -77,6 +105,7 @@ li {
     bottom: 0;
     width: max-content;
     transform: translateY(100%);
+    z-index: 999;
 }
 
 .menu_arrow {
@@ -183,6 +212,7 @@ li {
 }
 
 .menu_desplegable-peril {
+    z-index: 999;
     clip-path: var(--clip);
     transition: clip-path .3s;
     position: absolute;
@@ -294,4 +324,23 @@ li>a:hover {
 .BanderaEspaña,
 .BanderaIngles {
     background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
 }
