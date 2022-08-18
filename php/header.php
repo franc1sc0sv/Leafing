@@ -102,7 +102,7 @@ if (!isset($_SESSION['lang'])) {
         <title>Leafing</title>
 </head>
 
-<body class="darkmode hidden" id="boddy">
+<body class="darkmode">
         <!-- <div class="preloaderContainer" id="onload">
                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height: 100%; width: 100%;" width="200px" height="200px">
                         <g class="ldl-scale" style="transform-origin: 50% 50%; transform: rotate(0deg) scale(0.8, 0.8);">

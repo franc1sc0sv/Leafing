@@ -1,6 +1,6 @@
 const flechaUp = document.getElementById('flechaUp');
 
-window.onscroll = function () {
+window.onscroll = function (e) {
     if (document.documentElement.scrollTop > 100) {
         flechaUp.style.display = "block"
     } else {
@@ -9,8 +9,18 @@ window.onscroll = function () {
 }
 
 flechaUp.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    xD = setInterval(setxD, 500)
 })
+
+
+function setxD() {
+    if (document.documentElement.scrollTop != 0) {
+        document.querySelector('html').scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        clearInterval(xD);
+    }
+}
+

@@ -10,11 +10,7 @@ const englishHeader = document.getElementsByClassName('translateHeader');
 const englishFooter = document.getElementsByClassName('translateFooter');
 
 //console.log(english);
-
-const buttonSpanish = document.getElementById('buttonSpanish');
-const buttonEnglish = document.getElementById('buttonEnglish');
 const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
-const TranslateSetAtribute = document.getElementById('translateEspecial');
 
 const buttonChange = document.getElementById('buttonChange');
 let html = document.querySelector("html");
@@ -33,11 +29,11 @@ window.addEventListener("load", () => {
         .then(data => {
 
             if (data != 'ERROR') {
-                translateGeneralEN[7][7] = "My profile";
-                translateGeneralEN[7][8] = "Close session";
+                translateGeneralEN[7][6] = "My profile";
+                translateGeneralEN[7][7] = "Close session";
 
-                translateGeneralES[7][7] = " Mi perfil";
-                translateGeneralES[7][8] = "Cerrar sesión";
+                translateGeneralES[7][6] = " Mi perfil";
+                translateGeneralES[7][7] = "Cerrar sesión";
             }
 
             if (html.lang == "en") {

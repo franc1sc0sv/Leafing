@@ -8,10 +8,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html {
+/* html{
     scroll-behavior: smooth;
 }
+html:focus-within{
+    scroll-behavior: smooth !important;
+}
+body{
+    overflow-y: scroll;
+} */
 
 .container_anchor {
     cursor: pointer;
@@ -36,9 +41,8 @@ html {
     height: 50px;
     right: 30px;
     border-radius: 50%;
-    background: #8AB694;
     border: none;
-    margin-left: 1rem;  
+    margin-left: 1rem;
     background-image: url(../img/iconos/arrow.png);
     background-size: cover;
     background-repeat: no-repeat;

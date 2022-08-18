@@ -7,8 +7,6 @@
     <!-- <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a> -->
     <button class="container_anchor" onclick=traductor() id="buttonChange"></button>
     <button class="containerDarkMode cambio" id="btnMode"></button>
-    <button class="containerFlecha" id="flechaUp"></button>
-
 
     <div class="container">
         <div class="image-footer">
@@ -41,6 +39,8 @@
         </div>
     </div>
 </footer>
+<button class="containerFlecha" id="flechaUp"></button>
+
 <script src="../js/translate.js" type="module"></script>
 <script src="../js/scrollUp.js"></script>
 <script src="../js/darkmode.js"> </script>
