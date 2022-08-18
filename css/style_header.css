@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap');
 
 
-
+body{
+    overflow: overlay;
+}
 
 header {
     font-family: 'Montserrat';
