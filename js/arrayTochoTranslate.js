@@ -24,7 +24,7 @@ export const translateGeneralEN = [
     //11 = Eventos inscritos
     ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "],
     //12 = comunity
-    ["Categories", "Oceanos", "Recycling", "Forests", "Cleanup", "Water treatment", "Tundras", "Place", "Order by", "Categories ACS", "Name ASC", "Place ACS", "Send", "Results found: "]
+    //["Categories", "Oceanos", "Recycling", "Forests", "Cleanup", "Water treatment", "Place", "Order by", "Categories ACS", "Name ASC", "Place ACS", "Send", "Results found: "]
 ];
 
 export const translateGeneralES = [
@@ -41,7 +41,7 @@ export const translateGeneralES = [
     //5 = inicio de sesion
     ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente"],
     //6 = creacion de cuenta
-    ["¿Ya tienes una cuenta?", "Regístrate", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
+    ["¿Ya tienes una cuenta?", "Inicia sesión", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
     //header
     ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Ajustes especiales", "Registrarse", " Inicio de sesion"],
     //footer
@@ -53,6 +53,6 @@ export const translateGeneralES = [
     //Eventos inscritos
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"],
     //comunity
-    ["Categorias", "Oceanos", "Reciclaje", "Bosques", "Limpieza", "Tratamineto de aguas", "Tundras", "Lugar", "Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Enviar", "Resultados encontrados: "]
+    //["Categorias", "Oceanos", "Reciclaje", "Bosques", "Limpieza", "Tratamineto de aguas", "Lugar", "Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Enviar", "Resultados encontrados: "]
 
 ]

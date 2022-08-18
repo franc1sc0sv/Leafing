@@ -17,9 +17,9 @@ header {
     padding: 1.5rem 1.5rem;
 }
 
-.hidden {
+/* .hidden {
     overflow: hidden;
-}
+} */
 
 .preloaderContainer {
     height: 100vh;

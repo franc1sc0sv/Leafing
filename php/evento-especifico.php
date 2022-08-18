@@ -1,4 +1,5 @@
-<?php include_once 'include.php';
+<?php
+include_once 'include.php';
 include_once('conexion.php');
 include_once('header.php');
 
@@ -60,8 +61,7 @@ if (!$error) { ?>
                 </div>
 
                 <div class="inscribirseCancelar" id="inscribirseCancelar">
-                    <!-- <button class="ModalOpen" id="inscribirse"> Inscribirse</button>
-                    <button id="Cancelar">Cancelar inscripcion</button> -->
+
                 </div>
             </div>
         </div>
@@ -166,9 +166,7 @@ if (!$error) { ?>
                 </div>
             </div>
         </div>
-    <?php }else{
-        echo "xdd";
-    } ?>
+    <?php  } ?>
 <?php } ?>
 
 <?php include_once("footer.php"); ?>
