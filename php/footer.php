@@ -4,6 +4,7 @@
 ?>
 
 <footer>
+    <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a>
     <!-- <div class="agradecimientos">
         <p>Imagenes gracias a <a href="https://www.freepik.es/home" target="_blank">freepik</a></p>
         <a href="https://www.freepik.es/home" target="_blank"><img src="../img/logo/freepik-logo.png" alt="freepik-logo" class="img-freepik"></a>
@@ -48,6 +49,7 @@
 <script src="../js/app_profile.js"></script>
 <script src="../js/model.js"> </script>
 <script src="../js/preloader.js"></script>
+<script src="../js/scroll_anchor.js"></script>
 
 </body>
 
