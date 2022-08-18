@@ -10,6 +10,15 @@
     box-sizing: border-box;
 }
 
+header {
+    border-bottom: 1px white solid;
+}
+
+footer {
+    border-top: 1px white solid;
+    margin-top: 0;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -90,7 +99,7 @@
 .password {
     display: flex;
     height: 60px;
-    border-left: 8px solid #000 ;
+    border-left: 8px solid #000;
     color: #93D0A1;
     filter: invert(84%) sepia(17%) saturate(617%) hue-rotate(81deg) brightness(92%) contrast(85%);
 }
@@ -142,7 +151,6 @@
     font-weight: 600;
     font-size: 27px;
     line-height: 33px
-    
 }
 
 .form__grid-labels {
@@ -248,7 +256,7 @@
 
     .configuracion-name {
         margin-top: 40px;
-        
+
     }
 
     .configuracion-cuenta-container {

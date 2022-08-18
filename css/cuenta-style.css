@@ -10,6 +10,13 @@
     box-sizing: border-box;
 }
 
+header {
+    border-bottom: 1px white solid;
+}
+
+footer {
+    border-top: 1px white solid;
+}
 
 footer {
     margin: 0;
@@ -105,7 +112,7 @@ footer {
 .home {
     display: flex;
     height: 60px;
-    border-left: 8px solid #000 ;
+    border-left: 8px solid #000;
     color: #93D0A1;
     filter: invert(84%) sepia(17%) saturate(617%) hue-rotate(81deg) brightness(92%) contrast(85%);
 }
@@ -156,7 +163,6 @@ footer {
     font-weight: 600;
     font-size: 27px;
     line-height: 33px
-    
 }
 
 .form__grid-labels {
@@ -287,13 +293,13 @@ footer {
 }
 
 @media screen and (max-width: 815px) {
-    
+
     .user-menu-container {
         max-width: none;
     }
 
     .home {
-        border-left: 8px solid #fff ;
+        border-left: 8px solid #fff;
         filter: none;
     }
 
@@ -306,10 +312,10 @@ footer {
         border: none;
         background: none;
     }
-    
+
     .configuracion-name {
         margin-top: 40px;
-        
+
     }
 
     /* .configuracion-cuenta-container {
@@ -338,7 +344,7 @@ footer {
 }
 
 @media screen and (max-width: 540px) {
-   
+
     .form__grid-labels {
         display: grid;
         grid-template-columns: 1fr;

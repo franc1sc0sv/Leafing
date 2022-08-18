@@ -22,6 +22,8 @@ if (!isset($_SESSION['lang'])) {
         <meta http-equiv="Last-Modified" content="0">
         <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
         <meta http-equiv="Pragma" content="no-cache">
+        <link rel="stylesheet" href="../css/style_header.css">
+        <link rel="stylesheet" href="../css/style_footer.css">
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                 <!-- Estilos de index-->
@@ -59,13 +61,15 @@ if (!isset($_SESSION['lang'])) {
                 <link rel="stylesheet" href="../css/inscripcion.css">
         <?php } ?>
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php") { ?>
-                <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
-                <link rel="stylesheet" href="../css/footer-style-perfil-usuario.css">
-        <?php } else { ?>
-                <link rel="stylesheet" href="../css/style_header.css">
-                <link rel="stylesheet" href="../css/style_footer.css">
-        <?php } ?>
+        <?php //if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/mis_eventos.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/eventos_inscritos.php") { 
+        ?>
+        <!-- <link rel="stylesheet" href="../css/style-header-perfil-usuario.css">
+                <link rel="stylesheet" href="../css/footer-style-perfil-usuario.css"> -->
+        <?php //} else { 
+        ?>
+
+        <?php //} 
+        ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
