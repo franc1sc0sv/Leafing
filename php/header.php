@@ -10,7 +10,7 @@ if (!isset($_SESSION['lang'])) {
 
 
 <!DOCTYPE html>
-<html lang=<?php echo $_SESSION['lang'] ?>>
+<html lang=<?php echo $_SESSION['lang'] ?> id="html">
 
 <head>
         <meta charset="UTF-8">
