@@ -9,13 +9,14 @@ const englishHeader = document.getElementsByClassName('translateHeader');
 //englishFooter = elementos del footer
 const englishFooter = document.getElementsByClassName('translateFooter');
 
-console.log(english);
+//console.log(english);
 
 const buttonSpanish = document.getElementById('buttonSpanish');
 const buttonEnglish = document.getElementById('buttonEnglish');
 const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
 const TranslateSetAtribute = document.getElementById('translateEspecial');
 
+const buttonChange = document.getElementById('buttonChange');
 let html = document.querySelector("html");
 
 //FETCH PETICIONES Y RESPUESTAS
@@ -42,10 +43,11 @@ window.addEventListener("load", () => {
             if (html.lang == "en") {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
-
+                buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
+                buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
             }
         })
 
@@ -122,8 +124,8 @@ function forInnerHTM(translate) {
     let id = getID(arrayString[4])
     // console.log(pathname);
     //console.log(arrayString);
-    console.log(id);
-    console.log(translate[11])
+    //console.log(id);
+    //console.log(translate[11])
     //Cambiar valores del body
     for (let i = 0; i < english.length; i++) {
         english[i].innerHTML = translate[id][i];
@@ -145,6 +147,7 @@ function TraduccionEspañol() {
         fetch(`APISessions.php?peticion=4&lang=es`);
         forInnerHTM(translateGeneralES);
         html.setAttribute("lang", "es")
+        buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
 
     }
 }
@@ -154,16 +157,17 @@ function TraducirIngles() {
         fetch(`APISessions.php?peticion=4&lang=en`);
         forInnerHTM(translateGeneralEN);
         html.setAttribute("lang", "en")
-
+        buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
     }
 }
 
-buttonSpanish.addEventListener('click', function () {
-    TraduccionEspañol()
-    dataRandom()
-})
 
-buttonEnglish.addEventListener('click', function () {
-    TraducirIngles()
-    dataRandom()
+buttonChange.addEventListener('click', function () {
+    if (html.lang == "en") {
+        TraduccionEspañol()
+        dataRandom()
+    } else {
+        TraducirIngles()
+        dataRandom()
+    }
 })

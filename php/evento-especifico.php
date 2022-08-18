@@ -52,12 +52,11 @@ if (!$error) { ?>
                 </div>
 
                 <div class="container-text2">
-                    <p class="bold">Requisitos para asistir</p>
-                    <p><?php echo $event[0]['requirements_event'] ?></p>
-
-                    <p class="bold">Lugar y fecha</p><br>
-                    <p><?php echo $event[0]['place_event'] ?></p>
-                    <p><?php echo $event[0]['date_event'] ?></p>
+                    <p class="bold">Categorias</p>
+                    <p><?php echo $event[0]['id_categories_events'] ?></p>
+                    <br>
+                    <p class="bold">Lugar y fecha</p>
+                    <p><?php echo $event[0]['place_event'] , " ", $event[0]['date_event'] ?></p>
                 </div>
 
                 <div class="inscribirseCancelar" id="inscribirseCancelar">

@@ -277,7 +277,7 @@ if (!isset($_SESSION['lang'])) {
                                                         <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable translateHeader">Concientízate</a></li>
                                                 </ul>
                                         </li>
-                                        <li class="li-menu item-menu-desplegable">
+                                        <!-- <li class="li-menu item-menu-desplegable">
                                                 <p class="a-header"><span class="translateHeader">Ajustes especiales</span> <img src="../img/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
                                                         <li><img src="../img/imagenes/luna.png" alt="" id="btnMode" class="arreglar cambio"></li>
@@ -286,7 +286,7 @@ if (!isset($_SESSION['lang'])) {
                                                         <li class="li_menu-despleagble"><button id="buttonEnglish" class="BanderaIngles"><img class="imgBandera" src="../img/imagenes/Bandera-del-Reino-Unid.png" alt=""></button></li>
 
                                                 </ul>
-                                        </li>
+                                        </li> -->
                                 </ul>
                         </div>
 

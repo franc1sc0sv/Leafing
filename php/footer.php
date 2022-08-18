@@ -4,12 +4,12 @@
 ?>
 
 <footer>
-    <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a>
-    <!-- <div class="agradecimientos">
-        <p>Imagenes gracias a <a href="https://www.freepik.es/home" target="_blank">freepik</a></p>
-        <a href="https://www.freepik.es/home" target="_blank"><img src="../img/logo/freepik-logo.png" alt="freepik-logo" class="img-freepik"></a>
+    <!-- <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a> -->
+    <button class="container_anchor" onclick=traductor() id="buttonChange"></button>
+    <button class="containerDarkMode cambio" id="btnMode"></button>
+    <button class="containerFlecha" id="flechaUp"></button>
 
-    </div> -->
+
     <div class="container">
         <div class="image-footer">
             <img src="../img/logo/Logo_Negativo.png" alt="Logo-footer" id="img-footer">
@@ -42,6 +42,7 @@
     </div>
 </footer>
 <script src="../js/translate.js" type="module"></script>
+<script src="../js/scrollUp.js"></script>
 <script src="../js/darkmode.js"> </script>
 <script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/slider.js"></script>

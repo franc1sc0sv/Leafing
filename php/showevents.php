@@ -7,7 +7,7 @@
         <div class="specificInfo">
             <div class="date">
                 <img src="../img/iconos/location.svg" class="location" alt="">
-                27 - Junio
+                <?php echo $event['date_event'] ?>
             </div>
             <div class="place">
                 <img src="../img/iconos/location.svg" class="location" alt="">

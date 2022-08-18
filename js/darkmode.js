@@ -12,20 +12,22 @@ btnMode.addEventListener("click", function () {
     console.log(val)
 
     if (val) {
-        localStorage.dark = "si"//El primero es de asignacion, segundo comparacion y tercero comparacion de variables y tipos de datos//
-        document.querySelector(".cambio").src = "../img/imagenes/dom.png";
+        localStorage.dark = "si"
+        document.querySelector(".cambio").style.backgroundImage  = ("url(../img/imagenes/dom.png)")
     } else {
         localStorage.dark = "no"
-        document.querySelector(".cambio").src = "../img/imagenes/luna.png";
+        document.querySelector(".cambio").style.backgroundImage  = ("url(../img/imagenes/luna.png)")
     }
 })
 
 if (localStorage.dark == "si") {
     body.classList.add("darkmode");
     body.classList.add("font-mode");
-    document.querySelector(".cambio").src = "../img/imagenes/dom.png";
+    document.querySelector(".cambio").style.backgroundImage  = ("url(../img/imagenes/dom.png)")
+
+
 } else {
     body.classList.remove("darkmode");
     body.classList.remove("font-mode");
-    document.querySelector(".cambio").src = "../img/imagenes/luna.png";
+    document.querySelector(".cambio").style.backgroundImage  = ("url(../img/imagenes/luna.png)")
 }
