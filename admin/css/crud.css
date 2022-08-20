@@ -1,0 +1,40 @@
+.iconOption {
+    width: 30px;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(107%) hue-rotate(209deg) brightness(105%) contrast(105%);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.add:hover {
+    filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(2095%) hue-rotate(60deg) brightness(102%) contrast(103%);
+}
+
+.delete:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(6412%) hue-rotate(356deg) brightness(101%) contrast(117%);
+}
+
+.edit:hover {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(21%) saturate(6342%) hue-rotate(1deg) brightness(102%) contrast(106%);
+}
+
+.buttonNew {
+    background-color: #484848;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    transition: all .3s ease-in-out;
+}
+
+.buttonNew:hover {
+    background-color: #4F9466;
+}

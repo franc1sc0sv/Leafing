@@ -56,7 +56,7 @@ if (!$error) { ?>
                     <p><?php echo $event[0]['id_categories_events'] ?></p>
                     <br>
                     <p class="bold">Lugar y fecha</p>
-                    <p><?php echo $event[0]['place_event'] , " ", $event[0]['date_event'] ?></p>
+                    <p><?php echo $event[0]['place_event'], " ", $event[0]['date_event'] ?></p>
                 </div>
 
                 <div class="inscribirseCancelar" id="inscribirseCancelar">

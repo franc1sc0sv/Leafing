@@ -2,6 +2,11 @@ const body = document.getElementsByTagName('body')[0]
 
 function collapseSidebar() {
 	body.classList.toggle('sidebar-expand')
+	// console.log(screen.width)
+	// if (screen.width <= 600) {
+	// 	body.classList.toggle('blockScroll')
+	// }
+
 }
 
 window.onclick = function (event) {

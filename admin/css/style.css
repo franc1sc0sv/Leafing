@@ -68,6 +68,10 @@ body {
 	margin: 0;
 }
 
+h2 {
+	margin: 0;
+}
+
 .navbar {
 	display: flex;
 	flex-direction: row;
@@ -77,8 +81,8 @@ body {
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 101;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 1px;
+	position: inherit;
 }
 
 .navbar-nav {
@@ -88,6 +92,7 @@ body {
 	padding-left: 0;
 	margin-bottom: 0;
 	margin-top: 0;
+	gap: 1rem;
 }
 
 .nav-link {
@@ -213,7 +218,6 @@ body {
 	background: var(--main-bg-color);
 	max-width: 300px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
 	padding: unset;
 	border-radius: 10px;
 	border: 0.125px solid var(--second-bg-color);
@@ -318,21 +322,22 @@ body {
 .wrapper {
 	padding: 10px;
 	margin-left: 82px;
-	padding-top: 75px;
+	/* padding-top: 75px; */
 	background: var(--second-bg-color);
 	transition: margin-left .5s;
+	z-index: -1;
 }
 
 .sidebar {
 	width: 82px;
 	height: 100vh;
 	position: fixed;
-	margin-top: 65px;
+	/* margin-top: 48px; */
 	background: var(--main-bg-color);
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 1px;
 	overflow: hidden;
-	z-index: 100;
 	transition: width .5s;
+	z-index: 1;
 }
 
 /* .sidebar:hover {
@@ -380,10 +385,10 @@ body {
 	background: var(--second-bg-color);
 }
 
-.sidebar-nav-link.active {
+/* .sidebar-nav-link.active {
 	background: var(--second-bg-color);
 	color: var(--danger-color);
-}
+} */
 
 .sidebar-nav-link.active div {
 	border-left: 5px solid var(--danger-color);
@@ -451,6 +456,10 @@ body {
 
 	[class*="col-"] {
 		width: 100%
+	}
+
+	.content-modal {
+		width: 90%;
 	}
 }
 
@@ -747,4 +756,17 @@ table th {
 	background: rgba(0, 0, 0, 0.05);
 	border-radius: .25rem;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logout {
+	flex-basis: 100%;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 6rem;
+}
+
+.blockScroll {
+	overflow-x: hidden;
+	overflow-y: hidden;
+
 }

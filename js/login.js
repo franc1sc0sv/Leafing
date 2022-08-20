@@ -63,25 +63,22 @@ formCredentials.addEventListener('submit', function (e) {
                 alert.innerHTML = alertEmpty;
             } else if (data == "ErrorData") {
                 alert.innerHTML = CorreNoValido;
+            } else if (data == "LogeadoADMIN") {
+                alert.innerHTML = Nice;
+                setTimeout(redirec("../admin/php/admin.php"), 1000);
             } else {
-                alert.innerHTML = `
-                <div class="alertDivNice">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    <p>Logeado</p>
-                </div>`
-
-                console.log(data)
-                function redirec() {
-                    window.location.href = "index.php";
-                }
-                setTimeout(redirec, 1000);
-
-                console.log(data);
+                alert.innerHTML = Nice;
+                setTimeout(redirec("index.php"), 1000);
             }
         })
 
 
 })
+
+function redirec(path) {
+    window.location.href = path;
+}
+
 
 //Ojito para ver la contraseña
 eye.addEventListener('click', function () {

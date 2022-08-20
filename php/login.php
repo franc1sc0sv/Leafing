@@ -14,8 +14,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         //Quitarle el hash a la contraseña y verificar si es la misma
         if (password_verify($password, $result[0][2])) {
             if ($result[0][3] == 1) {
-                //Es admin
-                //echo json_encode("LogeadoADMIN");
+                $_SESSION['typeof'] = $result[0][3];
+                $_SESSION['estatus'] = true;
+                $_SESSION['dataID'] = $result[0][0];
+                echo json_encode("LogeadoADMIN");
             } else {
                 $_SESSION['typeof'] = $result[0][3];
                 $_SESSION['estatus'] = true;
