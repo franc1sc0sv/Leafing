@@ -461,6 +461,9 @@ h2 {
 	.content-modal {
 		width: 90%;
 	}
+	.alert{
+		width: 80%;
+	}
 }
 
 /* Small devices >= 600px */
