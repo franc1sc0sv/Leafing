@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Archivo:wght@200;400;600&family=Inter&family=Montserrat:wght@200;400&family=Noto+Sans&family=Poppins&family=Roboto:wght@400;500&display=swap%27');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+.contenedor-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    filter: brightness(80%);
+    background-image: url(fondo-evento.jpg);
+    position: relative;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+.colorcito {
+    color: #FFFFFF;
+}
+
+.return0 {
+    text-decoration: none;
+    position: absolute;
+    left: 63rem;
+    top: 8rem;
+    font-size: medium;
+}
+
+.return1 {
+    text-decoration: none;
+    position: absolute;
+    left: 75rem;
+    top: 8rem;
+    font-size: medium;
+}
+
+.return0:hover {
+    color: #FFDB84;
+    transition: 0.5;
+    transform: scale(1.08);
+}
+
+.return1:hover {
+    color: #FFDB84;
+    transition: 0.5;
+    transform: scale(1.08);
+}
+
+.flechita {
+    width: 2rem;
+
+}
+
+/* .imgFondo{
+    max-width: 40rem;
+} */
+
+.imgIcon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.imgEvento {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.general {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    gap: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subgeneral {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 0 5rem;
+}
+
+
+.parrafo-text {
+    margin-top: 1rem;
+    background-color: #ffffff;
+    text-align: left;
+    text-align: justify;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.flex {
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+}
+
+.starDate {
+    display: flex;
+}
+
+.inscription {
+    margin-top: 6rem;
+    background-color: #FFCA31;
+    color: #f6f6f6;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.5s;
+    border-color: #FFCA31;
+}
+
+.inscription:hover {
+    background: transparent;
+    color: #ffbb00;
+    border: solid;
+
+
+}
+
+.repor {
+    margin-top: 3rem;
+    background-color: #FF3333;
+    color: #f6f6f6;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.5s;
+    border-color: #FF3333;
+}
+
+.repor:hover {
+    background: transparent;
+    color: #FF3333;
+    border: solid;
+
+
+}
+
+.text-subgeneral {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.aña {
+    display: flex;
+    height: 100px;
+}
+
+.parrafo {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.contenedor-img-div {
+    margin-top: 2rem;
+
+}
+
+.button-all {
+    align-self: center;
+}
+
+.animation{
+    margin-top: 6rem;
+    max-width: 30rem;
+    align-self: center;
+}
