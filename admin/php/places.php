@@ -75,17 +75,17 @@
 </div>
 
 <style>
-	.LugaresNav {
+	.LuagaresNav {
 		background: var(--second-bg-color);
 		color: #eb4d4b;
 	}
 
-	.LugaresNav div {
+	.LuagaresNav div {
 		border-left: 5px solid var(--danger-color);
 
 	}
 
-	.LugaresNav i {
+	.LuagaresNav i {
 		color: var(--danger-color);
 		margin-left: -5px;
 	}
