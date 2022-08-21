@@ -41,7 +41,7 @@
 								<td>San Salvador</td>
 								<td>
 									<img src="../assets/icons/edit.svg" alt="edit" class="iconOption edit" id="edit">
-									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hide" id="add">
+									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hiden" id="add">
 									<img src="../assets/icons/delete.svg" alt="delete" class="iconOption delete" id="delete">
 								</td>
 							</tr>
@@ -63,13 +63,13 @@
 			<h2>Añade nuevos lugares</h2>
 			<div class="es">
 				<p>Lugar:</p>
-				<input type="text" name="categoryES" class="inputCategory">
+				<input type="text" name="categoryES" class="inputCategory" id="inputPlace">
 			</div>
 
 		</div>
 		<div class="footerModel">
 			<button id="cancel" class="cancel buttonNew"><span>Cancelar</span></button>
-			<button id="kepp" class="keep buttonNew"><span>Guardar</span></button>
+			<button id="keepPlace" class="keep buttonNew"><span>Guardar</span></button>
 		</div>
 	</div>
 </div>

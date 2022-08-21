@@ -10,13 +10,16 @@
     <!-- <link rel="icon" type="image/png" href="assets/AT-pro-logo.png" /> -->
     <link rel="stylesheet" type="text/css" href="../css/modal.css">
     <link rel="stylesheet" type="text/css" href="../css/crud.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/notification.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 
 
 </head>
 
 <body class="overlay-scrollbar dark">
+    <?php include_once('alerts.php') ?>
+
     <!-- navbar -->
     <div class="navbar">
         <!-- nav left -->

@@ -2,9 +2,9 @@
 const newB = document.getElementById('new');
 const cancel = document.getElementById('cancel');
 const XModal = document.getElementById('XModal');
+
 newB.addEventListener('click', function () {
     containerModal.style.display = "flex";
-
 })
 
 

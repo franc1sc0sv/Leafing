@@ -32,4 +32,12 @@ class conection
         $sentencia->execute();
         return $sentencia->fetchAll();
     }
+
+    public function consultarform($sql)
+    {
+        $sentencia = $this->conection->prepare($sql);
+        $sentencia->execute();
+        $count = $sentencia->rowCount();
+        return $count;
+    }
 }

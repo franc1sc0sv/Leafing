@@ -43,7 +43,7 @@
 								<td>Oceans</td>
 								<td>
 									<img src="../assets/icons/edit.svg" alt="edit" class="iconOption edit" id="edit">
-									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hide" id="add">
+									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hiden" id="add">
 									<img src="../assets/icons/delete.svg" alt="delete" class="iconOption delete" id="delete">
 								</td>
 							</tr>
@@ -65,11 +65,11 @@
 			<h2>Crea nuevas categorias</h2>
 			<div class="es">
 				<p>Categoria en español:</p>
-				<input type="text" name="categoryES" class="inputCategory">
+				<input type="text" name="categoryES" class="inputCategory" id="inputCategoryES">
 			</div>
 			<div class="en">
 				<p>Categoria en ingles:</p>
-				<input type="text" name="categoryEN" class="inputCategory">
+				<input type="text" name="categoryEN" class="inputCategory" id="inputCategoryEN">
 			</div>
 		</div>
 		<div class="footerModel">

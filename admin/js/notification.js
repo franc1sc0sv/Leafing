@@ -1,22 +1,19 @@
 const alert = document.getElementById('alert');
-const xD = document.getElementById('xD');
-const closebt = document.getElementById('close');
+const alertRepeat = document.getElementById('alertRepeat');
+const alertNice = document.getElementById('alertNice');
 
-xD.addEventListener('click', function () {
-    showNotification();
-})
-
-closebt.addEventListener('click', function () {
-    hideNotification();
-})
-
-function showNotification() {
+function showNotification(alert) {
     alert.classList.add("show");
     alert.classList.remove("hide");
     alert.classList.add("showAlert");
+
+    setTimeout(function () {
+        alert.classList.remove("show");
+        alert.classList.add("hide");
+    }, 5000)
 }
 
-function hideNotification() {
+function hideNotification(alert) {
     alert.classList.remove("show");
     alert.classList.add("hide");
 }

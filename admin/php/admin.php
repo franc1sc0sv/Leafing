@@ -1,5 +1,6 @@
 <?php session_start() ?>
 <?php include_once('header.php') ?>
+
 <!-- main content -->
 <div class="wrapper">
 	<div class="row">
@@ -40,7 +41,9 @@
 			</div>
 		</div>
 	</div>
+	<!-- <button id="xD" onclick="showNotification(alert)">Show Alert</button> -->
 </div>
+
 <style>
 	.adminNav {
 		background: var(--second-bg-color);

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     user-select: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
-html,
+/* html,
 body {
     height: 100%;
 }
@@ -17,7 +17,7 @@ body {
     display: grid;
     place-items: center;
     overflow: hidden;
-}
+} */
 
 button {
     padding: 8px 16px;
@@ -41,6 +41,7 @@ button {
     border-left: 8px solid #ffa502;
     overflow: hidden;
     opacity: 0;
+    z-index: 999;
     pointer-events: none;
 }
 
@@ -137,4 +138,21 @@ button {
 
 .alert .close-btn>img {
     filter: brightness(0) saturate(100%) invert(45%) sepia(38%) saturate(1337%) hue-rotate(7deg) brightness(101%) contrast(94%);
+}
+
+.nice {
+    background-color: #6ab04c;
+    border-left: 8px solid green;
+}
+
+.alert.nice .msg {
+    color: white;
+}
+
+.alert.nice .close-btn>img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(269deg) brightness(103%) contrast(102%);
+}
+
+.alert.nice .close-btn {
+    background: #6ab04c;
 }
