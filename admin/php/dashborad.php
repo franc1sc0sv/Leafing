@@ -1,5 +1,23 @@
 <?php session_start() ?>
-<?php include_once('header.php') ?>
+<?php
+include_once('conexion.php');
+include_once('header.php')
+?>
+
+<?php
+
+$objconexion = new conection();
+$eventos = $objconexion->consultar("SELECT events.id_events, events.name_event, user_data.user_name, categories_events.categories, place_events.place, state_events.state FROM `events` 
+INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
+INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
+INNER JOIN state_events ON events.id_state_events = state_events.id_state_events
+INNER JOIN place_events ON events.place_event = place_events.id_place;
+");
+
+
+
+//print_r($eventos);
+?>
 <!-- main content -->
 <div class="wrapper">
 	<div class="row">
@@ -9,7 +27,6 @@
 					<h1>
 						Eventos
 					</h1>
-					<i class="fas fa-ellipsis-h"></i>
 				</div>
 				<div class="card-content">
 					<table>
@@ -28,22 +45,99 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Funa de aristides</td>
-								<td>Adrian</td>
-								<td>Reciclaje</td>
-								<td>San Salvador</td>
-								<td>Activo</td>
-								<td>0</td>
-								<td><img src="../assets/icons/archive.svg" alt=" delete" class="iconOption" id="archive"></td>
-
-
-							</tr>
+							<?php foreach ($eventos as $evento) { ?>
+								<tr>
+									<td><?php echo $evento['id_events'] ?></td>
+									<td><?php echo $evento['name_event'] ?></td>
+									<td><?php echo $evento['user_name'] ?></td>
+									<td><?php echo $evento['categories'] ?></td>
+									<td><?php echo $evento['place'] ?></td>
+									<td><?php echo $evento['state'] ?></td>
+									<td id="<?php echo $evento['id_events'] ?>" onclick="modalReportsResume(this)"> <span class="resumen"> Resumen </span></td>
+									<td><img src="../assets/icons/archive.svg" alt="archive" class="iconOption" id="<?php echo $evento['id_events'] ?>" onclick="arhiveEvents(this)"></td>
+								</tr>
+							<?php } ?>
 
 						</tbody>
 					</table>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container-modal" id="containerModal">
+	<div class="content-modal col-xl-9 col-9 col-m-9 col-sm-8" id="contentModal">
+		<div class="headerModal" id="headerModal">
+			<h1>Reportes</h1>
+			<img src="../assets/icons/close.svg" alt="xD" id="XModal" class="XModal">
+		</div>
+		<div class="contentModel" id="contentModel">
+			<div class="tablaReports" id="tablaReports">
+
+
+				<p>Periodo:<span id="fechaPeriodo"> 2022-08-20 15:07:26 - 2022-08-20 15:07:39</span></p>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Desnudos</th>
+							<th>Violencia</th>
+							<th>Acoso</th>
+							<th>Suicidio</th>
+							<th>Iniformacion</th>
+							<th>Spam</th>
+							<th>Lengauje</th>
+							<th>Terrorismo</th>
+							<th>Total</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Cantidad</th>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+							<td class="cantidad">0</td>
+
+						</tr>
+						<tr>
+							<th>Porcentaje</th>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+							<td class="porcentaje">0%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-modal" id="containerMODAAL">
+	<div class="content-modal col-xl-9 col-9 col-m-9 col-sm-8" id="contentModal">
+		<div class="headerModal" id="headerModal">
+			<h1>Reportes</h1>
+			<img src="../assets/icons/close.svg" alt="xD" id="XModall" class="XModal">
+		</div>
+		<div class="contentModel" id="contentModel">
+			<div class="emptyReports showModel" id="emptyReports">
+				<h1>Este evento no tiene reportes</h1>
 			</div>
 		</div>
 	</div>
@@ -65,5 +159,7 @@
 		margin-left: -5px;
 	}
 </style>
+<script src="../js/dashboard.js" defer></script>
+
 <!-- end main content -->
 <?php include_once('footer.php') ?>

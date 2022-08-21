@@ -768,5 +768,15 @@ table th {
 .blockScroll {
 	overflow-x: hidden;
 	overflow-y: hidden;
+}
 
+
+.resumen {
+	transition: all .5s ease;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.resumen:hover {
+	color: #4F9466;
 }

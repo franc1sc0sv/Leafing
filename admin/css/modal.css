@@ -92,3 +92,15 @@
 .inputCategory:hover {
     border: none;
 }
+
+.contentModel{
+    overflow-x: auto;
+}
+
+.emptyReports{
+    text-align: center;
+}
+
+.hideModel{
+    display: none;
+}

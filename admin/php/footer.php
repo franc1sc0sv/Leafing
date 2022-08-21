@@ -1,8 +1,7 @@
-<?php //xD ?>
-
-<script src="../js/Modal.js"></script>
-<script src="../js/index.js"></script>
+<?php //xD 
+?>
 </body>
-
+<script src="../js/Modal.js" defer></script>
+<script src="../js/index.js" defer></script>
 
 </html>

@@ -1,4 +1,5 @@
-<?php //print_r($_SESSION); ?>
+<?php //print_r($_SESSION); 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/modal.css">
     <link rel="stylesheet" type="text/css" href="../css/crud.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
 
 <body class="overlay-scrollbar dark">
@@ -108,7 +110,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="./places.php" class="sidebar-nav-link LuagarNav">
+                <a href="./places.php" class="sidebar-nav-link LuagaresNav">
                     <div>
                         <img src="../assets/icons/place.svg" alt="Lugares">
                     </div>
