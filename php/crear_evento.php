@@ -56,7 +56,7 @@ include_once('header.php');
                                 <option value=10 class="optionColor">San Vicente</option>
                                 <option value=11 class="optionColor">Santa Ana</option>
                                 <option value=12 class="optionColor">Sonsonate</option>
-                                <option value=13class="optionColor">Usulután</option>
+                                <option value=13 class="optionColor">Usulután</option>
                                 <option value=14 class="optionColor">San Miguel</option>
                             </select>
 
