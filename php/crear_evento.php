@@ -18,7 +18,7 @@ include_once('header.php');
             </div>
 
 
-            <form action="#" class="container_form">
+            <form action="createEvents.php" method="post" class="container_form">
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
@@ -28,35 +28,74 @@ include_once('header.php');
 
                         <label for="title" class="label_forms label_generalidaes translate">¿Qué se realizará en el
                             evento? </label>
-                        <input type="text" name="title" class="input_genralidades input_comentario">
+                        <input type="text" name="description" class="input_genralidades input_comentario">
 
-                        <label for="title" class="label_forms label_generalidaes translate">Requisitos para asistir
+                        <!-- <label for="title" class="label_forms label_generalidaes translate">Requisitos para asistir
                             al evento</label>
-                        <input type="text" name="title" class="input_genralidades input_requisitos">
+                        <input type="text" name="title" class="input_genralidades input_requisitos"> -->
 
                         <label for=""></label>
                     </div>
                     <div class="side_2 side-datos">
                         <div class="input_1">
-                            <label for="title" class="label_forms label_datos translate">Lugar de organización
+                            <!-- <label for="title" class="label_forms label_datos translate">Lugar de organización
                             </label>
-                            <input type="text" name="title" class="input_datos">
+                            <input type="text" name="title" class="input_datos"> -->
+
+                            <select name="lugar" class="label_forms label_datos translate" id="Lugar">
+                                <option value="" class="optionColor translate">Lugar</option>
+                                <option value=1 class="optionColor">Ahuachapán</option>
+                                <option value=2 class="optionColor">Cabañas</option>
+                                <option value=3 class="optionColor">Chalatenango</option>
+                                <option value=4 class="optionColor">Cuscatlán</option>
+                                <option value=5 class="optionColor">La Libertad</option>
+                                <option value=6 class="optionColor">La Paz</option>
+                                <option value=7 class="optionColor">La Unión</option>
+                                <option value=8 class="optionColor">Morazán</option>
+                                <option value=9 class="optionColor">San Salvador</option>
+                                <option value=10 class="optionColor">San Vicente</option>
+                                <option value=11 class="optionColor">Santa Ana</option>
+                                <option value=12 class="optionColor">Sonsonate</option>
+                                <option value=13class="optionColor">Usulután</option>
+                                <option value=14 class="optionColor">San Miguel</option>
+                            </select>
+
+                            <label for="title" class="label_forms label_datos translate">Dirección
+                            </label>
+                            <input type="text" name="address" class="input_datos">
 
                         </div>
 
                         <div class="fecha_form-eventos">
                             <div id="fecha_eventos">
-                                <label for="" class="classfecha-hora label_forms translate">Fecha </label>
-                                <input type="text" name="title" class="input_fecha">
+                                <label for="" class="classfecha-hora label_forms translate">Fecha de inicio</label>
+                                <input type="datetime-local" name="dateStart" class="input_fecha">
                             </div>
 
                             <div id="hora_eventos">
-                                <label for="" class="classfecha-hora label_forms translate">Hora </label>
-                                <input type="text" name="title" class="input_fecha">
+                                <label for="" class="classfecha-hora label_forms translate">Fecha de finalización </label>
+                                <input type="datetime-local" name="dateFinish" class="input_fecha">
                             </div>
                         </div>
 
-                        <div class="transporte_forms-eventos">
+                        <select name="categorias" class="inputs" id="Categorias">
+                            <?php if ($_GET["categorias"] != '') { ?>
+                                <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
+                            <?php } ?>
+                            <option value="" class="translate optionColor"> Categorías</option>
+
+                            <?php
+                            $objconexionfiltros = new conection();
+                            $categoriasevents = $objconexionfiltros->consultar("SELECT * FROM `categories_events`");
+
+                            foreach ($categoriasevents as $categoriaevents) { ?>
+                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories-events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
+                            <?php } ?>
+
+                        </select>
+                        
+
+                        <!-- <div class="transporte_forms-eventos">
                             <h1 class="translate">Transporte:</h1>
                             <p class="translate">¿Su evento contará con transporte disponible para las personas que se inscriban?</p>
 
@@ -70,7 +109,7 @@ include_once('header.php');
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -81,14 +120,13 @@ include_once('header.php');
                         <div class="subir-imagen">
 
                             <p class="translate">Imagen</p>
-
-                            <div class="imagen-side">
-                                <img src="../img/imagenes/img_icon.svg" alt="">
+                            <input type="file" name="image" id="">
+                                
                             </div>
                         </div>
 
                         <div class="publish">
-                           <span class="submit translate"> <input type="submit" name="submit" value="Publicar"> </span>
+                            <span class="submit translate"> <input type="submit" name="submit" value="Publicar"> </span>
                         </div>
                     </div>
                 </div>
