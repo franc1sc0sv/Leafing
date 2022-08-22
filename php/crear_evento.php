@@ -18,7 +18,7 @@ include_once('header.php');
             </div>
 
 
-            <form action="createEvents.php" method="post" class="container_form">
+            <form action="createEvents.php" method="post" class="container_form" enctype="multipart/form-data">
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
@@ -89,7 +89,7 @@ include_once('header.php');
                             $categoriasevents = $objconexionfiltros->consultar("SELECT * FROM `categories_events`");
 
                             foreach ($categoriasevents as $categoriaevents) { ?>
-                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories-events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
+                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories_events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
                             <?php } ?>
 
                         </select>

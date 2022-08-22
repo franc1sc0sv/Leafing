@@ -23,11 +23,12 @@ class conection{
         //echo $sql;
         $this->conection->exec($sql);
         //Ejecuta una instrucion sql y nos regresa un id 
-
+        echo $sql;
         return $this->conection->lastInsertId();
     }   
 
     public function consultar($sql){
+        echo $sql;
         //ejecutar instruccion con prepare
         //Lo que va ser el prepare es tomar esa instruccion sql y almacenarla en la variable
         //echo $sql;

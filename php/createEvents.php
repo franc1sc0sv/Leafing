@@ -13,9 +13,9 @@ if ($_POST) {
 
     $date = new DateTime();
 
-    $image = $date->getTimestamp() . "_" . $_POST['image'];
-    $tempImage = $_POST['image'];
-    move_uploaded_file($tempImage, "imagenes/".$image);
+    $image = $date->getTimestamp() . "_" . $_FILES['image']['name'];
+    $tempImage = $_FILES['image']['tmp_name'];
+    move_uploaded_file($tempImage, "images/".$image);
 
 
     $objConnection = new conection();
@@ -24,20 +24,22 @@ if ($_POST) {
 
     header("location:crear_evento.php");
 
-    print_r($title);
-    echo "<br>";
-    print_r($description);
-    echo "<br>";
-    print_r($place);
-    echo "<br>";
-    print_r($address);
-    echo "<br>";
-    print_r($dateS);
-    echo "<br>";
-    print_r($category);
-    echo "<br>";
-    print_r($image);
+    // print_r($title);
+    // echo "<br>";
+    // print_r($description);
+    // echo "<br>";
+    // print_r($place);
+    // echo "<br>";
+    // print_r($address);
+    // echo "<br>";
+    // print_r($dateS);
+    // echo "<br>";
+    // print_r($category);
+    // echo "<br>";
+    // print_r($image);
 }
+
+
 
 
 ?>
