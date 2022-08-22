@@ -35,16 +35,8 @@
 								<th>Options</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>San Salvador</td>
-								<td>
-									<img src="../assets/icons/edit.svg" alt="edit" class="iconOption edit" id="edit">
-									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hiden" id="add">
-									<img src="../assets/icons/delete.svg" alt="delete" class="iconOption delete" id="delete">
-								</td>
-							</tr>
+						<tbody id="dataPlaces">
+
 						</tbody>
 					</table>
 				</div>
@@ -70,6 +62,27 @@
 		<div class="footerModel">
 			<button id="cancel" class="cancel buttonNew"><span>Cancelar</span></button>
 			<button id="keepPlace" class="keep buttonNew"><span>Guardar</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="container-modal" id="containerModalPlacesEdit">
+	<div class="content-modal col-xl-5 col-5 col-m-7 col-sm-8" id="contentModal">
+		<div class="headerModal" id="headerModal">
+			<h1>Editar</h1>
+			<img src="../assets/icons/close.svg" alt="xD" id="XModalEditPlaces" class="XModal" onclick="hideModalEditPlaces()">
+		</div>
+		<div class=" contentModel" id="contentModel">
+			<h2>Edita este lugar</h2>
+			<div class="es">
+				<p>Lugar:</p>
+				<input type="text" name="categoryES" class="inputCategory" id="inputPlaceEdit">
+			</div>
+
+		</div>
+		<div class="footerModel">
+			<button id="cancel" class="cancel buttonNew" onclick="hideModalEditPlaces()"><span>Cancelar</span></button>
+			<button id="keepPlaceEdit" class="keep buttonNew"><span>Guardar</span></button>
 		</div>
 	</div>
 </div>

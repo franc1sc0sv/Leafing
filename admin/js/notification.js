@@ -1,6 +1,7 @@
 const alert = document.getElementById('alert');
 const alertRepeat = document.getElementById('alertRepeat');
 const alertNice = document.getElementById('alertNice');
+const error = document.getElementById('error');
 
 function showNotification(alert) {
     alert.classList.add("show");

@@ -14,16 +14,18 @@ class conection
     {
         try {
             $this->conection = new PDO("mysql:host=$this->server; dbname=leafing; charset=utf8mb4", $this->user, $this->password);
-            $this->conection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->conection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
         } catch (PDOException $e) {
-            return "fallo de conexion" . $e;
+            return "fallo de conexion" . $e->getMessage();
         }
     }
 
     public function ejecutar($sql)
     {
+        //echo $sql;
         $this->conection->exec($sql);
-        return $this->conection->lastInsertId();
+        //print_r($this->conection->errorInfo());
+        return $this->conection->errorInfo();
     }
 
     public function consultar($sql)

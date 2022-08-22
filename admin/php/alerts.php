@@ -27,3 +27,12 @@
         </div>
     </div>
 </div>
+
+<div class="alert hide error" id="error">
+    <div class="containerNotification">
+        <span class="msg">Error al ejecutar la sentencia</span>
+        <div class="close-btn" id="close" onclick="hideNotification(error)">
+            <img src="../assets/icons/close.svg" alt="">
+        </div>
+    </div>
+</div>

@@ -36,17 +36,8 @@
 								<th>Options</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Oceanos</td>
-								<td>Oceans</td>
-								<td>
-									<img src="../assets/icons/edit.svg" alt="edit" class="iconOption edit" id="edit">
-									<img src="../assets/icons/add.svg" alt="add" class="iconOption add hiden" id="add">
-									<img src="../assets/icons/delete.svg" alt="delete" class="iconOption delete" id="delete">
-								</td>
-							</tr>
+						<tbody id="dataCategories">
+
 						</tbody>
 					</table>
 				</div>
@@ -75,6 +66,30 @@
 		<div class="footerModel">
 			<button id="cancel" class="cancel buttonNew"><span>Cancelar</span></button>
 			<button id="kepp" class="keep buttonNew"><span>Guardar</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="container-modal" id="containerModalEdit">
+	<div class="content-modal col-xl-5 col-5 col-m-7 col-sm-8" id="contentModal">
+		<div class="headerModal" id="headerModal">
+			<h1>Editar</h1>
+			<img src="../assets/icons/close.svg" alt="xD" id="XModal" class="XModal" onclick="hideModal()">
+		</div>
+		<div class="contentModel" id="contentModel">
+			<h2>Editar cagoria #<span class="idEscondido">0</span> </h2>
+			<div class="es">
+				<p>Categoria en español:</p>
+				<input type="text" name="categoryES" class="inputCategory" id="inputCategoryEsEdit">
+			</div>
+			<div class="en">
+				<p>Categoria en ingles:</p>
+				<input type="text" name="categoryEN" class="inputCategory" id="inputCategoryEnEdit">
+			</div>
+		</div>
+		<div class="footerModel">
+			<button id="cancel" class="cancel buttonNew" onclick="hideModal()"><span>Cancelar</span></button>
+			<button id="keppCategorieEdit" class="keep buttonNew"><span>Guardar</span></button>
 		</div>
 	</div>
 </div>

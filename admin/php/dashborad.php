@@ -44,20 +44,8 @@ INNER JOIN place_events ON events.place_event = place_events.id_place;
 
 							</tr>
 						</thead>
-						<tbody>
-							<?php foreach ($eventos as $evento) { ?>
-								<tr>
-									<td><?php echo $evento['id_events'] ?></td>
-									<td><?php echo $evento['name_event'] ?></td>
-									<td><?php echo $evento['user_name'] ?></td>
-									<td><?php echo $evento['categories'] ?></td>
-									<td><?php echo $evento['place'] ?></td>
-									<td><?php echo $evento['state'] ?></td>
-									<td id="<?php echo $evento['id_events'] ?>" onclick="modalReportsResume(this)"> <span class="resumen"> Resumen </span></td>
-									<td><img src="../assets/icons/archive.svg" alt="archive" class="iconOption" id="<?php echo $evento['id_events'] ?>" onclick="arhiveEvents(this)"></td>
-								</tr>
-							<?php } ?>
-
+						<tbody id="DataEvents">
+							
 						</tbody>
 					</table>
 				</div>
@@ -159,7 +147,7 @@ INNER JOIN place_events ON events.place_event = place_events.id_place;
 		margin-left: -5px;
 	}
 </style>
-<script src="../js/dashboard.js" defer></script>
+
 
 <!-- end main content -->
 <?php include_once('footer.php') ?>

@@ -66,6 +66,7 @@ body {
 	background: var(--main-bg-color);
 	color: var(--main-color);
 	margin: 0;
+	overflow-x: hidden;
 }
 
 h2 {

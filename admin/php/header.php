@@ -1,4 +1,7 @@
 <?php //print_r($_SESSION); 
+date_default_timezone_set('America/El_Salvador');
+$time = time();
+echo date('y-m-d-G-i-s', $time)
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,14 +15,10 @@
     <link rel="stylesheet" type="text/css" href="../css/crud.css">
     <link rel="stylesheet" type="text/css" href="../css/notification.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-
-
 </head>
 
 <body class="overlay-scrollbar dark">
     <?php include_once('alerts.php') ?>
-
     <!-- navbar -->
     <div class="navbar">
         <!-- nav left -->

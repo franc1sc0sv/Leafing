@@ -36,7 +36,8 @@ button {
     background: #ffdb9b;
     position: absolute;
     right: 0;
-    top: 10px;
+    /* top: 10px; */
+    bottom: 20px;
     border-radius: 4px;
     border-left: 8px solid #ffa502;
     overflow: hidden;
