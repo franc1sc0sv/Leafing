@@ -20,6 +20,7 @@ class conection{
     }
 
     public function ejecutar($sql){ //Insertar datos/delete/actualizar
+        //echo $sql;
         $this->conection->exec($sql);
         //Ejecuta una instrucion sql y nos regresa un id 
 
@@ -29,6 +30,7 @@ class conection{
     public function consultar($sql){
         //ejecutar instruccion con prepare
         //Lo que va ser el prepare es tomar esa instruccion sql y almacenarla en la variable
+        //echo $sql;
         $sentencia=$this->conection->prepare($sql);
         $sentencia->execute();
         //Retorna todos los registros que pueda consultar con la sentencia sql

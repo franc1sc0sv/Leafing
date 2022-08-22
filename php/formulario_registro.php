@@ -8,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/personal_data.css">
     <link href="../css/register.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/notification.css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
     <title>Registro</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="alreadysignup">
-            <p class="question translate">¿Ya tienes una cuenta?</p>
-            <a href="../php/formulario_inicio-sesion.php" class="login"><span class="translate">Inicia sesión</span></a>
-        </div>
-        <div class="container2">
 
+        <div class="container2">
+            <div class="alreadysignup">
+                <p class="question translate">¿Ya tienes una cuenta?</p>
+                <a href="../php/formulario_inicio-sesion.php" class="login"><span class="translate">Inicia sesión</span></a>
+            </div>
             <div class="container-form">
                 <div class="form">
                     <a class="littleX" href="../php/index.php"><img src="../img/iconos/x.svg" alt=""></a>
@@ -137,8 +138,11 @@
             </div>
         </div>
     </div>
+    <div id="alertLogin">
+    </div>
+    <script src="../js/notification.js"></script>
     <script src="../js/translate.js" type="module"></script>
-    <script src="../js/register.js" defer></script>
+    <script src="../js/register.js" type="module"></script>
 </body>
 
 </html>

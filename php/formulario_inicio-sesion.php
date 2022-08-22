@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start() ?>
 
 <!DOCTYPE html>
 <html lang=<?php echo $_SESSION['lang'] ?>>
@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/login_.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/notification.css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
     <title>Registrarse</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="container2">
             <div class="alreadysignup">
                 <p class="question"> <span class="translate"> ¿Aún no tienes una cuenta?</span></p>
@@ -47,10 +48,6 @@
                                             <input type="password" class="mitexto" id="password" name="password">
                                             <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
                                         </div>
-
-                                        <div class="alert" id="alert">
-
-                                        </div>
                                         <div class="next">
                                             <button class="nexto" type="submit"><span class="translate">Siguiente</span></button>
                                         </div>
@@ -83,9 +80,13 @@
                 </div>
             </div>
         </div>
+        <div id="alertLogin">
+
+        </div>
     </div>
+    <script src="../js/notification.js"></script>
     <script src="../js/translate.js" type="module"></script>
-    <script src="../js/login.js"> </script>
+    <script src="../js/login.js" type="module"> </script>
 </body>
 
 </html>

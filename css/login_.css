@@ -5,6 +5,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 
 p {
     font-family: 'Poppins', sans-serif;

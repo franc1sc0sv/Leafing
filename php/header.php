@@ -24,7 +24,7 @@ if (!isset($_SESSION['lang'])) {
         <meta http-equiv="Pragma" content="no-cache">
         <link rel="stylesheet" href="../css/style_header.css">
         <link rel="stylesheet" href="../css/style_footer.css">
-
+        <link rel="stylesheet" href="../css/notification.css">
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/index.php") { ?>
                 <!-- Estilos de index-->
                 <link rel="stylesheet" href="../css/style_index.css">

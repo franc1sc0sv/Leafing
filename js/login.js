@@ -1,56 +1,14 @@
+import { warning, alertf, nice } from "../js/alerts.js";
+const alertLogin = document.getElementById('alertLogin')
 const formCredentials = document.getElementById('formCredentials')
 const alert = document.getElementById('alert');
 const eye = document.getElementById('eye')
 const passwordInput = document.getElementById('password');
 let html = document.querySelector("html");
 
-///DEFINICION DE LOS MENSAJES DE ERROR DEPENDIENDO DEL IDIOMA
-if (html.lang == "es") {
-    alertEmpty = `
-    <div class="alertDivEmpty">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Llena todos los campos</p>
-    </div>`;
-
-    CorreNoValido = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Correo electrónico o contraseña incorrectos</p>
-    </div > `;
-    Nice = `;
-    <div class="alertDivNice" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Logeado</p>
-    </div > `;
-
-
-
-} else {
-    alertEmpty = `
-    <div class="alertDivEmpty">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Fill in all the fields</p>
-    </div>`;
-
-    CorreNoValido = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Incorrect email or password</p>
-    </div > `;
-    Nice = `;
-    <div class="alertDivNice" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Logged in</p>
-    </div > `;
-}
-
-
 formCredentials.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formCredentials);
-
-    let email = data.get('email')
-    let passsword = data.get('password')
 
     fetch('login.php', {
         method: 'post',
@@ -59,28 +17,56 @@ formCredentials.addEventListener('submit', function (e) {
 
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if (data == "empty") {
-                alert.innerHTML = alertEmpty;
+                let msg;
+                if (html.lang == "es") {
+                    msg = alertf("Llena todos los campos")
+                } else {
+                    msg = alertf("Fill in all the fields")
+                }
+                alertLogin.innerHTML = msg;
+                showNotification()
             } else if (data == "ErrorData") {
-                alert.innerHTML = CorreNoValido;
+                let msg;
+                if (html.lang == "es") {
+                    msg = alertf("Correo electrónico o contraseña incorrectos")
+                } else {
+                    msg = alertf("Incorrect email or password")
+                }
+                alertLogin.innerHTML = msg;
+                showNotification()
             } else if (data == "LogeadoADMIN") {
-                alert.innerHTML = Nice;
-                setTimeout(redirec("../admin/php/admin.php"), 1000);
+                let msg;
+                if (html.lang == "es") {
+                    msg = nice("Logeado")
+                } else {
+                    msg = nice("Loged")
+                }
+                alertLogin.innerHTML = msg;
+                showNotification()
+                setTimeout(function () {
+                    window.location.href = "../admin/php/admin.php";
+                }, 800);
+
             } else {
-                alert.innerHTML = Nice;
-                setTimeout(redirec("index.php"), 1000);
+                let msg;
+                if (html.lang == "es") {
+                    msg = nice("Logeado")
+                } else {
+                    msg = nice("Loged")
+                }
+                alertLogin.innerHTML = msg;
+                showNotification()
+                setTimeout(function () {
+                    window.location.href = "../php/index.php";
+                }, 800);
             }
         })
 
 
 })
 
-function redirec(path) {
-    window.location.href = path;
-}
-
-
-//Ojito para ver la contraseña
 eye.addEventListener('click', function () {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";

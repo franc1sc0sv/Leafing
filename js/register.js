@@ -1,3 +1,4 @@
+import { warning, alertf, nice } from "../js/alerts.js";
 const code = document.getElementById('containerinfo1');
 const formEmail = document.getElementById('formEmail');
 const alert = document.getElementById('alert');
@@ -15,98 +16,7 @@ var Dataemail;
 var Datapassword;
 var codigoCorrecto;
 let html = document.querySelector("html");
-
-///DEFINICION DE LOS MENSAJES DE ERROR DEPENDIENDO DEL IDIOMA
-if (html.lang == "es") {
-    alertEmpty =
-        `<div class="alertDivEmpty">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Llena todos los campos</p>
-    </div>`;
-
-    alertRepietido =
-        ` <div class="alertDivRepetido" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Ya existe un correo con esta cuenta</p>
-    </div >`;
-    CorreNoValido = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Datos Invalidos</p>
-    </div > `;
-    passswordNot = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>La contraseña debe tener más de 6 caracteres y menos de 15</p>
-    </div > `;
-    DatosIncorrectos = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Datos Incorrecots</p>
-    </div > `;
-    fourDigits = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>El codigo debe tener 4 dígitos</p>
-    </div > `;
-
-    NameNoValido = `
-    <div class="alertDivRepetido" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Nombre no válido</p>
-    </div > `
-    Nice = `;
-    <div class="alertDivNice" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Tu cuenta ha sido creada</p>
-    </div > `;
-
-
-
-} else {
-    alertEmpty = `
-    <div class="alertDivEmpty">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Fill in all the fields</p>
-    </div>`;
-
-    alertRepietido = ` 
-    <div class="alertDivRepetido" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>There is already an email with this account</p>
-    </div >`;
-    CorreNoValido = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Invalid data</p>
-    </div > `;
-    passswordNot = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>The password must be longer than 6 characters and less than 15 characters.</p>
-    </div > `;
-    DatosIncorrectos = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Incorrect Data</p>
-    </div > `;
-    fourDigits = `
-    <div class="alertDivEmpty" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>The code must have 4 digits</p>
-    </div > `;
-
-    NameNoValido = `
-    <div class="alertDivRepetido" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Invalid name</p>
-    </div > `
-    Nice = `;
-    <div class="alertDivNice" >
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <p>Your account has been created</p>
-    </div > `;
-}
+const alertLogin = document.getElementById('alertLogin')
 
 //Es el primer slider del formulario - correo y contraseña
 formEmail.addEventListener('submit', function (e) {
@@ -115,28 +25,29 @@ formEmail.addEventListener('submit', function (e) {
     let email = data.get('email')
     let passsword = data.get('password')
     let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    //console.log(data)
-    // console.log(email)
-    // console.log(passsword)
-
-    // console.log(expRegEmail.test(email))
-
-    //Fecth trabaja por defecto con get
-
-    //Enviando por medio de fecth y post los elementos del form
 
     if (!expRegEmail.test(email)) {
-        alert.innerHTML = CorreNoValido;
+        //console.log("email")
+        let msg;
+        if (html.lang == "es") {
+            msg = nice("Datos invalidos")
+        } else {
+            msg = nice("Invalid data")
+        }
+        //console.log(msg)
+        alertLogin.innerHTML = msg;
+        showNotification()
     } else if (passsword.length < 6 || passsword.length > 15) {
+        console.log("password")
         alert.innerHTML = passswordNot;
     } else {
         fetch('register.php?estatus=stage1', {
             method: 'post',
-            body: data //El cuerpo del mensaje que se va enviar
+            body: data
         })
-            //Promesas
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data == 'repetido') {
                     alert.innerHTML = alertRepietido;
                 } else {

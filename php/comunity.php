@@ -55,14 +55,14 @@ if (!isset($_GET['date_filtro'])) {
                             <?php if ($_GET["categorias"] != '') { ?>
                                 <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
                             <?php } ?>
-                            <option value="" class="translate optionColor"> Categorías</option>
+                            <option value="" class="translate optionColor">Categorías</option>
 
                             <?php
                             $objconexionfiltros = new conection();
                             $categoriasevents = $objconexionfiltros->consultar("SELECT * FROM `categories_events`");
-
+                            print_r($categoriasevents);
                             foreach ($categoriasevents as $categoriaevents) { ?>
-                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories-events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
+                                <option class="translate optionColor" value="<?php echo $categoriaevents['id_categories_events'] ?>"> <?php echo $categoriaevents['categories'] ?> </option>
                             <?php } ?>
 
                         </select>
@@ -76,38 +76,19 @@ if (!isset($_GET['date_filtro'])) {
                                 <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
                             <?php } ?>
                             <option value="" class="optionColor translate">Lugar</option>
-                            <option value="Ahuachapán" class="optionColor">Ahuachapán</option>
-                            <option value="Cabañas" class="optionColor">Cabañas</option>
-                            <option value="Chalatenango" class="optionColor">Chalatenango</option>
-                            <option value="Cuscatlán" class="optionColor">Cuscatlán</option>
-                            <option value="La Libertad" class="optionColor">La Libertad</option>
-                            <option value="La Paz" class="optionColor">La Paz</option>
-                            <option value="La Unión" class="optionColor">La Unión</option>
-                            <option value="Morazán" class="optionColor">Morazán</option>
-                            <option value="San Salvador" class="optionColor">San Salvador</option>
-                            <option value="San Vicente" class="optionColor">San Vicente</option>
-                            <option value="Santa Ana" class="optionColor">Santa Ana</option>
-                            <option value="Sonsonate" class="optionColor">Sonsonate</option>
-                            <option value="Usulután" class="optionColor">Usulután</option>
-                            <option value="San Miguel" class="optionColor">San Miguel</option>
+                            <?php
+                            $objconexionfiltrosPlace = new conection();
+                            $placesEvents = $objconexionfiltrosPlace->consultar("SELECT * FROM `place_events`");
+                            //print_r($categoriasevents);
+                            foreach ($placesEvents as $placesEvent) { ?>
+                                <option class="translate optionColor" value="<?php echo $placesEvent['id_place'] ?>"> <?php echo $placesEvent['place'] ?> </option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div>
                         <select id="orden" name="orden" class="inputs">
                             <?php if ($_GET["orden"] != '') { ?>
-                                <option value="<?php echo $_GET["orden"]; ?>">
-                                    <?php
-                                    if ($_GET["orden"] == '1') {
-                                        echo 'Categorias';
-                                    }
-                                    if ($_GET["orden"] == '2') {
-                                        echo 'Nombre';
-                                    }
-                                    if ($_GET["orden"] == '3') {
-                                        echo 'Lugar';
-                                    }
-                                    ?>
-                                </option>
+                                <option value="<?php echo $_GET["orden"]; ?>"> <?php echo $_GET["orden"]; ?></option>
                             <?php } ?>
                             <option value="" class="optionColor translate">Ordenar por</option>
                             <option value="1" class="optionColor translate">Categorias ACS</option>
@@ -147,7 +128,7 @@ if (!isset($_GET['date_filtro'])) {
                 if ($_GET['date_filtro'] != '') {
                     $originalDate = $_GET['date_filtro'];
                     $newDate = date("Y-m-a", strtotime($originalDate));
-                    $sql .= " AND date_event >= '" . $originalDate . "' ";
+                    $sql .= " AND date_event = '" . $originalDate . "' ";
                 }
 
                 if ($_GET['lugar'] != '') {
