@@ -15,7 +15,6 @@
 
 <body>
     <div class="container">
-
         <div class="container2">
             <div class="alreadysignup">
                 <p class="question translate">¿Ya tienes una cuenta?</p>
@@ -51,10 +50,6 @@
 
                                         </div>
 
-                                        <div class="alert" id="alert">
-
-                                        </div>
-
                                         <div class="next">
                                             <button class="nexto" type="submit"><span class="translate">Siguiente</span></button>
                                         </div>
@@ -76,7 +71,7 @@
                                         <input type="number" class="mitexto inpuxD" name="codeEmail">
                                     </div>
                                     <div class="sendagain">
-                                        <p class="translate">Enviar de nuevo el código de nuevo</p>
+                                        <!-- <p class="translate">Enviar de nuevo el código de nuevo</p> -->
                                     </div>
 
                                     <div class="alertCode" id="alertCode">
@@ -89,7 +84,7 @@
                                 </form>
                             </div>
                             <div class="YourInfo">
-                                <div class="createaccount">
+                                <div class="createaccount" id="completeInfo">
                                     <p class="translate">Completa tu información</p>
                                 </div>
                                 <div class="inputs">
@@ -137,12 +132,12 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="alertLogin">
-    </div>
-    <script src="../js/notification.js"></script>
-    <script src="../js/translate.js" type="module"></script>
-    <script src="../js/register.js" type="module"></script>
+        <div id="alertRegister">
+        </div>
+
+        <script src="../js/notification.js"></script>
+        <script src="../js/register.js" type="module"></script>
+        <script src="../js/translate.js" type="module"></script>
 </body>
 
 </html>

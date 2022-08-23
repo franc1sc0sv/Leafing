@@ -12,7 +12,7 @@ export const translateGeneralEN = [
     //5 = inicio de sesion
     ["Don't have an account yet?", "Register", "Log in", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next"],
     //6 = creacion de cuenta
-    ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Gender"],
+    ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Gender"],
     //7 =header
     ["Home", "About us", "Help the planet", "Events", "Create your events", "Become aware", "Log in", "Sign in"],
     //8 = footer
@@ -41,7 +41,7 @@ export const translateGeneralES = [
     //5 = inicio de sesion
     ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente"],
     //6 = creacion de cuenta
-    ["¿Ya tienes una cuenta?", "Inicia sesión", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
+    ["¿Ya tienes una cuenta?", "Inicia sesión", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
     //header
     ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Registrarse", " Inicio de sesion"],
     //footer

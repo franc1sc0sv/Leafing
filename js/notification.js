@@ -5,19 +5,20 @@
 
 function showNotification() {
     let alert = document.getElementById('alert');
-    console.log(alert);
     alert.classList.add("show");
     alert.classList.remove("hide");
     alert.classList.add("showAlert");
-
+    //console.log(alert)
     setTimeout(function () {
         alert.classList.remove("show");
         alert.classList.add("hide");
     }, 2000)
+
 }
 
 function hideNotification() {
     let alert = document.getElementById('alert');
     alert.classList.remove("show");
     alert.classList.add("hide");
+
 }
