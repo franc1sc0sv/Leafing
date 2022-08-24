@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 23-08-2022 a las 03:36:52
+-- Tiempo de generación: 24-08-2022 a las 03:07:34
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -41,7 +41,8 @@ INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categori
 (1, 'Oceano', 'Ocean'),
 (5, 'Tratamineto de aguas', 'Water treatment'),
 (7, 'Otra', 'Other'),
-(13, 'Rios', 'Rivers');
+(13, 'Rios', 'Rivers'),
+(14, 'Lagunas', 'Lagoons');
 
 -- --------------------------------------------------------
 
@@ -56,12 +57,20 @@ CREATE TABLE `events` (
   `description_event` varchar(500) NOT NULL,
   `place_event` int(11) NOT NULL,
   `direccion_evento` varchar(500) NOT NULL,
-  `date_event` date NOT NULL,
-  `end_date` int(11) NOT NULL,
+  `date_event` datetime NOT NULL,
+  `end_date` datetime NOT NULL,
   `id_categories_events` int(11) NOT NULL,
   `id_user_data` int(11) NOT NULL,
   `id_state_events` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `events`
+--
+
+INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
+(1, 'La funa de aristides', 'img.jpg', 'La funa de aristides', 16, 'La funa de aristides', '2022-08-24 08:00:00', '2022-08-24 15:00:00', 5, 6, 1),
+(2, 'aña', 'aña', 'aña', 3, 'aña', '2022-08-23 22:46:47', '2022-08-25 16:46:47', 5, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -96,7 +105,8 @@ INSERT INTO `place_events` (`id_place`, `place`) VALUES
 (3, 'Chalatenango'),
 (9, 'San Salvador'),
 (15, 'Soyapango'),
-(16, 'La casa de aristides');
+(16, 'La casa de aristides'),
+(17, 'San Martin');
 
 -- --------------------------------------------------------
 
@@ -400,13 +410,13 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT de la tabla `categories_events`
 --
 ALTER TABLE `categories_events`
-  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
@@ -418,7 +428,7 @@ ALTER TABLE `inscriptions`
 -- AUTO_INCREMENT de la tabla `place_events`
 --
 ALTER TABLE `place_events`
-  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `random_curious_data`

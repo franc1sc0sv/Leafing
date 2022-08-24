@@ -1,3 +1,4 @@
+<?php //xD?>
 </body>
 <script src="../js/consultas.js" defer></script>
 <script src="../js/Modal.js" defer></script>
