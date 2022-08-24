@@ -5,7 +5,7 @@
 
 <footer>
     <!-- <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a> -->
-    <button class="container_anchor" onclick=traductor() id="buttonChange"></button>
+    <button class="container_anchor" id="buttonChange"></button>
     <button class="containerDarkMode cambio" id="btnMode"></button>
 
     <div class="container">
@@ -41,7 +41,7 @@
 </footer>
 <button class="containerFlecha" id="flechaUp"></button>
 <script src="../js/translate.js" type="module"></script>
-<script src="../js/scrollUp.js"></script>
+<!-- <script src="../js/scrollUp.js"></script> -->
 <script src="../js/darkmode.js"> </script>
 <script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/slider.js"></script>
