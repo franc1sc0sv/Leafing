@@ -30,9 +30,9 @@ if ($_GET['busca'] == '') {
 $resultsearch = explode(" ", $_GET['busca']);
 
 if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' && $_GET['date_filtro'] == '') {
-    $sql = "SELECT events.id_events, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
+    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
 } else {
-    $sql = "SELECT events.id_events, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
+    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
     if ($_GET["busca"] != '') {
         $sql .= " AND name_event LIKE LOWER('%" . $resultsearch[0] . "%')";
 
