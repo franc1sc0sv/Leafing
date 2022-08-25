@@ -6,10 +6,17 @@ function eventsData(sql) {
     fetch(`../php/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
-            //console.log(data);
-            dataEvents = cardsData(data);
-            let contenedor = document.getElementById('contenedor');
-            contenedor.innerHTML = dataEvents;
+            console.log(data);
+            if (data == '') {
+                let contenedor = document.getElementById('contenedor');
+                contenedor.innerHTML = '<p class="aña">Ningún resultado coincide con su búsqueda</p>';
+            } else {
+                dataEvents = cardsData(data);
+                let contenedor = document.getElementById('contenedor');
+                contenedor.innerHTML = dataEvents;
+            }
+
+
         })
 }
 
@@ -110,8 +117,8 @@ formFilter.addEventListener('submit', function (e) {
     fetch(`../php/filter.php?busca=${data.get('busca')}&orden=${data.get('orden')}&lugar=${data.get('lugar')}&categorias=${data.get('categorias')}&date_filtro=${data.get('date_filtro')}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             eventsData(data)
+            //console.log(data);
         })
 })
 

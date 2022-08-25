@@ -40,13 +40,13 @@ window.addEventListener("load", () => {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
                 buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
-                let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories","2"]
+                let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
                 filters(arrayOrder)
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
                 buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
-                let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias","1"]
+                let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
                 filters(arrayOrder)
             }
         })
@@ -75,16 +75,19 @@ function Data(array) {
 
 //Me va a traducir los DATOS RANDOM LIVE
 function dataRandom() {
-    fetch(`datosRandomi.php`)
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            let DatosRadom = Data(data)
-            //console.log(DatosRadom)
-            Datos_curiosos_container.innerHTML = DatosRadom;
+    let pathname = window.location.pathname;
+    if (pathname == "/LEAFING/Crea-J-2022/php/index.php") {
+        fetch(`datosRandomi.php`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                let DatosRadom = Data(data)
+                //console.log(DatosRadom)
+                Datos_curiosos_container.innerHTML = DatosRadom;
 
 
-        })
+            })
+    }
 }
 //me para saber en que pagina estamos
 function getID(path) {
@@ -148,7 +151,7 @@ function TraduccionEspañol() {
         forInnerHTM(translateGeneralES);
         html.setAttribute("lang", "es")
         buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
-        let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias","1"]
+        let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
         filters(arrayOrder)
 
     }
@@ -160,8 +163,8 @@ function TraducirIngles() {
         forInnerHTM(translateGeneralEN);
         html.setAttribute("lang", "en")
         buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
-        let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories","2"]
-        
+        let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
+
         filters(arrayOrder)
     }
 }

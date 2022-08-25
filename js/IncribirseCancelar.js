@@ -4,33 +4,34 @@ const butonCancelar = `<button id="Cancelar" onclick=CancelarInscripcion(this)>C
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
 const contenidoModalInscripcion = document.getElementById('contenidoModalInscripcion');
-
-fetch('APISessions.php?peticion=1')
-    .then(res => res.json())
-    .then(data => {
-        // data['dataID'];//User_ID
-        // data['estatus'];//True:logeado
-        // data['typeof'];//1: admin, 2:user
-        console.log(data)
-        if (data == 'ERROR') {
-            inscribirseCancelar.innerHTML = butonInscribirse;
-        } else {
-            let estiben = window.location.search;
-            fetch(`APISessions.php${estiben}&peticion=2`)
-                .then(res => res.json())
-                .then(data => {
-                    //console.log(data)
-                    if (data == 0) {
-                        inscribirseCancelar.innerHTML = butonInscribirse;
-                    } else if (data == 1) {
-                        inscribirseCancelar.innerHTML = butonCancelar;
-                    } else {
-                        console.log(data);
-                    }
-                })
-        }
-    })
-
+let pathname = window.location.pathname;
+if (pathname == "/LEAFING/Crea-J-2022/php/evento-especifico.php") {
+    fetch('APISessions.php?peticion=1')
+        .then(res => res.json())
+        .then(data => {
+            // data['dataID'];//User_ID
+            // data['estatus'];//True:logeado
+            // data['typeof'];//1: admin, 2:user
+            console.log(data)
+            if (data == 'ERROR') {
+                inscribirseCancelar.innerHTML = butonInscribirse;
+            } else {
+                let estiben = window.location.search;
+                fetch(`APISessions.php${estiben}&peticion=2`)
+                    .then(res => res.json())
+                    .then(data => {
+                        //console.log(data)
+                        if (data == 0) {
+                            inscribirseCancelar.innerHTML = butonInscribirse;
+                        } else if (data == 1) {
+                            inscribirseCancelar.innerHTML = butonCancelar;
+                        } else {
+                            console.log(data);
+                        }
+                    })
+            }
+        })
+}
 function closeModal() {
     modal_container.classList.remove('show');
 }
