@@ -76,7 +76,7 @@ function Data(array) {
 //Me va a traducir los DATOS RANDOM LIVE
 function dataRandom() {
     let pathname = window.location.pathname;
-    if (pathname == "/LEAFING/Crea-J-2022/php/index.php") {
+    if (pathname == "/LEAFING/Crea-J-2022/php/index.php" || pathname == "/LEAFING/Crea-J-2022/php/") {
         fetch(`datosRandomi.php`)
             .then(res => res.json())
             .then(data => {

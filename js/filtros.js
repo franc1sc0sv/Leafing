@@ -1,5 +1,5 @@
 window.onload = function () {
-    eventsData("SELECT events.id_events, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1;")
+    eventsData("SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1;")
 
 }
 function eventsData(sql) {
@@ -74,27 +74,28 @@ function options(dataCategories, option) {
 
 
 function cardsData(dataEvents) {
+    console.log(dataEvents);
     let element = '';
     for (let i = 0; i < dataEvents.length; i++) {
         element += `
         
         <div class="card">
         <div class="event-img">
-            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="images/<?php echo $image; ?> class="img"></a>
+            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="images/${dataEvents[i][1]}" class="img"></a>
         </div> 
         <div class="cardtext">
-            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank" class="title">${dataEvents[i][1]}</a>
+            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank" class="title">${dataEvents[i][2]}</a>
             <div class="specificInfo">
                 <div class="date">
                     <img src="../img/iconos/location.svg" class="location" alt="">
-                    ${dataEvents[i][4]}
+                    ${dataEvents[i][5]}
                 </div>
                 <div class="place">
                     <img src="../img/iconos/location.svg" class="location" alt="">
-                    ${dataEvents[i][3]}
+                    ${dataEvents[i][4]}
                 </div>
             </div>
-            <p>${dataEvents[i][2]}</p>
+            <p>${dataEvents[i][3]}</p>
 
         </div>
         <span class="event-time">
