@@ -8,6 +8,7 @@ if ($_POST) {
     $place = $_POST['lugar'];
     $address = $_POST['address'];
     $dateS = $_POST['dateStart'];
+    $dateE = $_POST['dateEnd'];
     $category = $_POST['categorias'];
 
 
@@ -19,7 +20,7 @@ if ($_POST) {
 
 
     $objConnection = new conection();
-    $sql = "INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES (NULL, '$title', '$image', '$description', '$place', '$address', '$dateS', '$category', '2', '1')";
+    $sql = "INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES (NULL, '$title', '$image', '$description', '$place', '$address', '$dateS', '$dateE', '$category', '2', '1')";
     $objConnection->ejecutar($sql);
 
     header("location:crear_evento.php");
@@ -38,8 +39,5 @@ if ($_POST) {
     // echo "<br>";
     // print_r($image);
 }
-
-
-
 
 ?>

@@ -30,7 +30,7 @@ if (!$error) { ?>
     <h2 class="h2-start"><?php echo $event[0]['name_event'] ?></h2>
     <div class="general">
         <div class="container-text1">
-            <img src="../img/imagenes/inscriccion.png"> <!-- XD-->
+            <img src="./images/<?php echo $event[0]['img_event'] ?>"> <!-- XD-->
             <div class="levicfp">
                 <div class="container-img2">
                     <div class="container-perfil">

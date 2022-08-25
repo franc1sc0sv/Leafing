@@ -66,6 +66,8 @@ function Data(array) {
             <p> ${array[index][3]}</p>
          </div>
         
+// //console.log(english);
+// const Datos_curiosos_container = document.getElementById('Datos_curiosos_container');
         
         \n`
     }
