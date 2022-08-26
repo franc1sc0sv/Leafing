@@ -51,6 +51,7 @@
 <script src="../js/preloader.js"></script>
 <script src="../js/scroll_anchor.js"></script>
 <script src="../js/notification.js"></script>
+<script src="../js/form_img.js"></script>
 
 </body>
 
