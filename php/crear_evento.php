@@ -2,10 +2,6 @@
 include_once('include.php');
 include_once('conexion.php');
 include_once('header.php');
-
-if (isset($_SESSION['estatus'])!= true) {
-    header("location:formulario_inicio-sesion.php");
-}
 ?>
 
 <body class="darkmode">
