@@ -41,15 +41,14 @@
 </footer>
 <button class="containerFlecha" id="flechaUp"></button>
 <script src="../js/translate.js" type="module"></script>
+<script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/scrollUp.js"></script>
 <script src="../js/darkmode.js"> </script>
-<script src="../js/IncribirseCancelar.js"></script>
 <script src="../js/slider.js"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_profile.js"></script>
 <script src="../js/model.js"> </script>
 <script src="../js/preloader.js"></script>
-<script src="../js/scroll_anchor.js"></script>
 <script src="../js/notification.js"></script>
 
 </body>

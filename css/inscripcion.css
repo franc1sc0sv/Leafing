@@ -238,6 +238,7 @@
     background-color: #E1F2E4;
     grid-template-columns: 0.5fr 1fr;
     max-width: 88rem;
+    align-items: stretch;
 }
 
 .container-text>img {

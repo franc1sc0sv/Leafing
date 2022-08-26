@@ -162,7 +162,6 @@ function TraducirIngles() {
         html.setAttribute("lang", "en")
         buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
         let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
-
         filters(arrayOrder)
     }
 }

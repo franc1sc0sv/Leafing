@@ -38,8 +38,12 @@
 }
 
 .modal p {
-    opacity: 0.7;
-    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
 }
 
 .BotonesRegistroInicio {
