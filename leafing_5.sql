@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-08-2022 a las 03:07:34
+-- Tiempo de generación: 25-08-2022 a las 20:50:08
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -41,8 +41,7 @@ INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categori
 (1, 'Oceano', 'Ocean'),
 (5, 'Tratamineto de aguas', 'Water treatment'),
 (7, 'Otra', 'Other'),
-(13, 'Rios', 'Rivers'),
-(14, 'Lagunas', 'Lagoons');
+(13, 'Rios', 'Rivers');
 
 -- --------------------------------------------------------
 
@@ -69,8 +68,9 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
-(1, 'La funa de aristides', 'img.jpg', 'La funa de aristides', 16, 'La funa de aristides', '2022-08-24 08:00:00', '2022-08-24 15:00:00', 5, 6, 1),
-(2, 'aña', 'aña', 'aña', 3, 'aña', '2022-08-23 22:46:47', '2022-08-25 16:46:47', 5, 6, 1);
+(1, 'hola', '1661442653_kunai-jett-anime-fa-valorant-videojuego-de-riot-papel-pintado-3840x2160_54.jpg', 'hola', 9, 'Colegio Don Bosco', '2022-04-12 12:00:00', '2023-05-04 06:00:00', 5, 2, 1),
+(2, 'fsdfsd', '1661453549_dcb0cdfe0ddd52e00e0362a6f79375c1.jpg', 'fasfsdafsadfas', 9, 'fasdfsadfasdfasdfsadfas', '2022-12-31 13:32:00', '2022-03-12 12:12:00', 5, 2, 1),
+(3, 'aaaaaaaaaa', '1661456877_kaworu2.jpg', 'faaaaaaaaaaaaaaaaaa', 15, 'Colegio Don Bosco', '2022-02-12 04:03:00', '2022-01-31 03:42:00', 13, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -105,8 +105,7 @@ INSERT INTO `place_events` (`id_place`, `place`) VALUES
 (3, 'Chalatenango'),
 (9, 'San Salvador'),
 (15, 'Soyapango'),
-(16, 'La casa de aristides'),
-(17, 'San Martin');
+(16, 'La casa de aristides');
 
 -- --------------------------------------------------------
 
@@ -410,13 +409,13 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT de la tabla `categories_events`
 --
 ALTER TABLE `categories_events`
-  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
@@ -428,7 +427,7 @@ ALTER TABLE `inscriptions`
 -- AUTO_INCREMENT de la tabla `place_events`
 --
 ALTER TABLE `place_events`
-  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `random_curious_data`

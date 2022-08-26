@@ -22,6 +22,9 @@ if (isset($_GET['estiben'])) {
         echo "WTF un error validado";
         $error = true;
     }
+} else {
+    echo "Nice try estiben";
+    $error = true;
 }
 
 
@@ -58,13 +61,34 @@ if (!$error) { ?>
                     <p class="bold">Lugar y fecha</p>
                     <p><?php echo $event[0]['place_event'], " ", $event[0]['date_event'] ?></p>
                 </div>
+                <?php
 
-                <div class="inscribirseCancelar" id="inscribirseCancelar">
+                if (isset($_SESSION['estatus'])) {
+                    $id = $_SESSION['dataID'];
+                    $idevent = $_GET['estiben'];
+                    $sql = "SELECT * FROM `inscriptions` WHERE id_persona_inscrita = $id AND id_event = $idevent";
+                    $objConexion = new conection();
+                    $rowCount = $objConexion->consultarform($sql);
+                    if ($rowCount == 0) { ?>
+                        <div class="inscribirseCancelar" id="inscribirseCancelar">
+                            <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
+                        </div>
+                    <?php } else if ($rowCount == 1) { ?>
+                        <div class="inscribirseCancelar" id="inscribirseCancelar">
+                            <button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>
+                        </div>
+                    <?php }  ?>
 
-                </div>
+                <?php  } else { ?>
+                    <div class="inscribirseCancelar" id="inscribirseCancelar">
+                        <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
+                    </div>
+                <?php } ?>
+
             </div>
         </div>
     </div>
+    <div id="alertAña"></div>
 
     <div id="modal_container" class="modal-container">
         <div class="modal" id="modal">

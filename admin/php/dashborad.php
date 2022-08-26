@@ -75,7 +75,7 @@ INNER JOIN place_events ON events.place_event = place_events.id_place;
 							<th>Violencia</th>
 							<th>Acoso</th>
 							<th>Suicidio</th>
-							<th>Iniformacion</th>
+							<th>Informacion</th>
 							<th>Spam</th>
 							<th>Lengauje</th>
 							<th>Terrorismo</th>
