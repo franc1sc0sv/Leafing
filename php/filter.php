@@ -1,28 +1,4 @@
 <?php
-// if ($_GET['busca'] = ' ') {
-//     $_GET['busca'] = '';
-// }
-
-// if ($_GET['orden'] = ' ') {
-//     $_GET['orden'] = '';
-// }
-// if ($_GET['lugar'] = ' ') {
-//     $_GET['lugar'] = '';
-// }
-
-// if ($_GET['categorias'] = ' ') {
-//     $_GET['categorias'] = '';
-// }
-
-// if ($_GET['date_filtro'] = ' ') {
-//     $_GET['date_filtro'] = '';
-// }
-
-
-// if ($_GET['busca'] == '') {
-//     $_GET['busca'] = ' ';
-// }
-
 //print_r($_GET);
 if ($_GET['busca'] == '') {
     $_GET['busca'] = ' ';
@@ -50,7 +26,7 @@ if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' &&
     if ($_GET['date_filtro'] != '') {
         $originalDate = $_GET['date_filtro'];
         $newDate = date("Y-m-a", strtotime($originalDate));
-        $sql .= " AND date_event = '" . $originalDate . "' ";
+        $sql .= " AND date_event <= '" . $originalDate . "' ";
     }
 
     if ($_GET['lugar'] != '') {

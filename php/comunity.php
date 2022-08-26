@@ -20,7 +20,7 @@ include_once('header.php');
                         </select>
                     </div>
                     <div>
-                        <input type="date" name="date_filtro" class="inputs date" value="">
+                        <input type="datetime-local" name="date_filtro" class="inputs date" value="">
                     </div>
                     <div>
                         <select name="lugar" class="inputs" id="Lugar">
