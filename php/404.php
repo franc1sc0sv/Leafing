@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>Access Denied</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/404.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <section class="notFound">
-        <div class="img">
-            <img src="https://assets.codepen.io/5647096/backToTheHomepage.png" alt="Back to the Homepage" />
-            <img src="https://assets.codepen.io/5647096/Delorean.png" alt="El Delorean, El Doc y Marti McFly" />
-        </div>
-        <div class="text">
-            <h1>404</h1>
-            <h2>PAGE NOT FOUND</h2>
-            <h3>BACK TO HOME?</h3>
-            <a href="./index.php" class="yes">YES</a>
-            <a href="https://www.youtube.com/watch?v=G3AfIvJBcGo">NO</a>
-        </div>
-    </section>
+    <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top w3-center"><code>Acceso denegado</code></h1>
+        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+        <h3 class="w3-center w3-animate-right">404 forbidden</h3>
+        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+    </div>
 </body>
 
-
 </html>
-<?php
-//xD
-
-?>
