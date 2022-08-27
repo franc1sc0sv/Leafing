@@ -2,7 +2,7 @@
 if (!isset($_SESSION['lang'])) {
         $_SESSION['lang'] = "es";
 }
-//print_r($_SESSION);
+// print_r($_SESSION);
 //$objconexionxD = new conection();
 //$xD = $objconexionxD->consultar("SELECT * FROM `user_data` WHERE id_user_data = 6");
 //print_r($xD);

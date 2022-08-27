@@ -1,4 +1,8 @@
-<?php session_start() ?>
+<?php session_start();
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = "es";
+} 
+?>
 <!DOCTYPE html>
 <html lang=<?php echo $_SESSION['lang'] ?>>
 
