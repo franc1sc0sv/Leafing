@@ -71,6 +71,7 @@
                                 <span>Projects</span>
                             </a>
                         </li>
+                        
                         <li class="dropdown-menu-item">
                             <a href="#" class="dropdown-menu-link">
                                 <div>
@@ -121,14 +122,14 @@
                     <span>Lugares</span>
                 </a>
             </li>
-            <!-- <li class="sidebar-nav-item">
-                <a href="#" class="sidebar-nav-link">
+            <li class="sidebar-nav-item">
+                <a href="./reports.php" class="sidebar-nav-link reportsNav">
                     <div>
-                        <img src="../assets/icons/email.svg" alt="email">
+                        <img src="../assets/icons/monitoring.svg" alt="email">
                     </div>
-                    <span>Emails</span>
+                    <span>Reportes</span>
                 </a>
-            </li> -->
+            </li>
             <li class="sidebar-nav-item logout">
                 <a href="./close.php" class="sidebar-nav-link">
                     <div>
