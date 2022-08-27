@@ -1,4 +1,5 @@
 <?php session_start() ?>
+<?php include_once('./verification.php') ?>
 <?php
 include_once('conexion.php');
 include_once('header.php')
