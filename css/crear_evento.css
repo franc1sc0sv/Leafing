@@ -17,7 +17,40 @@ footer {
     margin-top: 5%;
 }
 
-.titulos-generales {
+.bgimage {
+    background: url(../img/imagenes/bgcreateevents.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.crea {
+    position: absolute;
+    left: 4.5rem;
+    top: 4.3rem;
+    font-size: 50px;
+}
+
+.evento {
+    position: absolute;
+    left: 7rem;
+    top: 8rem;
+    font-size: 50px;
+}
+
+.creatuevento {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 5rem;
+}
+
+
+/* .titulos-generales {
     display: grid;
     grid-template-columns: auto 0.7fr;
     justify-content: space-around;
@@ -45,7 +78,42 @@ footer {
     display: flex;
     flex-direction: column;
 
+} */
+.inputsTXT {
+    height: 45px;
+    padding-left: 1rem;
 }
+
+.inputstxt {
+
+    border-radius: 5px;
+    /* background: #f0f3f8; */
+    border: 1px solid rgb(186, 193, 206);
+    outline: none;
+    width: 500px;
+}
+
+.input_comentario {
+    resize: none;
+    height: 180px;
+    width: 500px;
+    padding: .6rem;
+    font-size: 14px;
+}
+
+::placeholder {
+    color: #bdbbbb;
+}
+
+.select {
+    height: 40px;
+    border-radius: 5px;
+    background: #f8f9fc;
+    border: 1px solid rgb(186, 193, 206);
+    outline: none;
+    margin-top: 40px;
+}
+
 
 .container_form {
     display: flex;
@@ -56,11 +124,52 @@ footer {
 
 }
 
+.dragfile_container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 330px;
+    gap: 1rem;
+    border: 2px #8AB694 dashed;
+    background: #f9fffb;
+    position: relative;
+}
+
+.dragfile_container-active {
+    background: #adc9b4;
+}
+
+.dragfile_icon {
+    width: 100px;
+}
+
+.dragfile_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dragfile_container input {
+    display: none;
+}
+
+.dragfile_container label {
+    display: block;
+    padding: 8px 21px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
 .container_1 {
     display: flex;
     width: 72vw;
     justify-content: center;
-    gap: 12vw;
+    gap: 150px;
 }
 
 .side-generalidades {
@@ -107,9 +216,9 @@ footer {
 }
 
 .label_forms {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16.3184px;
     line-height: 27px;
     color: #000000;
@@ -124,13 +233,13 @@ footer {
     border-radius: 4.2943px;
 }
 
-.input_genralidades {
+/* .input_genralidades {
     width: 38.23vw;
     height: 5.10vh;
     background: transparent;
     border: 0.858861px solid rgba(81, 81, 81, 0.4);
     border-radius: 4.2943px;
-}
+} */
 
 .input_fecha {
     width: 10.13vw;
@@ -140,10 +249,10 @@ footer {
     border-radius: 4.2943px;
 }
 
-.input_comentario {
+/* .input_comentario {
     height: 23.82vh;
 
-}
+} */
 
 .input_requisitos {
     height: 12.82vh;
@@ -178,7 +287,6 @@ footer {
 
 
 .container_2 {
-    width: 72vw;
     display: flex;
     justify-content: center;
     align-items: center;

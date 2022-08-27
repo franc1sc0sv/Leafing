@@ -50,6 +50,7 @@
 <script src="../js/model.js"> </script>
 <script src="../js/preloader.js"></script>
 <script src="../js/notification.js"></script>
+<script src="../js/form_img.js"></script>
 
 </body>
 

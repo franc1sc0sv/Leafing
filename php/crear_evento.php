@@ -9,12 +9,12 @@ include_once('header.php');
 
     <section>
         <article>
-            <div class="titulos-generales">
-                <div class="titulo_generales">
-                    <h1 class="">Crea tu propio evento</h1>
-                    <hr>
-                </div>
-                <div></div>
+            <div class="bgimage">
+                <div class="crea">Crea tu</div>
+                <div class="evento">Evento</div>
+            </div>
+            <div class="creatuevento">
+                <p>Crea tu evento</p>
             </div>
 
 
@@ -22,45 +22,19 @@ include_once('header.php');
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
-                        <label for="title" class="label_forms label_generalidaes ">Título del evento
+                        <label for="title" class="label_forms label_generalidaes">Título
                         </label>
-                        <input type="text" name="title" class="input_genralidades">
+                        <input type="text" name="title" class="input_genralidades inputstxt inputsTXT" placeholder="eg. Recolección de basura">
+                        <br>
 
-                        <label for="title" class="label_forms label_generalidaes ">¿Qué se realizará en el
-                            evento? </label>
-                        <input type="text" name="description" class="input_genralidades input_comentario">
+                        <label for="description" class="label_forms label_generalidaes ">Descripción </label>
+                        <textarea type="text" name="description" class="input_genralidades input_comentario inputstxt" placeholder="eg. Reunión para realizar una recolección con la ayuda de la comunidad"></textarea>
 
                         <!-- <label for="title" class="label_forms label_generalidaes translate">Requisitos para asistir
                             al evento</label>
                         <input type="text" name="title" class="input_genralidades input_requisitos"> -->
 
                         <label for=""></label>
-                    </div>
-                    <div class="side_2 side-datos">
-                        <div class="input_1">
-                            <!-- <label for="title" class="label_forms label_datos translate">Lugar de organización
-                            </label>
-                            <input type="text" name="title" class="input_datos"> -->
-
-                            <select name="lugar" class="inputs" id="Lugar">
-                                <?php if ($_GET["lugar"] != '') { ?>
-                                    <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
-                                <?php } ?>
-                                <option value="" class="optionColor ">Lugar</option>
-                                <?php
-                                $objconexionfiltrosPlace = new conection();
-                                $placesEvents = $objconexionfiltrosPlace->consultar("SELECT * FROM `place_events`");
-                                //print_r($categoriasevents);
-                                foreach ($placesEvents as $placesEvent) { ?>
-                                    <option class=" optionColor" value="<?php echo $placesEvent['id_place'] ?>"> <?php echo $placesEvent['place'] ?> </option>
-                                <?php } ?>
-                            </select>
-
-                            <label for="title" class="label_forms label_datos ">Dirección
-                            </label>
-                            <input type="text" name="address" class="input_datos">
-
-                        </div>
 
                         <div class="fecha_form-eventos">
                             <div id="fecha_eventos">
@@ -73,8 +47,22 @@ include_once('header.php');
                                 <input type="datetime-local" name="dateEnd" class="input_fecha">
                             </div>
                         </div>
+                    </div>
 
-                        <select name="categorias" class="inputs" id="Categorias">
+
+                    <div class="side_2 side-datos">
+
+                        <div class="dragfile_container">
+                            <img src="../img/iconos/cloud-computing.png" alt="" class="dragfile_icon">
+                            <p>Arrastra o suelta tu imagen</p>
+                            <p>O</p>
+                            <label for="image">Elige un archivo</label>
+                            <input type="file" name="image" id="imagee">
+                            <img alt="" id="img-result" class="dragfile_img">
+                            <!-- <p class="namee"></p> -->
+                        </div>
+
+                        <select name="categorias" class="select" id="Categorias">
                             <?php if ($_GET["categorias"] != '') { ?>
                                 <option value="<?php echo $_GET["categorias"]; ?>"><?php echo $_GET["categorias"]; ?></option>
                             <?php } ?>
@@ -89,6 +77,34 @@ include_once('header.php');
                             <?php } ?>
 
                         </select>
+
+                        <div class="input_1">
+                            <!-- <label for="title" class="label_forms label_datos translate">Lugar de organización
+                            </label>
+                            <input type="text" name="title" class="input_datos"> -->
+
+                            <select name="lugar" class="select" id="Lugar">
+                                <?php if ($_GET["lugar"] != '') { ?>
+                                    <option value="<?php echo $_GET["lugar"]; ?>"><?php echo $_GET["lugar"]; ?> </option>
+                                <?php } ?>
+                                <option value="" class="optionColor ">Lugar</option>
+                                <?php
+                                $objconexionfiltrosPlace = new conection();
+                                $placesEvents = $objconexionfiltrosPlace->consultar("SELECT * FROM `place_events`");
+                                //print_r($categoriasevents);
+                                foreach ($placesEvents as $placesEvent) { ?>
+                                    <option class=" optionColor" value="<?php echo $placesEvent['id_place'] ?>"> <?php echo $placesEvent['place'] ?> </option>
+                                <?php } ?>
+                            </select>
+                            <br>
+
+                            <label for="title" class="label_forms label_datos">Dirección
+                            </label>
+                            <input type="text" name="address" class="inputsTXT inputstxt" placeholder="eg. Colegio Don Bosco">
+
+                        </div>
+
+
 
 
                         <!-- <div class="transporte_forms-eventos">
@@ -110,22 +126,8 @@ include_once('header.php');
 
                     </div>
                 </div>
-
-                <div class="container_2">
-                    <div class="general_subir-imagen">
-                        <div class="subir-imagen">
-
-                            <p class="">Imagen</p>
-                            <input type="file" name="image" id="">
-
-                        </div>
-                    </div>
-
-                    <div class="publish">
-                        <span class="submit "> <input type="submit" name="submit" value="Publicar"> </span>
-                    </div>
                 </div>
-                </div>
+                <input type="submit" name="submit" value="Publicar" class="submit">
             </form>
         </article>
     </section>
