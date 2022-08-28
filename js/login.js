@@ -17,7 +17,7 @@ formCredentials.addEventListener('submit', function (e) {
 
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
             if (data == "empty") {
                 let msg;
                 if (html.lang == "es") {
@@ -39,9 +39,9 @@ formCredentials.addEventListener('submit', function (e) {
             } else if (data == "LogeadoADMIN") {
                 let msg;
                 if (html.lang == "es") {
-                    msg = nice("Logeado")
+                    msg = nice("BIENVENIDO ADMIN")
                 } else {
-                    msg = nice("Loged")
+                    msg = nice("WELCOME ADMIN")
                 }
                 alertLogin.innerHTML = msg;
                 showNotification()

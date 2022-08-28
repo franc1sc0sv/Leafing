@@ -49,7 +49,7 @@ formEmail.addEventListener('submit', function (e) {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data == 'repetido') {
                     let msg;
                     if (html.lang == "es") {
@@ -164,7 +164,7 @@ formData.addEventListener('submit', function (e) {
         showNotification();
     } else {
         //console.log("nice");
-        fetch(`register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}& gender=${gender}& user=${user}& Dataemail=${Dataemail}& Datapassword=${Datapassword}`)
+        fetch(`register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}& gender=${gender}& user=${user}& Dataemail=${Dataemail}& Datapassword=${Datapassword}&codeVerification=${codeVerification}`)
         let msg;
         if (html.lang == "es") {
             msg = nice("Tu cuenta ha sido creada")

@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php session_start();
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = "es";
+} ?>
 <!DOCTYPE html>
 <html lang=<?php echo $_SESSION['lang'] ?>>
 
@@ -9,7 +12,7 @@
     <link href="../css/login_.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../css/notification.css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
-    <title>Registrarse</title>
+    <title>Leafing</title>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
                     <div class="logo">
                     </div>
                     <div class="slide">
-                        <div class="containerinfo1">
+                        <div class="containerinfo1" id="containerinfo1">
                             <div class="emailpass">
                                 <div class="createaccount">
                                     <p class="translate">Inicia sesión</p>
@@ -47,6 +50,12 @@
                                             <input type="password" class="mitexto" id="password" name="password">
                                             <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
                                         </div>
+
+                                        <div class="forget">
+                                            <p id="passordForget">
+                                                Olvide mi contraseña
+                                            </p>
+                                        </div>
                                         <div class="next">
                                             <button class="nexto" type="submit"><span class="translate">Siguiente</span></button>
                                         </div>
@@ -55,24 +64,34 @@
                                 </div>
                             </div>
                             <div class="code">
-                                <div class="createaccount">
-                                    <p class="translate">Comprobar el correo electrónico</p>
-                                </div>
-                                <div class="textcode">
-                                    <p class="translate">Para verificar tu correo electrónico
-                                        te hemos enviado un código de confirmación a correoejemplo@gmail.com.
-                                    </p>
-                                </div>
-                                <div class="inputs">
-                                    <input type="text" class="mitexto">
-
-                                    <div class="sendagain">
-                                        <p class="translate">Enviar el código de nuevo</p>
+                                <form action="formulario_inicio-sesion.php" method="post" id="formEmail">
+                                    <div class="createaccount">
+                                        <p class="translate">Olvidaste tu correo electrónico</p>
                                     </div>
-                                </div>
-                                <div class="next">
-                                    <button><span class="translate">Siguiente</span></button>
-                                </div>
+                                    <div class="textcode">
+                                        <p class="translate">Escribe tu correo electronico y te mandaremos las instrucciones de como restablecerla</p>
+                                    </div>
+
+                                    <div class="inputs">
+                                        <input type="text" class="mitexto" name="email">
+                                    </div>
+                                    <div class="regresar" id="regresar">
+                                        <p>Regresar</p>
+                                    </div>
+
+                                    <div class="next">
+                                        <button type="submit"><span class="translate" id="enviarcodigo">Enviar</span></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="mensaje">
+                                <form action="formulario_inicio-sesion.php" method="post" id="formEmail">
+                                    <div class="createaccount">
+                                        <p class="translate">El siguiente paso</p>
+                                    </div>
+                                    <div class="textcode">
+                                        <p class="translate">Revisa tu correo con las instrucciones</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -84,8 +103,10 @@
         </div>
     </div>
     <script src="../js/notification.js"></script>
-    <script src="../js/translate.js" type="module"></script>
+    <script src="../js/forgetPassword.js"></script>
+    <!-- <script src="../js/translate.js" type="module"></script> -->
     <script src="../js/login.js" type="module"> </script>
+
 </body>
 
 </html>

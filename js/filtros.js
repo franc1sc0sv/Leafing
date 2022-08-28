@@ -99,8 +99,8 @@ function cardsData(dataEvents) {
 
         </div>
         <span class="event-time">
-            <span class="day-time">27</span>
-            Feb
+            <span class="day-time"></span>
+            
         </span>
     </div> \n`
     }

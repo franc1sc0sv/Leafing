@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 25-08-2022 a las 20:50:08
+-- Tiempo de generación: 27-08-2022 a las 19:13:14
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -68,9 +68,9 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
-(1, 'hola', '1661442653_kunai-jett-anime-fa-valorant-videojuego-de-riot-papel-pintado-3840x2160_54.jpg', 'hola', 9, 'Colegio Don Bosco', '2022-04-12 12:00:00', '2023-05-04 06:00:00', 5, 2, 1),
-(2, 'fsdfsd', '1661453549_dcb0cdfe0ddd52e00e0362a6f79375c1.jpg', 'fasfsdafsadfas', 9, 'fasdfsadfasdfasdfsadfas', '2022-12-31 13:32:00', '2022-03-12 12:12:00', 5, 2, 1),
-(3, 'aaaaaaaaaa', '1661456877_kaworu2.jpg', 'faaaaaaaaaaaaaaaaaa', 15, 'Colegio Don Bosco', '2022-02-12 04:03:00', '2022-01-31 03:42:00', 13, 2, 1);
+(1, 'Funa de aristides', '1661442653_kunai-jett-anime-fa-valorant-videojuego-de-riot-papel-pintado-3840x2160_54.jpg', 'hola', 9, 'Colegio Don Bosco', '2022-04-12 12:00:00', '2023-05-04 06:00:00', 5, 2, 1),
+(2, 'Reciclaje de basura', '1661453549_dcb0cdfe0ddd52e00e0362a6f79375c1.jpg', 'fasfsdafsadfas', 9, 'fasdfsadfasdfasdfsadfas', '2022-12-31 13:32:00', '2022-03-12 12:12:00', 5, 2, 1),
+(3, 'Clases de economia del profe juan carlos', '1661456877_kaworu2.jpg', 'faaaaaaaaaaaaaaaaaa', 15, 'Colegio Don Bosco', '2022-02-12 04:03:00', '2022-01-31 03:42:00', 13, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -82,8 +82,15 @@ CREATE TABLE `inscriptions` (
   `id_inscriptions` int(11) NOT NULL,
   `id_event` int(11) NOT NULL,
   `id_persona_inscrita` int(11) NOT NULL,
-  `date_inscriptions` date NOT NULL
+  `date_inscriptions` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `inscriptions`
+--
+
+INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES
+(1, 3, 5, '2022-08-26 02:03:39');
 
 -- --------------------------------------------------------
 
@@ -272,6 +279,7 @@ CREATE TABLE `user_credentials` (
   `id` int(10) UNSIGNED NOT NULL,
   `mail_user` varchar(500) NOT NULL,
   `password_user` varchar(500) NOT NULL,
+  `token` varchar(32) NOT NULL,
   `rol_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -279,13 +287,13 @@ CREATE TABLE `user_credentials` (
 -- Volcado de datos para la tabla `user_credentials`
 --
 
-INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `rol_id`) VALUES
-(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$A4X5ZpYic0FA/QCVN1/e9uQ8CqHFc/3rESShK3aZT0dqePqQaEMxC', 1),
-(2, 'rodri123pineda@gmail.com', 'RrX&75D1@AIG ', 1),
-(3, 'leandroescobar360@gmail.com', '0KE$TK#M9DZx', 1),
-(4, 'correo.prueba@gmail.com', 'HolaHola01', 2),
-(5, 'franelcrack16@gmail.com', '$2y$10$q7hz4x6Y7ddOXBtrqA.8hOAy9LK2l/0fZRoyzZV61NnrvTDiG.ZwC', 2),
-(6, 'axgagsgasgsg@gmail.com', '$2y$10$z7hOacjG4wS94yOaIMU0p.z4KTZXbo7x0Lf1U15LLJlQvkUCr98ha', 2);
+INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES
+(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$A4X5ZpYic0FA/QCVN1/e9uQ8CqHFc/3rESShK3aZT0dqePqQaEMxC', 'abd7c3380debc65c8569bc9910c41c99', 1),
+(2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
+(3, 'leandroescobar360@gmail.com', '$2y$10$gDF5K3oUG/lmS.Y63vnGm.lf.QfpaayzZFxhUGWKuXd9rNSomG1je', '77a6bde4a1566dcbffb5e0f236759407', 1),
+(4, 'correo.prueba@gmail.com', '$2y$10$JsskLroB8cDHsmTZDRWl9eVyDm2Jlp6lgf89P6yKKyw3HqShrv5fK', '2342a52562b575985b4fc8fb1f5f8501', 2),
+(5, 'franelcrack16@gmail.com', '$2y$10$RDD.A2Ybp1KGVSmFBrjXReav3rVVckfO5W4J4R7ZnDHihuy9foXe.', 'ab709f7019e671ccf1e7bbf49a17acdc', 2),
+(6, 'axgagsgasgsg@gmail.com', '$2y$10$OsGi4G7E1PGFcHh3Bn0pMun7ApEn9KI5bmOK4kwiaoa3si3x6RHsu', '8477b5a982eb7d7c52045cf7a78cd364', 2);
 
 -- --------------------------------------------------------
 
@@ -312,7 +320,7 @@ INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_n
 (3, 'Leandro Alberto', 'Valencia Escobar', '2003-05-06', 'Leansttar', 'M'),
 (4, 'Juan', 'Perez', '2006-06-08', 'JuanCaballo', 'M'),
 (5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M'),
-(6, 'lebi', 'Saz', '2006-02-06', 'ChanchitoGamerXXX', 'M');
+(6, 'Shouko', 'Komi', '2006-02-06', 'Komisan', 'F');
 
 --
 -- Índices para tablas volcadas
@@ -421,7 +429,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
@@ -496,6 +504,19 @@ ALTER TABLE `events`
 ALTER TABLE `inscriptions`
   ADD CONSTRAINT `events_inscriptions` FOREIGN KEY (`id_event`) REFERENCES `events` (`id_events`),
   ADD CONSTRAINT `user_data_events_inscriptions` FOREIGN KEY (`id_persona_inscrita`) REFERENCES `user_data` (`id_user_data`);
+
+--
+-- Filtros para la tabla `reports_transactional`
+--
+ALTER TABLE `reports_transactional`
+  ADD CONSTRAINT `eventReport` FOREIGN KEY (`id_event`) REFERENCES `events` (`id_events`),
+  ADD CONSTRAINT `reportTransaccional` FOREIGN KEY (`id_report`) REFERENCES `reports` (`id_reports`);
+
+--
+-- Filtros para la tabla `user_credentials`
+--
+ALTER TABLE `user_credentials`
+  ADD CONSTRAINT `rol` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
