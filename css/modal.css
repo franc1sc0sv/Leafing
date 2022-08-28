@@ -37,6 +37,16 @@
     margin: 0;
 }
 
+.container_imgCreated {
+    display: flex;
+    justify-content: center;
+}
+
+.imgCreated {
+    width: 100px;
+    height: 100px;
+}
+
 .modal p {
     font-style: normal;
     font-weight: 300;

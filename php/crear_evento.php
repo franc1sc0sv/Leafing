@@ -18,7 +18,7 @@ include_once('header.php');
             </div>
 
 
-            <form action="createEvents.php" method="post" class="container_form" enctype="multipart/form-data">
+            <form action="createEvents.php" method="post" class="container_form" enctype="multipart/form-data" id="formC">
                 <div class="container_1">
                     <div class="side_1 side-generalidades">
 
@@ -130,7 +130,19 @@ include_once('header.php');
                 <input type="submit" name="submit" value="Publicar" class="submit">
             </form>
         </article>
+        <div id="alertLogin">
+
+        </div>
     </section>
+    <div id="modal_container" class="modal-container">
+        <div class="modal" id="modal">
+            <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/notification.js"></script>
+    <script src="../js/createEvents.js" type="module"> </script>
 </body>
 
 <?php include_once("footer.php"); ?>
