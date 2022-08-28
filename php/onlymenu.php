@@ -1,18 +1,20 @@
 <?php
-//xD
-
+$objconexion = new conection();
+$idUser = $_SESSION['dataID'];
+$data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idUser");
+//print_r($data);
 ?>
 
 <div id="onlyMenu" class="user-menu-container mostrar">
     <div class="menu-img">
         <div class="behind-menu-img">
-            <img src="../img/imagenes/rei3.jpg" class="img-profile" alt="Foto de perfil">
+            <img src="./images/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
             <img src="../img/iconos/plus-profile.svg" alt="" class="img-plus">
         </div>
     </div>
     <div class="menu-nombre-usuario">
         <p class="nombre-usuario">
-            Ayanami Rei
+            <?php echo $data[0]['name'], " ", $data[0]['lastname'] ?>
         </p>
     </div>
     <div>

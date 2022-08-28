@@ -3,6 +3,7 @@ window.onload = function () {
 
 }
 function eventsData(sql) {
+    //console.log(sql)
     fetch(`../php/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
@@ -74,7 +75,7 @@ function options(dataCategories, option) {
 
 
 function cardsData(dataEvents) {
-    console.log(dataEvents);
+    //console.log(dataEvents);
     let element = '';
     for (let i = 0; i < dataEvents.length; i++) {
         element += `

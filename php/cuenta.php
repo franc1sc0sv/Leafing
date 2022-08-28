@@ -1,20 +1,24 @@
 <?php
 include_once('./include.php');
 include_once('./conexion.php');
-include_once('./header.php'); ?>
+include_once('./header.php');
+$objconexion = new conection();
+$idUser = $_SESSION['dataID'];
+$data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idUser");
+?>
 
 <div class="flex-container">
 
     <div id="onlyMenu" class="user-menu-container mostrar">
         <div class="menu-img">
             <div class="behind-menu-img">
-                <img src="../img/imagenes/rei3.jpg" class="img-profile" alt="Foto de perfil">
+            <img src="./images/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
                 <img src="../img/iconos/plus-profile.svg" alt="" class="img-plus">
             </div>
         </div>
         <div class="menu-nombre-usuario">
             <p class="nombre-usuario">
-                Ayanami Rei
+                <?php echo $data[0]['name'], " ", $data[0]['lastname'] ?>
             </p>
         </div>
         <div>
@@ -56,6 +60,7 @@ include_once('./header.php'); ?>
         </div>
     </div>
 
+
     <div id="onlyConfig" class="configuracion-cuenta-container no-mostrar">
         <div class="grid-container">
             <div class="back">
@@ -72,7 +77,7 @@ include_once('./header.php'); ?>
                     </div>
                     <div class="short-labels Apellido">
                         <label for="lastname" class="translate">Apellido</label>
-                        <input id="lastname"class="diseñoGod" type="text" name="lastname">
+                        <input id="lastname" class="diseñoGod" type="text" name="lastname">
                     </div>
                     <div class="short-labels Nombre-de-usuario">
                         <label for="usuario" class="translate">Nombre de usuario</label>

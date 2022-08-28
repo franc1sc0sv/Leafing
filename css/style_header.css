@@ -346,3 +346,9 @@ li>a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
 }
+
+.img-perfil{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}

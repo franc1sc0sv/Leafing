@@ -47,4 +47,4 @@ if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' &&
 }
 
 
-echo json_encode($sql);
+echo json_encode(urlencode($sql));

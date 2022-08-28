@@ -310,7 +310,7 @@ if (!isset($_SESSION['lang'])) {
                                 <div id="buttons-header">
                                         <!-- <a href="./close.php"><button>CLOSE SESSION</button></a> -->
                                         <ul class="menu-header-perfil">
-                                                <li class="li-menu_perfil"><img src="../img/iconos/usuario.png" alt="iconouser" height="50px" width="50px" class="img-perfil">
+                                                <li class="li-menu_perfil"><img src="./images/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
                                                         <ul class="menu_desplegable-peril">
                                                                 <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./cuenta.php"><span class="translateHeader"> Mi perfil</span></a></li>
                                                                 <li class="li-menu_perfil-desplegable"><a class="a-header" href="./close.php"><span class="translateHeader">Cerrar sesión</span></a></li>

@@ -239,6 +239,19 @@ footer {
     transition: all .5s ease-out;
 }
 
+.forget {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.forget:hover{
+    color: #93D0A1;
+}
+
 @media screen and (max-width: 768px) {
     .user-menu-container {
         display: none;

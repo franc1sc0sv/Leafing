@@ -11,9 +11,14 @@ if (isset($_GET['estiben'])) {
         $objconexion = new conection;
         $eventsmaxid = $objconexion->consultar("SELECT MAX(id_events) FROM `events` WHERE id_state_events = 1");
         if ($idevent >= 1 && $idevent <= $eventsmaxid[0][0]) {
-            $event = $objconexion->consultar("SELECT * FROM `events` WHERE id_events = $idevent");
-            $idcreator = $event[0]['id_user_data'];
-            $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
+
+            $event = $objconexion->consultar("SELECT events.id_events, events.name_event, events.description_event, events.direccion_evento, user_data.user_name, categories_events.categories, place_events.place, events.img_event, user_data.img_path, events.date_event FROM `events` 
+            INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
+            INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
+            INNER JOIN place_events ON events.place_event = place_events.id_place;");
+            //print_r($event);
+            // $idcreator = $event[0]['id_user_data'];
+            // $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
         } else {
             echo "El evento no existe";
             $error = true;
@@ -38,8 +43,8 @@ if (!$error) { ?>
                 <div class="container-img2">
                     <div class="container-perfil">
                         <div class="userData">
-                            <img src="../img/imagenes/inscriccion2.png" id="imgProfile">
-                            <p id="profile-name"><?php echo $creatrinfo[0]['name'] . " " . $creatrinfo[0]['lastname'] ?></p>
+                            <img src="./images/<?php echo $event[0]['img_path']?>" id="imgProfile">
+                            <p id="profile-name"><?php echo $event[0]['user_name'] ?></p>
                         </div>
                         <?php if (isset($_SESSION['estatus'])) { ?>
                             <div class="reporte">
@@ -56,10 +61,10 @@ if (!$error) { ?>
 
                 <div class="container-text2">
                     <p class="bold translate">Categorias</p>
-                    <p><?php echo $event[0]['id_categories_events'] ?></p>
+                    <p><?php echo $event[0]['categories'] ?></p>
                     <br>
                     <p class="bold translate">Lugar y fecha</p>
-                    <p><?php echo $event[0]['place_event'], " ", $event[0]['date_event'] ?></p>
+                    <p><?php echo $event[0]['place'], ", ", $event[0]['direccion_evento'], " - ", $event[0]['date_event'] ?></p>
                 </div>
                 <?php
 

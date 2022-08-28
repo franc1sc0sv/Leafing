@@ -98,7 +98,6 @@ formC.addEventListener('submit', function (e) {
             }
             else if (data == "Nice") {
                 modal_container.classList.add('show');
-                // $("#submit").unbind('click').click();
                 let contenidoModalInscripcionES = `
                 <h1>Tu evento ha sido creado con éxito</h1>
                 <div class=""container_imgCreated><img src="../img/iconos/comprobado.png" class="imgCreated"></div>
@@ -110,7 +109,7 @@ formC.addEventListener('submit', function (e) {
                 contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;
 
                 let close = document.getElementById('close');
-                close.addEventListener('click', ()=> {
+                close.addEventListener('click', () => {
                     closeModal();
                 })
 
