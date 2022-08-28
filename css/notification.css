@@ -36,10 +36,10 @@ body{
 }
 .alert {
     background: #ffdb9b;
-    position: absolute;
+    position: fixed;
     right: 0;
     /* top: 10px; */
-    bottom: 20px;
+    bottom: 30px;
     border-radius: 4px;
     border-left: 8px solid #ffa502;
     overflow: hidden;
