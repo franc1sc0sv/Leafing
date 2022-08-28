@@ -2,6 +2,7 @@
 include_once('include.php');
 include_once('conexion.php');
 
+
 if ($_POST) {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -17,7 +18,7 @@ if ($_POST) {
     $image = $date->getTimestamp() . "_" . $_FILES['image']['name'];
     $tempImage = $_FILES['image']['tmp_name'];
 
-    $allowed =  array('gif','png' ,'jpg');
+    $allowed =  array('gif','png' ,'jpg', 'jpeg', 'webp', 'svg');
     $filename = $_FILES['image']['name'];
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
