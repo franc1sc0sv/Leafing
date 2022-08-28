@@ -104,7 +104,6 @@ formC.addEventListener('submit', function (e) {
                 <div class=""container_imgCreated><img src="../img/iconos/comprobado.png" class="imgCreated"></div>
                 <div class="BotonesRegistroInicio">
                         <a href="../php/comunity.php" class="question">Ir a los eventos</a>
-                        <a href="../php/evento-especifico.php" class="question">Ver tu evento</a>
                 </div>
                 <button id="close" class="buttonxd">Cerrar</button>
                 `

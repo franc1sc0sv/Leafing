@@ -74,7 +74,7 @@ function deletePlaces(id) {
             //console.log(data)
             if (data == "nice") {
                 setTimeout(showNotification(alertNice), 1000)
-                consultas("SELECT events.id_events, events.name_event, user_data.user_name, categories_events.categories, place_events.place, state_events.state FROM `events` INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events INNER JOIN user_data ON events.id_user_data = user_data.id_user_data INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN place_events ON events.place_event = place_events.id_place;", 1);
+                consultas("SELECT events.id_events, events.name_event, user_data.user_name, categories_events.categories, place_events.place, state_events.state FROM `events` INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events INNER JOIN user_data ON events.id_user_data = user_data.id_user_data INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN place_events ON events.place_event = place_events.id_place;", 3);
             } else {
                 setTimeout(showNotification(error), 1000)
             }
