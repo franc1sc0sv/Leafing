@@ -52,7 +52,7 @@ if (!isset($_SESSION['lang'])) {
                                         </div>
 
                                         <div class="forget">
-                                            <p id="passordForget">
+                                            <p id="passordForget" class="translate">
                                                 Olvide mi contraseña
                                             </p>
                                         </div>
@@ -73,10 +73,10 @@ if (!isset($_SESSION['lang'])) {
                                     </div>
 
                                     <div class="inputs">
-                                        <input type="text" class="mitexto" name="email">
+                                        <input type="email" class="mitexto" name="email">
                                     </div>
                                     <div class="regresar" id="regresar">
-                                        <p>Regresar</p>
+                                        <p class="translate">Regresar</p>
                                     </div>
 
                                     <div class="next">
@@ -103,8 +103,8 @@ if (!isset($_SESSION['lang'])) {
         </div>
     </div>
     <script src="../js/notification.js"></script>
-    <script src="../js/forgetPassword.js"></script>
-    <!-- <script src="../js/translate.js" type="module"></script> -->
+    <script src="../js/forgetPassword.js" type="module"></script>
+    <script src="../js/translate.js" type="module"></script>
     <script src="../js/login.js" type="module"> </script>
 
 </body>

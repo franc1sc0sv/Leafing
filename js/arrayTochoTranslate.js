@@ -6,11 +6,11 @@ export const translateGeneralEN = [
     //2 = Concientizate
     ["Contribute to environmental care from home", "The environment is suffering a lot of problems nowadays, that is why in this section we invite you to become aware of what you are doing to contribute and help the environment.", "With the following measures that we designed especially for you, you will be able to contribute from your home with simple actions that we hope you enjoy and love to do.", "Tips and actions to take care of the environment from home", "Separate garbage.", "From an early age, it is good for children to learn how to separate waste so that it can be recycled. Teach them what is thrown in each bin and why it should be done this way.", "Use products that can be reused.", "There are many products that can be used several times to protect nature. For example, use cloth napkins instead of paper napkins.", "Plant trees.", "Trees produce oxygen and are essential to nature, so plant a tree in your home or in the community where you live.", "Consume organic fruits and vegetables.", "Organic products are environmentally friendly because no fertilizers or other pollutants are used in their production.", "Recycle as much as you can", "Before throwing away clothes, books or toys, think if you can give them a second chance to avoid spending and buying everything new. You will save money and protect nature.", "Bring your own bags to the supermarket.", "More and more supermarkets are selling plastic bags to avoid their use and encourage recycling. Take your own bags to the supermarket and you can use them several times.", "Learn how to start plants", "Take care of the beach with us through our events"],
     //3 = formulario de creacion de evento
-    ["Create your own event", "Event title", "What will take place at the event?", "Requirements to attend the event", "Place of organization", "Date", "Time", "Transportation:", "Will your event have transportation available for registrants?", "Yes", "No", "Image", "Publish"],
+    ["Create your", "Event", "Create your event", "Title", "Description", "Start date", "End date", "Drag or drop your image", "Choose a file", "Address", "Publish"],
     //4 = perfil de usuario
     ["Account", "Password", "My events", "Registered events", "Log out ", "Account settings", "Name", "Last name", "User name", "Nickname", "Email", "Telephone number", "About me", "Save", "Cancel"],
     //5 = inicio de sesion
-    ["Don't have an account yet?", "Register", "Log in", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Send the code again", "Next"],
+    ["Don't have an account yet?", "Sign up", "Sign in", "Email", "Password","Forgot my password", "Next", "Forgot your email", "Type your email and We will send you the instructions on how to restore it", "Return", "Send", "The next step", "Check your email with the instructions"],
     //6 = creacion de cuenta
     ["Already have an account?", "Log in", "Create an account ", "Email", "Password", "Next", "Check e-mail", "To verify your email address we have sent you a confirmation code to ", "Next", "Complete your information", "Name", "Lat name", "User name", "Date of birth", "Gender"],
     //7 =header
@@ -26,7 +26,7 @@ export const translateGeneralEN = [
     //12 = comunity
     ["Submit"],
     //13 = comunity
-    ["Description", "Categoires", "Location and date"]
+    ["Description", "Categories", "Location and date"]
 ];
 
 export const translateGeneralES = [
@@ -37,11 +37,11 @@ export const translateGeneralES = [
     //2 = Concientizate
     ["Contribuye al cuido medio ambiente desde casa", "El medio ambiente está sufriendo una gran cantidad de problemas en la actualidad, es por ello que en este apartado te invitamos a que hagas conciencia sobre lo que tú estás haciendo para contribuir y ayudar al medio ambiente.", "Con las siguientes medidas que diseñamos especialmente para ti podrás contribuir desde tu hogar con acciones simples que esperamos disfrutes y ames hacer.", "Consejos y acciones para cuidar el medioambiente desde casa", "Separa la basura.", "Desde pequeños es bueno que los niños aprendan a separar los residuos para que se puedan reciclar. Enséñales qué se tira en cada cubo y por qué se debe hacer así.", "Usa productos que puedan reutilizarse.", "Hay muchos productos que se pueden usar varias veces para proteger la naturaleza. Por ejemplo, utiliza servilletas de tela en lugar de servilletas de papel.", "Planta árboles.", "Los árboles producen oxígeno y son esenciales para la naturaleza, así que planta un árbol en tu casa o en la comunidad donde vives.", "Consume frutas y verduras ecológicas.", "Los productos ecológicos cuidan el medio ambiente porque en su producción no se utilizan fertilizantes ni otros productos contaminantes.", "Recicla todo lo que puedas.", "Antes de tirar ropa, libros o juguetes, piensa si puedes darles una segunda oportunidad para evitar gastar y comprar todo nuevo. Ahorrarás dinero y protegerás la naturaleza.", "Lleva tus propias bolsas al supermercado.", "Cada vez son más los supermercados que venden las bolsas de plástico para evitar su uso y fomentar el reciclado. Llévate tus propias bolsas al supermercado y podrás utilizarlas varias veces.", "Aprende cómo comenzar a sembrar plantas", "Cuida de la playa con nosotros a través de nuestros eventos",],
     //3 = formulario de creacion de evento
-    ["Crea tu propio evento", "Título del evento", "¿Qué se realizará en el evento?", "Requisitos para asistir al evento", "Lugar de organización", "Fecha", "Hora", "Transporte:", "¿Su evento contará con transporte disponible para las personas que se inscriban?", "Sí", "No", "Imagen", "Publicar"],
+    ["Crea tu", "Evento", "Crea tu evento", "Título", "Descripción", "Fecha de inicio", "Fecha de finalización", "Arrastra o suelta tu imagen", "Elige un archivo", "Dirección", "Publicar"],
     //4 = perfil de usuario
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la cuenta", "Nombre", "Apellido", "Nombre de usuario", "Apodo", "Email", "Número de teléfonico", "Sobre mí", "Guardar", "Cancelar"],
     //5 = inicio de sesion
-    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Enviar el código de nuevo", "Siguiente"],
+    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña","Olvide mi contraseña", "Siguiente", "Olvidaste tu correo electrónico", "Escribe tu correo electronico y te mandaremos las instrucciones de como restablecerla", "Regresar", "Enviar", "El siguiente paso", "Revisa tu correo con las instrucciones"],
     //6 = creacion de cuenta
     ["¿Ya tienes una cuenta?", "Inicia sesión", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
     //header
@@ -57,7 +57,7 @@ export const translateGeneralES = [
     //comunity
     ["Enviar"],
     //
-    ["Descripcion", "Categoiras", "Lugar y fecha"]
+    ["Descripcion", "Categorias", "Lugar y fecha"]
 
 
 ]
