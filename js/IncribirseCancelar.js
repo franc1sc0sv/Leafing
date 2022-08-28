@@ -6,6 +6,52 @@ const alertt = document.getElementById('alertAña');
 let html = document.querySelector("html");
 var aña;
 
+function inscriptionButton() {
+    let pathname = window.location.pathname;
+    if (pathname == "/LEAFING/Crea-J-2022/php/evento-especifico.php") {
+        fetch('APISessions.php?peticion=1')
+            .then(res => res.json())
+            .then(data => {
+                // data['dataID'];//User_ID
+                // data['estatus'];//True:logeado
+                // data['typeof'];//1: admin, 2:user
+                //console.log(data)
+                if (data == 'ERROR') {
+                    if (html.lang == "es") {
+                        inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
+                    } else {
+                        inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
+                    }
+                } else {
+                    let estiben = window.location.search;
+                    fetch(`APISessions.php${estiben}&peticion=2`)
+                        .then(res => res.json())
+                        .then(data => {
+                            //console.log(data)
+                            if (data == 0) {
+                                if (html.lang == "es") {
+                                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
+                                } else {
+                                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
+                                }
+                            } else if (data == 1) {
+                                if (html.lang == "es") {
+                                    inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>`;
+                                } else {
+                                    inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancel registration</button>`;
+                                }
+
+                            } else {
+                                console.log(data);
+                            }
+                        })
+                }
+            })
+    }
+}
+
+
+
 function getAña(id) {
     aña = id
 }
@@ -21,25 +67,20 @@ function inscribirse(id) {
         .then(res => res.json())
         .then(data => {
             if (data == 'ERROR') {
-                let contenidoModalInscripcionES = `
-                <h1>Necesitas tener una cuenta para poder inscribirte al evento</h1>
-                <div class="BotonesRegistroInicio">
-                        <a href="../php/formulario_inicio-sesion.php" class="question">¿Ya tienes una cuenta?</a>
-                        <a href="../php/formulario_registro.php" class="question">¿Aún no tienes una cuenta?</a>
-                </div>
-                <button id="close" class="buttonxd" onclick=closeModal()>Cerrar</button>
-                `
-                contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;
+                if (html.lang == "es") {
+                    contenidoModalInscripcionMesajeSin("Necesitas tener una cuenta para poder inscribirte al evento", "¿Ya tienes una cuenta?", "¿Aún no tienes una cuenta?", "Cerrar")
+                } else {
+                    contenidoModalInscripcionMesajeSin("You need to have an account to register for the event", "Do you already have an account?", "Don't you have an account yet?", "Close")
+                }
             } else {
                 getAña(data['dataID'])
-                let contenidoModalInscripcionES = `
-                <h1>¿En realidad deseas inscribirte a este evento?</h1>
-                <p>Si te inscribes deberas asistir al evento en la fecha y lugar indicados</p>
-                <div class="BotonesRegistroInicio">
-                    <button class="buttonxd" id="inscribirse" onclick=inscripcion()>Inscribirse</button>
-                    <button id="close" class="buttonxd" onclick=closeModal()>Cerrar</button>
-                </div>`
-                contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;
+                if (html.lang == "es") {
+                    contenidoModalInscripcionMesaje("¿En realidad deseas inscribirte a este evento?", "Si te inscribes deberas asistir al evento en la fecha y lugar indicados", "Inscribirse", "Cerrar", "inscripcion")
+                } else {
+                    contenidoModalInscripcionMesaje("Do you really want to register for this event?", "If you register, you must attend the event on the date and at the place indicated", "Register", "Close", "inscripcion")
+                }
+
+
 
             }
         })
@@ -53,14 +94,11 @@ function CancelarInscripcion(id) {
         .then(data => {
             if (data != 'ERROR') {
                 getAña(data['dataID'])
-                contenidoModalInscripcion.innerHTML = `
-                <h1>¿En realidad deseas cancelar la inscripcion a este evento?</h1>
-                <p>Acuerdate que ellos cuentan con tu presencia :)</p>
-                <div class="BotonesRegistroInicio">
-                    <button class="buttonxd" id="inscribirse" onclick=cancelarInscripcion()>Cancelar inscripcion</button>
-                    <button id="close" class="buttonxd" onclick=closeModal()>Cerrar</button>
-                </div>
-                `;
+                if (html.lang == "es") {
+                    contenidoModalInscripcionMesaje("¿En realidad deseas cancelar la inscripcion a este evento ?", "Acuerdate que ellos cuentan con tu presencia :)", "Cancelar inscripcion", "Cerrar", "cancelarInscripcion")
+                } else {
+                    contenidoModalInscripcionMesaje("Do you really want to cancel the registration to this event?", "Remember that they count on your presence :)", "Cancel registration", "Close", "cancelarInscripcion")
+                }
             }
         })
 
@@ -100,42 +138,63 @@ function cancelarInscripcion() {
         location.reload()
     }, 800);
 }
+function contenidoModalInscripcionMesajeSin(dato, dato1, dato3, dato4) {
+    let contenidoModalInscripcion = document.getElementById('contenidoModalInscripcion');
+    contenidoModalInscripcion.innerHTML = `
+    <h1>${dato}</h1>
+    <div class="BotonesRegistroInicio">
+            <a href="../php/formulario_inicio-sesion.php" class="question">${dato1}</a>
+            <a href="../php/formulario_registro.php" class="question">${dato3}</a>
+    </div>
+    <button id="close" class="buttonxd" onclick=closeModal()>${dato4}</button>
+    `;
+}
 
+function contenidoModalInscripcionMesaje(dato, dato2, dato3, dato4, funtion) {
+    let contenidoModalInscripcion = document.getElementById('contenidoModalInscripcion');
+    contenidoModalInscripcion.innerHTML = `
+    <h1>${dato}</h1>
+    <p>${dato2}</p>
+    <div class="BotonesRegistroInicio">
+        <button class="buttonxd" id="inscribirse" onclick=${funtion}()>${dato3}</button>
+        <button id="close" class="buttonxd" onclick=closeModal()>${dato4}</button>
+    </div>`;
+}
 
 function warning(msg) {
     return `
-<div class="alert hide warning" id="alert">
-    <div class="containerNotification">
-        <span class="msg">${msg}</span>
-        <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
-        </div>
-    </div>
-</div>`
+        <div class="alert hide warning" id = "alert">
+            <div class="containerNotification">
+                <span class="msg">${msg}</span>
+                <div class="close-btn" id="close" onclick="hideNotification()">
+                    <img src="../img/iconos/close.svg" alt="">
+                </div>
+            </div>
+</div> `
 }
 
 function alertf(msg) {
     return `
-<div class="alert hide" id="alert">
-    <div class="containerNotification">
-        <span class="msg">${msg}</span>
-        <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
-        </div>
-    </div>
-</div>`
+        <div class="alert hide" id = "alert">
+            <div class="containerNotification">
+                <span class="msg">${msg}</span>
+                <div class="close-btn" id="close" onclick="hideNotification()">
+                    <img src="../img/iconos/close.svg" alt="">
+                </div>
+            </div>
+</div> `
 }
 
 
 function nice(msg) {
     return `
-<div class="alert hide nice" id="alert">
-    <div class="containerNotification">
-        <span class="msg">${msg}</span>
-        <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
-        </div>
-    </div>
-</div>`
+        <div class="alert hide nice" id = "alert">
+            <div class="containerNotification">
+                <span class="msg">${msg}</span>
+                <div class="close-btn" id="close" onclick="hideNotification()">
+                    <img src="../img/iconos/close.svg" alt="">
+                </div>
+            </div>
+</div> `
 }
 

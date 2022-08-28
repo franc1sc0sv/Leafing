@@ -34,17 +34,23 @@ window.addEventListener("load", () => {
 
                 translateGeneralES[7][6] = " Mi perfil";
                 translateGeneralES[7][7] = "Cerrar sesión";
+
+                translateGeneralEN[13] = ["Report", "Description", "Categoires", "Location and date", "Report", "Select a problem", "If someone is in imminent danger, seek help before submitting a report to Leafing. Don't wait!", "Nudity", "Violence", "Harassment", "Suicide", "False information", "Spam", "Hate speech", "Terrorism", "Send", "Thank you. We received your report", "Report received", "Your report helps us improve our processes and contributes to Leafing remaining a safe environment for everyone", "Awaiting review", "Our review teams will review the content to remove content that does not meet our standards as quickly as possible", "Accept"];
+                translateGeneralES[13] = ["Reportar", "Descripcion", "Categoiras", "Lugar y fecha", "Reportar", "Selecciona un problema", "Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!", "Desnudos", "Violencia", "Acoso", "Suicidio", "Informacion falsa", "Spam", "Lenguaje que incita al odio", "Terrorismo", "Enviar", "Gracias. Recibimos tu reporte.", "Se recibio el reporte", "Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.", "Esperando revisión", "Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.", "Aceptar"];
+
             }
 
             if (html.lang == "en") {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
+                inscriptionButton()
                 buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
                 let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
                 filters(arrayOrder)
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
+                inscriptionButton()
                 buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
                 let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
                 filters(arrayOrder)
@@ -75,10 +81,10 @@ function Data(array) {
 function dataRandom() {
     let pathname = window.location.pathname;
     if (pathname == "/LEAFING/Crea-J-2022/php/index.php" || pathname == "/LEAFING/Crea-J-2022/php/") {
-        fetch(`datosRandomi.php`)
+        fetch(`datosRandomi.php?lang=${html.lang}`)
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 let DatosRadom = Data(data)
                 //console.log(DatosRadom)
                 Datos_curiosos_container.innerHTML = DatosRadom;
@@ -113,6 +119,8 @@ function getID(path) {
         id = 11;
     } else if (path == "comunity.php") {
         id = 12;
+    } else if (path == "evento-especifico.php") {
+        id = 13;
     }
 
     return id;
@@ -146,11 +154,14 @@ function TraduccionEspañol() {
 
     if (html.lang == "en") {
         fetch(`APISessions.php?peticion=4&lang=es`);
+        inscriptionButton()
+        dataRandom()
         forInnerHTM(translateGeneralES);
         html.setAttribute("lang", "es")
         buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
         let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
         filters(arrayOrder)
+
 
     }
 }
@@ -158,21 +169,25 @@ function TraducirIngles() {
 
     if (html.lang == "es") {
         fetch(`APISessions.php?peticion=4&lang=en`);
+        inscriptionButton()
+        dataRandom()
         forInnerHTM(translateGeneralEN);
         html.setAttribute("lang", "en")
         buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
         let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
         filters(arrayOrder)
+
+
     }
 }
 
 
 buttonChange.addEventListener('click', function () {
+
     if (html.lang == "en") {
         TraduccionEspañol()
-        dataRandom()
     } else {
         TraducirIngles()
-        dataRandom()
     }
 })
+

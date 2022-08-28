@@ -24,7 +24,9 @@ export const translateGeneralEN = [
     //11 = Eventos inscritos
     ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "],
     //12 = comunity
-    ["Submit"]
+    ["Submit"],
+    //13 = comunity
+    ["Description", "Categoires", "Location and date"]
 ];
 
 export const translateGeneralES = [
@@ -53,6 +55,9 @@ export const translateGeneralES = [
     //Eventos inscritos
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"],
     //comunity
-    ["Enviar"]
+    ["Enviar"],
+    //
+    ["Descripcion", "Categoiras", "Lugar y fecha"]
+
 
 ]

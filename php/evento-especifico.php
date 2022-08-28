@@ -43,47 +43,52 @@ if (!$error) { ?>
                         </div>
                         <?php if (isset($_SESSION['estatus'])) { ?>
                             <div class="reporte">
-                                <button id="ModalOpen"> Reportar</button>
+                                <button id="ModalOpen"><span class="translate"> Reportar</span></button>
                             </div>
                         <?php } ?>
                     </div>
                 </div>
                 <div class="container-descripcion">
 
-                    <p class="bold">Descripción</p><br>
+                    <p class="bold translate">Descripción</p><br>
                     <p><?php echo $event[0]['description_event'] ?></p>
                 </div>
 
                 <div class="container-text2">
-                    <p class="bold">Categorias</p>
+                    <p class="bold translate">Categorias</p>
                     <p><?php echo $event[0]['id_categories_events'] ?></p>
                     <br>
-                    <p class="bold">Lugar y fecha</p>
+                    <p class="bold translate">Lugar y fecha</p>
                     <p><?php echo $event[0]['place_event'], " ", $event[0]['date_event'] ?></p>
                 </div>
                 <?php
 
-                if (isset($_SESSION['estatus'])) {
-                    $id = $_SESSION['dataID'];
-                    $idevent = $_GET['estiben'];
-                    $sql = "SELECT * FROM `inscriptions` WHERE id_persona_inscrita = $id AND id_event = $idevent";
-                    $objConexion = new conection();
-                    $rowCount = $objConexion->consultarform($sql);
-                    if ($rowCount == 0) { ?>
-                        <div class="inscribirseCancelar" id="inscribirseCancelar">
-                            <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
-                        </div>
-                    <?php } else if ($rowCount == 1) { ?>
-                        <div class="inscribirseCancelar" id="inscribirseCancelar">
-                            <button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>
-                        </div>
-                    <?php }  ?>
+                // if (isset($_SESSION['estatus'])) {
+                //     $id = $_SESSION['dataID'];
+                //     $idevent = $_GET['estiben'];
+                //     $sql = "SELECT * FROM `inscriptions` WHERE id_persona_inscrita = $id AND id_event = $idevent";
+                //     $objConexion = new conection();
+                //     $rowCount = $objConexion->consultarform($sql);
+                //     if ($rowCount == 0) { 
+                ?>
+                <div class="inscribirseCancelar" id="inscribirseCancelar">
+                    <!-- <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button> -->
+                </div>
+                <?php //} else if ($rowCount == 1) { 
+                ?>
+                <!-- <div class="inscribirseCancelar" id="inscribirseCancelar">
+                    <button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>
+                </div> -->
+                <?php /// }  
+                ?>
 
-                <?php  } else { ?>
-                    <div class="inscribirseCancelar" id="inscribirseCancelar">
-                        <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
-                    </div>
-                <?php } ?>
+                <!-- <div class="inscribirseCancelar" id="inscribirseCancelar">
+                    <?php  //} else { 
+                    ?>
+                    <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
+                </div> -->
+                <?php //} 
+                ?>
 
             </div>
         </div>
@@ -103,51 +108,51 @@ if (!$error) { ?>
             <div class="content-modal" id="contentModal">
                 <div class="headerModal" id="headerModal">
                     <img src="../img/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
-                    <h1>Reportar</h1>
+                    <h1 class="translate">Reportar</h1>
                     <img src="../img/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
                 </div>
                 <div class="contentModel" id="contentModel">
                     <div class="contentModelReportes">
-                        <h2>Selecciona un problema</h2>
-                        <p>Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!</p>
+                        <h2 class="translate">Selecciona un problema</h2>
+                        <p class="translate">Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!</p>
                         <div class="reportesModel">
                             <div class="reportes" id="desnudos" onclick=identifyReport(this)>
-                                <h3>Desnudos</h3>
+                                <h3 class="translate">Desnudos</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="violencia" onclick=identifyReport(this)>
-                                <h3>Violencia</h3>
+                                <h3 class="translate">Violencia</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="acoso" onclick=identifyReport(this)>
-                                <h3>Acoso</h3>
+                                <h3 class="translate">Acoso</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="suicidio" onclick=identifyReport(this)>
-                                <h3>Suicidio</h3>
+                                <h3 class="translate">Suicidio</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="informacion_falsa" onclick=identifyReport(this)>
-                                <h3>Informacion falsa</h3>
+                                <h3 class="translate">Informacion falsa</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="spam" onclick=identifyReport(this)>
-                                <h3>Spam</h3>
+                                <h3 class="translate">Spam</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="lenguaje" onclick=identifyReport(this)>
-                                <h3>Lenguaje que incita al odio</h3>
+                                <h3 class="translate">Lenguaje que incita al odio</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="terrorismo" onclick=identifyReport(this)>
-                                <h3>Terrorismo</h3>
+                                <h3 class="translate">Terrorismo</h3>
                                 <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
                         </div>
@@ -155,35 +160,35 @@ if (!$error) { ?>
 
                     <div class="sendReport">
                         <div class="content">
-                            <h2 class="changeInfo">Nombre reporte</h2>
-                            <p class="changeInfo">Descripcion del reporte:</p>
+                            <h2 class="changeInfo">nice try estiben</h2>
+                            <p class="changeInfo">jajajajja</p>
                             <ul class="ul-reporte changeInfo">
-                                <li class="li-report changeInfo">Cosas que no permitimos(li).</li>
+                                <li class="li-report changeInfo">aña</li>
                             </ul>
 
                             <div class="alert" id="alert">
                             </div>
                         </div>
                         <div class="sendbutton">
-                            <button class="button-report" id="buttonReport">Enviar</button>
+                            <button class="button-report translate" id="buttonReport">funcionara?</button>
                         </div>
                     </div>
 
                     <div class="MensajeReport">
                         <div class="contentMensaje">
                             <img src="../img/iconos/check_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="checkIcon">
-                            <h2>Gracias. Recibimos tu reporte.</h2>
+                            <h2 class="translate">Gracias. Recibimos tu reporte.</h2>
                             <div class="MensajesExtra">
                                 <div>
-                                    <h3>Se recibio el reporte</h3>
-                                    <p>Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.</p>
+                                    <h3 class="translate">Se recibio el reporte</h3>
+                                    <p class="translate">Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.</p>
                                 </div>
                                 <div>
-                                    <h3>Esperando revisión</h3>
-                                    <p>Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.</p>
+                                    <h3 class="translate">Esperando revisión</h3>
+                                    <p class="translate">Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.</p>
                                 </div>
                             </div>
-                            <button class="button-report" id="buttonSalirReport">Aceptar</button>
+                            <button class="button-report translate" id="buttonSalirReport">Aceptar</button>
                         </div>
                     </div>
                 </div>

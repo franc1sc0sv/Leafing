@@ -40,8 +40,8 @@
     </div>
 </footer>
 <button class="containerFlecha" id="flechaUp"></button>
-<script src="../js/translate.js" type="module"></script>
 <script src="../js/IncribirseCancelar.js"></script>
+<script src="../js/translate.js" type="module"></script>
 <script src="../js/scrollUp.js"></script>
 <script src="../js/darkmode.js"> </script>
 <script src="../js/slider.js"></script>
