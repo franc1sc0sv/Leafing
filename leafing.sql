@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-08-2022 a las 16:56:04
+-- Tiempo de generación: 28-08-2022 a las 17:53:35
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -70,7 +70,8 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
-(1, 'Limpieza del cerro de Guazapa', '1661695966_Guazapa.jpg', 'Sera una caminata comunitara en la que limpiaremos el camino hacia el cerro de guazapa', 3, 'San Jose Guayabal', '2022-09-07 09:00:00', '2022-09-07 16:00:00', 3, 5, 1);
+(1, 'Limpieza del cerro de Guazapa', '1661695966_Guazapa.jpg', 'Sera una caminata comunitara en la que limpiaremos el camino hacia el cerro de guazapa', 3, 'San Jose Guayabal', '2022-09-07 09:00:00', '2022-09-07 16:00:00', 3, 5, 1),
+(2, 'Limpieza del rio las margaritas', '1661707314_lempa-portada.webp', 'Salvemos el rio las margaritas que ultimamente ha estado muy contaminado', 1, 'El colegio don Bosco', '2022-08-30 15:24:00', '2022-08-31 15:23:00', 2, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -84,6 +85,14 @@ CREATE TABLE `inscriptions` (
   `id_persona_inscrita` int(11) NOT NULL,
   `date_inscriptions` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `inscriptions`
+--
+
+INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES
+(1, 1, 5, '2022-08-28 17:27:15'),
+(2, 2, 5, '2022-08-28 17:45:05');
 
 -- --------------------------------------------------------
 
@@ -419,13 +428,13 @@ ALTER TABLE `categories_events`
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
