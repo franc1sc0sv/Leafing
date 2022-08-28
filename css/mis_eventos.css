@@ -242,3 +242,7 @@ footer {
     }
 
 }
+
+.archivedEvent {
+    opacity: .3;
+}

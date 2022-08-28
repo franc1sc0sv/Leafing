@@ -4,7 +4,7 @@ include_once('./conexion.php');
 
 $id = $_SESSION['dataID'];
 $objconexionEvnt = new conection();
-$dataInscriptions = $objconexionEvnt->consultar("SELECT events.name_event, events.img_event, user_data.user_name, user_data.img_path FROM `inscriptions`
+$dataInscriptions = $objconexionEvnt->consultar("SELECT events.id_events, events.name_event, events.img_event, user_data.user_name, user_data.img_path FROM `inscriptions`
 INNER JOIN events ON inscriptions.id_event = events.id_events
 INNER JOIN user_data ON inscriptions.id_persona_inscrita =  user_data.id_user_data 
 WHERE id_persona_inscrita = $id ");
@@ -32,7 +32,9 @@ include_once('./header.php'); ?>
                             </div>
                             <div class="container__info-user">
                                 <img src="./images/<?php echo $dataInscriptions[$i]['img_path'] ?>" alt="" class="imgPerfil">
-                                <p class="card-name-event"><?php echo $dataInscriptions[$i]['name_event'] ?></p>
+                                <a href="./evento-especifico.php?estiben=<?php echo $dataInscriptions[$i]['id_events']?>" target="_blacnk">
+                                    <p class="card-name-event"><?php echo $dataInscriptions[$i]['name_event'] ?></p>
+                                </a>
                                 <p class="card-user-name"><?php echo $dataInscriptions[$i]['user_name'] ?></p>
                             </div>
                         </div>

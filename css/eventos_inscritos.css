@@ -179,7 +179,7 @@ footer {
     height: 20px;
     position: absolute;
     margin: 15px;
-    background-image: url(../img/iconos/like.svg);
+    /* background-image: url(../img/iconos/like.svg); */
     background-repeat: no-repeat;
     opacity: .6;
 }

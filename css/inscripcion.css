@@ -124,7 +124,7 @@
     align-items: center;
     z-index: 100;
     display: none;
-
+    font-family: 'Montserrat';
 }
 
 /* #btn-modal:checked~.container-modal {

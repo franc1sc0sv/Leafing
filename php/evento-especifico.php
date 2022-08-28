@@ -15,7 +15,9 @@ if (isset($_GET['estiben'])) {
             $event = $objconexion->consultar("SELECT events.id_events, events.name_event, events.description_event, events.direccion_evento, user_data.user_name, categories_events.categories, place_events.place, events.img_event, user_data.img_path, events.date_event FROM `events` 
             INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
             INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
-            INNER JOIN place_events ON events.place_event = place_events.id_place;");
+            INNER JOIN place_events ON events.place_event = place_events.id_place
+            WHERE id_events = $idevent;
+            ");
             //print_r($event);
             // $idcreator = $event[0]['id_user_data'];
             // $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
@@ -43,7 +45,7 @@ if (!$error) { ?>
                 <div class="container-img2">
                     <div class="container-perfil">
                         <div class="userData">
-                            <img src="./images/<?php echo $event[0]['img_path']?>" id="imgProfile">
+                            <img src="./images/<?php echo $event[0]['img_path'] ?>" id="imgProfile">
                             <p id="profile-name"><?php echo $event[0]['user_name'] ?></p>
                         </div>
                         <?php if (isset($_SESSION['estatus'])) { ?>
@@ -66,34 +68,9 @@ if (!$error) { ?>
                     <p class="bold translate">Lugar y fecha</p>
                     <p><?php echo $event[0]['place'], ", ", $event[0]['direccion_evento'], " - ", $event[0]['date_event'] ?></p>
                 </div>
-                <?php
-
-                // if (isset($_SESSION['estatus'])) {
-                //     $id = $_SESSION['dataID'];
-                //     $idevent = $_GET['estiben'];
-                //     $sql = "SELECT * FROM `inscriptions` WHERE id_persona_inscrita = $id AND id_event = $idevent";
-                //     $objConexion = new conection();
-                //     $rowCount = $objConexion->consultarform($sql);
-                //     if ($rowCount == 0) { 
-                ?>
                 <div class="inscribirseCancelar" id="inscribirseCancelar">
-                    <!-- <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button> -->
                 </div>
-                <?php //} else if ($rowCount == 1) { 
-                ?>
-                <!-- <div class="inscribirseCancelar" id="inscribirseCancelar">
-                    <button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>
-                </div> -->
-                <?php /// }  
-                ?>
 
-                <!-- <div class="inscribirseCancelar" id="inscribirseCancelar">
-                    <?php  //} else { 
-                    ?>
-                    <button class="ModalOpen open" id="inscribirse" onclick=inscribirse(this)> Inscribirse</button>
-                </div> -->
-                <?php //} 
-                ?>
 
             </div>
         </div>
