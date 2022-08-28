@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-08-2022 a las 19:13:14
+-- Tiempo de generación: 28-08-2022 a las 16:56:04
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -38,10 +38,12 @@ CREATE TABLE `categories_events` (
 --
 
 INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categories_en`) VALUES
-(1, 'Oceano', 'Ocean'),
-(5, 'Tratamineto de aguas', 'Water treatment'),
-(7, 'Otra', 'Other'),
-(13, 'Rios', 'Rivers');
+(1, 'Laguna', 'Lagoon'),
+(2, 'Rios', 'Rivers'),
+(3, 'Espacios verdes', 'Green spaces'),
+(5, 'Lagos', 'Lakes'),
+(6, 'Otras', 'Other'),
+(7, 'Tratamiento de aguas', 'Water treatment');
 
 -- --------------------------------------------------------
 
@@ -68,9 +70,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
-(1, 'Funa de aristides', '1661442653_kunai-jett-anime-fa-valorant-videojuego-de-riot-papel-pintado-3840x2160_54.jpg', 'hola', 9, 'Colegio Don Bosco', '2022-04-12 12:00:00', '2023-05-04 06:00:00', 5, 2, 1),
-(2, 'Reciclaje de basura', '1661453549_dcb0cdfe0ddd52e00e0362a6f79375c1.jpg', 'fasfsdafsadfas', 9, 'fasdfsadfasdfasdfsadfas', '2022-12-31 13:32:00', '2022-03-12 12:12:00', 5, 2, 1),
-(3, 'Clases de economia del profe juan carlos', '1661456877_kaworu2.jpg', 'faaaaaaaaaaaaaaaaaa', 15, 'Colegio Don Bosco', '2022-02-12 04:03:00', '2022-01-31 03:42:00', 13, 2, 1);
+(1, 'Limpieza del cerro de Guazapa', '1661695966_Guazapa.jpg', 'Sera una caminata comunitara en la que limpiaremos el camino hacia el cerro de guazapa', 3, 'San Jose Guayabal', '2022-09-07 09:00:00', '2022-09-07 16:00:00', 3, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -84,13 +84,6 @@ CREATE TABLE `inscriptions` (
   `id_persona_inscrita` int(11) NOT NULL,
   `date_inscriptions` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `inscriptions`
---
-
-INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES
-(1, 3, 5, '2022-08-26 02:03:39');
 
 -- --------------------------------------------------------
 
@@ -108,11 +101,13 @@ CREATE TABLE `place_events` (
 --
 
 INSERT INTO `place_events` (`id_place`, `place`) VALUES
-(2, 'Cabañas'),
-(3, 'Chalatenango'),
-(9, 'San Salvador'),
-(15, 'Soyapango'),
-(16, 'La casa de aristides');
+(1, 'San Salvador'),
+(2, 'La libertad'),
+(3, 'Cuscatlan'),
+(4, 'San Miguel'),
+(5, 'Chalatenango'),
+(6, 'San Vicente'),
+(7, 'Soyapango');
 
 -- --------------------------------------------------------
 
@@ -292,7 +287,7 @@ INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `ro
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
 (3, 'leandroescobar360@gmail.com', '$2y$10$gDF5K3oUG/lmS.Y63vnGm.lf.QfpaayzZFxhUGWKuXd9rNSomG1je', '77a6bde4a1566dcbffb5e0f236759407', 1),
 (4, 'correo.prueba@gmail.com', '$2y$10$JsskLroB8cDHsmTZDRWl9eVyDm2Jlp6lgf89P6yKKyw3HqShrv5fK', '2342a52562b575985b4fc8fb1f5f8501', 2),
-(5, 'franelcrack16@gmail.com', '$2y$10$RDD.A2Ybp1KGVSmFBrjXReav3rVVckfO5W4J4R7ZnDHihuy9foXe.', 'ab709f7019e671ccf1e7bbf49a17acdc', 2),
+(5, 'franelcrack16@gmail.com', '$2y$10$ab0duxiYFeVGFKHty5GqCOA2zRpRYqlwO/EHlmKq/ADL6/Bh1uNYG', 'e9d397b44535120eda781dcc56b924b2', 2),
 (6, 'axgagsgasgsg@gmail.com', '$2y$10$OsGi4G7E1PGFcHh3Bn0pMun7ApEn9KI5bmOK4kwiaoa3si3x6RHsu', '8477b5a982eb7d7c52045cf7a78cd364', 2);
 
 -- --------------------------------------------------------
@@ -307,20 +302,21 @@ CREATE TABLE `user_data` (
   `lastname` varchar(500) NOT NULL,
   `borndate` date NOT NULL,
   `user_name` varchar(500) NOT NULL,
-  `gender` varchar(500) NOT NULL
+  `gender` varchar(500) NOT NULL,
+  `img_path` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `user_data`
 --
 
-INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`) VALUES
-(1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M'),
-(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M'),
-(3, 'Leandro Alberto', 'Valencia Escobar', '2003-05-06', 'Leansttar', 'M'),
-(4, 'Juan', 'Perez', '2006-06-08', 'JuanCaballo', 'M'),
-(5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M'),
-(6, 'Shouko', 'Komi', '2006-02-06', 'Komisan', 'F');
+INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`) VALUES
+(1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M', 'defaultImage.png'),
+(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png'),
+(3, 'Leandro Alberto', 'Valencia Escobar', '2003-05-06', 'Leansttar', 'M', 'defaultImage.png'),
+(4, 'Juan', 'Perez', '2006-06-08', 'JuanCaballo', 'M', 'defaultImage.png'),
+(5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M', 'defaultImage.png'),
+(6, 'Shouko', 'Komi', '2006-02-06', 'Komisan', 'F', 'defaultImage.png');
 
 --
 -- Índices para tablas volcadas
@@ -417,25 +413,25 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT de la tabla `categories_events`
 --
 ALTER TABLE `categories_events`
-  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
 --
 ALTER TABLE `place_events`
-  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `random_curious_data`
