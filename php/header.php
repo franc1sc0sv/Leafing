@@ -74,6 +74,7 @@ if (!isset($_SESSION['lang'])) {
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
                 <link rel="stylesheet" href="../css/cuenta-style.css">
+                <link rel="stylesheet" href="../css/crear_evento.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/contraseña.php") { ?>
@@ -97,6 +98,7 @@ if (!isset($_SESSION['lang'])) {
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="../css/darkmode.css">
         <?php } ?>
+        
 
 
         <!--Favicon-->
@@ -310,7 +312,8 @@ if (!isset($_SESSION['lang'])) {
                                 <div id="buttons-header">
                                         <!-- <a href="./close.php"><button>CLOSE SESSION</button></a> -->
                                         <ul class="menu-header-perfil">
-                                                <li class="li-menu_perfil"><img src="./images/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
+                                                <p><?php echo $datauser[0]['name']; ?></p>
+                                                <li class="li-menu_perfil"><img src="./imgProfile/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
                                                         <ul class="menu_desplegable-peril">
                                                                 <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./cuenta.php"><span class="translateHeader"> Mi perfil</span></a></li>
                                                                 <li class="li-menu_perfil-desplegable"><a class="a-header" href="./close.php"><span class="translateHeader">Cerrar sesión</span></a></li>

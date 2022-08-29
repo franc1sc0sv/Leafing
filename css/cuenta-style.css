@@ -22,6 +22,15 @@ footer {
     margin: 0;
 }
 
+.modal {
+    width: 450px !important;
+}
+
+
+.dragfile_container {
+    width: 350px !important;
+    height: 350px !important;
+}
 
 
 .agradecimientos {

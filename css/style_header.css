@@ -192,8 +192,12 @@ li {
     height: 100%;
     display: flex;
     transition: transform .5s;
-    gap: 2.5vw;
+    gap: 1.5vw;
     align-items: center;
+}
+
+.menu-header-perfil p {
+    font-size: 20px;
 }
 
 
@@ -222,6 +226,7 @@ li {
     bottom: 0;
     width: max-content;
     transform: translateY(100%);
+    background: white;
 
 }
 

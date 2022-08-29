@@ -109,6 +109,7 @@ include_once('header.php');
     <script src="../js/filtersTA.js"></script>
     <script src="../js/notification.js"></script>
     <script src="../js/createEvents.js" type="module"> </script>
+
 </body>
 
 <?php include_once("footer.php"); ?>
