@@ -8,7 +8,7 @@ $data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = 
 <div id="onlyMenu" class="user-menu-container mostrar">
     <div class="menu-img">
         <div class="behind-menu-img">
-            <img src="./images/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
+            <img src="./imgProfile/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
             <img src="../img/iconos/plus-profile.svg" alt="" class="img-plus">
         </div>
     </div>

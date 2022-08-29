@@ -22,6 +22,7 @@ footer {
 .flex-container {
     display: flex;
     flex-direction: row;
+    border-top: 1px solid rgb(196, 188, 188);
     /* height: 83vh; */
 }
 
@@ -159,7 +160,7 @@ footer {
 .eventos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 1fr;
+    grid-auto-rows: 250px;
     justify-items: center;
     gap: 50px 30px;
 }

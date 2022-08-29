@@ -40,7 +40,7 @@ footer {
 .flex-container {
     display: flex;
     flex-direction: row;
-    border-top: 1px solid rgb(196, 188, 188);;
+    border-top: 1px solid rgb(196, 188, 188);
     /* height: 83vh; */
 }
 

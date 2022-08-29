@@ -31,7 +31,7 @@ include_once('./header.php'); ?>
                                 <div class="card-like"></div>
                             </div>
                             <div class="container__info-user">
-                                <img src="./images/<?php echo $dataInscriptions[$i]['img_path'] ?>" alt="" class="imgPerfil">
+                                <img src="./imgProfile/<?php echo $dataInscriptions[$i]['img_path'] ?>" alt="" class="imgPerfil">
                                 <a href="./evento-especifico.php?estiben=<?php echo $dataInscriptions[$i]['id_events']?>" target="_blacnk">
                                     <p class="card-name-event"><?php echo $dataInscriptions[$i]['name_event'] ?></p>
                                 </a>
