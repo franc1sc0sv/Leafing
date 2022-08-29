@@ -56,7 +56,7 @@ if (!isset($_SESSION['lang'])) {
                 <link rel="stylesheet" href="../css/crear_evento.css">
         <?php } ?>
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/evento-especifico.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/crear_evento.php") { ?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/evento-especifico.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/crear_evento.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/php/cuenta.php") { ?>
                 <!-- Estilos de evento especifico-->
                 <link rel="stylesheet" href="../css/inscripcion.css">
         <?php } ?>

@@ -10,7 +10,7 @@ function closeModal() {
     modal_container.classList.remove('show');
     setTimeout(function () {
         window.location.href = "../php/crear_evento.php";
-    }, 800);
+    }, 600);
 }
 
 formC.addEventListener('submit', function (e) {
