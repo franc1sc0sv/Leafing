@@ -45,7 +45,7 @@ if (!$error) { ?>
                 <div class="container-img2">
                     <div class="container-perfil">
                         <div class="userData">
-                            <img src="./images/<?php echo $event[0]['img_path'] ?>" id="imgProfile">
+                            <img src="./imgProfile/<?php echo $event[0]['img_path'] ?>" id="imgProfile">
                             <p id="profile-name"><?php echo $event[0]['user_name'] ?></p>
                         </div>
                         <?php if (isset($_SESSION['estatus'])) { ?>
