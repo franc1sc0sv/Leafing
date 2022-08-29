@@ -21,6 +21,10 @@ user.addEventListener('change', () => {
     container.classList.remove('hide');
 })
 
+boutme.addEventListener('change', () => {
+    container.classList.remove('hide');
+})
+
 //La alerta
 
 const formCC = document.getElementById('formCC')

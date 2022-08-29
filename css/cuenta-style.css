@@ -40,6 +40,7 @@ footer {
 .flex-container {
     display: flex;
     flex-direction: row;
+    border-top: 1px solid rgb(196, 188, 188);;
     /* height: 83vh; */
 }
 
@@ -179,9 +180,10 @@ footer {
 .form__grid-labels {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 6rem);
+    grid-template-rows: repeat(2, 6rem);
     align-content: center;
     gap: 40px 70px;
+    margin-bottom: 6rem;
 
 }
 
@@ -359,7 +361,7 @@ footer {
     .form__grid-labels {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 6rem);
+        grid-template-rows: repeat(3, 6rem);
         align-content: center;
         margin-bottom: 130px;
     }

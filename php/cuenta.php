@@ -85,27 +85,28 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
                         <label for="usuario" class="trans">Nombre de usuario</label>
                         <input id="usuario" class="diseñoGod change" type="text" name="usuario" value="<?php echo $data[0]['user_name']; ?>">
                     </div>
-                    <div class="short-labels nose-algo">
+                    <!-- <div class="short-labels nose-algo">
                         <label for="nose" class="trans">Apodo</label>
                         <input id="nose" class="diseñoGod" type="text" name="nose">
-                    </div>
+                    </div> -->
                     <div class="short-labels Email">
                         <label for="email" class="trans">Email</label>
                         <input disabled id="email" class="diseñoGod change" type="email" name="email" value="<?php echo $dataa[0]['mail_user'] ?>">
                     </div>
-                    <div class="short-labels Telefono">
+                    <!-- <div class="short-labels Telefono">
                         <label for="telefono" class="trans">Número de teléfono</label>
                         <input id="telefono" class="diseñoGod" type="text" name="telefono">
-                    </div>
+                    </div> -->
                     <div class="large-label sobre-mi">
                         <label for="sobre-mi" class="trans">Sobre mí</label>
-                        <textarea name="sobre-mi" class="diseñoGod" id="sobre-mi"></textarea>
+                        <textarea name="sobre-mi" class="diseñoGod" id="sobre-mi"><?php echo $data[0]['about_me']; ?></textarea>
                     </div>
-                    <div class="buttons-container hide" id="cont">
-                        <div class="guardar-button">
-                            <!-- <button class="guardar-button"><span class="trans">Guardar</span></button> -->
-                            <input type="submit" value="Guardar" class="guardar-buttonn">
-                        </div>
+
+                </div>
+                <div class="buttons-container hide" id="cont">
+                    <div class="guardar-button">
+                        <!-- <button class="guardar-button"><span class="trans">Guardar</span></button> -->
+                        <input type="submit" value="Guardar" class="guardar-buttonn">
                     </div>
                 </div>
 
