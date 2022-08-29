@@ -114,7 +114,7 @@ if (!$error) { ?>
                 for ($i = 0; $i < count($data); $i++) {  ?>
                     <div class="coment">
                         <div class="img-photo">
-                            <img src="./images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
+                            <img src="./imgProfile/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
                         </div>
 
                         <div class="body-coment">
@@ -224,5 +224,6 @@ if (!$error) { ?>
         </div>
     <?php  } ?>
 <?php } ?>
+<script src="../js/coments.js" type="module"></script>
 
 <?php include_once("footer.php"); ?>

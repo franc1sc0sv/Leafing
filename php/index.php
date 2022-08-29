@@ -49,9 +49,9 @@ include_once("header.php"); ?>
                     <article class="container-slider">
                         <div class="slider_screen primeroxd">
                             <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                                <h2>pepitOn60hz</h2>
+                                <h1>Aprende a cuidar las plantas</h1>
+                                <a href="../php/evento-especifico.php?estiben=1"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Primero">
                             </div>
@@ -59,9 +59,9 @@ include_once("header.php"); ?>
                         </div>
                         <div class="slider_screen segundoxd">
                             <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                                <h2>pepitOn60hz</h2>
+                                <h1>Limpieza del rio Lempa</h1>
+                                <a href="../php/evento-especifico.php?estiben=4"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Segundo">
                             </div>
@@ -69,9 +69,9 @@ include_once("header.php"); ?>
                         </div>
                         <div class="slider_screen terceroxd">
                             <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                                <h2>pepitOn60hz</h2>
+                                <h1>Capacitacion sobre ecologia</h1>
+                                <a href="../php/evento-especifico.php?estiben=5"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Tercero">
                             </div>
@@ -79,9 +79,9 @@ include_once("header.php"); ?>
                         </div>
                         <div class="slider_screen cuartoxd">
                             <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                                <h2>DaniTorres</h2>
+                                <h1>Campaña de reciclaje</h1>
+                                <a href="../php/evento-especifico.php?estiben=6"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Cuarto">
                             </div>
@@ -89,9 +89,9 @@ include_once("header.php"); ?>
                         </div>
                         <div class="slider_screen quintoxd">
                             <div class="text_slider t_Primero">
-                                <h2>Martha</h2>
-                                <h1>Recolección de basura</h1>
-                                <a href="../php/evento-especifico.php"><button> <span class="translate">Detalles</span></button></a>
+                                <h2>DaniTorres</h2>
+                                <h1>Consumo sostenible</h1>
+                                <a href="../php/evento-especifico.php?estiben=7"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Quinto">
                             </div>

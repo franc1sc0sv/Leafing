@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 29-08-2022 a las 00:34:18
+-- Tiempo de generación: 29-08-2022 a las 15:58:20
 -- Versión del servidor: 5.7.33
--- Versión de PHP: 8.1.7
+-- Versión de PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,12 +38,18 @@ CREATE TABLE `categories_events` (
 --
 
 INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categories_en`) VALUES
-(1, 'Laguna', 'Lagoon'),
-(2, 'Rios', 'Rivers'),
-(3, 'Espacios verdes', 'Green spaces'),
-(5, 'Lagos', 'Lakes'),
-(6, 'Otras', 'Other'),
-(7, 'Tratamiento de aguas', 'Water treatment');
+(1, 'reciclaje', 'recycling'),
+(2, 'ríos', 'rivers'),
+(3, 'lagunas', 'lagoons'),
+(4, 'zonas en cuido', 'areas under care'),
+(5, 'áreas verdes', 'green areas'),
+(6, 'ecología', 'ecology'),
+(7, 'taxonomía', 'taxonomy'),
+(8, 'capacitaciones', 'trainings'),
+(9, 'concientización', 'awareness'),
+(10, ' pensamiento crítico', ' critical thinking'),
+(11, 'otras', 'others'),
+(12, 'Animales', 'Animals');
 
 -- --------------------------------------------------------
 
@@ -64,8 +70,15 @@ CREATE TABLE `coments` (
 --
 
 INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUES
-(1, 'que hermoso se ve este evento', 5, 1, '2022-08-29 00:07:05'),
-(2, 'se ve interesante', 4, 1, '2022-08-29 00:22:36');
+(1, 'El tema esta muy interesante', 5, 1, '2022-08-29 02:30:05'),
+(2, 'Muy buena iniciativa', 5, 2, '2022-08-29 02:30:31'),
+(3, 'Es una caminata muy larga aprox. como dos horas. Me gusta!!!', 5, 3, '2022-08-29 02:31:10'),
+(4, 'El profesor aristides es un exelente docente :)', 5, 5, '2022-08-29 02:32:22'),
+(5, 'mmm interesante', 4, 7, '2022-08-29 02:53:25'),
+(6, 'Que bonito se ve el evento', 3, 2, '2022-08-29 14:30:13'),
+(7, 'El tema esta muy interesante\r\n\r\n', 3, 1, '2022-08-29 14:39:37'),
+(8, 'hola, muy bonito evento', 3, 10, '2022-08-29 15:49:08'),
+(9, 'diseño es el meta', 3, 10, '2022-08-29 15:50:38');
 
 -- --------------------------------------------------------
 
@@ -92,8 +105,16 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event`, `place_event`, `direccion_evento`, `date_event`, `end_date`, `id_categories_events`, `id_user_data`, `id_state_events`) VALUES
-(1, 'Limpieza del cerro de Guazapa', '1661695966_Guazapa.jpg', 'Sera una caminata comunitara en la que limpiaremos el camino hacia el cerro de guazapa', 3, 'San Jose Guayabal', '2022-09-07 09:00:00', '2022-09-07 16:00:00', 3, 5, 1),
-(2, 'Limpieza del rio las margaritas', '1661707314_lempa-portada.webp', 'Salvemos el rio las margaritas que ultimamente ha estado muy contaminado', 1, 'El colegio don Bosco', '2022-08-30 15:24:00', '2022-08-31 15:23:00', 2, 5, 1);
+(1, 'Aprende a cuidar las plantas', '1661737526_como_cuidar_las_plantas_de_interior_2688_orig.jpg', 'Una breve capacitacion sobre el porque es importante cuidar las plantas ya que son el ente principal del medio ambiente, profesores expertos en el area nos acompañaran siendo uno de ellos el profesor aristides el cual tiene 32 años de docencia en el area.', 10, 'El colegio don Bosco', '2022-09-06 08:00:00', '2022-09-06 12:00:00', 8, 4, 1),
+(2, 'Limpieza las calles', '1661737833_operatore_ecologico.jpg', 'Una actividad simple pero importante que nos ayudara a evitar el mal olor y contaminacion u posteriores acontecimientos en el futuro', 8, 'Texistepeque, 2da avenida norte', '2022-09-10 08:50:00', '2022-09-10 15:00:00', 4, 4, 1),
+(3, 'Limpieza en el cerro de Guazapa', '1661739673_Guazapa-min.jpg', 'Gracias a la organizacion de nuestro alcalde hemos organizado uan caminata hacia el cerro de guazapa y la cual aprovecharemos para limpiar todo su camino.', 4, 'San Jose Guayabal, Parque Central', '2022-09-03 06:00:00', '2022-09-03 16:00:00', 5, 4, 1),
+(4, 'Limpieza del rio Lempa', '1661739840_lempa-portada.webp', 'Uno de los mayores rios de nuestra nacion necesita un merecido cuidado y por eso hemos organizado una limpiza de sus zonas mas importantes.', 3, 'Nueva Concepción, Parque central', '2022-09-06 10:00:00', '2022-09-06 16:50:00', 2, 4, 1),
+(5, 'Capacitacion sobre ecologia', '1661740004_ecología-e1551739090805.jpg', 'El profesor Aristides vuelve para compartir una vez mas su conocimiento y en esta ocacion nos hablara sobre ecologia', 10, 'El colegio don Bosco', '2022-09-07 11:30:00', '2022-09-07 16:00:00', 6, 4, 1),
+(6, 'Campaña de reciclaje', '1661740918_parque-central-cojutepeque.jpg', 'Cojuteoque es un lugar muy hermoso conocido por sus chorizos pero una cosa lo mata la cual es la contaminacion ultimamente se ve mucha basura en canales, calles, zonas verdes. AYUDANOS. Incluye comida.', 4, 'Cojutepeque, Parque central', '2022-08-31 07:00:00', '2022-08-31 15:00:00', 1, 5, 1),
+(7, 'Consumo sostenible', '1661741478_58.jpg', 'El uso de modalidades de consumo y producción sostenibles aumenta la eficiencia y productividad asegura que las actividades humanas se mantengan dentro de la capacidad de sustentación del planeta y se respetan los derechos de las generaciones futuras.', 5, 'Surf city, playa el tunco', '2022-09-01 12:00:00', '2022-09-01 20:00:00', 8, 5, 1),
+(8, 'MCDONALS ES VIDA BRO', '1661741964_Mcdonalds_logo.webp', 'MCDONALS ES VIDA BRO', 10, 'McDonalds, Escalón', '2022-08-30 08:00:00', '2022-09-08 12:02:00', 11, 4, 1),
+(9, 'Salva a Añañin', '1661782853_Captura de pantalla (1).png', 'La increíble salvación de Añañin aña', 6, 'Mi casa en Apopa', '2022-08-29 08:00:00', '2022-08-30 02:00:00', 1, 3, 2),
+(10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -113,7 +134,11 @@ CREATE TABLE `inscriptions` (
 --
 
 INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES
-(2, 2, 5, '2022-08-28 17:45:05');
+(1, 3, 5, '2022-08-29 02:31:14'),
+(2, 5, 5, '2022-08-29 02:32:27'),
+(3, 7, 4, '2022-08-29 02:53:32'),
+(4, 10, 3, '2022-08-29 15:50:53'),
+(5, 1, 3, '2022-08-29 15:51:12');
 
 -- --------------------------------------------------------
 
@@ -131,13 +156,21 @@ CREATE TABLE `place_events` (
 --
 
 INSERT INTO `place_events` (`id_place`, `place`) VALUES
-(1, 'San Salvador'),
-(2, 'La libertad'),
-(3, 'Cuscatlan'),
-(4, 'San Miguel'),
-(5, 'Chalatenango'),
-(6, 'San Vicente'),
-(7, 'Soyapango');
+(1, 'Ahuachapán'),
+(2, 'Cabañas'),
+(3, 'Chalatenango'),
+(4, 'Cuscatlán'),
+(5, 'La Libertad'),
+(6, 'Morazán'),
+(7, 'La Paz'),
+(8, 'Santa Ana'),
+(9, 'San Miguel'),
+(10, 'San Salvador'),
+(11, 'San Vicente'),
+(12, 'Sonsonate'),
+(13, 'La Unión'),
+(14, 'Usulután'),
+(15, 'Apopa');
 
 -- --------------------------------------------------------
 
@@ -255,14 +288,6 @@ CREATE TABLE `reports_transactional` (
   `date_report` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `reports_transactional`
---
-
-INSERT INTO `reports_transactional` (`id_reports_transactional`, `id_event`, `id_report`, `date_report`) VALUES
-(1, 1, 5, '2022-08-28 18:40:22'),
-(2, 1, 8, '2022-08-28 20:29:26');
-
 -- --------------------------------------------------------
 
 --
@@ -323,9 +348,9 @@ CREATE TABLE `user_credentials` (
 INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES
 (1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$A4X5ZpYic0FA/QCVN1/e9uQ8CqHFc/3rESShK3aZT0dqePqQaEMxC', 'abd7c3380debc65c8569bc9910c41c99', 1),
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
-(3, 'leandroescobar360@gmail.com', '$2y$10$gDF5K3oUG/lmS.Y63vnGm.lf.QfpaayzZFxhUGWKuXd9rNSomG1je', '77a6bde4a1566dcbffb5e0f236759407', 1),
-(4, 'correo.prueba@gmail.com', '$2y$10$JsskLroB8cDHsmTZDRWl9eVyDm2Jlp6lgf89P6yKKyw3HqShrv5fK', '2342a52562b575985b4fc8fb1f5f8501', 2),
-(5, 'franelcrack16@gmail.com', '$2y$10$SI/fz9cmfn1O.m.XgCttYOTwMuezDHNLGJz95qH.t2Yi6uQk1Oaw6', 'c6f67b4d6ed8feae391f1007496728fc', 2);
+(3, 'escobaralberto381@gmail.com', '$2y$10$bg9D0PH5fsVbBc9LU6P7kuEon33ZqDqtW92iCLkBMm9svL8zu6KNS', 'b5c1364ee324ed0b224c55e3c0b96d01', 1),
+(4, 'aniapancakes6@gmail.com', '$2y$10$R4mHvbR76iCva3r6wbN5SO5sLE0opo2ubQSyHwpuAxCYECTx.wMki', '87c83b40fb4b5943faeb05236f068b67', 2),
+(5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2);
 
 -- --------------------------------------------------------
 
@@ -340,19 +365,20 @@ CREATE TABLE `user_data` (
   `borndate` date NOT NULL,
   `user_name` varchar(500) NOT NULL,
   `gender` varchar(500) NOT NULL,
-  `img_path` varchar(500) NOT NULL
+  `img_path` varchar(500) NOT NULL,
+  `about_me` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `user_data`
 --
 
-INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`) VALUES
-(1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M', 'defaultImage.png'),
-(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png'),
-(3, 'Leandro Alberto', 'Valencia Escobar', '2003-05-06', 'Leansttar', 'M', 'defaultImage.png'),
-(4, 'Juan', 'Perez', '2006-06-08', 'JuanHecker', 'M', 'defaultImage.png'),
-(5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M', 'defaultImage.png');
+INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
+(1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M', 'defaultImage.png', ''),
+(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png', ''),
+(3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
+(4, 'Esteban ', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', ''),
+(5, 'Juan Daniel', 'Jimenez Torres', '2004-04-08', 'DaniTorres', 'F', 'defaultImage.png', '');
 
 --
 -- Índices para tablas volcadas
@@ -457,31 +483,31 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT de la tabla `categories_events`
 --
 ALTER TABLE `categories_events`
-  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `coments`
 --
 ALTER TABLE `coments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
 --
 ALTER TABLE `place_events`
-  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `random_curious_data`
@@ -505,7 +531,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT de la tabla `reports_transactional`
 --
 ALTER TABLE `reports_transactional`
-  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
