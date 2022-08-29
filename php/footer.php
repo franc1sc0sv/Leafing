@@ -53,6 +53,7 @@
 <script src="../js/preloader.js"></script>
 <script src="../js/notification.js"></script>
 <script src="../js/form_img.js"></script>
+<script src="../js/coments.js" type="module"></script>
 
 </body>
 

@@ -17,8 +17,10 @@ p {
 .container {
     height: 100vh;
     width: 100vw;
-    background: url(../img/imagenes/bganother.svg);
+    background: url(../img/svg/fondo6.svg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -84,6 +84,52 @@ if (!$error) { ?>
             </div>
         </div>
     </div>
+
+    <?php if (isset($_SESSION['estatus'])) { ?>
+        <div class="box-container-coments">
+            <div class="headerComents">
+                <h2 class="titleComents translate">Deja un comentario</h2>
+            </div>
+            <div class="content-coments">
+                <form action="evento-especifico.php" method="post" class="formComents" id="formComents">
+                    <textarea name="coment" id="" cols="90" rows="4" class="textarea"></textarea>
+                    <button type="submit" class="send translate">Publicar mi comentario</button>
+                </form>
+            </div>
+        </div>
+    <?php } ?>
+
+    <?php if (isset($_SESSION['estatus'])) { ?>
+        <div class="box-all-coments">
+            <h1 class="translate">Comentarios</h1>
+            <?php
+            $objdata = new conection();
+            $data = $objdata->consultar("SELECT coment, user_data.user_name, user_data.img_path FROM `coments`
+        INNER JOIN user_data ON coments.id_publisher = user_data.id_user_data
+        WHERE id_event = $idevent;
+        ");
+            if (empty($data)) {
+                echo "<h3>No hay comentarios para este evento</h3>";
+            } else {
+                for ($i = 0; $i < count($data); $i++) {  ?>
+                    <div class="coment">
+                        <div class="img-photo">
+                            <img src="./images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
+                        </div>
+
+                        <div class="body-coment">
+                            <h4><?php echo $data[$i]['user_name'] ?></h4>
+                            <p><?php echo $data[$i]['coment'] ?></p>
+                        </div>
+                    </div>
+            <?php }
+            } ?>
+        </div>
+    <?php } ?>
+    <div class="alertcoments" id="alertcoments">
+
+
+    </div>
     <?php if (isset($_SESSION['estatus'])) { ?>
 
         <div class="container-modal" id="containerModal">

@@ -523,3 +523,7 @@ ul.pagination {
     color: #000000;
     font-family: 'Montserrat';
 }
+
+.menu_desplegable {
+    background: white;
+}
