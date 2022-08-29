@@ -197,4 +197,3 @@ function nice(msg) {
             </div>
 </div> `
 }
-

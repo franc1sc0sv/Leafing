@@ -40,7 +40,7 @@ if ($_GET['estatus'] == "stage1") {
             $sql1 = "INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES (NULL, '$Dataemail', '$passwordHashed','$token', '2')";
             $lastID = $objconexion->ejecutar($sql1);
             //Tabla de la data del usuarios
-            $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`) VALUES ($lastID, '$name', '$lastname', '$borndate', '$user_name', '$gender', 'defaultImage.png');";
+            $sql = "INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES ($lastID, '$name', '$lastname', '$borndate', '$user_name', '$gender', 'defaultImage.png', '');";
             $objconexion->ejecutar($sql);
             echo json_encode('niceYourAreLogin');
             unset($_SESSION['codeValidation']);
