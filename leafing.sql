@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-08-2022 a las 17:53:35
+-- Tiempo de generación: 29-08-2022 a las 00:34:18
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 8.1.7
 
@@ -44,6 +44,28 @@ INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categori
 (5, 'Lagos', 'Lakes'),
 (6, 'Otras', 'Other'),
 (7, 'Tratamiento de aguas', 'Water treatment');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `coments`
+--
+
+CREATE TABLE `coments` (
+  `id` int(11) NOT NULL,
+  `coment` varchar(200) NOT NULL,
+  `id_publisher` int(11) NOT NULL,
+  `id_event` int(11) NOT NULL,
+  `date` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `coments`
+--
+
+INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUES
+(1, 'que hermoso se ve este evento', 5, 1, '2022-08-29 00:07:05'),
+(2, 'se ve interesante', 4, 1, '2022-08-29 00:22:36');
 
 -- --------------------------------------------------------
 
@@ -91,7 +113,6 @@ CREATE TABLE `inscriptions` (
 --
 
 INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES
-(1, 1, 5, '2022-08-28 17:27:15'),
 (2, 2, 5, '2022-08-28 17:45:05');
 
 -- --------------------------------------------------------
@@ -234,6 +255,14 @@ CREATE TABLE `reports_transactional` (
   `date_report` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `reports_transactional`
+--
+
+INSERT INTO `reports_transactional` (`id_reports_transactional`, `id_event`, `id_report`, `date_report`) VALUES
+(1, 1, 5, '2022-08-28 18:40:22'),
+(2, 1, 8, '2022-08-28 20:29:26');
+
 -- --------------------------------------------------------
 
 --
@@ -296,8 +325,7 @@ INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `ro
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
 (3, 'leandroescobar360@gmail.com', '$2y$10$gDF5K3oUG/lmS.Y63vnGm.lf.QfpaayzZFxhUGWKuXd9rNSomG1je', '77a6bde4a1566dcbffb5e0f236759407', 1),
 (4, 'correo.prueba@gmail.com', '$2y$10$JsskLroB8cDHsmTZDRWl9eVyDm2Jlp6lgf89P6yKKyw3HqShrv5fK', '2342a52562b575985b4fc8fb1f5f8501', 2),
-(5, 'franelcrack16@gmail.com', '$2y$10$ab0duxiYFeVGFKHty5GqCOA2zRpRYqlwO/EHlmKq/ADL6/Bh1uNYG', 'e9d397b44535120eda781dcc56b924b2', 2),
-(6, 'axgagsgasgsg@gmail.com', '$2y$10$OsGi4G7E1PGFcHh3Bn0pMun7ApEn9KI5bmOK4kwiaoa3si3x6RHsu', '8477b5a982eb7d7c52045cf7a78cd364', 2);
+(5, 'franelcrack16@gmail.com', '$2y$10$SI/fz9cmfn1O.m.XgCttYOTwMuezDHNLGJz95qH.t2Yi6uQk1Oaw6', 'c6f67b4d6ed8feae391f1007496728fc', 2);
 
 -- --------------------------------------------------------
 
@@ -323,9 +351,8 @@ INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_n
 (1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M', 'defaultImage.png'),
 (2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png'),
 (3, 'Leandro Alberto', 'Valencia Escobar', '2003-05-06', 'Leansttar', 'M', 'defaultImage.png'),
-(4, 'Juan', 'Perez', '2006-06-08', 'JuanCaballo', 'M', 'defaultImage.png'),
-(5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M', 'defaultImage.png'),
-(6, 'Shouko', 'Komi', '2006-02-06', 'Komisan', 'F', 'defaultImage.png');
+(4, 'Juan', 'Perez', '2006-06-08', 'JuanHecker', 'M', 'defaultImage.png'),
+(5, 'Adrian', 'Saz', '2006-02-06', 'AdrianXSaz', 'M', 'defaultImage.png');
 
 --
 -- Índices para tablas volcadas
@@ -336,6 +363,14 @@ INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_n
 --
 ALTER TABLE `categories_events`
   ADD PRIMARY KEY (`id_categories_events`);
+
+--
+-- Indices de la tabla `coments`
+--
+ALTER TABLE `coments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_event` (`id_event`),
+  ADD KEY `id_publisher` (`id_publisher`);
 
 --
 -- Indices de la tabla `events`
@@ -425,6 +460,12 @@ ALTER TABLE `categories_events`
   MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT de la tabla `coments`
+--
+ALTER TABLE `coments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
@@ -464,7 +505,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT de la tabla `reports_transactional`
 --
 ALTER TABLE `reports_transactional`
-  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -482,17 +523,24 @@ ALTER TABLE `state_events`
 -- AUTO_INCREMENT de la tabla `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `coments`
+--
+ALTER TABLE `coments`
+  ADD CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`id_publisher`) REFERENCES `user_data` (`id_user_data`),
+  ADD CONSTRAINT `coments_ibfk_2` FOREIGN KEY (`id_event`) REFERENCES `events` (`id_events`);
 
 --
 -- Filtros para la tabla `events`
