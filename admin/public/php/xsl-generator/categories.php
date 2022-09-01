@@ -1,5 +1,5 @@
 <?php
-include_once("../conexion.php");
+include_once("../templates/conexion.php");
 $objconexion = new conection();
 $categories = $objconexion->consultar('SELECT * FROM `categories_events`');
 header("Content-Type: application/vnd.ms-excel; charset=utf-8");

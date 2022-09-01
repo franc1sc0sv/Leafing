@@ -24,7 +24,7 @@ include_once('./templates/header.php');
                     </p>
                 </div>
             </div>
-        </article>
+        </article>  
 
 
         <article id="about_us">

@@ -2,6 +2,10 @@
 // date_default_timezone_set('America/El_Salvador');
 // $time = time();
 // echo date('y-m-d-G-i-s', $time)
+$objconexionuser = new conection();
+$id    = $_SESSION['dataID'];
+$img_user = $objconexionuser->consultar("SELECT img_path FROM `user_data` WHERE id_user_data = $id");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +41,7 @@
         <ul class="navbar-nav nav-right">
             <li class="nav-item avt-wrapper">
                 <div class="avt dropdown">
-                    <img src="../assets/icons/person.svg" alt="User image">
+                    <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $img_user[0]['img_path'] ?>" alt="User image">
                     <ul id="user-menu" class="dropdown-menu">
                         <li class="dropdown-menu-item">
                             <a class="dropdown-menu-link">
@@ -71,7 +75,7 @@
                                 <span>Projects</span>
                             </a>
                         </li>
-                        
+
                         <li class="dropdown-menu-item">
                             <a href="#" class="dropdown-menu-link">
                                 <div>
@@ -130,6 +134,16 @@
                     <span>Reportes</span>
                 </a>
             </li>
+
+            <li class="sidebar-nav-item userview">
+                <a href="/LEAFING/Crea-J-2022/client/public/php/index.php" target="_blank" class="sidebar-nav-link reportsNav">
+                    <div>
+                        <img src="../assets/icons/user.svg" alt="email">
+                    </div>
+                    <span>Usuario</span>
+                </a>
+            </li>
+
             <li class="sidebar-nav-item logout">
                 <a href="./close.php" class="sidebar-nav-link">
                     <div>

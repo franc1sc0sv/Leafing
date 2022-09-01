@@ -6,7 +6,7 @@ function getData(data) {
 
 function arrayActualizado() {
     sql = "SELECT events.name_event, state_events.state FROM `events` INNER JOIN state_events ON events.id_state_events = state_events.id_state_events ORDER BY id_events; "
-    fetch(`../php/API/consultas.php?sql=${sql}`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
             getData(data);
@@ -21,7 +21,7 @@ function arhiveEvents(data) {
     console.log(arrayDataEvents)
     if (arrayDataEvents[data - 1][1] == "Activo") {
         sql = "UPDATE `events` SET `id_state_events` = 2 WHERE `events`.`id_events` = " + data;
-        fetch(`../php/API/ejecutar.php?sql=${sql}`)
+        fetch(`/LEAFING/Crea-J-2022/admin/api/ejecutar.php?sql=${sql}`)
             .then(res => res.json())
             .then(data => {
                 if (data == "nice") {
@@ -44,7 +44,7 @@ function unArhiveEvents(data) {
     console.log(arrayDataEvents)
     if (arrayDataEvents[data - 1][1] == "Archivado") {
         sql = "UPDATE `events` SET `id_state_events` = 1 WHERE `events`.`id_events` = " + data;
-        fetch(`../php/API/ejecutar.php?sql=${sql}`)
+        fetch(`/LEAFING/Crea-J-2022/admin/api/ejecutar.php?sql=${sql}`)
             .then(res => res.json())
             .then(data => {
                 if (data == "nice") {

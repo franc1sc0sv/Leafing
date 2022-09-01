@@ -1,5 +1,5 @@
 <?php
-include_once("../conexion.php");
+include_once('../public/php/templates/conexion.php');
 
 $place = $_GET['place'];
 

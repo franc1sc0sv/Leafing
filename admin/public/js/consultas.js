@@ -1,15 +1,16 @@
 let pathname = window.location.pathname;
 
 function consultas(sql, id) {
-    fetch(`../php/API/consultas.php?sql=${sql}`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
-
+            console.log(id)
+            console.log(sql)
             if (id == 1) {
                 dashboradData(data)
             } else if (id == 2) {
                 catagories(data);
-            } else {
+            } else if (id == 3) {
                 places(data);
             }
 

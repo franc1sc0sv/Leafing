@@ -8,7 +8,8 @@ let idCategory;
 function getID(id) {
     idCategory = id
 }
-if (pathname == "/LEAFING/Crea-J-2022/admin/php/categories.php") {
+
+if (pathname == "/LEAFING/Crea-J-2022/admin/public/php/categories.php") {
     consultas("SELECT * FROM `categories_events`", 2);
 }
 
@@ -16,7 +17,7 @@ keep.addEventListener('click', function () {
     let inputCategoryES = document.getElementById('inputCategoryES');
     let inputCategoryEN = document.getElementById('inputCategoryEN');
 
-    fetch(`../php/API/categories.php?inputCategoryES=${inputCategoryES.value}&inputCategoryEN=${inputCategoryEN.value}&stage=1`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/categories.php?inputCategoryES=${inputCategoryES.value}&inputCategoryEN=${inputCategoryEN.value}&stage=1`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -36,11 +37,10 @@ keep.addEventListener('click', function () {
 
 })
 
-
 function deleteCategories(id) {
     sql = "DELETE FROM `categories_events` WHERE `categories_events`.`id_categories_events` = " + id;
     //console.log(sql)
-    fetch(`../php/API/ejecutar.php?sql=${sql}`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/ejecutar.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
             //console.log(data)
@@ -57,7 +57,7 @@ function deleteCategories(id) {
 function showModalUpdate(id) {
     containerModalEdit.style.display = "flex";
     sql = "SELECT * FROM `categories_events` WHERE id_categories_events = " + id;
-    fetch(`../php/API/consultas.php?sql=${sql}`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
             getID(id)
@@ -76,7 +76,7 @@ keppCategorieEdit.addEventListener('click', function () {
     let inputCategoryEsEdit = document.getElementById('inputCategoryEsEdit');
     let inputCategoryEnEdit = document.getElementById('inputCategoryEnEdit');
 
-    fetch(`../php/API/categoriesEdit.php?inputCategoryES=${inputCategoryEsEdit.value}&inputCategoryEN=${inputCategoryEnEdit.value}&id=${idCategory}`)
+    fetch(`/LEAFING/Crea-J-2022/admin/api/categoriesEdit.php?inputCategoryES=${inputCategoryEsEdit.value}&inputCategoryEN=${inputCategoryEnEdit.value}&id=${idCategory}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)

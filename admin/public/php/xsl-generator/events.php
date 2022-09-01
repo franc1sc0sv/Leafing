@@ -1,5 +1,5 @@
 <?php
-include_once("../conexion.php");
+include_once("../templates/conexion.php");
 $objconexion = new conection();
 $eventsData = $objconexion->consultar('SELECT events.id_events, events.name_event,events.description_event, events.direccion_evento,events.date_event, events.end_date, user_data.user_name, categories_events.categories, place_events.place, state_events.state FROM `events` 
 INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events

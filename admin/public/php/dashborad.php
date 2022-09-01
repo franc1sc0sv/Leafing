@@ -1,12 +1,7 @@
-<?php session_start() ?>
-<?php include_once('./verification.php') ?>
-<?php
-include_once('conexion.php');
-include_once('header.php')
-?>
-
-<?php
-
+<?php session_start();
+include_once('./verification.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
 $objconexion = new conection();
 $eventos = $objconexion->consultar("SELECT events.id_events, events.name_event, user_data.user_name, categories_events.categories, place_events.place, state_events.state FROM `events` 
 INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
@@ -46,7 +41,7 @@ INNER JOIN place_events ON events.place_event = place_events.id_place;
 							</tr>
 						</thead>
 						<tbody id="DataEvents">
-							
+
 						</tbody>
 					</table>
 				</div>
@@ -151,4 +146,4 @@ INNER JOIN place_events ON events.place_event = place_events.id_place;
 
 
 <!-- end main content -->
-<?php include_once('footer.php') ?>
+<?php include_once('./templates/footer.php') ?>

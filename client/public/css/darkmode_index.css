@@ -64,9 +64,9 @@ body.darkmode,
     color: #4F9466 !important;
 }
 
-body.darkmode .img-perfil {
+/* body.darkmode .img-perfil {
     filter: invert(1);
-}
+} */
 
 /* body.darkmode, .titulos-generales, .titulos_generales img.menu_arrow-eventos {
     filter: brightness(100);

@@ -364,6 +364,7 @@ h2 {
 	align-items: center;
 	color: var(--main-color);
 	text-decoration: none;
+	width: 100%;
 }
 
 /*Esto modifica el css de los icones del sidebar*/
@@ -763,9 +764,9 @@ table th {
 }
 
 .logout {
-	flex-basis: 100%;
+	/* flex-basis: 100%;
 	display: flex;
-	align-items: flex-end;
+	align-items: flex-end; */
 	margin-bottom: 6rem;
 }
 
@@ -783,4 +784,10 @@ table th {
 
 .resumen:hover {
 	color: #4F9466;
+}
+
+.userview{
+	flex-basis: 100%;
+    display: flex;
+    align-items: flex-end;
 }

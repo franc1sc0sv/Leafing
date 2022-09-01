@@ -1,5 +1,5 @@
 <?php
-include_once("../conexion.php");
+include_once("../templates/conexion.php");
 $objconexion = new conection();
 $credentialsdata = $objconexion->consultar("SELECT id,mail_user,token FROM `user_credentials`;");
 $userData = $objconexion->consultar("SELECT name,lastname,user_name,borndate,gender FROM `user_data`;");

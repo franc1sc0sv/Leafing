@@ -1,6 +1,5 @@
 <?php
-include_once("../conexion.php");
-
+include_once('../public/php/templates/conexion.php');
 
 $inputCategoryES = $_GET['inputCategoryES'];
 $inputCategoryEN = $_GET['inputCategoryEN'];
@@ -16,3 +15,4 @@ if (!empty($inputCategoryES) && !empty($inputCategoryEN)) {
 } else {
     echo json_encode("empty");
 }
+?>

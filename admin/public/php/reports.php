@@ -1,7 +1,8 @@
-<?php session_start() ?>
-<?php include_once('./verification.php') ?>
-
-<?php include_once('header.php') ?>
+<?php session_start();
+include_once('./verification.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
+?>
 <div class="wrapper">
 
 	<div class="row">
@@ -56,4 +57,4 @@
 	}
 </style>
 <!-- end main content -->
-<?php include_once('footer.php') ?>
+<?php include_once('./templates/footer.php') ?>

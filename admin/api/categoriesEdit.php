@@ -1,5 +1,5 @@
 <?php
-include_once("../conexion.php");
+include_once('../public/php/templates/conexion.php');
 $inputCategoryES = $_GET['inputCategoryES'];
 $inputCategoryEN = $_GET['inputCategoryEN'];
 $id = $_GET['id'];

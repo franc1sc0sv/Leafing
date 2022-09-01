@@ -46,7 +46,7 @@ formCredentials.addEventListener('submit', function (e) {
                 alertLogin.innerHTML = msg;
                 showNotification()
                 setTimeout(function () {
-                    window.location.href = "../../../../admin/public/php/admin.php";
+                    window.location.href = "../../../admin/public/php/admin.php";
                 }, 800);
 
             } else {

@@ -80,7 +80,7 @@ if (!isset($_SESSION['lang'])) {
 
         <?php if ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/client/public/php/index.php") { ?>
                 <!--Aqui inicia el modo oscuro-->
-                <link rel="stylesheet" href="../css/darkmode.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/darkmode.css">
         <?php } ?>
         <!--Favicon-->
         <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">

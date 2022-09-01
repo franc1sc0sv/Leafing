@@ -1,16 +1,14 @@
-<?php session_start() ?>
-<?php include_once('./verification.php') ?>
-<?php include_once('conexion.php');
+<?php session_start();
+include_once('./verification.php');
+include_once('./templates/conexion.php');
 $id	= $_SESSION['dataID'];
 $objconexion = new conection();
-$dataUser = $objconexion->consultar("SELECT name,lastname FROM `user_data` WHERE id_user_data = $id");
+$dataUser = $objconexion->consultar("SELECT name,lastname,img_path FROM `user_data` WHERE id_user_data = $id");
 $dataUserCount = $objconexion->consultar("SELECT count(*) FROM `user_data`");
 $dataEventCount = $objconexion->consultar("SELECT count(*) FROM `events`");
 $dataReportsCount = $objconexion->consultar("SELECT count(*) FROM `reports_transactional`");
 $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscriptions`");
-?>
-
-<?php include_once('header.php') ?>
+include_once('./templates/header.php') ?>
 
 <!-- main content -->
 <div class="wrapper">
@@ -36,7 +34,7 @@ $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscripti
 				<p>
 					<i class="fas fa-tasks"></i>
 				</p>
-				<h3><?php echo $dataEventCount[0][0]?></h3>
+				<h3><?php echo $dataEventCount[0][0] ?></h3>
 				<p>Eventos</p>
 			</div>
 		</div>
@@ -45,7 +43,7 @@ $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscripti
 				<p>
 					<i class="fas fa-spinner"></i>
 				</p>
-				<h3><?php echo $dataUserCount[0][0]?></h3>
+				<h3><?php echo $dataUserCount[0][0] ?></h3>
 				<p>Usuarios</p>
 			</div>
 		</div>
@@ -54,7 +52,7 @@ $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscripti
 				<p>
 					<i class="fas fa-check-circle"></i>
 				</p>
-				<h3><?php echo $dataInscriptionCount[0][0]?></h3>
+				<h3><?php echo $dataInscriptionCount[0][0] ?></h3>
 				<p>Inscripciones</p>
 			</div>
 		</div>
@@ -63,7 +61,7 @@ $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscripti
 				<p>
 					<i class="fas fa-bug"></i>
 				</p>
-				<h3><?php echo $dataReportsCount[0][0]?></h3>
+				<h3><?php echo $dataReportsCount[0][0] ?></h3>
 				<p>Reportes</p>
 			</div>
 		</div>
@@ -88,4 +86,4 @@ $dataInscriptionCount = $objconexion->consultar("SELECT count(*) FROM `inscripti
 	}
 </style>
 <!-- end main content -->
-<?php include_once('footer.php') ?>
+<?php include_once('./templates/footer.php') ?>
