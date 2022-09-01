@@ -1,7 +1,8 @@
 <?php
-include_once('./include.php');
-include_once('./conexion.php');
-include_once('./header.php');
+include_once('../templates/include.php');
+include_once('../templates/conexion.php');
+include_once('../templates/header.php');
+
 $objconexion = new conection();
 $idUser = $_SESSION['dataID'];
 $data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idUser");
@@ -14,7 +15,7 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
     <div id="onlyMenu" class="user-menu-container mostrar">
         <div class="menu-img">
             <div class="behind-menu-img">
-                <img src="./imgProfile/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
+                <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $data[0]['img_path'] ?>" class="img-profile" alt="Foto de perfil">
                 <img src="../img/iconos/plus-profile.svg" alt="" class="img-plus">
             </div>
         </div>
@@ -27,32 +28,32 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
             <div class="menu-opciones">
                 <a href="#">
                     <div id="showConfig" class="opciones-item home">
-                        <img src="../img/iconos/Home.svg" class="opciones-icon">
+                        <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Home.svg" class="opciones-icon">
                         <p class="nombre-opcion trans">Cuenta</p>
                     </div>
                 </a>
                 <a href="./contraseña.php">
                     <div class="opciones-item password">
-                        <img src="../img/iconos/Password.svg" class="opciones-icon">
+                        <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Password.svg" class="opciones-icon">
                         <p class="nombre-opcion trans">Contraseña</p>
                     </div>
                 </a>
                 <a href="./mis_eventos.php">
                     <div class="opciones-item mis-eventos">
-                        <img src="../img/iconos/Mis-eventos.svg" class="opciones-icon">
+                        <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Mis-eventos.svg" class="opciones-icon">
                         <p class="nombre-opcion trans">Mis eventos</p>
                     </div>
                 </a>
                 <a href="./eventos_inscritos.php">
                     <div class="opciones-item eventos-inscritos">
-                        <img src="../img/iconos/Eventos-inscritos.svg" class="opciones-icon">
+                        <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Eventos-inscritos.svg" class="opciones-icon">
                         <p class="nombre-opcion trans">Eventos inscritos</p>
                     </div>
                 </a>
                 <div class="cerrar-sesion1">
                     <a href="./close.php">
                         <div class="opciones-item cerrar-sesion">
-                            <img src="../img/iconos/Cerrar-sesion.svg" class="opciones-icon">
+                            <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Cerrar-sesion.svg" class="opciones-icon">
                             <p class="nombre-opcion trans">Cerrar sesión</p>
 
                         </div>
@@ -115,6 +116,7 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
         </div>
     </div>
 </div>
+
 <div id="modal_container" class="modal-container">
     <div class="modal" id="modal">
         <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
@@ -134,7 +136,7 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
         </div>
     </div>
 </div>
-<script src="../js/app_profile.js"></script>
-<script src="../js/account.js"></script>
+<script src="../../js/account/app_profile.js"></script>
+<script src="../../js/account/account.js"></script>
 
-<?php include_once('./footer.php'); ?>
+<?php include_once('../templates/footer.php'); ?>

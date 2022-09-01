@@ -34,7 +34,7 @@ const modal_container = document.getElementById('modal_container');
 function closeModal() {
     modal_container.classList.remove('show');
     setTimeout(function () {
-        window.location.href = "../php/cuenta.php";
+        location.reload()
     }, 600);
 }
 
@@ -42,7 +42,7 @@ formCC.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formCC);
 
-    fetch('accountUp.php', {
+    fetch('/LEAFING/Crea-J-2022/client/api/account/accountUp.php', {
         method: 'post',
         body: data
     })
@@ -54,7 +54,7 @@ formCC.addEventListener('submit', function (e) {
                 modal_container.classList.add('show');
                 let contenidoModalInscripcionES = `
                 <h1>Tus datos han sido actualizados</h1>
-                <div class=""container_imgCreated><img src="../img/iconos/comprobado.png" class="imgCreated"></div>
+                <div class=""container_imgCreated><img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/comprobado.png" class="imgCreated"></div>
                 <button id="close" class="buttonxd">Cerrar</button>
                 `
                 contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;

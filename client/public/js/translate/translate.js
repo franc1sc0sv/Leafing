@@ -46,14 +46,14 @@ window.addEventListener("load", () => {
                 inscriptionButton()
                 buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera_de_Españapng.png)")
                 let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
-                filters(arrayOrder)
+                //filters(arrayOrder)
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
                 inscriptionButton()
                 buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera-del-Reino-Unid.png)")
                 let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
-                filters(arrayOrder)
+                //filters(arrayOrder)
             }
         })
 

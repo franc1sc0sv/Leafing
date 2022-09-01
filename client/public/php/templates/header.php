@@ -19,9 +19,9 @@ if (!isset($_SESSION['lang'])) {
         <meta http-equiv="Last-Modified" content="0">
         <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
         <meta http-equiv="Pragma" content="no-cache">
-        <link rel="stylesheet" href="../css/style_header.css">
-        <link rel="stylesheet" href="../css/style_footer.css">
-        <link rel="stylesheet" href="../css/notification.css">
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/style_header.css">
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/style_footer.css">
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/notification.css">
         <!-- Estilos de index-->
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/index.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/") { ?>
                 <link rel="stylesheet" href="../css/style_index.css">
@@ -55,28 +55,28 @@ if (!isset($_SESSION['lang'])) {
 
 
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/cuenta.php") { ?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
-                <link rel="stylesheet" href="../css/cuenta-style.css">
-                <link rel="stylesheet" href="../css/crear_evento.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
         <?php } ?>
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/contraseña.php") { ?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/contraseña.php") { ?>
                 <!--Estilos para perfil - contraseñas -->
-                <link rel="stylesheet" href="../css/contraseña.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/contraseña.css">
         <?php } ?>
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/mis_eventos.php") { ?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/mis_eventos.php") { ?>
                 <!--Estilos para perfil - mis eventos -->
-                <link rel="stylesheet" href="../css/mis_eventos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
         <?php } ?>
 
-        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/eventos_inscritos.php") { ?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/eventos_inscritos.php") { ?>
                 <!--Estilos para perfil - eventos inscritos -->
-                <link rel="stylesheet" href="../css/eventos_inscritos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/eventos_inscritos.css">
         <?php } ?>
 
-        <link rel="stylesheet" href="../css/modal.css">
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/modal.css">
 
         <?php if ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/client/public/php/index.php") { ?>
                 <!--Aqui inicia el modo oscuro-->
@@ -101,15 +101,15 @@ if (!isset($_SESSION['lang'])) {
 
                         <div id="links-header">
                                 <ul class="menu-header">
-                                        <li class="li-menu item-menu-desplegable"><a href="../php/index.php" class="a-header"><span class="translateHeader">Inicio</span></a>
+                                        <li class="li-menu item-menu-desplegable"><a href="/LEAFING/Crea-J-2022/client/public/php/index.php" class="a-header"><span class="translateHeader">Inicio</span></a>
                                         </li>
-                                        <li class="li-menu item-menu-desplegable"><a href="../php/about_us.php" class="a-header"><span class="translateHeader">Nosotros</span></a></li>
+                                        <li class="li-menu item-menu-desplegable"><a href="/LEAFING/Crea-J-2022/client/public/php/about_us.php" class="a-header"><span class="translateHeader">Nosotros</span></a></li>
                                         <li class="li-menu item-menu-desplegable">
-                                                <p class="a-header"><span class="translateHeader">Ayuda al planeta</span> <img src="../assets/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <p class="a-header"><span class="translateHeader">Ayuda al planeta</span> <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
-                                                        <li class="li_menu-despleagble"><a href="../php/comunity.php" class="a-header a-header-desplegable translateHeader">Eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/crear_evento.php" class="a-header a-header-desplegable translateHeader">Crea tus eventos</a></li>
-                                                        <li class="li_menu-despleagble"><a href="../php/concientizate.php" class="a-header a-header-desplegable translateHeader">Concientízate</a></li>
+                                                        <li class="li_menu-despleagble"><a href="/LEAFING/Crea-J-2022/client/public/php/comunity.php" class="a-header a-header-desplegable translateHeader">Eventos</a></li>
+                                                        <li class="li_menu-despleagble"><a href="/LEAFING/Crea-J-2022/client/public/php/crear_evento.php" class="a-header a-header-desplegable translateHeader">Crea tus eventos</a></li>
+                                                        <li class="li_menu-despleagble"><a href="/LEAFING/Crea-J-2022/client/public/php/concientizate.php" class="a-header a-header-desplegable translateHeader">Concientízate</a></li>
                                                 </ul>
                                         </li>
                                 </ul>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['lang'])) {
                                         <!-- <a href="./close.php"><button>CLOSE SESSION</button></a> -->
                                         <ul class="menu-header-perfil">
                                                 <p><?php echo $datauser[0]['name']; ?></p>
-                                                <li class="li-menu_perfil"><img src="../assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
+                                                <li class="li-menu_perfil"><img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
                                                         <ul class="menu_desplegable-peril">
                                                                 <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./account/cuenta.php"><span class="translateHeader"> Mi perfil</span></a></li>
                                                                 <li class="li-menu_perfil-desplegable"><a class="a-header" href="./templates/close.php"><span class="translateHeader">Cerrar sesión</span></a></li>

@@ -1,4 +1,5 @@
 <?php
+include_once('../public/php/templates/include.php');
 include_once('../public/php/templates/conexion.php');
 
 

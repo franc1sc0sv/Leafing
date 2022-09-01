@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "../js/component/alerts.js";
 
 const formComents = document.getElementById('formComents');
 let alertcoments = document.getElementById('alertcoments');
@@ -7,7 +7,7 @@ formComents.addEventListener('submit', function (e) {
     e.preventDefault();
     let data = new FormData(formComents);
     let URLsearch = window.location.search;
-    fetch(`coments.php${URLsearch}`, {
+    fetch(`/LEAFING/Crea-J-2022/client/api/coments.php${URLsearch}`, {
         method: 'post',
         body: data
     })

@@ -6,10 +6,11 @@ const alertt = document.getElementById('alertAña');
 let html = document.querySelector("html");
 var aña;
 
+
 function inscriptionButton() {
     let pathname = window.location.pathname;
-    if (pathname == "/LEAFING/Crea-J-2022/php/evento-especifico.php") {
-        fetch('APISessions.php?peticion=1')
+    if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+        fetch('/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1')
             .then(res => res.json())
             .then(data => {
                 // data['dataID'];//User_ID
@@ -24,7 +25,7 @@ function inscriptionButton() {
                     }
                 } else {
                     let estiben = window.location.search;
-                    fetch(`APISessions.php${estiben}&peticion=2`)
+                    fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php${estiben}&peticion=2`)
                         .then(res => res.json())
                         .then(data => {
                             //console.log(data)
@@ -63,7 +64,7 @@ function closeModal() {
 function inscribirse(id) {
     //    console.log(id.id);
     modal_container.classList.add('show');
-    fetch('APISessions.php?peticion=1')
+    fetch('/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1')
         .then(res => res.json())
         .then(data => {
             if (data == 'ERROR') {
@@ -89,7 +90,7 @@ function inscribirse(id) {
 
 function CancelarInscripcion(id) {
     modal_container.classList.add('show');
-    fetch('APISessions.php?peticion=1')
+    fetch('/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1')
         .then(res => res.json())
         .then(data => {
             if (data != 'ERROR') {
@@ -108,7 +109,7 @@ function CancelarInscripcion(id) {
 function inscripcion() {
     let estiben = window.location.search;
     id = estiben.split('=')
-    fetch("./ejecutar.php?sql=INSERT INTO`inscriptions`(`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES(NULL, '" + id[1] + "', '" + aña + "', NOW()); ")
+    fetch("/LEAFING/Crea-J-2022/client/api/ejecutar.php?sql=INSERT INTO`inscriptions`(`id_inscriptions`, `id_event`, `id_persona_inscrita`, `date_inscriptions`) VALUES(NULL, '" + id[1] + "', '" + aña + "', NOW()); ")
     let msg;
     if (html.lang == "es") {
         msg = nice("Proceso completado")
@@ -125,7 +126,7 @@ function inscripcion() {
 function cancelarInscripcion() {
     let estiben = window.location.search;
     id = estiben.split('=');
-    fetch("./ejecutar.php?sql=DELETE FROM inscriptions WHERE id_event = '" + id[1] + "' AND id_persona_inscrita ='" + aña + "';")
+    fetch("/LEAFING/Crea-J-2022/client/api/ejecutar.php?sql=DELETE FROM inscriptions WHERE id_event = '" + id[1] + "' AND id_persona_inscrita ='" + aña + "';")
     let msg;
     if (html.lang == "es") {
         msg = nice("Proceso completado")
