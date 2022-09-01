@@ -108,22 +108,19 @@ if (!$error) { ?>
         INNER JOIN user_data ON coments.id_publisher = user_data.id_user_data
         WHERE id_event = $idevent;
         ");
-            if (empty($data)) {
-                echo "<h3>No hay comentarios para este evento</h3>";
-            } else {
-                for ($i = 0; $i < count($data); $i++) {  ?>
-                    <div class="coment">
-                        <div class="img-photo">
-                            <img src="../assets/user_images/profile_images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
-                        </div>
 
-                        <div class="body-coment">
-                            <h4><?php echo $data[$i]['user_name'] ?></h4>
-                            <p><?php echo $data[$i]['coment'] ?></p>
-                        </div>
+            for ($i = 0; $i < count($data); $i++) {  ?>
+                <div class="coment">
+                    <div class="img-photo">
+                        <img src="../assets/user_images/profile_images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
                     </div>
-            <?php }
-            } ?>
+
+                    <div class="body-coment">
+                        <h4><?php echo $data[$i]['user_name'] ?></h4>
+                        <p><?php echo $data[$i]['coment'] ?></p>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     <?php } ?>
     <div class="alertcoments" id="alertcoments">
@@ -135,9 +132,9 @@ if (!$error) { ?>
         <div class="container-modal" id="containerModal">
             <div class="content-modal" id="contentModal">
                 <div class="headerModal" id="headerModal">
-                    <img src="../img/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
+                    <img src="../assets/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
                     <h1 class="translate">Reportar</h1>
-                    <img src="../img/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
+                    <img src="../assets/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
                 </div>
                 <div class="contentModel" id="contentModel">
                     <div class="contentModelReportes">
@@ -146,42 +143,42 @@ if (!$error) { ?>
                         <div class="reportesModel">
                             <div class="reportes" id="desnudos" onclick=identifyReport(this)>
                                 <h3 class="translate">Desnudos</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="violencia" onclick=identifyReport(this)>
                                 <h3 class="translate">Violencia</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="acoso" onclick=identifyReport(this)>
                                 <h3 class="translate">Acoso</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="suicidio" onclick=identifyReport(this)>
                                 <h3 class="translate">Suicidio</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="informacion_falsa" onclick=identifyReport(this)>
                                 <h3 class="translate">Informacion falsa</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="spam" onclick=identifyReport(this)>
                                 <h3 class="translate">Spam</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="lenguaje" onclick=identifyReport(this)>
                                 <h3 class="translate">Lenguaje que incita al odio</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
 
                             <div class="reportes" id="terrorismo" onclick=identifyReport(this)>
                                 <h3 class="translate">Terrorismo</h3>
-                                <img src="../img/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
                             </div>
                         </div>
                     </div>

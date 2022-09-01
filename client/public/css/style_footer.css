@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* html{
     scroll-behavior: smooth;
 }
@@ -31,7 +32,14 @@ body{
     background-repeat: no-repeat;
     opacity: 0.5;
     background-position: center;
+    transition: all .3s ease-in;
 }
+
+.container_anchor:hover {
+    opacity: 1;
+    transform: scale(1.005);
+}
+
 
 .containerFlecha {
     cursor: pointer;
@@ -43,11 +51,12 @@ body{
     border-radius: 50%;
     border: none;
     margin-left: 1rem;
-    background-image: url(../img/iconos/arrow.png);
+    background-image: url(../assets/iconos/arrow.png);
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
     display: none;
+    transition: opacity .3s ease-in-out;
 }
 
 .containerDarkMode {
@@ -63,6 +72,15 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
+    transition: opacity .3s ease-in-out;
+}
+
+.containerDarkMode:hover {
+    opacity: 1;
+}
+
+.containerFlecha:hover{
+    opacity: 1;
 }
 
 /* .container_anchor img,

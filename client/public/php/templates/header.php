@@ -22,6 +22,7 @@ if (!isset($_SESSION['lang'])) {
         <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/style_header.css">
         <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/style_footer.css">
         <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/notification.css">
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/menu_dropdown.css">
         <!-- Estilos de index-->
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/index.php" || $_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/") { ?>
                 <link rel="stylesheet" href="../css/style_index.css">
@@ -127,15 +128,37 @@ if (!isset($_SESSION['lang'])) {
                                 //print_r($datauser);
                         ?>
                                 <div id="buttons-header">
-                                        <!-- <a href="./close.php"><button>CLOSE SESSION</button></a> -->
                                         <ul class="menu-header-perfil">
                                                 <p><?php echo $datauser[0]['name']; ?></p>
-                                                <li class="li-menu_perfil"><img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="iconouser" class="img-perfil">
-                                                        <ul class="menu_desplegable-peril">
-                                                                <li class="li-menu_perfil-desplegable" -><a class="a-header" href="./account/cuenta.php"><span class="translateHeader"> Mi perfil</span></a></li>
-                                                                <li class="li-menu_perfil-desplegable"><a class="a-header" href="./templates/close.php"><span class="translateHeader">Cerrar sesión</span></a></li>
+                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/1662047356_f44b968e1981f48a3cadba22351150c0.jpg);background-size: contain;">
+                                                        <ul id="user-menu" class="dropdown-menu">
+                                                                <li class="dropdown-menu-item">
+                                                                        <a class="dropdown-menu-link">
+                                                                                <span>Profile</span>
+                                                                        </a>
+                                                                </li>
+                                                                <li class="dropdown-menu-item">
+                                                                        <a href="#" class="dropdown-menu-link">
+                                                                                <span>Settings</span>
+                                                                        </a>
+                                                                </li>
+                                                                <li class="dropdown-menu-item">
+                                                                        <a href="#" class="dropdown-menu-link">
+                                                                                <span>Payments</span>
+                                                                        </a>
+                                                                </li>
+                                                                <li class="dropdown-menu-item">
+                                                                        <a href="#" class="dropdown-menu-link">
+                                                                                <span>Projects</span>
+                                                                        </a>
+                                                                </li>
+                                                                <li class="dropdown-menu-item">
+                                                                        <a href="#" class="dropdown-menu-link">
+                                                                                <span>Logout</span>
+                                                                        </a>
+                                                                </li>
                                                         </ul>
-                                                </li>
+                                                </div>
                                         </ul>
                                 </div>
 

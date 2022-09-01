@@ -118,7 +118,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(144, 148, 150, 0.8);
+    background-color: rgb(0 0 0 / 40%);
     display: none;
     justify-content: center;
     align-items: center;

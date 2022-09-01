@@ -79,7 +79,7 @@ include_once('./templates/header.php') ?>
 			<img src="../assets/icons/close.svg" alt="xD" id="XModal" class="XModal" onclick="hideModal()">
 		</div>
 		<div class="contentModel" id="contentModel">
-			<h2>Editar cagoria #<span class="idEscondido">0</span> </h2>
+			<h2>Editar cagoria</h2>
 			<div class="es">
 				<p>Categoria en español:</p>
 				<input type="text" name="categoryES" class="inputCategory" id="inputCategoryEsEdit">
