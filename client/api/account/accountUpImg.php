@@ -1,7 +1,7 @@
 <?php
 
-include_once('include.php');
-include_once('conexion.php');
+include_once('../../public/php/templates/include.php');
+include_once('../../public/php/templates/conexion.php');
 
 $id = $_SESSION['dataID'];
 
@@ -16,12 +16,12 @@ if ($_POST){
     $filename = $_FILES['image']['name'];
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
-    move_uploaded_file($tempImage, "imgProfile/".$image);
+    move_uploaded_file($tempImage, "../../public/assets/user_images/profile_images/".$image);
     $objConnection = new conection();
     $sql = "UPDATE `user_data` SET `img_path`='$image' WHERE id_user_data = $id";
     $objConnection->ejecutar($sql);
 
-    header('location:cuenta.php');
+    //header('location:../../public/php/account/cuenta.php');
  
 
 }

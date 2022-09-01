@@ -41,11 +41,11 @@
 </footer>
 <button class="containerFlecha" id="flechaUp"></button>
 <script src="../js/IncribirseCancelar.js"></script>
-<script src="../js/translate/translate.js" type="module"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/translate/translate.js" type="module"></script>
 <script src="../js/forgetPasswordAccount.js" type="module"></script>
 <script src="../js/changePasswordAccount.js" type="module"></script>
 <script src="../js/scrollUp.js"></script>
-<script src="../js/darkmode.js"> </script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/darkmode.js"> </script>
 <script src="../js/slider.js"></script>
 <script src="../js/app_burger.js"> </script>
 <script src="../js/app_profile.js"></script>

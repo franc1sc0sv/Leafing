@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "../js/component/alerts.js";
 const alertLogin = document.getElementById('alertLogin')
 const formC = document.getElementById('formC')
 let html = document.querySelector("html");
@@ -9,19 +9,17 @@ const modal_container = document.getElementById('modal_container');
 function closeModal() {
     modal_container.classList.remove('show');
     setTimeout(function () {
-        window.location.href = "../php/crear_evento.php";
+        location.reload();
     }, 600);
 }
 
 formC.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formC);
-
-    fetch('createEvents.php', {
+    fetch('/LEAFING/Crea-J-2022/client/api/createEvents.php', {
         method: 'post',
         body: data
     })
-
         .then(res => res.json())
         .then(data => {
             console.log(data)

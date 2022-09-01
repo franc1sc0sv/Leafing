@@ -43,17 +43,22 @@ window.addEventListener("load", () => {
             if (html.lang == "en") {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
-                inscriptionButton()
-                buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera_de_Españapng.png)")
+                let pathname = window.location.pathname;
+                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+                    inscriptionButton()
+                }
+                buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera_de_Españapng.png)")
                 let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
-                //filters(arrayOrder)
+                filters(arrayOrder)
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
-                inscriptionButton()
-                buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera-del-Reino-Unid.png)")
+                let pathname = window.location.pathname;
+                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+                    inscriptionButton()
+                } buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera-del-Reino-Unid.png)")
                 let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
-                //filters(arrayOrder)
+                filters(arrayOrder)
             }
         })
 
@@ -62,7 +67,7 @@ window.addEventListener("load", () => {
 function forInnerHTM(translate) {
     let pathname = window.location.pathname;
     let arrayString = pathname.split("/");
-    let id = getID(arrayString[6])
+    let id = getID(arrayString[6], arrayString[7])
 
     for (let i = 0; i < english.length; i++) {
         english[i].innerHTML = translate[id][i];
@@ -82,11 +87,14 @@ function TraduccionEspañol() {
 
     if (html.lang == "en") {
         fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=es`);
-        inscriptionButton();
+        let pathname = window.location.pathname;
+        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+            inscriptionButton()
+        }
         dataRandom();
         forInnerHTM(translateGeneralES);
         html.setAttribute("lang", "es");
-        buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera-del-Reino-Unid.png)");
+        buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera-del-Reino-Unid.png)");
         let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"];
         filters(arrayOrder)
 
@@ -97,11 +105,14 @@ function TraducirIngles() {
 
     if (html.lang == "es") {
         fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=en`);
-        inscriptionButton();
+        let pathname = window.location.pathname;
+        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+            inscriptionButton()
+        }
         dataRandom();
         forInnerHTM(translateGeneralEN);
         html.setAttribute("lang", "en")
-        buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera_de_Españapng.png)");
+        buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera_de_Españapng.png)");
         let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"];
         filters(arrayOrder);
 
@@ -144,7 +155,7 @@ function dataRandom() {
     }
 }
 //me para saber en que pagina estamos
-function getID(path) {
+function getID(path, path2) {
     let id;
 
     if (path == "index.php" || path == "") {
@@ -155,17 +166,17 @@ function getID(path) {
         id = 2;
     } else if (path == "crear_evento.php") {
         id = 3;
-    } else if (path == "cuenta.php") {
+    } else if (path2 == "cuenta.php") {
         id = 4;
     } else if (path == "formulario_inicio-sesion.php") {
         id = 5;
     } else if (path == "formulario_registro.php") {
         id = 6;
-    } else if (path == "contrase%C3%B1a.php") {
+    } else if (path2 == "contrase%C3%B1a.php") {
         id = 9;
-    } else if (path == "mis_eventos.php") {
+    } else if (path2 == "mis_eventos.php") {
         id = 10;
-    } else if (path == "eventos_inscritos.php") {
+    } else if (path2 == "eventos_inscritos.php") {
         id = 11;
     } else if (path == "comunity.php") {
         id = 12;

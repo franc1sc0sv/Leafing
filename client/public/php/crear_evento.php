@@ -20,7 +20,7 @@ include_once('./templates/header.php');
         </div>
 
 
-        <form action="createEvents.php" method="post" class="container_form" enctype="multipart/form-data" id="formC">
+        <form action="crear_evento.php" method="post" class="container_form" enctype="multipart/form-data" id="formC">
             <div class="container_1">
                 <div class="side_1 side-generalidades">
 
@@ -55,7 +55,7 @@ include_once('./templates/header.php');
                 <div class="side_2 side-datos">
 
                     <div class="dragfile_container">
-                        <img src="../img/iconos/cloud-computing.png" alt="" class="dragfile_icon">
+                        <img src="../assets/iconos/cloud-computing.png" alt="" class="dragfile_icon">
                         <p class="translate">Arrastra o suelta tu imagen</p>
                         <p>O</p>
                         <label for="image" class="translate">Elige un archivo</label>

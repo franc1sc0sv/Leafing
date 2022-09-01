@@ -1,10 +1,12 @@
 <?php
-include_once('./include.php');
-include_once('./conexion.php');
-include_once('./header.php'); ?>
+include_once('../templates/include.php');
+include_once('../templates/conexion.php');
+include_once('../templates/header.php');
+
+?>
 <div class="flex-container">
 
-    <?php include_once('./onlymenu.php') ?>
+    <?php include_once('../templates/onlymenu.php') ?>
 
     <div class="configuracion-cuenta-container">
         <div class="configuracion-cuenta-container">
@@ -48,4 +50,4 @@ include_once('./header.php'); ?>
     </div>
 </div>
 
-<?php include_once('./footer.php'); ?>
+<?php include_once('../templates/footer.php'); ?>

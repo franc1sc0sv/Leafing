@@ -18,7 +18,7 @@ footer {
 }
 
 .bgimage {
-    background: url(../img/imagenes/bgcreateevents.jpg);
+    background: url(../assets/imagenes/bgcreateevents.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
