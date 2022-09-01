@@ -1,6 +1,5 @@
 <?php
-include_once('./conexion.php');
-
+include_once('../public/php/templates/conexion.php');
 
 $sql = $_GET['sql'];
 $objconexion = new conection();

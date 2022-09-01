@@ -6,4 +6,5 @@ session_destroy();
 session_start();
 $_SESSION['lang'] = $lang;
 
-header("location:index.php");
+header("location:../index.php");
+?>

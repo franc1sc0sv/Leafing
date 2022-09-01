@@ -1,6 +1,6 @@
 <?php
-include_once('include.php');
-include_once('conexion.php');
+include_once('../public/php/templates/include.php');
+include_once('../public/php/templates/conexion.php');
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $email = $_POST['email'];

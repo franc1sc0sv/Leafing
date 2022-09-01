@@ -1,7 +1,7 @@
 <?php session_start();
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = "es";
-} 
+}
 ?>
 <!DOCTYPE html>
 <html lang=<?php echo $_SESSION['lang'] ?>>
@@ -11,7 +11,7 @@ if (!isset($_SESSION['lang'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/personal_data.css">
-    <link href="../css/register.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/notification.css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
     <title>Registro</title>
@@ -22,11 +22,11 @@ if (!isset($_SESSION['lang'])) {
         <div class="container2">
             <div class="alreadysignup">
                 <p class="question translate">¿Ya tienes una cuenta?</p>
-                <a href="../php/formulario_inicio-sesion.php" class="login"><span class="translate">Inicia sesión</span></a>
+                <a href="formulario_inicio-sesion.php" class="login"><span class="translate">Inicia sesión</span></a>
             </div>
             <div class="container-form">
                 <div class="form">
-                    <a class="littleX" href="../php/index.php"><img src="../img/iconos/x.svg" alt=""></a>
+                    <a class="littleX" href="./index.php"><img src="../assets/iconos/x.svg" alt=""></a>
                     <div class="title">
                         <p class="leafing">
                             LEAFING
@@ -50,7 +50,7 @@ if (!isset($_SESSION['lang'])) {
                                         <div class="passwordinput">
                                             <label for="password" class="translate">Constraseña</label><br>
                                             <input type="password" class="mitexto idk inpuxD" id="password" name="password">
-                                            <img class="eye" src="../img/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
+                                            <img class="eye" src="../assets/iconos/visibility_black_24dp.svg" alt="eye icon" id="eye">
 
                                         </div>
 
@@ -138,10 +138,11 @@ if (!isset($_SESSION['lang'])) {
         </div>
         <div id="alertRegister">
         </div>
+    </div>
 
-        <script src="../js/notification.js"></script>
-        <script src="../js/register.js" type="module"></script>
-        <script src="../js/translate.js" type="module"></script>
+    <script src="../js/notification.js"></script>
+    <script src="../js/register.js" type="module"></script>
+    <script src="../js/translate/translate.js" type="module"></script>
 </body>
 
 </html>

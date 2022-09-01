@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "./component/alerts.js";
 const alertLogin = document.getElementById('alertLogin')
 const formCredentials = document.getElementById('formCredentials')
 const alert = document.getElementById('alert');
@@ -10,7 +10,7 @@ formCredentials.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formCredentials);
 
-    fetch('login.php', {
+    fetch('/LEAFING/Crea-J-2022/client/api/login.php', {
         method: 'post',
         body: data
     })
@@ -46,7 +46,7 @@ formCredentials.addEventListener('submit', function (e) {
                 alertLogin.innerHTML = msg;
                 showNotification()
                 setTimeout(function () {
-                    window.location.href = "../admin/php/admin.php";
+                    window.location.href = "../../../../admin/public/php/admin.php";
                 }, 800);
 
             } else {
@@ -59,7 +59,7 @@ formCredentials.addEventListener('submit', function (e) {
                 alertLogin.innerHTML = msg;
                 showNotification()
                 setTimeout(function () {
-                    window.location.href = "../php/index.php";
+                    window.location.href = "./index.php";
                 }, 800);
             }
         })

@@ -1,1 +1,1 @@
-ErrorDocument 404 http://localhost/LEAFING/Crea-J-2022/php/404.php
+#ErrorDocument 404 http://localhost/LEAFING/Crea-J-2022/error/404.php

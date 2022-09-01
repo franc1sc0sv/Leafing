@@ -1,5 +1,5 @@
 function filters(arrayOrderBy) {
-    fetch("../php/consultas.php?sql=SELECT * FROM `place_events`")
+    fetch("/LEAFING/Crea-J-2022/client/api/consultas.php?sql=SELECT * FROM `place_events`")
         .then(res => res.json())
         .then(data => {
             let option = `<option value="" class="optionColor">${arrayOrderBy[4]}</option>`;
@@ -8,7 +8,7 @@ function filters(arrayOrderBy) {
             Lugar.innerHTML = optionsCategoriesEvents;
         })
 
-    fetch("../php/consultas.php?sql=SELECT * FROM `categories_events`")
+    fetch("/LEAFING/Crea-J-2022/client/api/consultas.php?sql=SELECT * FROM `categories_events`")
         .then(res => res.json())
         .then(data => {
             //console.log(data)

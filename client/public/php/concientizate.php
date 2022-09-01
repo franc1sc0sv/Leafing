@@ -1,10 +1,9 @@
-<?php 
-include_once('include.php');
-include_once('conexion.php');
-include_once('header.php');
+<?php
+include_once('./templates/include.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
+?>
 
-
- ?>
 
 <div class="container_content">
     <div class="container-intro-page">
@@ -73,4 +72,4 @@ include_once('header.php');
         </div>
     </div>
 </div>
-<?php include_once("footer.php"); ?>
+<?php include_once('./templates/footer.php'); ?>

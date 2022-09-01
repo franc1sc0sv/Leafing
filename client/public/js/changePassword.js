@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "../js/component/alerts.js";
 const formCredentialsChangePassword = document.getElementById('formCredentialsChangePassword');
 const alert = document.getElementById('alertXDD');
 let html = document.querySelector("html");
@@ -12,15 +12,14 @@ formCredentialsChangePassword.addEventListener('submit', function (e) {
     if (passsword.length < 6 || passsword.length > 30) {
         let msg;
         if (html.lang == "es") {
-            msg = alertf("Contraseña Invalida")
+            msg = alertf("Datos invalidos")
         } else {
-            msg = alertf("Invalid password")
+            msg = alertf("Invalid data")
         }
         alert.innerHTML = msg;
         showNotification();
-        console.log("XD")
-    } else {
-        fetch(`passwordChange.php${URLsearch}`, {
+        } else {
+        fetch(`/LEAFING/Crea-J-2022/client/api/password_change.php${URLsearch}`, {
             method: 'post',
             body: data
         })

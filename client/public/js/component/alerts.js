@@ -4,7 +4,7 @@ export function warning(msg) {
     <div class="containerNotification">
         <span class="msg">${msg}</span>
         <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
+            <img src="../assets/iconos/close.svg" alt="">
         </div>
     </div>
 </div>`
@@ -16,7 +16,7 @@ export function alertf(msg) {
     <div class="containerNotification">
         <span class="msg">${msg}</span>
         <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
+            <img src="../assets/iconos/close.svg" alt="">
         </div>
     </div>
 </div>`
@@ -29,7 +29,7 @@ export function nice(msg) {
     <div class="containerNotification">
         <span class="msg">${msg}</span>
         <div class="close-btn" id="close" onclick="hideNotification()">
-            <img src="../img/iconos/close.svg" alt="">
+            <img src="../assets/iconos/close.svg" alt="">
         </div>
     </div>
 </div>`

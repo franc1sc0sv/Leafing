@@ -1,5 +1,5 @@
 <?php
-include_once('conexion.php');
+include_once('../public/php/templates/conexion.php');
 //$array = array($_POST['password'], $_POST['passwordRe']);
 $password = $_POST['password'];
 $passwordRe = $_POST['passwordRe'];

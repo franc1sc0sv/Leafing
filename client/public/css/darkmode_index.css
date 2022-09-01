@@ -140,7 +140,7 @@ body.darkmode,
 }
 
 body.darkmode header {
-    background-image: url(../img/imagenes/imagen-dark.jpg);
+    background-image: url(../assets/imagenes/imagen-dark.jpg);
     transition: 3s;
 }
 

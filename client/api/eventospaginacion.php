@@ -1,6 +1,6 @@
 <?php
 
-include_once('conexion.php');
+include_once('../public/php/templates/conexion.php');
 
 class Paginacion extends conection
 {

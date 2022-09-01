@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "./component/alerts.js";
 
 const passordForget = document.getElementById('passordForget');
 const containerinfo1 = document.getElementById('containerinfo1');
@@ -23,7 +23,7 @@ formEmail.addEventListener('submit', function (e) {
     let html = document.querySelector("html");
 
     if (email != '') {
-        fetch(`sendCode.php?email=${email}`)
+        fetch(`/LEAFING/Crea-J-2022/client/api/send_email_password.php?email=${email}`)
         containerinfo1.style.transform = "translateX(-66%)";
     } else {
         let msg;

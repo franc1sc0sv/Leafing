@@ -2,8 +2,11 @@
 
 if (isset($_SESSION['estatus'])) {
     if ($_SESSION['typeof'] != 1) {
-        header("location:../php/accessDenied.php");
+        header("location:../../../error/access_denied.php");
     }
 } else {
-    header("location:../php/accessDenied.php");
+    header("location:../../../error/access_denied.php");
 }
+?>
+
+<link rel="stylesheet" href="../../../error/access_denied.php"

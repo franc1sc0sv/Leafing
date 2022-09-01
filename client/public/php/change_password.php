@@ -2,7 +2,7 @@
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = "es";
 }
-include_once('conexion.php');
+include_once('./templates/conexion.php');
 ?>
 <!DOCTYPE html>
 <html lang=<?php echo $_SESSION['lang'] ?>>
@@ -11,7 +11,7 @@ include_once('conexion.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/changePassword.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/changePassword.css">
     <link rel="stylesheet" href="../css/notification.css">
     <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
     <title>Leafing</title>
@@ -84,8 +84,7 @@ include_once('conexion.php');
     </div>
     <script src="../js/notification.js"></script>
     <script src="../js/changePassword.js" type="module"></script>
-
-    <!-- <script src="../js/translate.js" type="module"></script> -->
+    <script src="../js/translate/translate.js" type="module"></script>
     <!-- <script src="../js/login.js" type="module"> </script> -->
 
 </body>

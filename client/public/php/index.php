@@ -1,7 +1,8 @@
 <?php
-include_once('include.php');
-include_once('conexion.php');
-include_once("header.php"); ?>
+include_once('./templates/include.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
+?>
 
 <body>
     <section>
@@ -28,7 +29,7 @@ include_once("header.php"); ?>
                 </div>
 
                 <div class="img_que-eventos">
-                    <img id="img_que-eventos" src="../img/imagenes/que-eventos_img.svg" alt="imagen-que-eventos">
+                    <img id="img_que-eventos" src="../assets/imagenes/que-eventos_img.svg" alt="imagen-que-eventos">
                 </div>
 
             </div>
@@ -124,7 +125,7 @@ include_once("header.php"); ?>
         <div class="titulos-generales">
             <div class="titulo_generales">
                 <a href="../php/comunity.php" class="comunitySlider">
-                    <p class="translate">Ver todos los eventos de la comunidad </p><img src="../img/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion">
+                    <p class="translate">Ver todos los eventos de la comunidad </p><img src="../assets/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion">
                 </a>
             </div>
             <div></div>
@@ -172,4 +173,4 @@ include_once("header.php"); ?>
         </div>
     </section>
 </body>
-<?php include_once("footer.php"); ?>
+<?php include_once('./templates/footer.php'); ?>

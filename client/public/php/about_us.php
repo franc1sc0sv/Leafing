@@ -1,7 +1,7 @@
-<?php 
-include_once ('include.php');
-include_once('conexion.php');
-include_once('header.php'); 
+<?php
+include_once('./templates/include.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
 ?>
 
 <body class="darkmode">
@@ -11,7 +11,7 @@ include_once('header.php');
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros">
-                    <img src="../img/imagenes/sobre-nosotros_img.png" alt="menu_arrow">
+                    <img src="../assets/imagenes/sobre-nosotros_img.png" alt="menu_arrow">
                 </div>
                 <div class="text_sobre-nosotros">
                     <p class="translate">SOBRE NOSOTROS</p>
@@ -30,7 +30,7 @@ include_once('header.php');
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros our-mision">
-                    <img src="../img/imagenes/our-mision_img.png" alt="img-nuestra_mision">
+                    <img src="../assets/imagenes/our-mision_img.png" alt="img-nuestra_mision">
                 </div>
                 <div class="text_sobre-nosotros text-our-mision">
                     <h1 class="green translate">Nuestra misión</h1>
@@ -47,7 +47,7 @@ include_once('header.php');
         <article id="about_us">
             <div class="sobre-nosotros">
                 <div class="img_sobre-nosotros">
-                    <img src="../img/imagenes/our-vision_img.png" alt="img-nuestra_vision">
+                    <img src="../assets/imagenes/our-vision_img.png" alt="img-nuestra_vision">
                 </div>
                 <div class="text_sobre-nosotros text-our-vision">
                     <h1 class="green translate">Nuestra visión</h1>
@@ -63,4 +63,4 @@ include_once('header.php');
     </section>
 
 </body>
-<?php include_once("footer.php"); ?>
+<?php include_once('./templates/footer.php'); ?>

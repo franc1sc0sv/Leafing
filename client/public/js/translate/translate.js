@@ -24,7 +24,7 @@ let html = document.querySelector("html");
 
 //Esto va a traducir la pagina dependiendo que valor tenga htmml.lang por defecto es ES
 window.addEventListener("load", () => {
-    fetch(`APISessions.php?peticion=1`)
+    fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1`)
         .then(res => res.json())
         .then(data => {
 
@@ -44,20 +44,71 @@ window.addEventListener("load", () => {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
                 inscriptionButton()
-                buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
+                buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera_de_Españapng.png)")
                 let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
                 filters(arrayOrder)
             } else {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
                 inscriptionButton()
-                buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
+                buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera-del-Reino-Unid.png)")
                 let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
                 filters(arrayOrder)
             }
         })
 
 })
+
+function forInnerHTM(translate) {
+    let pathname = window.location.pathname;
+    let arrayString = pathname.split("/");
+    let id = getID(arrayString[6])
+
+    for (let i = 0; i < english.length; i++) {
+        english[i].innerHTML = translate[id][i];
+    }
+    //Cambiar valores del header
+    for (let i = 0; i < englishHeader.length; i++) {
+        englishHeader[i].innerHTML = translate[7][i];
+    }
+    //Cambiar valores del footer
+    for (let i = 0; i < englishFooter.length; i++) {
+        englishFooter[i].innerHTML = translate[8][i];
+    }
+}
+
+
+function TraduccionEspañol() {
+
+    if (html.lang == "en") {
+        fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=es`);
+        inscriptionButton();
+        dataRandom();
+        forInnerHTM(translateGeneralES);
+        html.setAttribute("lang", "es");
+        buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera-del-Reino-Unid.png)");
+        let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"];
+        filters(arrayOrder)
+
+
+    }
+}
+function TraducirIngles() {
+
+    if (html.lang == "es") {
+        fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=en`);
+        inscriptionButton();
+        dataRandom();
+        forInnerHTM(translateGeneralEN);
+        html.setAttribute("lang", "en")
+        buttonChange.style.backgroundImage = ("url(../assets/imagenes/Bandera_de_Españapng.png)");
+        let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"];
+        filters(arrayOrder);
+
+
+    }
+}
+
 //Me va almacenar todos en una varaiable lo que haya que imprimir
 function Data(array) {
     let liElemnet = '';
@@ -67,7 +118,7 @@ function Data(array) {
         <div class="Datos_cards">
             <div>
                 <h1> ${array[index][1]} </h1>
-                <img src="../img/imagenes/icono_2-datos.png" alt="icon_datos">
+                <img src="../assets/imagenes/icono_2-datos.png" alt="icon_datos">
             </div>
             <p> ${array[index][3]}</p>
          </div>
@@ -80,13 +131,12 @@ function Data(array) {
 //Me va a traducir los DATOS RANDOM LIVE
 function dataRandom() {
     let pathname = window.location.pathname;
-    if (pathname == "/LEAFING/Crea-J-2022/php/index.php" || pathname == "/LEAFING/Crea-J-2022/php/") {
-        fetch(`datosRandomi.php?lang=${html.lang}`)
+    if (pathname == "/LEAFING/Crea-J-2022/client/public/php/index.php" || pathname == "/LEAFING/Crea-J-2022/client/public/php/") {
+        fetch(`/LEAFING/Crea-J-2022/client/api/random_data.php?lang=${html.lang}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 let DatosRadom = Data(data)
-                //console.log(DatosRadom)
                 Datos_curiosos_container.innerHTML = DatosRadom;
 
 
@@ -126,62 +176,6 @@ function getID(path) {
     return id;
 }
 
-//Esto es la funcion que me va acambiar los valores de ingles a español y viceversa
-function forInnerHTM(translate) {
-    let pathname = window.location.pathname;
-    let arrayString = pathname.split("/");
-    let id = getID(arrayString[4])
-    // console.log(pathname);
-    //console.log(arrayString);
-    //console.log(id);
-    //console.log(translate[11])
-    //Cambiar valores del body
-    for (let i = 0; i < english.length; i++) {
-        english[i].innerHTML = translate[id][i];
-    }
-    //Cambiar valores del header
-    for (let i = 0; i < englishHeader.length; i++) {
-        englishHeader[i].innerHTML = translate[7][i];
-    }
-    //Cambiar valores del footer
-    for (let i = 0; i < englishFooter.length; i++) {
-        englishFooter[i].innerHTML = translate[8][i];
-    }
-}
-
-
-function TraduccionEspañol() {
-
-    if (html.lang == "en") {
-        fetch(`APISessions.php?peticion=4&lang=es`);
-        inscriptionButton()
-        dataRandom()
-        forInnerHTM(translateGeneralES);
-        html.setAttribute("lang", "es")
-        buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera_de_Españapng.png)")
-        let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
-        filters(arrayOrder)
-
-
-    }
-}
-function TraducirIngles() {
-
-    if (html.lang == "es") {
-        fetch(`APISessions.php?peticion=4&lang=en`);
-        inscriptionButton()
-        dataRandom()
-        forInnerHTM(translateGeneralEN);
-        html.setAttribute("lang", "en")
-        buttonChange.style.backgroundImage = ("url(../img/imagenes/Bandera-del-Reino-Unid.png)")
-        let arrayOrder = ["Order by", "Categories ACS", "Name ASC", "Place ACS", "Place", "Categories", "2"]
-        filters(arrayOrder)
-
-
-    }
-}
-
-
 buttonChange.addEventListener('click', function () {
 
     if (html.lang == "en") {
@@ -190,4 +184,3 @@ buttonChange.addEventListener('click', function () {
         TraducirIngles()
     }
 })
-

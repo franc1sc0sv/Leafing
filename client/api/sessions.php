@@ -1,7 +1,7 @@
 <?php
 //Esta onda va retornar las variables de session activas
-include_once('include.php');
-include_once('conexion.php');
+include_once('../public/php/templates/include.php');
+include_once('../public/php/templates/conexion.php');
 
 function getEstatusUser()
 {

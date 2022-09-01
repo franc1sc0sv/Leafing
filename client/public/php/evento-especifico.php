@@ -1,7 +1,7 @@
 <?php
-include_once 'include.php';
-include_once('conexion.php');
-include_once('header.php');
+include_once('./templates/include.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
 
 $error = false;
 //estiben = id del evento
@@ -40,12 +40,12 @@ if (!$error) { ?>
     <h2 class="h2-start"><?php echo $event[0]['name_event'] ?></h2>
     <div class="general">
         <div class="container-text1">
-            <img src="./images/<?php echo $event[0]['img_event'] ?>"> <!-- XD-->
+            <img src="../assets/user_images/events_images/<?php echo $event[0]['img_event'] ?>"> <!-- XD-->
             <div class="levicfp">
                 <div class="container-img2">
                     <div class="container-perfil">
                         <div class="userData">
-                            <img src="./imgProfile/<?php echo $event[0]['img_path'] ?>" id="imgProfile">
+                            <img src="../assets/user_images/profile_images/<?php echo $event[0]['img_path'] ?>" id="imgProfile">
                             <p id="profile-name"><?php echo $event[0]['user_name'] ?></p>
                         </div>
                         <?php if (isset($_SESSION['estatus'])) { ?>
@@ -114,7 +114,7 @@ if (!$error) { ?>
                 for ($i = 0; $i < count($data); $i++) {  ?>
                     <div class="coment">
                         <div class="img-photo">
-                            <img src="./imgProfile/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
+                            <img src="../assets/user_images/profile_images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
                         </div>
 
                         <div class="body-coment">
@@ -227,4 +227,4 @@ if (!$error) { ?>
 
 <script src="../js/coments.js" type="module"></script>
 
-<?php include_once("footer.php"); ?>
+<?php include_once('./templates/footer.php'); ?>

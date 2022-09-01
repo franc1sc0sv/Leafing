@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "../js/component/alerts.js";
 const alertRegister = document.getElementById('alertRegister')
 const code = document.getElementById('containerinfo1');
 const formEmail = document.getElementById('formEmail');
@@ -43,7 +43,7 @@ formEmail.addEventListener('submit', function (e) {
         invalidData();
         console.log("pass")
     } else {
-        fetch('register.php?estatus=stage1', {
+        fetch('/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage1', {
             method: 'post',
             body: data
         })
@@ -164,7 +164,7 @@ formData.addEventListener('submit', function (e) {
         showNotification();
     } else {
         //console.log("nice");
-        fetch(`register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}& gender=${gender}& user=${user}& Dataemail=${Dataemail}& Datapassword=${Datapassword}&codeVerification=${codeVerification}`)
+        fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}& gender=${gender}& user=${user}& Dataemail=${Dataemail}& Datapassword=${Datapassword}&codeVerification=${codeVerification}`)
         let msg;
         if (html.lang == "es") {
             msg = nice("Tu cuenta ha sido creada")

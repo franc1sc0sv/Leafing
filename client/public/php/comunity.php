@@ -1,8 +1,9 @@
 <?php
-include_once('include.php');
-include_once('conexion.php');
-include_once('header.php');
+include_once('./templates/include.php');
+include_once('./templates/conexion.php');
+include_once('./templates/header.php');
 ?>
+
 
 <body class="darkmode">
     <div class="generalContainer">
@@ -66,4 +67,4 @@ include_once('header.php');
 
     <script src="../js/filtros.js"></script>
 </body>
-<?php include_once("footer.php"); ?>
+<?php include_once('./templates/footer.php'); ?>

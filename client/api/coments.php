@@ -1,6 +1,5 @@
 <?php
-include_once 'include.php';
-include_once 'conexion.php';
+include_once('../public/php/templates/conexion.php');
 
 
 $coment = $_POST['coment'];

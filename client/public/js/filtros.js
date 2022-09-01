@@ -4,7 +4,7 @@ window.onload = function () {
 }
 function eventsData(sql) {
     //console.log(sql)
-    fetch(`../php/consultas.php?sql=${sql}`)
+    fetch(`/LEAFING/Crea-J-2022/client/api/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -22,7 +22,7 @@ function eventsData(sql) {
 }
 
 function filters(arrayOrderBy) {
-    fetch("../php/consultas.php?sql=SELECT * FROM `place_events`")
+    fetch("/LEAFING/Crea-J-2022/client/api/consultas.php?sql=SELECT * FROM `place_events`")
         .then(res => res.json())
         .then(data => {
             let option = `<option value="" class="optionColor">${arrayOrderBy[4]}</option>`;
@@ -31,7 +31,7 @@ function filters(arrayOrderBy) {
             Lugar.innerHTML = optionsCategoriesEvents;
         })
 
-    fetch("../php/consultas.php?sql=SELECT * FROM `categories_events`")
+    fetch("/LEAFING/Crea-J-2022/client/api/consultas.php?sql=SELECT * FROM `categories_events`")
         .then(res => res.json())
         .then(data => {
             //console.log(data)
@@ -82,17 +82,17 @@ function cardsData(dataEvents) {
         
         <div class="card">
         <div class="event-img">
-            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="images/${dataEvents[i][1]}" class="img"></a>
+            <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="../assets/user_images/events_images/${dataEvents[i][1]}" class="img"></a>
         </div> 
         <div class="cardtext">
             <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank" class="title">${dataEvents[i][2]}</a>
             <div class="specificInfo">
                 <div class="date">
-                    <img src="../img/iconos/location.svg" class="location" alt="">
+                    <img src="../assets/iconos/location.svg" class="location" alt="">
                     ${dataEvents[i][5]}
                 </div>
                 <div class="place">
-                    <img src="../img/iconos/location.svg" class="location" alt="">
+                    <img src="../assets/iconos/location.svg" class="location" alt="">
                     ${dataEvents[i][4]}
                 </div>
             </div>
@@ -116,7 +116,7 @@ formFilter.addEventListener('submit', function (e) {
     e.preventDefault()
     let data = new FormData(formFilter);
 
-    fetch(`../php/filter.php?busca=${data.get('busca')}&orden=${data.get('orden')}&lugar=${data.get('lugar')}&categorias=${data.get('categorias')}&date_filtro=${data.get('date_filtro')}`)
+    fetch(`/LEAFING/Crea-J-2022/client/api/filter.php?busca=${data.get('busca')}&orden=${data.get('orden')}&lugar=${data.get('lugar')}&categorias=${data.get('categorias')}&date_filtro=${data.get('date_filtro')}`)
         .then(res => res.json())
         .then(data => {
             eventsData(data)
