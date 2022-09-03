@@ -136,7 +136,7 @@ $img_user = $objconexionuser->consultar("SELECT img_path FROM `user_data` WHERE 
             </li>
 
             <li class="sidebar-nav-item userview">
-                <a href="/LEAFING/Crea-J-2022/client/public/php/index.php" target="_blank" class="sidebar-nav-link reportsNav">
+                <a href="/LEAFING/Crea-J-2022/client/public/php/index.php" target="_blank" class="sidebar-nav-link ">
                     <div>
                         <img src="../assets/icons/user.svg" alt="email">
                     </div>

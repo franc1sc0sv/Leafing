@@ -527,3 +527,149 @@ ul.pagination {
 .menu_desplegable {
     background: white;
 }
+
+/*cards new*/
+
+.container_cards {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: max-content;
+    /* gap-c: 1rem; */
+    row-gap: 3rem;
+    column-gap: 1rem;
+}
+
+.img_event {
+    max-width: 100%;
+    height: 40vh;
+    vertical-align: middle;
+    border-style: none;
+    /* width: 340px;
+    height: 200px; */
+}
+
+p {
+    font-size: 0.8rem;
+    line-height: 0.9231rem;
+    color: #777777;
+    font-family: "Poppins";
+}
+
+.img_container_cards {
+    position: relative;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+    overflow: hidden;
+}
+
+.content_cards {
+    /* padding: 1.2rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background: #FFFFFF;
+    position: relative;
+    padding: 25px 30px;
+    overflow: hidden;
+
+}
+
+.info_content_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.date_cards {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.icons_div {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.title_cards {
+    color: #222222;
+    text-decoration: none;
+    font-size: 1.462rem;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: "Poppins";
+    transition: all .3s ease-in-out;
+}
+
+.category_event {
+    padding: .6rem 1.2rem;
+    border-radius: 25px;
+    background-color: #ffbb00;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.img_container_a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.title_cards:hover {
+    color: #ffbb00;
+}
+
+.icon_cards {
+    filter: invert(87%) sepia(33%) saturate(7473%) hue-rotate(2deg) brightness(108%) contrast(103%);
+}
+
+.cards_new {
+    border: 1px solid #EAEAEA;
+    /* border-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    overflow: hidden;
+    border-radius:10px;
+}
+
+.img_background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30vh;
+    max-width: 100%;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.img_background:hover{
+    transform: scale(1.15);
+
+}
+@media (max-width: 990px) {
+
+    .container_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 790px) {
+
+    .container_cards {
+        grid-template-columns: 1fr;
+    }
+}

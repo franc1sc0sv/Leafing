@@ -3,7 +3,7 @@ include_once('./templates/include.php');
 include_once('./templates/conexion.php');
 
 if (!isset($_SESSION['estatus'])) {
-    header('location:./forms/formulario_inicio-sesion.php');
+    header('location:./formulario_inicio-sesion.php');
 }
 include_once('./templates/header.php');
 

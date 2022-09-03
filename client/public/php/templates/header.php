@@ -130,7 +130,7 @@ if (!isset($_SESSION['lang'])) {
                                 <div id="buttons-header">
                                         <ul class="menu-header-perfil">
                                                 <p><?php echo $datauser[0]['name']; ?></p>
-                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/1662047356_f44b968e1981f48a3cadba22351150c0.jpg);background-size: contain;">
+                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;">
                                                         <ul id="user-menu" class="dropdown-menu">
                                                                 <li class="dropdown-menu-item">
                                                                         <a class="dropdown-menu-link">

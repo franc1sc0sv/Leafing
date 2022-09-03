@@ -21,7 +21,7 @@ if ($_POST){
     $sql = "UPDATE `user_data` SET `img_path`='$image' WHERE id_user_data = $id";
     $objConnection->ejecutar($sql);
 
-    //header('location:../../public/php/account/cuenta.php');
+    header('location:../../public/php/account/cuenta.php');
  
 
 }
