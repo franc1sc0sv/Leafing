@@ -51,7 +51,7 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
                     </div>
                 </a>
                 <div class="cerrar-sesion1">
-                    <a href="./close.php">
+                    <a href="../templates/close.php">
                         <div class="opciones-item cerrar-sesion">
                             <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/Cerrar-sesion.svg" class="opciones-icon">
                             <p class="nombre-opcion translate">Cerrar sesión</p>

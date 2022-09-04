@@ -6,9 +6,9 @@ if ($_GET['busca'] == '') {
 $resultsearch = explode(" ", $_GET['busca']);
 
 if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' && $_GET['date_filtro'] == '') {
-    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
+    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event, state_events.state,categories_events.categories FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events WHERE events.id_state_events = 1";
 } else {
-    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place WHERE id_state_events = 1";
+    $sql = "SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event, state_events.state,categories_events.categories FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events WHERE events.id_state_events = 1";
     if ($_GET["busca"] != '') {
         $sql .= " AND name_event LIKE LOWER('%" . $resultsearch[0] . "%')";
 
@@ -20,7 +20,7 @@ if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' &&
     }
 
     if ($_GET['categorias'] != '') {
-        $sql .= " AND id_categories_events = '" . $_GET['categorias'] . "' ";
+        $sql .= " AND events.id_categories_events = '" . $_GET['categorias'] . "' ";
     }
 
     if ($_GET['date_filtro'] != '') {
@@ -34,7 +34,7 @@ if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' &&
     }
 
     if ($_GET['orden'] == '1') {
-        $sql .= " ORDER BY id_categories_events ASC ";
+        $sql .= " ORDER BY categories_events.categories ASC ";
     }
 
     if ($_GET['orden'] == '2') {
