@@ -83,6 +83,13 @@ if (!isset($_SESSION['lang'])) {
                 <!--Aqui inicia el modo oscuro-->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/darkmode.css">
         <?php } ?>
+
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") { ?>
+                <!-- Estilos de crear evento-->
+                <link rel="stylesheet" href="../css/specific.css">
+        <?php } ?>
+        
+        
         <!--Favicon-->
         <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
 
