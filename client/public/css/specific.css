@@ -195,6 +195,9 @@ body {
     border: 1px solid #ffbb00;
 
     width: 100%;
+
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .add button:hover {
