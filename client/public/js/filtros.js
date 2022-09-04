@@ -1,9 +1,14 @@
 window.onload = function () {
-    eventsData("SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event, state_events.state,categories_events.categories FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events WHERE events.id_state_events = 1")
-
+    eventsData("SELECT events.id_events, events.img_event, events.name_event,events.description_event, place_events.place, events.date_event, state_events.state,categories_events.categories FROM `events` INNER JOIN place_events ON events.place_event = place_events.id_place INNER JOIN state_events ON events.id_state_events = state_events.id_state_events INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events WHERE events.id_state_events = 1 ORDER BY RAND();")
+    usersData("SELECT id_user_data, name, lastname, user_name, img_path, about_me FROM `user_data` ORDER BY RAND();")
 }
+
+const formFilter = document.getElementById('formFilter');
+const formUsers = document.getElementById('formUsers');
+const switchToogle = document.getElementById('switch');
+
 function eventsData(sql) {
-    console.log(sql)
+    // console.log(sql)
     fetch(`/LEAFING/Crea-J-2022/client/api/consultas.php?sql=${sql}`)
         .then(res => res.json())
         .then(data => {
@@ -20,6 +25,29 @@ function eventsData(sql) {
                 dataEvents = cardsData(data);
                 let contenedor = document.getElementById('contenedor');
                 contenedor.innerHTML = dataEvents;
+            }
+
+
+        })
+}
+
+function usersData(sql) {
+    //console.log(sql)
+    fetch(`/LEAFING/Crea-J-2022/client/api/consultas.php?sql=${sql}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data == '') {
+                let contenedor_users = document.getElementById('contenedor_users');
+                let html = document.querySelector('html');
+                if (html.lang == "es") {
+                    contenedor_users.innerHTML = '<p class="aña">Ningún resultado coincide con su búsqueda</p>';
+                } else {
+                    contenedor_users.innerHTML = '<p class="aña">No results match your search </p>';
+                }
+            } else {
+                dataUsers = cardsUser(data);
+                document.getElementById('contenedor_users').innerHTML = dataUsers;
+
             }
 
 
@@ -133,43 +161,49 @@ function cardsData(dataEvents) {
     return element;
 }
 
-// function cardsData(dataEvents) {
-//     //console.log(dataEvents);
-//     let element = '';
-//     for (let i = 0; i < dataEvents.length; i++) {
-//         element += `
+function cardsUser(dataUser) {
+    //console.log(dataEvents);
+    let element = '';
+    for (let i = 0; i < dataUser.length; i++) {
+        element += `
+        <div class="card">
+            <div class="event-img">
+                <a href="./evento-especifico.php?estiben=${dataUser[i][0]}" target="_blank"><img src="../assets/user_images/profile_images/${dataUser[i][4]}" class="img"></a>
+            </div>
+            <div class="cardtext">
+                <a href="./evento-especifico.php?estiben=${dataUser[i][0]}" target="_blank" class="title">${dataUser[i][3]}</a>
+                <div class="specificInfo">
+                    <div class="place">
+                        ${dataUser[i][1] + " " + dataUser[i][2]}
+                    </div>
+                </div>
+                <p>${dataUser[i][5]}</p>
+            </div>
+            
+            <span class="event-time">
+            </span>
+        </div> \n`
+    }
 
-//         <div class="card">
-//         <div class="event-img">
-//             <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="../assets/user_images/events_images/${dataEvents[i][1]}" class="img"></a>
-//         </div> 
-//         <div class="cardtext">
-//             <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank" class="title">${dataEvents[i][2]}</a>
-//             <div class="specificInfo">
-//                 <div class="date">
-//                     <img src="../assets/iconos/location.svg" class="location" alt="">
-//                     ${dataEvents[i][5]}
-//                 </div>
-//                 <div class="place">
-//                     <img src="../assets/iconos/location.svg" class="location" alt="">
-//                     ${dataEvents[i][4]}
-//                 </div>
-//             </div>
-//             <p>${dataEvents[i][3]}</p>
+    return element;
+}
 
-//         </div>
-//         <span class="event-time">
-//             <span class="day-time"></span>
+switchToogle.addEventListener('change', () => {
+    if (switchToogle.checked) {
+        document.getElementById('formUsers').classList.remove("item_disabled")
+        document.getElementById('formFilter').classList.add("item_disabled")
 
-//         </span>
-//     </div> \n`
-//     }
+        document.getElementById('contenedor_users').classList.remove("item_disabled")
+        document.getElementById('contenedor').classList.add("item_disabled")
 
-//     return element;
-// }
+    } else {
+        document.getElementById('formFilter').classList.remove("item_disabled")
+        document.getElementById('formUsers').classList.add("item_disabled")
 
-const formFilter = document.getElementById('formFilter');
-
+        document.getElementById('contenedor').classList.remove("item_disabled")
+        document.getElementById('contenedor_users').classList.add("item_disabled")
+    }
+})
 
 formFilter.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -179,7 +213,20 @@ formFilter.addEventListener('submit', function (e) {
         .then(res => res.json())
         .then(data => {
             eventsData(data)
-            //console.log(data);
+        })
+})
+
+formUsers.addEventListener('submit', function (e) {
+    e.preventDefault()
+    let data = new FormData(formUsers);
+    // let busca = data.get('buscaUsers'); 
+    fetch(`/LEAFING/Crea-J-2022/client/api/filter_users.php`, {
+        method: 'post',
+        body: data
+    })
+        .then(res => res.json())
+        .then(data => {
+            usersData(data)
         })
 })
 

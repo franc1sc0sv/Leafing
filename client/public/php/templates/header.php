@@ -59,7 +59,13 @@ if (!isset($_SESSION['lang'])) {
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
-                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
+                <!-- <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css"> -->
+        <?php } ?>
+
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/public_account.php") { ?>
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/followInfo.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/contraseña.php") { ?>
@@ -129,7 +135,7 @@ if (!isset($_SESSION['lang'])) {
                         ?>
                                 <div id="buttons-header">
                                         <ul class="menu-header-perfil">
-                                                <p><?php echo $datauser[0]['name']; ?></p>
+                                                <p><?php echo $datauser[0]['user_name']; ?></p>
                                                 <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;">
                                                         <ul id="user-menu" class="dropdown-menu">
                                                                 <li class="dropdown-menu-item">

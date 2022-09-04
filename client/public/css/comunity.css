@@ -10,10 +10,12 @@
 }
 
 .form {
-    padding: 120px 35px;
+    padding: 60px 35px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    opacity: 1;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .inputs {
@@ -159,14 +161,16 @@ footer {
 }
 
 .img {
-    width: 340px;
+    width: 200px;
     height: 200px;
+    border-radius: 50%;
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
 }
 
-.img:hover {
-    transform: scale(1.15);
-}
+/* .img:hover {
+    transform: scale(1.1);
+} */
 
 .specificInfo {
     display: flex;
@@ -346,7 +350,7 @@ footer {
     height: 45px;
     line-height: 16px;
     text-align: center;
-    background: #96caa0;
+    background: #ffbb00;
     color: #ffffff;
     border-radius: 50%;
     position: absolute;
@@ -644,7 +648,7 @@ p {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px; */
     overflow: hidden;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .img_background {
@@ -656,10 +660,11 @@ p {
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.img_background:hover{
+.img_background:hover {
     transform: scale(1.15);
 
 }
+
 @media (max-width: 990px) {
 
     .container_cards {
@@ -672,4 +677,79 @@ p {
     .container_cards {
         grid-template-columns: 1fr;
     }
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background: #ffbb00;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 130px;
+}
+
+.generalContainer {
+    align-items: center;
+}
+
+.icon_toogle {
+    width: 60px;
+    height: 60px;
+    filter: invert(75%) sepia(82%) saturate(2969%) hue-rotate(3deg) brightness(109%) contrast(102%);
+
+
+}
+
+.toogle_switch {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.item_active {
+    opacity: 1;
+    display: flex;
+}
+
+.item_disabled {
+    opacity: 0;
+    display: none;
+}
+
+.container_users {
+    width: 80%;
+    margin: 0 auto;
 }
