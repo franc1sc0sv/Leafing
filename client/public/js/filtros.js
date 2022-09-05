@@ -106,8 +106,6 @@ function options(dataCategories, option) {
     return option;
 }
 
-
-
 function cardsData(dataEvents) {
     //console.log(dataEvents);
     function capitalizarPrimeraLetra(str) {
@@ -168,10 +166,10 @@ function cardsUser(dataUser) {
         element += `
         <div class="card">
             <div class="event-img">
-                <a href="./evento-especifico.php?estiben=${dataUser[i][0]}" target="_blank"><img src="../assets/user_images/profile_images/${dataUser[i][4]}" class="img"></a>
+                <a href="./public_account.php?desiree=${dataUser[i][0]}" target="_blank"><img src="../assets/user_images/profile_images/${dataUser[i][4]}" class="img"></a>
             </div>
             <div class="cardtext">
-                <a href="./evento-especifico.php?estiben=${dataUser[i][0]}" target="_blank" class="title">${dataUser[i][3]}</a>
+                <a href="./public_account.php?desiree=${dataUser[i][0]}" target="_blank" class="title">${dataUser[i][3]}</a>
                 <div class="specificInfo">
                     <div class="place">
                         ${dataUser[i][1] + " " + dataUser[i][2]}

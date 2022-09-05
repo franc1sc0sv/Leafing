@@ -39,9 +39,9 @@ function filters(arrayOrderBy) {
     let descriptionInput = document.getElementById('descriptionInput');
     if (html.lang == "es") {
         tituloInput.setAttribute('placeholder', 'eg. Recolección de basura')
-        descriptionInput.setAttribute('placeholder', 'eg. Recolección de basura')
+        descriptionInput.setAttribute('placeholder', 'eg. Reunión para hacer una colecta con la ayuda de la comunidad.')
     } else {
-        tituloInput.setAttribute('placeholder', 'eg. Reunión para realizar una recolección con la ayuda de la comunidad')
+        tituloInput.setAttribute('placeholder', 'eg. Garbage collection')
         descriptionInput.setAttribute('placeholder', 'eg. Meeting to carry out a collection with the help of the community.')
     }
 

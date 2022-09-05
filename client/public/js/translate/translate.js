@@ -101,6 +101,7 @@ function TraduccionEspañol() {
 
     }
 }
+
 function TraducirIngles() {
 
     if (html.lang == "es") {
