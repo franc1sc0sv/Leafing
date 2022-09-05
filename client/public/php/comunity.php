@@ -4,76 +4,76 @@ include_once('./templates/conexion.php');
 include_once('./templates/header.php');
 ?>
 
+<div class="generalContainer">
 
-<body class="darkmode">
-    <div class="generalContainer">
+    <div class="backImage"></div>
 
-        <div class="backImage"></div>
+    <div class="toogle_switch">
+        <img src="../assets/iconos/event.svg" alt="" class="icon_toogle">
 
-        <div class="toogle_switch">
-            <img src="../assets/iconos/event.svg" alt="" class="icon_toogle">
-            <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
-            <img src="../assets/iconos/persons.svg" alt="" class="icon_toogle">
-        </div>
+        <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
 
-        <div class="first">
-            <form class="form" action="comunity.php" method="post" id="formFilter">
-                <div class="containerFiltros">
-                    <div class="first-text">
+        <img src="../assets/iconos/persons.svg" alt="" class="icon_toogle">
+    </div>
 
-                        <input type="search" class="inputs search" id="Buscador" name="busca" />
-                        <img src="../img/iconos/lupa.png" alt="" class="lupa">
-                    </div>
-                    <div>
-                        <select name="categorias" class="inputs" id="categoriasFilters">
-                        </select>
-                    </div>
-                    <div>
-                        <input type="datetime-local" name="date_filtro" class="inputs date" value="">
-                    </div>
-                    <div>
-                        <select name="lugar" class="inputs" id="Lugar">
-                        </select>
-                    </div>
-                    <div>
-                        <select id="orden" name="orden" class="inputs">
+    <div class="first">
+        <form class="form" action="comunity.php" method="post" id="formFilter">
+            <div class="containerFiltros">
+                <div class="first-text">
 
-                        </select>
-                    </div>
-                    <div>
-                        <button type="submit" value="ENVIAR" class="send"> <span class="translate"> Enviar</span> </button>
-                    </div>
+                    <input type="search" class="inputs search" id="Buscador" name="busca" />
+                    <img src="../img/iconos/lupa.png" alt="" class="lupa">
                 </div>
-            </form>
-
-            <form class="form item_disabled" action="comunity.php" method="post" id="formUsers">
-                <div class="containerFiltros">
-                    <div class="first-text">
-                        <input type="search" class="inputs search" id="Buscador" name="buscaUsers" />
-                        <img src="../img/iconos/lupa.png" alt="" class="lupa">
-                    </div>
-                    <div>
-                        <button type="submit" value="ENVIAR" class="send"> <span class="translate"> Enviar</span> </button>
-                    </div>
+                <div>
+                    <select name="categorias" class="inputs" id="categoriasFilters">
+                    </select>
                 </div>
-            </form>
-            <div class="xDD">
-                <?php
+                <div>
+                    <input type="datetime-local" name="date_filtro" class="inputs date" value="">
+                </div>
+                <div>
+                    <select name="lugar" class="inputs" id="Lugar">
+                    </select>
+                </div>
+                <div>
+                    <select id="orden" name="orden" class="inputs">
 
-                // $numeroEvents =  count($events);
-                // if ($numeroEvents > 0 and $_GET['busca'] != '') {
-                //     echo '<span class="translate">Resultados encontrados:</span><b> ' . $numeroEvents . '</b>';
-                // }
-
-                ?>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" value="ENVIAR" class="send"> <span class="translate"> Enviar</span> </button>
+                </div>
             </div>
+        </form>
 
+        <form class="form item_disabled" action="comunity.php" method="post" id="formUsers">
+            <div class="containerFiltros">
+                <div class="first-text">
+                    <input type="search" class="inputs search" id="Buscador" name="buscaUsers" />
+                    <img src="../img/iconos/lupa.png" alt="" class="lupa">
+                </div>
+                <div>
+                    <button type="submit" value="ENVIAR" class="send"> <span class="translate"> Enviar</span> </button>
+                </div>
+            </div>
+        </form>
+        <div class="xDD">
+            <?php
+
+            // $numeroEvents =  count($events);
+            // if ($numeroEvents > 0 and $_GET['busca'] != '') {
+            //     echo '<span class="translate">Resultados encontrados:</span><b> ' . $numeroEvents . '</b>';
+            // }
+
+            ?>
         </div>
-    </div>
-    </div>
 
-    <div class="container_users item_disabled" id="contenedor_users">
-        <!-- <div class="card">
+    </div>
+</div>
+</div>
+
+<div class="container_users item_disabled" id="contenedor_users">
+    <!-- <div class="card">
             <div class="event-img">
                 <a href="./evento-especifico.php?estiben=${dataEvents[i][0]}" target="_blank"><img src="../assets/user_images/profile_images/1662216446_5c43568d3f31e0ba35ccd9294a705cc5.jpg" class="img"></a>
             </div>
@@ -90,13 +90,13 @@ include_once('./templates/header.php');
             <span class="event-time">
             </span>
         </div> -->
-    </div>
+</div>
 
-    <div class="container_cards" id="contenedor">
+<div class="container_cards" id="contenedor">
 
-    </div>
+</div>
 
-    <!-- <div class="cards_new">
+<!-- <div class="cards_new">
         <div class="img_container_cards img_background" style="background-image: url(../assets/imagenes/event-1-1130x650.webp);">
 
         </div>
@@ -125,13 +125,13 @@ include_once('./templates/header.php');
         </div>
     </div> -->
 
-    <div class="pagination">
-        <form action="comunity.php" method="post">
+<div class="pagination">
+    <form action="comunity.php" method="post">
 
-        </form>
+    </form>
 
-    </div>
+</div>
 
-    <script src="../js/filtros.js"></script>
+<script src="../js/filtros.js"></script>
 </body>
 <?php include_once('./templates/footer.php'); ?>

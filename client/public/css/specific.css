@@ -112,6 +112,7 @@ body {
 }
 
 .details {
+    height: max-content;
     width: 400px;
     background: #fff;
     border-radius: 5px;
@@ -175,7 +176,7 @@ body {
 }
 
 .add {
-    margin-top: 80px;
+    padding: 1rem 0;
 }
 
 .add button {
@@ -195,9 +196,6 @@ body {
     border: 1px solid #ffbb00;
 
     width: 100%;
-
-    cursor: pointer;
-    transition: 0.2s;
 }
 
 .add button:hover {
