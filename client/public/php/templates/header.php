@@ -59,7 +59,13 @@ if (!isset($_SESSION['lang'])) {
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
-                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
+                <!-- <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css"> -->
+        <?php } ?>
+
+        <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/public_account.php") { ?>
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/followInfo.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/contraseña.php") { ?>
@@ -88,8 +94,8 @@ if (!isset($_SESSION['lang'])) {
                 <!-- Estilos de crear evento-->
                 <link rel="stylesheet" href="../css/specific.css">
         <?php } ?>
-        
-        
+
+
         <!--Favicon-->
         <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
 
@@ -113,7 +119,7 @@ if (!isset($_SESSION['lang'])) {
                                         </li>
                                         <li class="li-menu item-menu-desplegable"><a href="/LEAFING/Crea-J-2022/client/public/php/about_us.php" class="a-header"><span class="translateHeader">Nosotros</span></a></li>
                                         <li class="li-menu item-menu-desplegable">
-                                                <p class="a-header"><span class="translateHeader">Ayuda al planeta</span> <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
+                                                <p class="a-header"> <a href="/LEAFING/Crea-J-2022/client/public/php/comunity.php" class="a-header "> <span class="translateHeader">Ayuda al planeta</span></a> <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/flechita.svg" class="menu_arrow" alt="flechita"> </p>
                                                 <ul class="menu_desplegable">
                                                         <li class="li_menu-despleagble"><a href="/LEAFING/Crea-J-2022/client/public/php/comunity.php" class="a-header a-header-desplegable translateHeader">Eventos</a></li>
                                                         <li class="li_menu-despleagble"><a href="/LEAFING/Crea-J-2022/client/public/php/crear_evento.php" class="a-header a-header-desplegable translateHeader">Crea tus eventos</a></li>
@@ -136,34 +142,25 @@ if (!isset($_SESSION['lang'])) {
                         ?>
                                 <div id="buttons-header">
                                         <ul class="menu-header-perfil">
-                                                <p><?php echo $datauser[0]['name']; ?></p>
+                                                <p><?php echo $datauser[0]['user_name']; ?></p>
                                                 <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;">
                                                         <ul id="user-menu" class="dropdown-menu">
-                                                                <li class="dropdown-menu-item">
-                                                                        <a class="dropdown-menu-link">
-                                                                                <span>Profile</span>
+                                                                <li class="dropdown-menu-item data_user">
+                                                                        <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/1662216446_5c43568d3f31e0ba35ccd9294a705cc5.jpg" alt="" class="img_perfil_menu">
+                                                                        <p class="name_perfil">Francisco Melendez</p>
+                                                                        <p class="correo_perfil">franc1sc0.sv.xd@gmail.com</p>
+                                                                        <a href="/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php">
+                                                                                <button class="button_perfil"> Gestionar tu cuenta </button>
                                                                         </a>
                                                                 </li>
-                                                                <li class="dropdown-menu-item">
-                                                                        <a href="#" class="dropdown-menu-link">
-                                                                                <span>Settings</span>
+                                                                <li class="dropdown-menu-item close_session">
+                                                                        <a href="/LEAFING/Crea-J-2022/client/public/php/templates/close.php" class="dropdown-menu-link link_close">
+                                                                                <!-- <button class="button_close"> -->
+                                                                                Cerrar Sesion
+                                                                                <!-- </button> -->
                                                                         </a>
                                                                 </li>
-                                                                <li class="dropdown-menu-item">
-                                                                        <a href="#" class="dropdown-menu-link">
-                                                                                <span>Payments</span>
-                                                                        </a>
-                                                                </li>
-                                                                <li class="dropdown-menu-item">
-                                                                        <a href="#" class="dropdown-menu-link">
-                                                                                <span>Projects</span>
-                                                                        </a>
-                                                                </li>
-                                                                <li class="dropdown-menu-item">
-                                                                        <a href="#" class="dropdown-menu-link">
-                                                                                <span>Logout</span>
-                                                                        </a>
-                                                                </li>
+
                                                         </ul>
                                                 </div>
                                         </ul>

@@ -33,6 +33,11 @@ if ($_GET['busca'] == '' && $_GET['lugar'] == '' && $_GET['categorias'] == '' &&
         $sql .= " AND place_event = '" . $_GET['lugar'] . "' ";
     }
 
+
+    if ($_GET['orden'] == '') {
+        $sql .= " ORDER BY RAND(); ";
+    }
+
     if ($_GET['orden'] == '1') {
         $sql .= " ORDER BY categories_events.categories ASC ";
     }

@@ -1,0 +1,83 @@
+body {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.followsInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#onlyMenu {
+    gap: 2rem;
+    justify-content: center;
+}
+
+#onlyConfig {
+    overflow-y: auto;
+
+}
+
+.followButon {
+    padding: .5rem 1.5rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.menu-nombre-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.followsInfo>p,
+.about-me {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    /* font-size: 26px; */
+    line-height: 32px;
+    margin-top: 15px;
+}
+
+.followsInfo>p>span {
+    font-weight: 800;
+
+}
+
+.flex-container {
+    height: 87vh;
+}
+
+.menu-img {
+    padding: 0;
+}
+
+.configuracion-name {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.content_info {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 15px;
+}
+
+.infor_content_b{
+    font-weight: 600;
+}
+.img_link{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}

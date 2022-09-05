@@ -4,13 +4,14 @@
     flex-direction: column;
     position: relative;
     right: 260px;
-    top: 105%;
-    background: gray;
+    top: 110%;
     max-width: 300px;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     padding: unset;
     border-radius: 10px;
     /* border: 0.125px solid var(--second-bg-color);*/
+    background-color: rgb(52 54 56);
+    width: 300px;
 }
 
 .dropdown-menu-content {
@@ -20,13 +21,15 @@
 
 .dropdown-menu-item {
     width: 100%;
+    padding: 1rem;
 }
 
 .dropdown-menu-link {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none; */
+    color: #e8eaed;
     /* color: var(--main-color); */
 }
 
@@ -76,6 +79,7 @@
 
 .dropdown-expand {
     display: inline-flex;
+    z-index: 999;
 }
 
 /* .img-perfil {
@@ -89,5 +93,86 @@
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+}
 
+.dropdown-toggle:hover {
+    box-shadow: 0 0 0 3px #0000001f;
+}
+
+.img_perfil_menu {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.name_perfil {
+    font-size: 15px !important;
+    letter-spacing: .1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #e8eaed;
+    font-weight: 800;
+    margin-top: 1rem;
+
+}
+
+.correo_perfil {
+    color: #5f6368;
+    font: 400 14px/20px Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: .2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #e8eaed;
+    text-align: center;
+    font-size: 15px !important;
+    margin-bottom: .8rem;
+}
+
+.data_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_perfil {
+    border-radius: 23px;
+    border: none;
+    padding: .3rem 1rem;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.link_close {
+    /* border-radius: 23px; */
+    border: none;
+    padding: .3rem 1rem;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ffffff4f;
+    /* width: 100%; */
+}
+.link_close:hover{
+    color: white;
+}
+.close_session {
+    text-align: center;
+    border-top: 1px #ffffff6b solid;
+    border-bottom: 1px #ffffff6b solid;
+    margin-bottom: 1rem;
 }

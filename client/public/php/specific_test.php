@@ -2,19 +2,46 @@
 include_once('./templates/include.php');
 include_once('./templates/conexion.php');
 include_once('./templates/header.php');
-?>
+
+$error = false;
+//estiben = id del evento
+if (isset($_GET['estiben'])) {
+    $idevent = $_GET['estiben'];
+    if (is_numeric($idevent)) {
+        $objconexion = new conection;
+        $eventsmaxid = $objconexion->consultar("SELECT MAX(id_events) FROM `events` WHERE id_state_events = 1");
+        if ($idevent >= 1 && $idevent <= $eventsmaxid[0][0]) {
+
+            $event = $objconexion->consultar("SELECT events.id_events, events.name_event, events.description_event, events.direccion_evento, user_data.user_name, categories_events.categories, place_events.place, events.img_event, user_data.img_path, events.date_event, events.id_user_data  FROM `events` 
+            INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
+            INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
+            INNER JOIN place_events ON events.place_event = place_events.id_place
+            WHERE id_events = $idevent;
+            ");
+            $idcreator = $event[0]['id_user_data'];
+            $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
+        } else {
+            echo "El evento no existe";
+            $error = true;
+        }
+    } else {
+        echo "WTF un error validado";
+        $error = true;
+    }
+} else {
+    echo "Nice try estiben";
+    $error = true;
+}
 
 
-
-
-<body class="darkmode">
+if (!$error) { ?>
     <div class="all_yes">
         <div class="generalContainer">
             <div class="backImage"></div>
             <div class="first">
                 <div class="form">
                     <div class="containerinfo">
-                        <h1 class="event_name">Milano 21T Meeting</h1>
+                        <h1 class="event_name"><?php echo $event[0]['name_event'] ?></h1>
                         <div class="links">
                             <nav class="direction">
                                 <ol>
@@ -22,7 +49,7 @@ include_once('./templates/header.php');
                                     <img src="../assets/iconos/flecha-correcta.png" alt="" class="arrowhite">
                                     <li class="lievents"><a href="../php/comunity.php">Events</a></li>
                                     <img src="../assets/iconos/flecha-correcta.png" alt="" class="arrowhite">
-                                    <li class="lieve">Milano 21T Meeting</li>
+                                    <li class="lieve"><?php echo $event[0]['name_event'] ?></li>
                                 </ol>
                             </nav>
                         </div>
@@ -34,15 +61,10 @@ include_once('./templates/header.php');
             <div class="container_event">
                 <div class="img_and_description">
                     <div class="description_img">
-                        <img src="https://demo.gloriathemes.com/eventchamp/demo/wp-content/uploads/2018/11/event-1-1130x650.jpg" alt="">
+                        <img src="../assets/user_images/events_images/<?php echo $event[0]['img_event'] ?>" alt="">
                     </div>
                     <div class="description">
-                        <p>Lorem ipsum dolor sit amet, voluptua iracundia disputationi an pri, his utinam principes dignissim ad. Ne nec dolore oblique nusquam, cu luptatum volutpat delicatissimi has. Sed ad dicam platonem, mea eros illum elitr id, ei has similique constituto. Ea movet saperet rationibus sit, pri autem aliquip invidunt an. Consetetur omittantur consequuntur eos et. Eleifend praesent iudicabit no mea, tollit persequeris ex pri, tota splendide voluptaria in pri. Ad per tale aliquip, ei sit viris commune albucius. Eos aliquip scaevola ut, eum alii mentitum prodesset no, his ne suas atomorum. Et numquam deleniti ponderum vis, quod error at mei. Novum blandit adolescens sea te. Ea eum cetero scaevola.
-
-                            In his meis porro viris, illud imperdiet reprimique et vim. Feugiat atomorum reprehendunt vix ei, ei facete regione pri. Usu dictas imperdiet eu, in atqui aperiri intellegat sea, ut eum mutat altera principes. Te sit quaeque oportere, has modus inani ceteros ad. Impedit blandit deseruisse duo ea, ne graecis deleniti incorrupte usu. Ut mei splendide accommodare. An pri iisque meliore, eam ei splendide eloquentiam philosophia. Ne per meis eleifend electram. Ne eam porro aliquam invidunt. Minim docendi eloquentiam cum ad. Quo ea mazim ubique, ex est fuisset blandit scaevola. Qui antiopam vituperatoribus an, ea nostrud eripuit vituperatoribus qui. In eam diam nominati, per ea alia luptatum. Nam habemus electram democritum ut. Mei ea omnium admodum intellegat. Habeo atqui molestiae at mei, an nec ridens consequuntur. Quem nulla cum ei, his ipsum apeirian no, per at eius iriure aperiri. Sed dicam interesset ei. Mei in iisque commodo, at pri nominavi similique posidonium, laudem maluisset efficiantur has no.
-
-                            His verterem consectetuer consequuntur ne, no virtute atomorum usu. Eu quo nemore causae tacimates, eos viderer persequeris an. Cu molestie consulatu qui. Natum labores perfecto no ius, pri dico mundi inciderint id. Ei usu dico libris postea. Cu graeco doctus splendide qui, ei eum probo regione.
-                        </p>
+                        <p><?php echo $event[0]['description_event'] ?></p>
                     </div>
                 </div>
                 <div class="details">
@@ -66,7 +88,7 @@ include_once('./templates/header.php');
                                         <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
+                                        <div class="lititle">Fecha de finalización</div>
                                         <div class="liinner">November 17, 2020 12:00 pm</div>
                                     </div>
                                 </li>
@@ -75,8 +97,8 @@ include_once('./templates/header.php');
                                         <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="lititle">Categoria</div>
+                                        <div class="liinner">Reciclaje</div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
@@ -84,8 +106,8 @@ include_once('./templates/header.php');
                                         <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="lititle">Lugar</div>
+                                        <div class="liinner">San Salvador</div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
@@ -93,28 +115,19 @@ include_once('./templates/header.php');
                                         <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="lititle">Direccion</div>
+                                        <div class="liinner">El colegio don bosco</div>
                                     </div>
                                 </li>
-                                <li class="lidetails">
+                                <!-- <li class="lidetails">
                                     <div class="liicon">
                                         <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="lititle">Organizador</div>
+                                        <div class="liinner">franc1sc0_sv</div>
                                     </div>
-                                </li>
-                                <li class="lidetails">
-                                    <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
-                                    </div>
-                                    <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
-                                    </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <div class="add">
@@ -141,6 +154,7 @@ include_once('./templates/header.php');
             </div>
         </div>
     </div>
+<?php } ?>
 </body>
 
 <?php include_once('./templates/footer.php'); ?>
