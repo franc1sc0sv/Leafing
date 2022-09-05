@@ -19,7 +19,8 @@ a {
 }
 
 header {
-    background: url(../assets/imagenes/imagen-light.jpg) no-repeat center center;
+    /* background: url(../assets/imagenes/imagen-light.jpg) no-repeat center center; */
+    background: url(../assets/imagenes/asian.jpg) no-repeat center center;
     background-size: cover;
     transition: 3s;
 
