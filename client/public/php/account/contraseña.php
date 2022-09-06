@@ -21,15 +21,15 @@ include_once('../templates/header.php');
                     <div class="form__grid-labels">
                         <div class="short-labels antigua-contraseña">
                             <label for="antigua-contraseña"><span class="translate">Antigua contraseña</span></label>
-                            <input id="antigua-contraseña" type="password" name="antigua_contraseña">
+                            <input id="antigua-contraseña" type="password" name="antigua_contraseña" class="cambio">
                         </div>
                         <div class="short-labels nueva-contraseña">
                             <label for="nueva-contraseña"><span class="translate">Nueva contraseña</span></label>
-                            <input id="nueva-contraseña" type="password" name="nueva_contraseña">
+                            <input id="nueva-contraseña" type="password" name="nueva_contraseña" class="cambio">
                         </div>
                         <div class="short-labels confirmar-contra">
                             <label for="confirmar-contra"><span class="translate">Confirmar nueva contraseña</span></label>
-                            <input id="confirmar-contra" type="password" name="confirmar_contra">
+                            <input id="confirmar-contra" type="password" name="confirmar_contra" class="cambio">
                         </div>
                     </div>
                     <p class="forget translate" id="forgetPassword">Olvidaste tu contraseña?</p>

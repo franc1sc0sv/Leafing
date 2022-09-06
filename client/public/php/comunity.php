@@ -36,7 +36,7 @@ include_once('./templates/header.php');
                     </select>
                 </div>
                 <div>
-                    <select id="orden" name="orden" class="inputs">
+                    <select id="orden" name="orden" class="inputs solo-ordenar">
 
                     </select>
                 </div>

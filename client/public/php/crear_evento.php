@@ -41,12 +41,12 @@ include_once('./templates/header.php');
                     <div class="fecha_form-eventos">
                         <div id="fecha_eventos">
                             <label for="" class="classfecha-hora label_forms translate">Fecha de inicio</label>
-                            <input type="datetime-local" name="dateStart" class="input_fecha">
+                            <input type="datetime-local" name="dateStart" class="input_fecha date-color">
                         </div>
 
                         <div id="hora_eventos">
                             <label for="" class="classfecha-hora label_forms translate">Fecha de finalización </label>
-                            <input type="datetime-local" name="dateEnd" class="input_fecha">
+                            <input type="datetime-local" name="dateEnd" class="input_fecha date-color">
                         </div>
                     </div>
                 </div>
@@ -59,12 +59,12 @@ include_once('./templates/header.php');
                         <p class="translate">Arrastra o suelta tu imagen</p>
                         <p>O</p>
                         <label for="image" class="translate">Elige un archivo</label>
-                        <input type="file" name="image" id="imagee">
+                        <input type="file" name="image" id="imagee" class="imput-img">
                         <img alt="" id="img-result" class="dragfile_img">
                         <!-- <p class="namee"></p> -->
                     </div>
 
-                    <select name="categorias" class="select" id="categoriasFilters">
+                    <select name="categorias" class="select select-color" id="categoriasFilters">
 
                     </select>
 
@@ -73,14 +73,14 @@ include_once('./templates/header.php');
                             </label>
                             <input type="text" name="title" class="input_datos"> -->
 
-                        <select name="lugar" class="select" id="Lugar">
+                        <select name="lugar" class="select select-color" id="Lugar">
 
                         </select>
                         <br>
 
                         <label for="title" class="label_forms label_datos translate">Dirección
                         </label>
-                        <input type="text" name="address" class="inputsTXT inputstxt" placeholder="eg. Colegio Don Bosco">
+                        <input type="text" name="address" class="inputsTXT inputstxt direccion" placeholder="eg. Colegio Don Bosco">
 
                     </div>
                 </div>
