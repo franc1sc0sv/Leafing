@@ -6,7 +6,7 @@
 class conection{
     private $server="localhost";
     private $user="root";
-    private $password="";
+    private $password="123";
     public $conection;
 
     public function __construct(){

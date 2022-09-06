@@ -148,3 +148,7 @@ body.darkmode header {
     width: 2rem;
     height: 2rem;
 }
+
+body.darkmode .li_menu-despleagble {
+    background-color: #403c3c;
+}

@@ -60,7 +60,7 @@ if (!$error) { ?>
         <div class="container_whole">
             <div class="container_event">
                 <div class="img_and_description">
-                    <div class="description_img">
+                    <div class="description_img black">
                         <img src="../assets/user_images/events_images/<?php echo $event[0]['img_event'] ?>" alt="">
                     </div>
                     <div class="description">
@@ -131,22 +131,22 @@ if (!$error) { ?>
                             </ul>
                         </div>
                         <div class="add">
-                            <button>Inscribirse</button>
+                            <button class="button-hover">Inscribirse</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="father_commentss">
                 <div class="commentss">
-                    <div class="comment_title">Deja un Comentario</div>
+                    <div class="comment_title">Deja un comentario</div>
                     <div class="pcomments">
                         <form action="" method="post" class="comment_form">
                             <div class="comment_area">
-                                <textarea name="" id="" placeholder="Tu comentario"></textarea>
+                                <textarea name="" id="" placeholder="Tu comentario" class="textArea-black"></textarea>
 
                             </div>
                             <div class="comment_submit">
-                                <button type="submit" class="comment_button">Publicar comentario</button>
+                                <button type="submit" class="comment_button button-hover">Publicar comentario</button>
                             </div>
                         </form>
                     </div>

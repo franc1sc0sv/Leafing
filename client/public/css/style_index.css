@@ -91,6 +91,32 @@ header {
 }
 
 
+
+/* What do we do */
+
+.what_do_we_do {
+    background: #f7f7f7;
+    padding: 120px 0;
+}
+
+.what_container {
+    display: flex;
+
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.what_info {
+    width: 34%;
+
+}
+
+.what_info_border {
+    padding: 60px;
+    border: 4px solid #000;
+}
+
+
 /*¿Qué son estos eventos?*/
 
 .que-eventos {

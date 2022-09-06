@@ -41,11 +41,11 @@ export const translateGeneralES = [
     //4 = perfil de usuario
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la cuenta", "Nombre", "Apellido", "Nombre de usuario", "Email", "Sobre mí", "Guardar", "Cancelar"],
     //5 = inicio de sesion
-    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Olvide mi contraseña", "Siguiente", "Olvidaste tu correo electrónico", "Escribe tu correo electronico y te mandaremos las instrucciones de como restablecerla", "Regresar", "Enviar", "El siguiente paso", "Revisa tu correo con las instrucciones"],
+    ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Olvidé mi contraseña", "Siguiente", "Olvidaste tu correo electrónico", "Escribe tu correo electrónico y te mandaremos las instrucciones de como restablecerla", "Regresar", "Enviar", "El siguiente paso", "Revisa tu correo con las instrucciones"],
     //6 = creacion de cuenta
     ["¿Ya tienes una cuenta?", "Inicia sesión", "Crea una cuenta", "Email", "Contraseña", "Siguiente", "Verifica tu correo", "Para verificar tu dirección de correo electrónico te hemos enviado un código de confirmación a ", "Siguiente", "Completa tu información", "Nombre", "Apellido", "Nombre de usuario", "Fecha de nacimiento ", "Género"],
     //header
-    ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Registrarse", " Inicio de sesion"],
+    ["Inicio", "Nosotros", "Ayuda al planeta", "Eventos", "Crea tus eventos", "Concientízate", "Registrarse", " Inicio de sesión"],
     //footer
     ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"],
     //Contraseña
@@ -57,7 +57,7 @@ export const translateGeneralES = [
     //comunity
     ["Enviar", "Enviar"],
     //
-    ["Descripcion", "Categorias", "Lugar y fecha"]
+    ["Descripción", "Categorías", "Lugar y fecha"]
 
 
 ]
