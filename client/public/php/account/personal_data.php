@@ -1,5 +1,8 @@
 <?php
 include_once('include.php');
+if (!isset($_SESSION['dataID'])) {
+    header("location:../index.php");
+}
 include_once('conexion.php');
 if ($_POST) {
     $objconexion = new conection();

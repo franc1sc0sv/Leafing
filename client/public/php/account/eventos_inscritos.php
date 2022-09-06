@@ -1,5 +1,8 @@
 <?php
 include_once('../templates/include.php');
+if (!isset($_SESSION['dataID'])) {
+    header("location:../index.php");
+}
 include_once('../templates/conexion.php');
 
 $id = $_SESSION['dataID'];

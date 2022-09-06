@@ -223,5 +223,4 @@ if (!$error) { ?>
 <?php } ?>
 
 <script src="../js/coments.js" type="module"></script>
-
 <?php include_once('./templates/footer.php'); ?>

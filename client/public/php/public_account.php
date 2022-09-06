@@ -11,8 +11,8 @@ if (isset($_GET['desiree'])) {
         $objconexion = new conection;
         $usersMaxid = $objconexion->consultar("SELECT MAX(id_user_data) FROM `user_data`");
         if ($iduser >= 1 && $iduser <= $usersMaxid[0][0]) {
+            $dataID = $_SESSION['dataID'];
             $user = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data =  $iduser");
-            //print_r($user);
         } else {
             echo "El perfil no existe";
             $error = true;
@@ -42,12 +42,29 @@ if (!$error) {
                 <p class="nombre-usuario">
                     <?php echo $user[0][4] ?>
                 </p>
-                <button class="followButon">Seguir</button>
+                <div id="buttonFollow">
+
+                </div>
+                <!-- <div class="sk-fading-circle">
+                    <div class="sk-circle1 sk-circle"></div>
+                    <div class="sk-circle2 sk-circle"></div>
+                    <div class="sk-circle3 sk-circle"></div>
+                    <div class="sk-circle4 sk-circle"></div>
+                    <div class="sk-circle5 sk-circle"></div>
+                    <div class="sk-circle6 sk-circle"></div>
+                    <div class="sk-circle7 sk-circle"></div>
+                    <div class="sk-circle8 sk-circle"></div>
+                    <div class="sk-circle9 sk-circle"></div>
+                    <div class="sk-circle10 sk-circle"></div>
+                    <div class="sk-circle11 sk-circle"></div>
+                    <div class="sk-circle12 sk-circle"></div>
+                </div> -->
+
             </div>
 
             <div class="followsInfo">
-                <p><span>1635</span> Seguidores</p>
-                <p><span>13541</span> Seguidos</p>
+                <p><span id="followers"></span> Seguidores</p>
+                <p><span id="following"></span> Seguidos</p>
             </div>
             <div class="about">
                 <p class="about-me">"<?php echo $user[0][7] ?>"</p>
@@ -98,7 +115,19 @@ if (!$error) {
             </div>
         </div>
     </div>
+
+    <div id="modal_container" class="modal-container">
+        <div class="modal" id="modal">
+            <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="alertProfile">
+
+    </div>
 <?php } ?>
 
-
+<script src="../js/followers.js"></script>
 <?php include_once('./templates/footer.php'); ?>

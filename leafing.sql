@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 29-08-2022 a las 15:58:20
+-- Tiempo de generación: 06-09-2022 a las 04:48:29
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -44,12 +44,11 @@ INSERT INTO `categories_events` (`id_categories_events`, `categories`, `categori
 (4, 'zonas en cuido', 'areas under care'),
 (5, 'áreas verdes', 'green areas'),
 (6, 'ecología', 'ecology'),
-(7, 'taxonomía', 'taxonomy'),
 (8, 'capacitaciones', 'trainings'),
 (9, 'concientización', 'awareness'),
 (10, ' pensamiento crítico', ' critical thinking'),
 (11, 'otras', 'others'),
-(12, 'Animales', 'Animals');
+(14, 'animales', 'animals');
 
 -- --------------------------------------------------------
 
@@ -78,7 +77,10 @@ INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUE
 (6, 'Que bonito se ve el evento', 3, 2, '2022-08-29 14:30:13'),
 (7, 'El tema esta muy interesante\r\n\r\n', 3, 1, '2022-08-29 14:39:37'),
 (8, 'hola, muy bonito evento', 3, 10, '2022-08-29 15:49:08'),
-(9, 'diseño es el meta', 3, 10, '2022-08-29 15:50:38');
+(9, 'diseño es el meta', 3, 10, '2022-08-29 15:50:38'),
+(10, 'mmm interesante', 1, 7, '2022-09-01 14:06:54'),
+(11, 'Que bonito se ve el evento\r\n\r\n', 1, 2, '2022-09-01 14:45:48'),
+(12, 'El evento se ve muy interesante', 1, 6, '2022-09-05 02:33:11');
 
 -- --------------------------------------------------------
 
@@ -112,9 +114,23 @@ INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event
 (5, 'Capacitacion sobre ecologia', '1661740004_ecología-e1551739090805.jpg', 'El profesor Aristides vuelve para compartir una vez mas su conocimiento y en esta ocacion nos hablara sobre ecologia', 10, 'El colegio don Bosco', '2022-09-07 11:30:00', '2022-09-07 16:00:00', 6, 4, 1),
 (6, 'Campaña de reciclaje', '1661740918_parque-central-cojutepeque.jpg', 'Cojuteoque es un lugar muy hermoso conocido por sus chorizos pero una cosa lo mata la cual es la contaminacion ultimamente se ve mucha basura en canales, calles, zonas verdes. AYUDANOS. Incluye comida.', 4, 'Cojutepeque, Parque central', '2022-08-31 07:00:00', '2022-08-31 15:00:00', 1, 5, 1),
 (7, 'Consumo sostenible', '1661741478_58.jpg', 'El uso de modalidades de consumo y producción sostenibles aumenta la eficiencia y productividad asegura que las actividades humanas se mantengan dentro de la capacidad de sustentación del planeta y se respetan los derechos de las generaciones futuras.', 5, 'Surf city, playa el tunco', '2022-09-01 12:00:00', '2022-09-01 20:00:00', 8, 5, 1),
-(8, 'MCDONALS ES VIDA BRO', '1661741964_Mcdonalds_logo.webp', 'MCDONALS ES VIDA BRO', 10, 'McDonalds, Escalón', '2022-08-30 08:00:00', '2022-09-08 12:02:00', 11, 4, 1),
+(8, 'MCDONALS ES VIDA BRO', '1661741964_Mcdonalds_logo.webp', 'MCDONALS ES VIDA BRO', 10, 'McDonalds, Escalón', '2022-08-30 08:00:00', '2022-09-08 12:02:00', 11, 4, 2),
 (9, 'Salva a Añañin', '1661782853_Captura de pantalla (1).png', 'La increíble salvación de Añañin aña', 6, 'Mi casa en Apopa', '2022-08-29 08:00:00', '2022-08-30 02:00:00', 1, 3, 2),
-(10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2);
+(10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2),
+(11, 'la esquizofremia pego rico bro', '1662044397_87099079dd04b5ac5a840b9d42ec0857.jpg', 'afawfafafAfAFAF', 8, 'El colegio don Bosco', '2022-09-28 08:52:00', '2022-09-29 08:52:00', 2, 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `followers`
+--
+
+CREATE TABLE `followers` (
+  `id_follow` int(11) NOT NULL,
+  `id_follower` int(11) NOT NULL,
+  `id_following` int(11) NOT NULL,
+  `date_following` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -138,7 +154,11 @@ INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`
 (2, 5, 5, '2022-08-29 02:32:27'),
 (3, 7, 4, '2022-08-29 02:53:32'),
 (4, 10, 3, '2022-08-29 15:50:53'),
-(5, 1, 3, '2022-08-29 15:51:12');
+(5, 1, 3, '2022-08-29 15:51:12'),
+(7, 2, 4, '2022-09-01 13:51:46'),
+(8, 11, 1, '2022-09-01 16:15:54'),
+(9, 1, 1, '2022-09-04 23:31:40'),
+(10, 6, 1, '2022-09-05 02:33:17');
 
 -- --------------------------------------------------------
 
@@ -170,7 +190,7 @@ INSERT INTO `place_events` (`id_place`, `place`) VALUES
 (12, 'Sonsonate'),
 (13, 'La Unión'),
 (14, 'Usulután'),
-(15, 'Apopa');
+(20, 'apopa');
 
 -- --------------------------------------------------------
 
@@ -349,7 +369,7 @@ INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `ro
 (1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$A4X5ZpYic0FA/QCVN1/e9uQ8CqHFc/3rESShK3aZT0dqePqQaEMxC', 'abd7c3380debc65c8569bc9910c41c99', 1),
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
 (3, 'escobaralberto381@gmail.com', '$2y$10$bg9D0PH5fsVbBc9LU6P7kuEon33ZqDqtW92iCLkBMm9svL8zu6KNS', 'b5c1364ee324ed0b224c55e3c0b96d01', 1),
-(4, 'aniapancakes6@gmail.com', '$2y$10$R4mHvbR76iCva3r6wbN5SO5sLE0opo2ubQSyHwpuAxCYECTx.wMki', '87c83b40fb4b5943faeb05236f068b67', 2),
+(4, 'aniapancakes6@gmail.com', '$2y$10$XVBDcfsGADU0ialOjwrNbuYmy.Ml4AYsxZ.bXanEW/J0qiD3BJBZC', '11fbb9c5d923bc560772c96f6ba937e4', 2),
 (5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2);
 
 -- --------------------------------------------------------
@@ -374,10 +394,10 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
-(1, 'Francisco Josue', 'Hernandez Melendez', '2006-08-06', 'franc1sc0_sv', 'M', 'defaultImage.png', ''),
+(1, 'Francisco ', 'Josue', '2006-08-06', 'franc1sc0_sv', 'M', '1662216446_5c43568d3f31e0ba35ccd9294a705cc5.jpg', 'Me gusta el arroz con nato'),
 (2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png', ''),
 (3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
-(4, 'Esteban ', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', ''),
+(4, 'Esteban', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', 'aFAfAFa'),
 (5, 'Juan Daniel', 'Jimenez Torres', '2004-04-08', 'DaniTorres', 'F', 'defaultImage.png', '');
 
 --
@@ -407,6 +427,14 @@ ALTER TABLE `events`
   ADD KEY `id_user-data` (`id_user_data`),
   ADD KEY `id_state-events` (`id_state_events`),
   ADD KEY `place_event` (`place_event`);
+
+--
+-- Indices de la tabla `followers`
+--
+ALTER TABLE `followers`
+  ADD PRIMARY KEY (`id_follow`),
+  ADD KEY `id_follower` (`id_follower`),
+  ADD KEY `id_following` (`id_following`);
 
 --
 -- Indices de la tabla `inscriptions`
@@ -483,31 +511,37 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT de la tabla `categories_events`
 --
 ALTER TABLE `categories_events`
-  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_categories_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `coments`
 --
 ALTER TABLE `coments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de la tabla `followers`
+--
+ALTER TABLE `followers`
+  MODIFY `id_follow` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
 --
 ALTER TABLE `place_events`
-  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_place` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `random_curious_data`
@@ -576,6 +610,13 @@ ALTER TABLE `events`
   ADD CONSTRAINT `place_event` FOREIGN KEY (`place_event`) REFERENCES `place_events` (`id_place`),
   ADD CONSTRAINT `state` FOREIGN KEY (`id_state_events`) REFERENCES `state_events` (`id_state_events`),
   ADD CONSTRAINT `user_data(creator)` FOREIGN KEY (`id_user_data`) REFERENCES `user_data` (`id_user_data`);
+
+--
+-- Filtros para la tabla `followers`
+--
+ALTER TABLE `followers`
+  ADD CONSTRAINT `follower` FOREIGN KEY (`id_follower`) REFERENCES `user_data` (`id_user_data`),
+  ADD CONSTRAINT `following` FOREIGN KEY (`id_following`) REFERENCES `user_data` (`id_user_data`);
 
 --
 -- Filtros para la tabla `inscriptions`

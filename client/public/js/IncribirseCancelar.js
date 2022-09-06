@@ -186,7 +186,6 @@ function alertf(msg) {
 </div> `
 }
 
-
 function nice(msg) {
     return `
         <div class="alert hide nice" id = "alert">

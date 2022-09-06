@@ -1,4 +1,10 @@
 <?php session_start();
+
+if (isset($_SESSION['dataID'])) {
+    header("location:./index.php");
+}
+
+
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = "es";
 } ?>
