@@ -13,21 +13,21 @@ btnMode.addEventListener("click", function () {
 
     if (val) {
         localStorage.dark = "si"
-        document.querySelector(".cambio").style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/dom.png)")
+        btnMode.style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/dom.png)")
     } else {
         localStorage.dark = "no"
-        document.querySelector(".cambio").style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/luna.png)")
+        btnMode.style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/luna.png)")
     }
 })
 
 if (localStorage.dark == "si") {
     body.classList.add("darkmode");
     body.classList.add("font-mode");
-    document.querySelector(".cambio").style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/dom.png)")
+    btnMode.style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/dom.png)")
 
 
 } else {
     body.classList.remove("darkmode");
     body.classList.remove("font-mode");
-    document.querySelector(".cambio").style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/luna.png)")
+    btnMode.style.backgroundImage  = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/luna.png)")
 }
