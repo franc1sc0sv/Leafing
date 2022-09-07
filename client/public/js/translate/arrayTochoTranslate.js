@@ -8,7 +8,7 @@ export const translateGeneralEN = [
     //3 = formulario de creacion de evento
     ["Create your", "Event", "Create your event", "Title", "Description", "Start date", "End date", "Drag or drop your image", "Choose a file", "Address", "Publish"],
     //4 = perfil de usuario
-    ["Account", "Password", "My events", "Registered events", "Log out ", "Account settings", "Name", "Last name", "User name", "Email", "About me", "Save", "Cancel"],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Account settings", "Name", "Last name", "User name", "Email", "About me", "Save", "Drag or drop your image", "Choose a file"],
     //5 = inicio de sesion
     ["Don't have an account yet?", "Sign up", "Sign in", "Email", "Password", "Forgot my password", "Next", "Forgot your email", "Type your email and We will send you the instructions on how to restore it", "Return", "Send", "The next step", "Check your email with the instructions"],
     //6 = creacion de cuenta
@@ -39,7 +39,7 @@ export const translateGeneralES = [
     //3 = formulario de creacion de evento
     ["Crea tu", "Evento", "Crea tu evento", "Título", "Descripción", "Fecha de inicio", "Fecha de finalización", "Arrastra o suelta tu imagen", "Elige un archivo", "Dirección", "Publicar"],
     //4 = perfil de usuario
-    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la cuenta", "Nombre", "Apellido", "Nombre de usuario", "Email", "Sobre mí", "Guardar", "Cancelar"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la cuenta", "Nombre", "Apellido", "Nombre de usuario", "Email", "Sobre mí", "Guardar", "Arrastra o suelta tu imagen", "Elige un archivo"],
     //5 = inicio de sesion
     ["¿Aún no tienes una cuenta?", "Regístrate", "Inicia sesión", "Email", "Contraseña", "Olvidé mi contraseña", "Siguiente", "Olvidaste tu correo electrónico", "Escribe tu correo electrónico y te mandaremos las instrucciones de como restablecerla", "Regresar", "Enviar", "El siguiente paso", "Revisa tu correo con las instrucciones"],
     //6 = creacion de cuenta

@@ -21,6 +21,26 @@
     opacity: 1;
 }
 
+.buttonxd {
+    background-color: #484848;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 490;
+    font-size: 19px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonxd:hover {
+    background-color: #8AB694;
+}
+
 .modal {
     background-color: #fff;
     width: 600px;
