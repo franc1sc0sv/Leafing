@@ -128,7 +128,6 @@ if (!$error) { ?>
 
     </div>
     <?php if (isset($_SESSION['estatus'])) { ?>
-
         <div class="container-modal" id="containerModal">
             <div class="content-modal" id="contentModal">
                 <div class="headerModal" id="headerModal">

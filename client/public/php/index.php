@@ -68,7 +68,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Aprende a cuidar las plantas</h1>
-                                <a href="../php/evento-especifico.php?estiben=1"><button> <span class="translate">Detalles</span></button></a>
+                                <a href="../php/specific_test.php?estiben=1"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Primero">
                             </div>
@@ -78,7 +78,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Limpieza del rio Lempa</h1>
-                                <a href="../php/evento-especifico.php?estiben=4"><button> <span class="translate">Detalles</span></button></a>
+                                <a href="../php/specific_test.php?estiben=4"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Segundo">
                             </div>
@@ -88,7 +88,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Capacitacion sobre ecologia</h1>
-                                <a href="../php/evento-especifico.php?estiben=5"><button> <span class="translate">Detalles</span></button></a>
+                                <a href="../php/specific_test.php?estiben=5"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Tercero">
                             </div>
@@ -98,7 +98,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>DaniTorres</h2>
                                 <h1>Campaña de reciclaje</h1>
-                                <a href="../php/evento-especifico.php?estiben=6"><button> <span class="translate">Detalles</span></button></a>
+                                <a href="../php/specific_test.php?estiben=6"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Cuarto">
                             </div>
@@ -108,7 +108,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>DaniTorres</h2>
                                 <h1>Consumo sostenible</h1>
-                                <a href="../php/evento-especifico.php?estiben=7"><button> <span class="translate">Detalles</span></button></a>
+                                <a href="../php/specific_test.php?estiben=7"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Quinto">
                             </div>

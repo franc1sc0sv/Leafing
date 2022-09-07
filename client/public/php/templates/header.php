@@ -92,12 +92,13 @@ if (!isset($_SESSION['lang'])) {
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") { ?>
                 <!-- Estilos de crear evento-->
+                <link rel="stylesheet" href="../css/inscripcion.css">
                 <link rel="stylesheet" href="../css/specific.css">
         <?php } ?>
 
 
         <!--Favicon-->
-        <link rel="icon" href="../img/favicon/favicon(full-vectorizado-2).svg">
+        <link rel="icon" href="/LEAFING/Crea-J-2022/client/public/assets/favicon/favicon(full-vectorizado-2).svg">
 
         <title>Leafing</title>
 </head>
@@ -151,7 +152,7 @@ if (!isset($_SESSION['lang'])) {
                                 $arrayFollowers = [];
                                 $arrayEventsNotifications = [];
                                 $arrayNotifications = [];
-                                
+
 
                                 // array_push($arrayNotifications, $arrayEventsNotifications);
                                 for ($i = 0; $i < count($who_follow); $i++) {

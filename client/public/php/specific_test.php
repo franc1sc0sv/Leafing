@@ -12,14 +12,16 @@ if (isset($_GET['estiben'])) {
         $eventsmaxid = $objconexion->consultar("SELECT MAX(id_events) FROM `events` WHERE id_state_events = 1");
         if ($idevent >= 1 && $idevent <= $eventsmaxid[0][0]) {
 
-            $event = $objconexion->consultar("SELECT events.id_events, events.name_event, events.description_event, events.direccion_evento, user_data.user_name, categories_events.categories, place_events.place, events.img_event, user_data.img_path, events.date_event, events.id_user_data  FROM `events` 
+            $event = $objconexion->consultar("SELECT * FROM `events` 
             INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
             INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
             INNER JOIN place_events ON events.place_event = place_events.id_place
             WHERE id_events = $idevent;
             ");
-            $idcreator = $event[0]['id_user_data'];
-            $creatrinfo = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = $idcreator");
+            // print_r($event);
+            $timestampStart = strtotime($event[0]['date_event']);
+            $timestampEnd = strtotime($event[0]['end_date']);
+            setlocale(LC_TIME, "spanish");
         } else {
             echo "El evento no existe";
             $error = true;
@@ -70,91 +72,224 @@ if (!$error) { ?>
                 <div class="details">
                     <div class="one">
                         <span>Detalles del evento</span>
+                        <?php if (isset($_SESSION['estatus'])) { ?>
+                            <div class="reporte">
+                                <button id="ModalOpen"><span class="translate"> Reportar</span></button>
+                            </div>
+                        <?php } ?>
                     </div>
                     <div class="details2">
                         <div class="rest">
                             <ul>
                                 <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/calendar_month.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Fecha de inicio</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="liinner"><?php echo strftime("%B %e, %Y %r", $timestampStart); ?></div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/calendar_month.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Fecha de finalización</div>
-                                        <div class="liinner">November 17, 2020 12:00 pm</div>
+                                        <div class="liinner"><?php echo strftime("%B %e, %Y %r", $timestampEnd); ?></div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/category_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Categoria</div>
-                                        <div class="liinner">Reciclaje</div>
+                                        <div class="liinner"><?php echo $event[0]['categories'] ?></div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/location_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Lugar</div>
-                                        <div class="liinner">San Salvador</div>
+                                        <div class="liinner"><?php echo $event[0]['place'] ?></div>
                                     </div>
                                 </li>
                                 <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/home_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Direccion</div>
-                                        <div class="liinner">El colegio don bosco</div>
+                                        <div class="liinner"><?php echo $event[0]['direccion_evento'] ?></div>
                                     </div>
                                 </li>
-                                <!-- <li class="lidetails">
+                                <li class="lidetails">
                                     <div class="liicon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1581/1581943.png" alt="">
+                                        <img src="../assets/iconos/person_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
                                         <div class="lititle">Organizador</div>
-                                        <div class="liinner">franc1sc0_sv</div>
+                                        <div class="liinner"><a href="./public_account.php?desiree=<?php echo $event[0]['id_user_data'] ?>"><?php echo $event[0]['user_name'] ?></a></div>
                                     </div>
-                                </li> -->
+                                </li>
                             </ul>
                         </div>
-                        <div class="add">
-                            <button class="button-hover">Inscribirse</button>
+                        <div class="add" id="inscribirseCancelar">
+                            <!-- <button class="button-hover">Inscribirse</button> -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="father_commentss">
-                <div class="commentss">
-                    <div class="comment_title">Deja un comentario</div>
-                    <div class="pcomments">
-                        <form action="" method="post" class="comment_form">
-                            <div class="comment_area">
-                                <textarea name="" id="" placeholder="Tu comentario" class="textArea-black"></textarea>
+            <?php if (isset($_SESSION['estatus'])) { ?>
 
-                            </div>
-                            <div class="comment_submit">
-                                <button type="submit" class="comment_button button-hover">Publicar comentario</button>
-                            </div>
-                        </form>
+                <div class="father_commentss">
+                    <div class="commentss">
+                        <div class="comment_title">Deja un comentario</div>
+                        <div class="pcomments">
+                            <form action="specific_test.php" method="post" class="comment_form" id="formComents">
+                                <div class="comment_area">
+                                    <textarea name="coment" id="" placeholder="Tu comentario" class="textArea-black"></textarea>
+                                </div>
+                                <div class="comment_submit">
+                                    <button type="submit" class="comment_button button-hover">Publicar comentario</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+            <div class="box-all-coments">
+                <h1 class="s">Comentarios</h1>
+                <?php
+                $objdata = new conection();
+                $data = $objdata->consultar("SELECT coment, user_data.user_name, user_data.img_path FROM `coments` INNER JOIN user_data ON coments.id_publisher = user_data.id_user_data WHERE id_event = $idevent;");
+                for ($i = 0; $i < count($data); $i++) {  ?>
+                    <div class="coment">
+                        <div class="img-photo">
+                            <img src="../assets/user_images/profile_images/<?php echo $data[$i]['img_path'] ?>" alt="" class="img-coment">
+                        </div>
+
+                        <div class="body-coment">
+                            <h4><?php echo $data[$i]['user_name'] ?></h4>
+                            <p><?php echo $data[$i]['coment'] ?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+            <div id="alertcoments">
+            </div>
+            
+            <div id="alertAña">
+            </div>
+
+            <div id="modal_container" class="modal-container">
+                <div class="modal" id="modal">
+                    <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-<?php } ?>
-</body>
 
-<?php include_once('./templates/footer.php'); ?>
+            <?php if (isset($_SESSION['estatus'])) { ?>
+                <div class="container-modal" id="containerModal">
+                    <div class="content-modal" id="contentModal">
+                        <div class="headerModal" id="headerModal">
+                            <img src="../assets/iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="xd2" id="arrorBack">
+                            <h1 class="translate">Reportar</h1>
+                            <img src="../assets/iconos/close_FILL0_wght400_GRAD0_opsz48.svg" alt="xD" id="XModal">
+                        </div>
+                        <div class="contentModel" id="contentModel">
+                            <div class="contentModelReportes">
+                                <h2 class="translate">Selecciona un problema</h2>
+                                <p class="translate">Si alguien se encuentra en peligro inminente, busca ayuda antes de enviar un reporte a Leafing. No esperes.!</p>
+                                <div class="reportesModel">
+                                    <div class="reportes" id="desnudos" onclick=identifyReport(this)>
+                                        <h3 class="translate">Desnudos</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="violencia" onclick=identifyReport(this)>
+                                        <h3 class="translate">Violencia</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="acoso" onclick=identifyReport(this)>
+                                        <h3 class="translate">Acoso</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="suicidio" onclick=identifyReport(this)>
+                                        <h3 class="translate">Suicidio</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="informacion_falsa" onclick=identifyReport(this)>
+                                        <h3 class="translate">Informacion falsa</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="spam" onclick=identifyReport(this)>
+                                        <h3 class="translate">Spam</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="lenguaje" onclick=identifyReport(this)>
+                                        <h3 class="translate">Lenguaje que incita al odio</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+
+                                    <div class="reportes" id="terrorismo" onclick=identifyReport(this)>
+                                        <h3 class="translate">Terrorismo</h3>
+                                        <img src="../assets/iconos/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="flechitaModel">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sendReport">
+                                <div class="content">
+                                    <h2 class="changeInfo">nice try estiben</h2>
+                                    <p class="changeInfo">jajajajja</p>
+                                    <ul class="ul-reporte changeInfo">
+                                        <li class="li-report changeInfo">aña</li>
+                                    </ul>
+
+                                    <div class="alert" id="alert">
+                                    </div>
+                                </div>
+                                <div class="sendbutton">
+                                    <button class="button-report translate" id="buttonReport">funcionara?</button>
+                                </div>
+                            </div>
+
+                            <div class="MensajeReport">
+                                <div class="contentMensaje">
+                                    <img src="../assets/iconos/check_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="checkIcon">
+                                    <h2 class="translate">Gracias. Recibimos tu reporte.</h2>
+                                    <div class="MensajesExtra">
+                                        <div>
+                                            <h3 class="translate">Se recibio el reporte</h3>
+                                            <p class="translate">Tu reporte nos ayuda a mejorar nuestros procesos y contribuye a que Leafing siga siendo un entorno seguro para todos.</p>
+                                        </div>
+                                        <div>
+                                            <h3 class="translate">Esperando revisión</h3>
+                                            <p class="translate">Nuestros equipos de revisaran el contenido para eliminar el contenido que no cumple nuestras normas lo más rápido posible.</p>
+                                        </div>
+                                    </div>
+                                    <button class="button-report translate" id="buttonSalirReport">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php  } ?>
+        <?php } ?>
+        </div>
+        <script src="../js/coments.js" type="module"></script>
+
+        <?php include_once('./templates/footer.php'); ?>

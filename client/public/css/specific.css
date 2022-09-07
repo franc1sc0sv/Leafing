@@ -20,7 +20,7 @@ body {
     height: 100%;
     position: absolute;
     z-index: -1;
-    filter: brightness(45%) grayscale(20%) ;
+    filter: brightness(45%) grayscale(20%);
 }
 
 .generalContainer {
@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    
+
 }
 
 .first {
@@ -93,22 +93,22 @@ body {
     display: flex;
     justify-content: center;
     gap: 1.8rem;
-    
-    
+
+
 }
 
 .img_and_description {
     max-width: 830px;
     background: #fff;
     border-radius: 5px;
-    
+
 }
 
 .img_and_description img {
-    max-width: 830px;
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    
+
 }
 
 .details {
@@ -124,10 +124,10 @@ body {
     font-size: 13px;
 }
 
-.details2{
+.details2 {
     display: flex;
     flex-direction: column;
-    
+
     padding: 0 30px;
     width: 100%;
 
@@ -143,6 +143,7 @@ body {
     align-items: center;
     height: 96px;
     margin-bottom: 30px;
+    justify-content: space-between;
 }
 
 
@@ -275,13 +276,97 @@ body {
     background: transparent;
 }
 
+.box-all-coments {
+    margin: 1rem auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #1a0a1e;
+    text-decoration: none;
+
+    background: #fff;
+    width: 1258px;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+.coment {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.body-coment {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.img-coment {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.body-coment>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #9A9A9A;
+}
+
+.buttonxd {
+    background-color: #484848;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 490;
+    font-size: 19px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonxd:hover {
+    background-color: #8AB694;
+}
+
+
+#ModalOpen {
+    border-radius: 23px;
+    padding: 10px;
+    padding: 10px 25px;
+    background-color: #484848;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+#ModalOpen:hover {
+    background-color: #8AB694;
+}
+
+
+
 
 @media (max-width: 1300px) {
-    
+
     .container_event {
         flex-direction: column;
         align-items: center;
-        
+
     }
 
     .img_and_description {
@@ -302,7 +387,8 @@ body {
         margin-top: 40px;
     }
 
-    .commentss {
+    .commentss,
+    .box-all-coments {
         width: 95%
     }
 

@@ -8,7 +8,7 @@ $idevnt = $_GET['estiben'];
 $id = $_SESSION['dataID'];
 
 if (!empty($coment)) {
-    if ((strlen($coment) < 10 || strlen($coment) > 200)) {
+    if ((strlen($coment) < 5 || strlen($coment) > 200)) {
         echo json_encode('invalid');
     } else {
         $objconexion = new conection();
@@ -18,3 +18,4 @@ if (!empty($coment)) {
 } else {
     echo json_encode('empty');
 }
+?>

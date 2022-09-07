@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
                 forInnerHTM(translateGeneralEN);
                 dataRandom()
                 let pathname = window.location.pathname;
-                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") {
                     inscriptionButton()
                 }
                 buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera_de_Españapng.png)")
@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
                 forInnerHTM(translateGeneralES);
                 dataRandom()
                 let pathname = window.location.pathname;
-                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+                if (pathname == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") {
                     inscriptionButton()
                 } buttonChange.style.backgroundImage = ("url(/LEAFING/Crea-J-2022/client/public/assets/imagenes/Bandera-del-Reino-Unid.png)")
                 let arrayOrder = ["Ordenar por", "Categorias ACS", "Nombre ASC", "Lugar ACS", "Lugar", "Categorias", "1"]
@@ -88,7 +88,7 @@ function TraduccionEspañol() {
     if (html.lang == "en") {
         fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=es`);
         let pathname = window.location.pathname;
-        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") {
             inscriptionButton()
         }
         dataRandom();
@@ -107,7 +107,7 @@ function TraducirIngles() {
     if (html.lang == "es") {
         fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=4&lang=en`);
         let pathname = window.location.pathname;
-        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
+        if (pathname == "/LEAFING/Crea-J-2022/client/public/php/specific_test.php") {
             inscriptionButton()
         }
         dataRandom();

@@ -5,61 +5,56 @@ const contenidoModalInscripcion = document.getElementById('contenidoModalInscrip
 const alertt = document.getElementById('alertAña');
 let html = document.querySelector("html");
 var aña;
-
-
 function inscriptionButton() {
-    let pathname = window.location.pathname;
-    if (pathname == "/LEAFING/Crea-J-2022/client/public/php/evento-especifico.php") {
-        fetch('/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1')
-            .then(res => res.json())
-            .then(data => {
-                // data['dataID'];//User_ID
-                // data['estatus'];//True:logeado
-                // data['typeof'];//1: admin, 2:user
-                //console.log(data)
-                if (data == 'ERROR') {
-                    if (html.lang == "es") {
-                        inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
-                    } else {
-                        inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
-                    }
+    console.log("aña")
+    fetch('/LEAFING/Crea-J-2022/client/api/sessions.php?peticion=1')
+        .then(res => res.json())
+        .then(data => {
+            // data['dataID'];//User_ID
+            // data['estatus'];//True:logeado
+            // data['typeof'];//1: admin, 2:user
+            console.log(data)
+            if (data == 'ERROR') {
+                if (html.lang == "es") {
+                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
                 } else {
-                    let estiben = window.location.search;
-                    fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php${estiben}&peticion=2`)
-                        .then(res => res.json())
-                        .then(data => {
-                            //console.log(data)
-                            if (data == 0) {
-                                if (html.lang == "es") {
-                                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
-                                } else {
-                                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
-                                }
-                            } else if (data == 1) {
-                                if (html.lang == "es") {
-                                    inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>`;
-                                } else {
-                                    inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancel registration</button>`;
-                                }
-
-                            } else {
-                                console.log(data);
-                            }
-                        })
+                    inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
                 }
-            })
-    }
+            } else {
+                let estiben = window.location.search;
+                fetch(`/LEAFING/Crea-J-2022/client/api/sessions.php${estiben}&peticion=2`)
+                    .then(res => res.json())
+                    .then(data => {
+                        //console.log(data)
+                        if (data == 0) {
+                            if (html.lang == "es") {
+                                inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Inscribirse</button>`;
+                            } else {
+                                inscribirseCancelar.innerHTML = `<button class="ModalOpen open" id="inscribirse"onclick=inscribirse(this)> Register</button>`;
+                            }
+                        } else if (data == 1) {
+                            if (html.lang == "es") {
+                                inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancelar inscripcion</button>`;
+                            } else {
+                                inscribirseCancelar.innerHTML = `<button id="Cancelar" onclick=CancelarInscripcion(this)>Cancel registration</button>`;
+                            }
+
+                        } else {
+                            console.log(data);
+                        }
+                    })
+            }
+        })
+
 }
-
-
 
 function getAña(id) {
     aña = id
 }
+
 function closeModal() {
     modal_container.classList.remove('show');
 }
-
 
 function inscribirse(id) {
     //    console.log(id.id);
@@ -105,7 +100,6 @@ function CancelarInscripcion(id) {
 
 }
 
-
 function inscripcion() {
     let estiben = window.location.search;
     id = estiben.split('=')
@@ -139,6 +133,7 @@ function cancelarInscripcion() {
         location.reload()
     }, 800);
 }
+
 function contenidoModalInscripcionMesajeSin(dato, dato1, dato3, dato4) {
     let contenidoModalInscripcion = document.getElementById('contenidoModalInscripcion');
     contenidoModalInscripcion.innerHTML = `
