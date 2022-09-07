@@ -6,25 +6,25 @@ include_once('./templates/header.php');
 
 <body>
     <section>
-        <!-- <article class="Qué-son-estos-eventos">
+        <article class="Qué-son-estos-eventos">
             <div class="que-eventos">
 
                 <div id="hr1_que-evento">
-                    <h1 class="trans">¿Qué son estos eventos?</h1>
+                    <h1 class="translate">¿Qué son estos eventos?</h1>
                     <hr class="hr_que-eventos">
                 </div>
 
                 <div class="contenido_que-eventos">
-                    <p class="trans">
+                    <p class="translate">
                         Los presentes eventos tienen la finalidad de ayudar al medio ambiente, usando a los usuarios de Leafing como medio conectivo entre la interacción de eventos creados por ustedes mismos donde podrán contribuir por medio de la inscripción y registro de los mismos.
                     </p>
 
                     <div class="preguntas_eventos-eventos">
-                        <p><a href="../php/about_us.php"><span class="trans hover-xd">¿Quiénes somos?</span></a> </p>
-                        <p><a href="../php/crear_evento.php"><span class="trans hover-xd">Crea un evento</span></a></p>
+                        <p><a href="../php/about_us.php"><span class="translate hover-xd">¿Quiénes somos?</span></a> </p>
+                        <p><a href="../php/crear_evento.php"><span class="translate hover-xd">Crea un evento</span></a></p>
                     </div>
 
-                    <a href="../php/comunity.php"><button class="button_que-eventos" class="trans"><span class="trans">Explorar más</span></button></a>
+                    <a href="../php/comunity.php"><button class="button_que-eventos" class="translate"><span class="translate">Explorar más</span></button></a>
 
                 </div>
 
@@ -33,9 +33,9 @@ include_once('./templates/header.php');
                 </div>
 
             </div>
-        </article> -->
+        </article>
 
-        <article class="what_do_we_do">
+        <!-- <article class="what_do_we_do">
             <div class="what_container">
                 <div class="what_info">
                     <div class="what_info_border">
@@ -49,12 +49,12 @@ include_once('./templates/header.php');
                     <div class="values_three"></div>
                 </div>
             </div>
-        </article>
+        </article> -->
 
         <article class="slider_article">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1 class="trans">Próximos eventos de la <br> comunidad </h1>
+                    <h1 class="translate">Próximos eventos de la <br> comunidad </h1>
                     <hr>
                 </div>
                 <div></div>
@@ -68,7 +68,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Aprende a cuidar las plantas</h1>
-                                <a href="../php/evento-especifico.php?estiben=1"><button> <span class="trans">Detalles</span></button></a>
+                                <a href="../php/evento-especifico.php?estiben=1"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Primero">
                             </div>
@@ -78,7 +78,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Limpieza del rio Lempa</h1>
-                                <a href="../php/evento-especifico.php?estiben=4"><button> <span class="trans">Detalles</span></button></a>
+                                <a href="../php/evento-especifico.php?estiben=4"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Segundo">
                             </div>
@@ -88,7 +88,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>pepitOn60hz</h2>
                                 <h1>Capacitacion sobre ecologia</h1>
-                                <a href="../php/evento-especifico.php?estiben=5"><button> <span class="trans">Detalles</span></button></a>
+                                <a href="../php/evento-especifico.php?estiben=5"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Tercero">
                             </div>
@@ -98,7 +98,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>DaniTorres</h2>
                                 <h1>Campaña de reciclaje</h1>
-                                <a href="../php/evento-especifico.php?estiben=6"><button> <span class="trans">Detalles</span></button></a>
+                                <a href="../php/evento-especifico.php?estiben=6"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Cuarto">
                             </div>
@@ -108,7 +108,7 @@ include_once('./templates/header.php');
                             <div class="text_slider t_Primero">
                                 <h2>DaniTorres</h2>
                                 <h1>Consumo sostenible</h1>
-                                <a href="../php/evento-especifico.php?estiben=7"><button> <span class="trans">Detalles</span></button></a>
+                                <a href="../php/evento-especifico.php?estiben=7"><button> <span class="translate">Detalles</span></button></a>
                             </div>
                             <div class="imgen_slider i_Quinto">
                             </div>
@@ -141,7 +141,7 @@ include_once('./templates/header.php');
         <div class="titulos-generales">
             <div class="titulo_generales">
                 <a href="../php/comunity.php" class="comunitySlider">
-                    <p class="trans">Ver todos los eventos de la comunidad </p><img src="../assets/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion">
+                    <p class="translate">Ver todos los eventos de la comunidad </p><img src="../assets/iconos/flechita.svg" alt="flechita" class="menu_arrow-eventos inversion">
                 </a>
             </div>
             <div></div>
@@ -151,7 +151,7 @@ include_once('./templates/header.php');
         <article class="Recomendaciones-informacion">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1 class="trans">Información y <br> recomendaciones</h1>
+                    <h1 class="translate">Información y <br> recomendaciones</h1>
                     <hr>
                 </div>
                 <div></div>
@@ -160,16 +160,16 @@ include_once('./templates/header.php');
 
                 <div class="contribute_recomendaciones">
                     <div class="recomendacion">
-                        <h1 class="trans">Contribuye al cuido <br> medioambiental desde casa.</h1>
-                        <p class="trans">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa.</p>
-                        <a href="../php/concientizate.php"><button><span class="trans">Saber más</span></button></a>
+                        <h1 class="translate">Contribuye al cuido <br> medioambiental desde casa.</h1>
+                        <p class="translate">Información y recomendaciones sobre cómo ayudar al planeta sin salir de casa.</p>
+                        <a href="../php/concientizate.php"><button><span class="translate">Saber más</span></button></a>
                     </div>
                 </div>
 
                 <div class="habitos_recomendaciones">
                     <div class="informacion">
-                        <h1 class="trans">Hábitos para aprovechar los <br> recursos naturales.</h1>
-                        <a href="../php/concientizate.php"><button><span class="trans">Saber más</span></button></a>
+                        <h1 class="translate">Hábitos para aprovechar los <br> recursos naturales.</h1>
+                        <a href="../php/concientizate.php"><button><span class="translate">Saber más</span></button></a>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@ include_once('./templates/header.php');
         <article class="¿Sabias-qué?">
             <div class="titulos-generales">
                 <div class="titulo_generales">
-                    <h1 class="trans">¿Sabías qué?</h1>
+                    <h1 class="translate">¿Sabías qué?</h1>
                     <hr>
                 </div>
                 <div></div>

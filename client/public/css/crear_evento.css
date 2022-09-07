@@ -47,6 +47,7 @@ footer {
     justify-content: center;
     font-size: 50px;
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 
@@ -130,7 +131,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    /* width: 500px; */
     height: 330px;
     gap: 1rem;
     border: 2px #8AB694 dashed;
@@ -242,7 +243,6 @@ footer {
 } */
 
 .input_fecha {
-    width: 10.13vw;
     height: 5.10vh;
     background: transparent;
     border: 0.858861px solid rgba(81, 81, 81, 0.4);
@@ -371,9 +371,9 @@ footer {
         width: 100%;
     }
 
-    .input_fecha {
+    /* .input_fecha {
         width:114px;
-    }
+    } */
 
     .titulos-generales {
         grid-template-columns: 1fr;
@@ -403,4 +403,42 @@ footer {
     .general_subir-imagen {
         gap: 10vh;
     }
+}
+
+@media screen and (max-width: 1540px) { 
+    .crea {
+        display: none;
+    }
+
+    .evento {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1296px) { 
+    .container_form{
+        justify-content: center;
+    }
+
+    .container_1 {
+        width: 500px;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 624px) { 
+
+    .container_1 {
+        width: 85%;
+    }
+
+    .inputstxt {
+        width: auto;
+    }
+
+    .fecha_form-eventos {
+        flex-direction: column;
+    }
+    
 }
