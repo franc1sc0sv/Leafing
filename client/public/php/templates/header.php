@@ -58,11 +58,14 @@ if (!isset($_SESSION['lang'])) {
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
+                
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
                 <!-- <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css"> -->
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/public_account.php") { ?>
+                
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/followInfo.css">
@@ -71,19 +74,24 @@ if (!isset($_SESSION['lang'])) {
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/contraseña.php") { ?>
                 <!--Estilos para perfil - contraseñas -->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/contraseña.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/mis_eventos.php") { ?>
                 <!--Estilos para perfil - mis eventos -->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/eventos_inscritos.php") { ?>
                 <!--Estilos para perfil - eventos inscritos -->
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/eventos_inscritos.css">
+                <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
         <?php } ?>
 
         <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/modal.css">
+
+        <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/modalAcount.css">
 
         <?php if ($_SERVER['SCRIPT_NAME'] != "/LEAFING/Crea-J-2022/client/public/php/index.php") { ?>
                 <!--Aqui inicia el modo oscuro-->

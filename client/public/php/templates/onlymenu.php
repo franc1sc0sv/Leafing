@@ -55,3 +55,25 @@ $data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = 
         </div>
     </div>
 </div>
+<div id="modal_container" class="modal-container">
+    <div class="modal" id="modal">
+        <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+            <form action="../../../api/account/accountUpImg.php" method="post" enctype="multipart/form-data" class="formcenter">
+                <div class="dragfile_container">
+                    <img src="../assets/iconos/cloud-computing.png" alt="" class="dragfile_icon">
+                    <p class="translate">Arrastra o suelta tu imagen</p>
+                    <p>O</p>
+                    <label for="image" class="translate">Elige un archivo</label>
+                    <input type="file" name="image" id="imagee">
+                    <img alt="" id="img-result" class="dragfile_img">
+                </div>
+                <br>
+                <input name="submit" type="submit" class="submit" value="Guardar">
+            </form>
+            <button id="close" class="buttonxd">Cerrar</button>
+        </div>
+    </div>
+</div>
+<script src="../../js/account/app_profile.js"></script>
+<script src="../../js/account/account.js"></script>
+<script src="../../js/form_img.js"></script>

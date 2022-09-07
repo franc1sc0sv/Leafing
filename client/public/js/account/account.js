@@ -83,3 +83,5 @@ plus.addEventListener('click', () => {
     })
 
 })
+
+console.log('añaa')
