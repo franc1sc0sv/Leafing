@@ -28,10 +28,10 @@ if (isset($_GET['desiree'])) {
 
 if (!$error) {
 ?>
-
+    <link rel="stylesheet" href="../css/responsive_moda_account.css">
     <div class="flex-container">
 
-        <div id="onlyMenu" class="user-menu-container mostrar">
+        <div id="onlyMenu" class="user-menu-container">
             <div class="menu-img">
                 <div class="behind-menu-img">
                     <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $user[0][6] ?>" class="img-profile" alt="Foto de perfil">
@@ -71,7 +71,7 @@ if (!$error) {
 
         </div>
 
-        <div id="onlyConfig" class="configuracion-cuenta-container no-mostrar">
+        <div id="onlyConfig" class="configuracion-cuenta-container">
             <div class="grid-container">
                 <div class="back">
                     <a href="#" id="showMenu" class="btn"><img src="../img/iconos/back.svg" alt=""></a>

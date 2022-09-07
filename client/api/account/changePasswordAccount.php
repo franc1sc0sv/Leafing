@@ -1,6 +1,6 @@
 <?php
-include_once('./include.php');
-include_once('./conexion.php');
+include_once('../../public/php/templates/include.php');
+include_once('../../public/php/templates/conexion.php');
 
 $antigua_contraseña = $_POST['antigua_contraseña'];
 $nueva_contraseña = $_POST['nueva_contraseña'];

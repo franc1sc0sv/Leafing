@@ -9,19 +9,22 @@ if (isset($_GET['estiben'])) {
     $idevent = $_GET['estiben'];
     if (is_numeric($idevent)) {
         $objconexion = new conection;
-        $eventsmaxid = $objconexion->consultar("SELECT MAX(id_events) FROM `events` WHERE id_state_events = 1");
-        if ($idevent >= 1 && $idevent <= $eventsmaxid[0][0]) {
-
-            $event = $objconexion->consultar("SELECT * FROM `events` 
-            INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
-            INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
-            INNER JOIN place_events ON events.place_event = place_events.id_place
-            WHERE id_events = $idevent;
-            ");
-            // print_r($event);
-            $timestampStart = strtotime($event[0]['date_event']);
-            $timestampEnd = strtotime($event[0]['end_date']);
-            setlocale(LC_TIME, "spanish");
+        $eventStatus = $objconexion->consultar("SELECT id_state_events FROM `events` WHERE id_events = $idevent");
+        if (!empty($eventStatus)) {
+            if ($eventStatus[0][0] == 1) {
+                $event = $objconexion->consultar("SELECT * FROM `events` 
+                INNER JOIN categories_events ON events.id_categories_events = categories_events.id_categories_events 
+                INNER JOIN user_data ON events.id_user_data = user_data.id_user_data 
+                INNER JOIN place_events ON events.place_event = place_events.id_place
+                WHERE id_events = $idevent;");
+                // print_r($event);
+                $timestampStart = strtotime($event[0]['date_event']);
+                $timestampEnd = strtotime($event[0]['end_date']);
+                setlocale(LC_TIME, "spanish");
+            } else {
+                echo "El evento esta archivado o finalizado";
+                $error = true;
+            }
         } else {
             echo "El evento no existe";
             $error = true;
@@ -47,10 +50,10 @@ if (!$error) { ?>
                         <div class="links">
                             <nav class="direction">
                                 <ol>
-                                    <li class="lihome"><a href="../php/index.php">Home</a></li>
+                                    <li class="lihome"><a href="../php/index.php" class="translate">Home</a></li>
                                     <img src="../assets/iconos/flecha-correcta.png" alt="" class="arrowhite">
-                                    <li class="lievents"><a href="../php/comunity.php">Events</a></li>
-                                    <img src="../assets/iconos/flecha-correcta.png" alt="" class="arrowhite">
+                                    <li class="lievents"><a href="../php/comunity.php" class="translate">Events</a></li>
+                                    <img src=" ../assets/iconos/flecha-correcta.png" alt="" class="arrowhite">
                                     <li class="lieve"><?php echo $event[0]['name_event'] ?></li>
                                 </ol>
                             </nav>
@@ -71,7 +74,7 @@ if (!$error) { ?>
                 </div>
                 <div class="details">
                     <div class="one">
-                        <span>Detalles del evento</span>
+                        <span class="translate">Detalles del evento</span>
                         <?php if (isset($_SESSION['estatus'])) { ?>
                             <div class="reporte">
                                 <button id="ModalOpen"><span class="translate"> Reportar</span></button>
@@ -86,7 +89,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/calendar_month.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de inicio</div>
+                                        <div class="lititle translate">Fecha de inicio</div>
                                         <div class="liinner"><?php echo strftime("%B %e, %Y %r", $timestampStart); ?></div>
                                     </div>
                                 </li>
@@ -95,7 +98,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/calendar_month.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Fecha de finalización</div>
+                                        <div class="lititle translate">Fecha de finalización</div>
                                         <div class="liinner"><?php echo strftime("%B %e, %Y %r", $timestampEnd); ?></div>
                                     </div>
                                 </li>
@@ -104,7 +107,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/category_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Categoria</div>
+                                        <div class="lititle translate">Categoria</div>
                                         <div class="liinner"><?php echo $event[0]['categories'] ?></div>
                                     </div>
                                 </li>
@@ -113,7 +116,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/location_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Lugar</div>
+                                        <div class="lititle translate">Lugar</div>
                                         <div class="liinner"><?php echo $event[0]['place'] ?></div>
                                     </div>
                                 </li>
@@ -122,7 +125,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/home_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Direccion</div>
+                                        <div class="lititle translate">Direccion</div>
                                         <div class="liinner"><?php echo $event[0]['direccion_evento'] ?></div>
                                     </div>
                                 </li>
@@ -131,7 +134,7 @@ if (!$error) { ?>
                                         <img src="../assets/iconos/person_e.svg" alt="">
                                     </div>
                                     <div class="liinfo">
-                                        <div class="lititle">Organizador</div>
+                                        <div class="lititle translate">Organizador</div>
                                         <div class="liinner"><a href="./public_account.php?desiree=<?php echo $event[0]['id_user_data'] ?>"><?php echo $event[0]['user_name'] ?></a></div>
                                     </div>
                                 </li>
@@ -143,28 +146,27 @@ if (!$error) { ?>
                     </div>
                 </div>
             </div>
-            <?php if (isset($_SESSION['estatus'])) { ?>
 
+            <?php if (isset($_SESSION['estatus'])) { ?>
                 <div class="father_commentss">
                     <div class="commentss">
-                        <div class="comment_title">Deja un comentario</div>
+                        <div class="comment_title translate">Deja un comentario</div>
                         <div class="pcomments">
                             <form action="specific_test.php" method="post" class="comment_form" id="formComents">
                                 <div class="comment_area">
-                                    <textarea name="coment" id="" placeholder="Tu comentario" class="textArea-black"></textarea>
+                                    <textarea name="coment" id="" class="textArea-black"></textarea>
                                 </div>
                                 <div class="comment_submit">
-                                    <button type="submit" class="comment_button button-hover">Publicar comentario</button>
+                                    <button type="submit" class="comment_button button-hover translate">Publicar comentario</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-
             <?php } ?>
 
             <div class="box-all-coments">
-                <h1 class="s">Comentarios</h1>
+                <h1 class="translate">Comentarios</h1>
                 <?php
                 $objdata = new conection();
                 $data = $objdata->consultar("SELECT coment, user_data.user_name, user_data.img_path FROM `coments` INNER JOIN user_data ON coments.id_publisher = user_data.id_user_data WHERE id_event = $idevent;");
@@ -184,7 +186,7 @@ if (!$error) { ?>
 
             <div id="alertcoments">
             </div>
-            
+
             <div id="alertAña">
             </div>
 

@@ -15,7 +15,7 @@ include_once('../templates/header.php');
         <div class="configuracion-cuenta-container">
             <div class="grid-container">
                 <div class="back">
-                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
+                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../../assets/iconos/back.svg" alt=""></a>
                 </div>
                 <div class="configuracion-name">
                     <span class="translate">Configuración de contraseña</span>
@@ -52,5 +52,7 @@ include_once('../templates/header.php');
         </div>
     </div>
 </div>
+<script src="/LEAFING/Crea-J-2022/client/public/js/account/forgetPasswordAccount.js" type="module"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/account/changePasswordAccount.js" type="module"></script>
 
 <?php include_once('../templates/footer.php'); ?>

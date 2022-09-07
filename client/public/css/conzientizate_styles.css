@@ -42,7 +42,7 @@
 
 
 .image-board {
-    background-image: url(../img/imagenes/concientizate.svg);
+    background-image: url(../assets/imagenes/concientizate.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -143,7 +143,7 @@
 }
 
 .end__side2>div {
-    background-image: url(../img/imagenes/conzientizate_grilla-img-.svg);
+    background-image: url(../assets/imagenes/conzientizate_grilla-img-.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,7 +154,7 @@
 
 .end__side1 >div{
     height: 60vh;
-    background-image: url(../img/imagenes/conzientizate_grilla-img-1.svg);
+    background-image: url(../assets/imagenes/conzientizate_grilla-img-1.svg);
     background-position: center ;
     background-repeat: no-repeat;
     background-size: cover;

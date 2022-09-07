@@ -13,9 +13,9 @@ $data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = 
         </div>
     </div>
     <div class="menu-nombre-usuario">
-        <p class="nombre-usuario">
+        <a href="../public_account.php?desiree=<?php echo $data[0]['id_user_data'] ?>" class="nombre-usuario" target="_blank">
             <?php echo $data[0]['name'], " ", $data[0]['lastname'] ?>
-        </p>
+        </a>
     </div>
     <div>
         <div class="menu-opciones">

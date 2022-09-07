@@ -95,7 +95,7 @@ if (!isset($_SESSION['lang'])) {
                                     <div class="createaccount">
                                         <p class="translate">El siguiente paso</p>
                                     </div>
-                                    <div class="textcode">
+                                    <div class="textcode RevisaCorreo">
                                         <p class="translate">Revisa tu correo con las instrucciones</p>
                                     </div>
                             </div>

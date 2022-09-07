@@ -1,4 +1,4 @@
-import { warning, alertf, nice } from "../js/alerts.js";
+import { warning, alertf, nice } from "../component/alerts.js";
 const formConfiguracionPassword = document.getElementById('formConfiguracionPassword');
 let alertNotification = document.getElementById('alertNotification');
 let html = document.querySelector("html");
@@ -7,7 +7,7 @@ formConfiguracionPassword.addEventListener('submit', function (e) {
     e.preventDefault();
     let data = new FormData(formConfiguracionPassword);
 
-    fetch(`changePasswordAccount.php`, {
+    fetch(`/LEAFING/Crea-J-2022/client/api/account/changePasswordAccount.php`, {
         method: 'post',
         body: data
     })

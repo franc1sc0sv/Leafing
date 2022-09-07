@@ -39,21 +39,17 @@
     </div>
 </footer>
 <button class="containerFlecha" id="flechaUp"></button>
-<script src="../js/IncribirseCancelar.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/IncribirseCancelar.js"></script>
 <script src="/LEAFING/Crea-J-2022/client/public/js/translate/translate.js" type="module"></script>
-<script src="../js/forgetPasswordAccount.js" type="module"></script>
-<script src="../js/changePasswordAccount.js" type="module"></script>
-<script src="../js/scrollUp.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/scrollUp.js"></script>
 <script src="/LEAFING/Crea-J-2022/client/public/js/darkmode.js"></script>
 <script src="/LEAFING/Crea-J-2022/client/public/js/menu_dropdown.js"></script>
-<script src="../js/slider.js"></script>
-<script src="../js/app_burger.js"> </script>
-<script src="../js/app_profile.js"></script>
-<script src="../js/model.js"> </script>
-<script src="../js/preloader.js"></script>
-<script src="../js/notification.js"></script>
-<script src="../js/form_img.js"></script>
-<script src="../js/account.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/slider.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/app_burger.js"> </script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/model.js"> </script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/preloader.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/notification.js"></script>
+<script src="/LEAFING/Crea-J-2022/client/public/js/form_img.js"></script>
 
 </body>
 

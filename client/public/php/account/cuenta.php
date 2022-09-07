@@ -24,9 +24,9 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
             </div>
         </div>
         <div class="menu-nombre-usuario">
-            <p class="nombre-usuario">
+            <a href="../public_account.php?desiree=<?php echo $data[0]['id_user_data'] ?>" class="nombre-usuario" target="_blank">
                 <?php echo $data[0]['name'], " ", $data[0]['lastname'] ?>
-            </p>
+            </a>
         </div>
         <div>
             <div class="menu-opciones">
@@ -71,7 +71,7 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
     <div id="onlyConfig" class="configuracion-cuenta-container no-mostrar">
         <div class="grid-container">
             <div class="back">
-                <a href="#" id="showMenu" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
+                <a href="#" id="showMenu" class="btn"><img src="../../assets/iconos/back.svg" alt=""></a>
             </div>
             <div class="configuracion-name translate">
                 Configuración de la cuenta

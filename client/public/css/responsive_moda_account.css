@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    .user-menu-container {
+        display: flex;
+    }
+
+    .flex-container {
+        height: max-content;
+        flex-direction: column;
+    }
+
+    .user-menu-container {
+        border-right: none;
+        max-width: unset;
+        margin-top: 2rem;
+    }
+}
