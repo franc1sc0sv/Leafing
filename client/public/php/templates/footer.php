@@ -4,7 +4,6 @@
 ?>
 
 <footer>
-    <!-- <a href="#boddy" class="container_anchor"><img src="../img/iconos/arrow.png" alt=""></a> -->
     <button class="container_anchor" id="buttonChange"></button>
     <button class="containerDarkMode cambio" id="btnMode"></button>
 

@@ -89,9 +89,9 @@ function follow() {
 
     setTimeout(() => {
         definesButton();
+        definesFollowers();
     }, 3000);
 
-    definesFollowers();
 
 }
 
@@ -117,9 +117,8 @@ function fetchCancelFollow() {
     closeModal()
     setTimeout(() => {
         definesButton();
+        definesFollowers();
     }, 3000);
-
-    definesFollowers();
 
 }
 

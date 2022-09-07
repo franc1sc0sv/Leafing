@@ -138,26 +138,113 @@ if (!isset($_SESSION['lang'])) {
                                 $IDuserdata = $_SESSION['dataID'];
                                 $objconexion = new conection();
                                 $datauser = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data ='$IDuserdata'");
-                                //print_r($datauser);
+                                $dataemail = $objconexion->consultar("SELECT mail_user FROM `user_credentials` WHERE id ='$IDuserdata'");
+                                //Consulta me va a traer a las personas que me siguen
+                                $newFollowers = $objconexion->consultar("SELECT date_following, user_data.img_path, user_data.user_name,user_data.id_user_data FROM `followers`
+                                INNER JOIN user_data ON followers.id_follower = user_data.id_user_data 
+                                WHERE followers.id_following = $IDuserdata ORDER BY date_following DESC");
+                                //Consulta me va a traer a las personas que me van a traer los id de las personas que sigo
+                                $who_follow = $objconexion->consultar("SELECT user_data.id_user_data FROM `followers` INNER JOIN user_data ON followers.id_following = user_data.id_user_data WHERE followers.id_follower = $IDuserdata");
+                                //Las notificaciones que de todos los eventos que suban
+                                $notifiactionsEvents = $objconexion->consultar("SELECT notifications_events.date_following, events.id_events, user_data.img_path, user_data.user_name, user_data.id_user_data FROM `notifications_events` INNER JOIN events ON notifications_events.id_events = events.id_events INNER JOIN user_data ON events.id_user_data = user_data.id_user_data;");
+
+                                $arrayFollowers = [];
+                                $arrayEventsNotifications = [];
+                                $arrayNotifications = [];
+                                
+
+                                // array_push($arrayNotifications, $arrayEventsNotifications);
+                                for ($i = 0; $i < count($who_follow); $i++) {
+                                        array_push($arrayFollowers, $who_follow[$i]['id_user_data']);
+                                }
+                                // print_r($arrayFollowers);
+                                for ($i = 0; $i < count($notifiactionsEvents); $i++) {
+                                        if (in_array($notifiactionsEvents[$i]['id_user_data'], $arrayFollowers)) {
+                                                array_push($arrayEventsNotifications, $notifiactionsEvents[$i]);
+                                        }
+                                }
+
+                                for ($i = 0; $i < count($arrayEventsNotifications); $i++) {
+                                        array_push($arrayNotifications, $arrayEventsNotifications[$i]);
+                                }
+
+                                for ($i = 0; $i < count($newFollowers); $i++) {
+                                        array_push($arrayNotifications, $newFollowers[$i]);
+                                }
+
+                                // print_r($newFollowers);
+                                // print_r($arrayEventsNotifications);
+                                $fechasArray = [];
+                                foreach ($arrayNotifications as $key => $row) {
+                                        $fechasArray[$key] = $row['date_following'];
+                                }
+
+                                // print_r($fechasArray);
+
+                                array_multisort($fechasArray, SORT_DESC, $arrayNotifications);
+                                // $resverseArray = array_reverse($arrayNotifications);
+                                // print_r($arrayNotifications);
+
                         ?>
                                 <div id="buttons-header">
                                         <ul class="menu-header-perfil">
                                                 <p><?php echo $datauser[0]['user_name']; ?></p>
+                                                <div class="dropdown-toggle notificationxD" data-toggle="notification-menu">
+                                                        <span class="number_notification"><?php echo count($arrayNotifications); ?></span>
+                                                        <ul id="notification-menu" class="dropdown-menu notification-menu notificationUl">
+                                                                <div class="dropdown-menu-header">
+                                                                        <span class="notifications_title">
+                                                                                Notifications
+                                                                        </span>
+                                                                </div>
+                                                                <div class="dropdown-menu-content overlay-scrollbar scrollbar-hover">
+                                                                        <?php foreach ($arrayNotifications as $arrayNotification) {
+
+                                                                                if (isset($arrayNotification['id_events'])) { ?>
+                                                                                        <li class="dropdown-menu-item">
+                                                                                                <a href="/LEAFING/Crea-J-2022/client/public/php/specific_test.php?estiben=<?php echo $arrayNotification['id_events'] ?>" class="dropdown-menu-link menu_notification_a">
+                                                                                                        <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $arrayNotification['img_path'] ?>" alt="" class="img_perfil_menu_notifications">
+                                                                                                        <span>
+                                                                                                                <?php echo $arrayNotification['user_name'] ?> a publicado un nuevo evento
+                                                                                                                <br>
+                                                                                                                <span>
+                                                                                                                        <?php echo $arrayNotification['date_following'] ?>
+                                                                                                                </span>
+                                                                                                        </span>
+                                                                                                </a>
+                                                                                        </li>
+                                                                                <?php } else { ?>
+                                                                                        <li class="dropdown-menu-item">
+                                                                                                <a href="/LEAFING/Crea-J-2022/client/public/php/public_account.php?desiree=<?php echo $arrayNotification['id_user_data'] ?>" class="dropdown-menu-link menu_notification_a">
+                                                                                                        <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $arrayNotification['img_path'] ?>" alt="" class="img_perfil_menu_notifications">
+                                                                                                        <span>
+                                                                                                                <?php echo $arrayNotification['user_name'] ?> a comenzado a seguirte
+                                                                                                                <br>
+                                                                                                                <span>
+                                                                                                                        <?php echo $arrayNotification['date_following'] ?>
+                                                                                                                </span>
+                                                                                                        </span>
+                                                                                                </a>
+                                                                                        </li>
+                                                                                <?php } ?>
+                                                                        <?php } ?>
+
+                                                                </div>
+                                                        </ul>
+                                                </div>
                                                 <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;">
                                                         <ul id="user-menu" class="dropdown-menu">
                                                                 <li class="dropdown-menu-item data_user">
-                                                                        <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/1662216446_5c43568d3f31e0ba35ccd9294a705cc5.jpg" alt="" class="img_perfil_menu">
-                                                                        <p class="name_perfil">Francisco Melendez</p>
-                                                                        <p class="correo_perfil">franc1sc0.sv.xd@gmail.com</p>
+                                                                        <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="" class="img_perfil_menu">
+                                                                        <p class="name_perfil"><?php echo $datauser[0]['name'], " ", $datauser[0]['lastname']; ?></p>
+                                                                        <p class="correo_perfil"><?php echo $dataemail[0]['mail_user']; ?></p>
                                                                         <a href="/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php">
                                                                                 <button class="button_perfil"> Gestionar tu cuenta </button>
                                                                         </a>
                                                                 </li>
                                                                 <li class="dropdown-menu-item close_session">
                                                                         <a href="/LEAFING/Crea-J-2022/client/public/php/templates/close.php" class="dropdown-menu-link link_close">
-                                                                                <!-- <button class="button_close"> -->
                                                                                 Cerrar Sesion
-                                                                                <!-- </button> -->
                                                                         </a>
                                                                 </li>
 

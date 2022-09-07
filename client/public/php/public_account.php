@@ -11,7 +11,6 @@ if (isset($_GET['desiree'])) {
         $objconexion = new conection;
         $usersMaxid = $objconexion->consultar("SELECT MAX(id_user_data) FROM `user_data`");
         if ($iduser >= 1 && $iduser <= $usersMaxid[0][0]) {
-            $dataID = $_SESSION['dataID'];
             $user = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data =  $iduser");
         } else {
             echo "El perfil no existe";
