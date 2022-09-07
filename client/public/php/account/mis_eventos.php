@@ -20,7 +20,7 @@ $dataEvent = $objconexion->consultar("SELECT id_events ,name_event,img_event,id_
         <div class="configuracion-cuenta-container">
             <div class="grid-container">
                 <div class="back">
-                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
+                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../../assets/iconos/back.svg" alt=""></a>
                 </div>
                 <div class="configuracion-name">
                     <span class="translate"> Mis eventos</span>

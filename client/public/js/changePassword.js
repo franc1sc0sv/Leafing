@@ -18,7 +18,7 @@ formCredentialsChangePassword.addEventListener('submit', function (e) {
         }
         alert.innerHTML = msg;
         showNotification();
-        } else {
+    } else {
         fetch(`/LEAFING/Crea-J-2022/client/api/password_change.php${URLsearch}`, {
             method: 'post',
             body: data
@@ -37,7 +37,7 @@ formCredentialsChangePassword.addEventListener('submit', function (e) {
                     showNotification();
 
                     setTimeout(function () {
-                        window.location.href = "formulario_inicio-sesion.php";
+                        window.location.href = "/LEAFING/Crea-J-2022/client/public/php/index.php";
                     }, 1500);
 
                 } else if (data == "invalid") {

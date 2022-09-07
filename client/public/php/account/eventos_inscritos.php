@@ -9,8 +9,8 @@ $id = $_SESSION['dataID'];
 $objconexionEvnt = new conection();
 $dataInscriptions = $objconexionEvnt->consultar("SELECT events.id_events, events.name_event, events.img_event, user_data.user_name, user_data.img_path FROM `inscriptions`
 INNER JOIN events ON inscriptions.id_event = events.id_events
-INNER JOIN user_data ON inscriptions.id_persona_inscrita =  user_data.id_user_data 
-WHERE id_persona_inscrita = $id ");
+INNER JOIN user_data ON events.id_user_data =  user_data.id_user_data 
+WHERE id_persona_inscrita = 1");
 
 
 include_once('../templates/header.php'); ?>
@@ -21,7 +21,7 @@ include_once('../templates/header.php'); ?>
         <div class="configuracion-cuenta-container">
             <div class="grid-container">
                 <div class="back">
-                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../img/iconos/back.svg" alt=""></a>
+                    <a href="./cuenta.php" id="showConfig" class="btn"><img src="../../assets/iconos/back.svg" alt=""></a>
                 </div>
                 <div class="configuracion-name">
                     <span class="translate">Eventos inscritos</span>
@@ -29,13 +29,13 @@ include_once('../templates/header.php'); ?>
                 <div class="eventos-grid">
                     <?php for ($i = 0; $i < count($dataInscriptions); $i++) { ?>
                         <div class="card">
-                            <img src="./images/<?php echo $dataInscriptions[$i]['img_event'] ?>" alt="">
+                            <img src="../../assets/user_images/events_images/<?php echo $dataInscriptions[$i]['img_event'] ?>" alt="">
                             <div class="container__card-like">
                                 <div class="card-like"></div>
                             </div>
                             <div class="container__info-user">
-                                <img src="./imgProfile/<?php echo $dataInscriptions[$i]['img_path'] ?>" alt="" class="imgPerfil">
-                                <a href="./evento-especifico.php?estiben=<?php echo $dataInscriptions[$i]['id_events'] ?>" target="_blacnk">
+                                <img src="../../assets/user_images/profile_images/<?php echo $dataInscriptions[$i]['img_path'] ?>" alt="" class="imgPerfil">
+                                <a href="/LEAFING/Crea-J-2022/client/public/php/specific_test.php?estiben=<?php echo $dataInscriptions[$i]['id_events'] ?>" target="_blank">
                                     <p class="card-name-event"><?php echo $dataInscriptions[$i]['name_event'] ?></p>
                                 </a>
                                 <p class="card-user-name"><?php echo $dataInscriptions[$i]['user_name'] ?></p>

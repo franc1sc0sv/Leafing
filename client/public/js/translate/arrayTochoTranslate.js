@@ -26,7 +26,7 @@ export const translateGeneralEN = [
     //12 = comunity
     ["Submit", "Submit"],
     //13 = comunity
-    ["Description", "Categories", "Location and date"]
+    ["Home", "Events", "Event Details", "Start Date", "End Date", "Category", "Venue", "Address", "Organizer", "Comments"]
 ];
 
 export const translateGeneralES = [
@@ -57,7 +57,7 @@ export const translateGeneralES = [
     //comunity
     ["Enviar", "Enviar"],
     //
-    ["Descripción", "Categorías", "Lugar y fecha"]
+    ["Inicio", "Eventos", "Detalles del evento", "Fecha de inicio", "Fecha de finalización", "Categoria", "Lugar", "Direccion", "Organizador", "Comentarios", "Publicar comentario"]
 
 
 ]

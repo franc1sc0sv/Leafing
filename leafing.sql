@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-09-2022 a las 04:48:29
+-- Tiempo de generación: 07-09-2022 a las 17:17:38
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -80,7 +80,10 @@ INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUE
 (9, 'diseño es el meta', 3, 10, '2022-08-29 15:50:38'),
 (10, 'mmm interesante', 1, 7, '2022-09-01 14:06:54'),
 (11, 'Que bonito se ve el evento\r\n\r\n', 1, 2, '2022-09-01 14:45:48'),
-(12, 'El evento se ve muy interesante', 1, 6, '2022-09-05 02:33:11');
+(12, 'El evento se ve muy interesante', 1, 6, '2022-09-05 02:33:11'),
+(13, 'ojito amo a las tortugas', 1, 15, '2022-09-07 15:29:16'),
+(14, 'El evento se ve muy interesante', 1, 15, '2022-09-07 16:08:12'),
+(15, 'A la las tortugas son hermosas', 1, 15, '2022-09-07 16:13:28');
 
 -- --------------------------------------------------------
 
@@ -117,7 +120,17 @@ INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event
 (8, 'MCDONALS ES VIDA BRO', '1661741964_Mcdonalds_logo.webp', 'MCDONALS ES VIDA BRO', 10, 'McDonalds, Escalón', '2022-08-30 08:00:00', '2022-09-08 12:02:00', 11, 4, 2),
 (9, 'Salva a Añañin', '1661782853_Captura de pantalla (1).png', 'La increíble salvación de Añañin aña', 6, 'Mi casa en Apopa', '2022-08-29 08:00:00', '2022-08-30 02:00:00', 1, 3, 2),
 (10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2),
-(11, 'la esquizofremia pego rico bro', '1662044397_87099079dd04b5ac5a840b9d42ec0857.jpg', 'afawfafafAfAFAF', 8, 'El colegio don Bosco', '2022-09-28 08:52:00', '2022-09-29 08:52:00', 2, 1, 2);
+(11, 'la esquizofremia pego rico bro', '1662044397_87099079dd04b5ac5a840b9d42ec0857.jpg', 'afawfafafAfAFAF', 8, 'El colegio don Bosco', '2022-09-28 08:52:00', '2022-09-29 08:52:00', 2, 1, 2),
+(15, 'Liberacion de tortugas', '1662504175_liberar-tortugas.jpg', 'Unete a nosotros a realizar esta actividad que beneficiara a muchas tortugitas', 5, 'Surf city, playa el tunco', '2022-09-21 16:40:00', '2022-09-22 16:40:00', 14, 1, 1),
+(16, 'Plantacion de arboles', '1662505176_plantación-árboles-scaled.jpg', 'Acompañanos a esta plantacion de arboles en la torre futura', 10, 'Colonia Escalon, Torre Futura', '2022-09-29 16:58:00', '2022-09-30 16:58:00', 5, 1, 1);
+
+--
+-- Disparadores `events`
+--
+DELIMITER $$
+CREATE TRIGGER `logs_notifications_events` AFTER INSERT ON `events` FOR EACH ROW INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_event`) VALUES (NULL, NEW.id_events, NOW())
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -131,6 +144,20 @@ CREATE TABLE `followers` (
   `id_following` int(11) NOT NULL,
   `date_following` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `followers`
+--
+
+INSERT INTO `followers` (`id_follow`, `id_follower`, `id_following`, `date_following`) VALUES
+(38, 1, 3, '2022-09-06 18:01:56'),
+(39, 1, 2, '2022-09-06 18:01:57'),
+(42, 4, 1, '2022-09-06 21:53:40'),
+(43, 1, 4, '2022-09-06 21:53:45'),
+(45, 2, 1, '2022-09-06 22:18:43'),
+(46, 5, 2, '2022-09-06 22:23:42'),
+(51, 5, 1, '2022-09-07 03:58:38'),
+(53, 1, 5, '2022-09-07 04:03:23');
 
 -- --------------------------------------------------------
 
@@ -158,7 +185,27 @@ INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`
 (7, 2, 4, '2022-09-01 13:51:46'),
 (8, 11, 1, '2022-09-01 16:15:54'),
 (9, 1, 1, '2022-09-04 23:31:40'),
-(10, 6, 1, '2022-09-05 02:33:17');
+(13, 5, 1, '2022-09-07 16:33:10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `notifications_events`
+--
+
+CREATE TABLE `notifications_events` (
+  `id_notifications_events` int(11) NOT NULL,
+  `id_events` int(11) NOT NULL,
+  `date_following` timestamp NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `notifications_events`
+--
+
+INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_following`) VALUES
+(1, 15, '2022-09-06 23:21:57'),
+(2, 16, '2022-09-06 23:22:10');
 
 -- --------------------------------------------------------
 
@@ -308,6 +355,13 @@ CREATE TABLE `reports_transactional` (
   `date_report` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `reports_transactional`
+--
+
+INSERT INTO `reports_transactional` (`id_reports_transactional`, `id_event`, `id_report`, `date_report`) VALUES
+(1, 6, 5, '2022-09-07 16:54:16');
+
 -- --------------------------------------------------------
 
 --
@@ -394,11 +448,11 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
-(1, 'Francisco ', 'Josue', '2006-08-06', 'franc1sc0_sv', 'M', '1662216446_5c43568d3f31e0ba35ccd9294a705cc5.jpg', 'Me gusta el arroz con nato'),
-(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', 'defaultImage.png', ''),
+(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662524619_c24c00cb08d43b70d5a7d37894c9d091.jpg', 'Me gusta el arroz con nato'),
+(2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', '1662502764_307c607b1ff349fbe30a7776f68a4b72.jpg', ''),
 (3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
 (4, 'Esteban', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', 'aFAfAFa'),
-(5, 'Juan Daniel', 'Jimenez Torres', '2004-04-08', 'DaniTorres', 'F', 'defaultImage.png', '');
+(5, 'Adrian', 'Lopez Bonilla', '2004-04-08', 'chepeZD', 'F', 'defaultImage.png', '');
 
 --
 -- Índices para tablas volcadas
@@ -445,6 +499,13 @@ ALTER TABLE `inscriptions`
   ADD KEY `persona_inscrita` (`id_persona_inscrita`),
   ADD KEY `id_persona_inscrita` (`id_persona_inscrita`),
   ADD KEY `id_event_2` (`id_event`);
+
+--
+-- Indices de la tabla `notifications_events`
+--
+ALTER TABLE `notifications_events`
+  ADD PRIMARY KEY (`id_notifications_events`),
+  ADD KEY `id_events` (`id_events`);
 
 --
 -- Indices de la tabla `place_events`
@@ -517,25 +578,31 @@ ALTER TABLE `categories_events`
 -- AUTO_INCREMENT de la tabla `coments`
 --
 ALTER TABLE `coments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `followers`
 --
 ALTER TABLE `followers`
-  MODIFY `id_follow` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_follow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT de la tabla `notifications_events`
+--
+ALTER TABLE `notifications_events`
+  MODIFY `id_notifications_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
@@ -565,7 +632,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT de la tabla `reports_transactional`
 --
 ALTER TABLE `reports_transactional`
-  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -624,6 +691,12 @@ ALTER TABLE `followers`
 ALTER TABLE `inscriptions`
   ADD CONSTRAINT `events_inscriptions` FOREIGN KEY (`id_event`) REFERENCES `events` (`id_events`),
   ADD CONSTRAINT `user_data_events_inscriptions` FOREIGN KEY (`id_persona_inscrita`) REFERENCES `user_data` (`id_user_data`);
+
+--
+-- Filtros para la tabla `notifications_events`
+--
+ALTER TABLE `notifications_events`
+  ADD CONSTRAINT `id_event_notifications` FOREIGN KEY (`id_events`) REFERENCES `events` (`id_events`);
 
 --
 -- Filtros para la tabla `reports_transactional`

@@ -171,8 +171,8 @@ function identifyReport(element) {
 
 buttonReport.addEventListener("click", function () {
     let URLsearch = window.location.search;
-    console.log(URLsearch);
-    console.log("id: ", idReport)
+    // console.log(URLsearch);
+    // console.log("id: ", idReport)
     if (idReport == undefined) {
         alert.innerHTML =
             `<div class="alertDivEmpty">
@@ -180,7 +180,7 @@ buttonReport.addEventListener("click", function () {
             <p>Error :)</p>
         </div>`
     } else {
-        fetch(`modelReports.php${URLsearch}&idReport=${idReport}`)
+        fetch(`/LEAFING/Crea-J-2022/client/api/model_reports.php${URLsearch}&idReport=${idReport}`)
         contentModel.style.transform = "translateX(-66%)";
         headerModal.style.display = 'none'
         contentModal.style.paddingBottom = "0rem"
