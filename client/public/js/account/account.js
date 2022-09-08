@@ -1,30 +1,32 @@
-let namee = document.getElementById('name');
-let lastname = document.getElementById('lastname');
-let user = document.getElementById('usuario');
-let email = document.getElementById('email');
-let boutme = document.getElementById('sobre-mi');
-let container = document.getElementById('cont');
+if (document.getElementById('name')) {
+    let namee = document.getElementById('name');
+    let lastname = document.getElementById('lastname');
+    let user = document.getElementById('usuario');
+    let email = document.getElementById('email');
+    let boutme = document.getElementById('sobre-mi');
+    let container = document.getElementById('cont');
 
 
 
-//Detectar los cambios
+    //Detectar los cambios
 
-namee.addEventListener('change', () => {
-    container.classList.remove('hide');
-})
+    namee.addEventListener('change', () => {
+        container.classList.remove('hide');
+    })
 
-lastname.addEventListener('change', () => {
-    container.classList.remove('hide');
-})
+    lastname.addEventListener('change', () => {
+        container.classList.remove('hide');
+    })
 
-user.addEventListener('change', () => {
-    container.classList.remove('hide');
-})
+    user.addEventListener('change', () => {
+        container.classList.remove('hide');
+    })
 
-boutme.addEventListener('change', () => {
-    container.classList.remove('hide');
-})
+    boutme.addEventListener('change', () => {
+        container.classList.remove('hide');
+    })
 
+}
 //La alerta
 
 const formCC = document.getElementById('formCC')
