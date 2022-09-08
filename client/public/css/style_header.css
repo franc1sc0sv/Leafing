@@ -257,6 +257,11 @@ li {
     border: none;
     cursor: pointer;
 }
+.iconRegisterLogin{
+    width: 60px;
+    height: 60px;
+    display: none;
+}
 
 @media screen and (max-width: 900px) {
 
@@ -269,15 +274,32 @@ li {
         --clip: 0;
         overflow: hidden;
     }
+    .iconRegisterLogin{
+        display: flex;
+    }
 
     #menu {
-        display: grid;
-        grid-template-columns: max-content 1fr;
+        /* display: grid;
+        grid-template-columns: max-content 1fr; */
+        display: flex;
         align-items: center;
         justify-content: center;
     }
 
+    #leafing-header {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .buttons-header{
+        display: none;
+    }
+    
     #buttons-header {
+        width: max-content;
+    }
+
+    .usernamexD {
         display: none;
     }
 
@@ -305,6 +327,7 @@ li {
     .menu-header_show {
         transform: unset;
         width: 55%;
+        z-index: 999;
     }
 
     .a-header {
