@@ -26,10 +26,7 @@ if (document.getElementById('name')) {
         container.classList.remove('hide');
     })
 
-}
-//La alerta
-
-const formCC = document.getElementById('formCC')
+    const formCC = document.getElementById('formCC')
 const contenidoModalInscripcion = document.getElementById('contenidoModalInscripcion');
 const modal_container = document.getElementById('modal_container');
 
@@ -70,6 +67,11 @@ formCC.addEventListener('submit', function (e) {
 
         })
 })
+
+}
+//La alerta
+
+
 
 let plus = document.querySelector('.img-plus');
 
