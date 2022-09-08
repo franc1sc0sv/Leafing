@@ -208,6 +208,7 @@ li {
     transition: transform .5s;
     gap: 1.5vw;
     align-items: center;
+    z-index: 999;
 }
 
 .menu-header-perfil p {
