@@ -152,3 +152,7 @@ body.darkmode header {
 body.darkmode .li_menu-despleagble {
     background-color: #403c3c;
 }
+
+body.darkmode .notificationxD {
+    filter: invert();
+}

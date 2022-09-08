@@ -291,3 +291,23 @@ body.darkmode .search {
     background-color: #403c3c;
     color: #F6F5F0 !important;
 } */
+
+body.darkmode .box-all-coments {
+    background-color: #403c3c;
+}
+
+body.darkmode .dragfile_container {
+    background-color: #403c3c;
+}
+
+body.darkmode .dragfile_container label {
+    background-color: #616069;
+}
+
+body.darkmode .notificationxD {
+    filter: invert();
+}
+
+body.darkmode .modal {
+    background-color: #0b0d17;
+}

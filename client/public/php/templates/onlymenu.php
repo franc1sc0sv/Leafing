@@ -76,4 +76,6 @@ $data = $objconexion->consultar("SELECT * FROM `user_data` WHERE id_user_data = 
 </div>
 <script src="../../js/account/app_profile.js"></script>
 <script src="../../js/account/account.js"></script>
+    <script src="../../js/form_img.js"></script>
+<script src="../../js/account/account.js"></script>
 <script src="../../js/form_img.js"></script>
