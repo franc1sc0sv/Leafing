@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 07-09-2022 a las 17:17:38
+-- Tiempo de generación: 08-09-2022 a las 04:44:58
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -83,7 +83,9 @@ INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUE
 (12, 'El evento se ve muy interesante', 1, 6, '2022-09-05 02:33:11'),
 (13, 'ojito amo a las tortugas', 1, 15, '2022-09-07 15:29:16'),
 (14, 'El evento se ve muy interesante', 1, 15, '2022-09-07 16:08:12'),
-(15, 'A la las tortugas son hermosas', 1, 15, '2022-09-07 16:13:28');
+(15, 'A la las tortugas son hermosas', 1, 15, '2022-09-07 16:13:28'),
+(16, 'Que hermosas las tortugas', 2, 15, '2022-09-07 22:31:04'),
+(17, 'Es cierto apopa es muy sucio', 1, 6, '2022-09-08 00:06:27');
 
 -- --------------------------------------------------------
 
@@ -152,12 +154,13 @@ CREATE TABLE `followers` (
 INSERT INTO `followers` (`id_follow`, `id_follower`, `id_following`, `date_following`) VALUES
 (38, 1, 3, '2022-09-06 18:01:56'),
 (39, 1, 2, '2022-09-06 18:01:57'),
-(42, 4, 1, '2022-09-06 21:53:40'),
 (43, 1, 4, '2022-09-06 21:53:45'),
 (45, 2, 1, '2022-09-06 22:18:43'),
 (46, 5, 2, '2022-09-06 22:23:42'),
 (51, 5, 1, '2022-09-07 03:58:38'),
-(53, 1, 5, '2022-09-07 04:03:23');
+(53, 1, 5, '2022-09-07 04:03:23'),
+(54, 4, 1, '2022-09-07 18:26:22'),
+(55, 1, 7, '2022-09-08 03:03:35');
 
 -- --------------------------------------------------------
 
@@ -360,7 +363,11 @@ CREATE TABLE `reports_transactional` (
 --
 
 INSERT INTO `reports_transactional` (`id_reports_transactional`, `id_event`, `id_report`, `date_report`) VALUES
-(1, 6, 5, '2022-09-07 16:54:16');
+(1, 6, 5, '2022-09-07 16:54:16'),
+(2, 5, 7, '2022-09-07 20:31:12'),
+(3, 5, 1, '2022-09-07 20:40:44'),
+(4, 5, 8, '2022-09-07 20:40:52'),
+(5, 5, 7, '2022-09-07 20:41:46');
 
 -- --------------------------------------------------------
 
@@ -420,11 +427,13 @@ CREATE TABLE `user_credentials` (
 --
 
 INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES
-(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$A4X5ZpYic0FA/QCVN1/e9uQ8CqHFc/3rESShK3aZT0dqePqQaEMxC', 'abd7c3380debc65c8569bc9910c41c99', 1),
+(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$Kn4qYZ0bSsGGnf28M2UNeOd6taTNRSNioymuQtkFcmHDkzKLIQp06', '981a30900a63c647eeefd74da68c4504', 1),
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
 (3, 'escobaralberto381@gmail.com', '$2y$10$bg9D0PH5fsVbBc9LU6P7kuEon33ZqDqtW92iCLkBMm9svL8zu6KNS', 'b5c1364ee324ed0b224c55e3c0b96d01', 1),
 (4, 'aniapancakes6@gmail.com', '$2y$10$XVBDcfsGADU0ialOjwrNbuYmy.Ml4AYsxZ.bXanEW/J0qiD3BJBZC', '11fbb9c5d923bc560772c96f6ba937e4', 2),
-(5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2);
+(5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2),
+(6, 'yelmidepsu@vusra.com', '$2y$10$CviQ3nw4iLsKID409eAuMeTppp03vdV8wOJJS.OKFWIOlKw7uLfIe', '8eb782aa5731cdc9bc38705a0bc525cb', 2),
+(7, 'rdzynns013@roco.lol', '$2y$10$hwb/4dUXW3623HDkOlfQ8.2gaDlfvFGyFXrpLGRyQNCRtC5QJTSFm', '71645c92448b22f3f587a58734d3a07f', 2);
 
 -- --------------------------------------------------------
 
@@ -448,11 +457,13 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
-(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662524619_c24c00cb08d43b70d5a7d37894c9d091.jpg', 'Me gusta el arroz con nato'),
+(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662596429_nuevo-anuncio-de-Komi-San-min.jpg', 'Me gusta el arroz con nato'),
 (2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', '1662502764_307c607b1ff349fbe30a7776f68a4b72.jpg', ''),
 (3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
 (4, 'Esteban', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', 'aFAfAFa'),
-(5, 'Adrian', 'Lopez Bonilla', '2004-04-08', 'chepeZD', 'F', 'defaultImage.png', '');
+(5, 'Adrian', 'Lopez Bonilla', '2004-04-08', 'chepeZD', 'F', 'defaultImage.png', ''),
+(6, 'Juan Carlos', 'Quinteros', '2022-09-21', 'snark98', 'M', 'defaultImage.png', ''),
+(7, 'Cristian Lebí', 'Gonsales', '2003-05-07', 'lebigaming', 'M', '1662607939_bandera-lgbt-comunidad-lesbica-gay-bisexual-transgenero_102583-3212.jpg', 'me gusta rodrigo :)');
 
 --
 -- Índices para tablas volcadas
@@ -578,7 +589,7 @@ ALTER TABLE `categories_events`
 -- AUTO_INCREMENT de la tabla `coments`
 --
 ALTER TABLE `coments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
@@ -590,7 +601,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT de la tabla `followers`
 --
 ALTER TABLE `followers`
-  MODIFY `id_follow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id_follow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `inscriptions`
@@ -632,7 +643,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT de la tabla `reports_transactional`
 --
 ALTER TABLE `reports_transactional`
-  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_reports_transactional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -650,13 +661,13 @@ ALTER TABLE `state_events`
 -- AUTO_INCREMENT de la tabla `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
