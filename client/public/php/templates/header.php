@@ -116,10 +116,11 @@ if (!isset($_SESSION['lang'])) {
         <header>
                 <nav id="menu">
                         <div class="burger">
-                                <img src="../assets/iconos/burger_img.svg" class="burger_icon" alt="icon_burger">
+                                <img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/burger_img.svg" class="burger_icon" alt="icon_burger">
                         </div>
                         <div id="leafing-header">
                                 <h1 id="LEAFING">Leafing</h1>
+
                         </div>
 
                         <div id="links-header">
@@ -142,6 +143,7 @@ if (!isset($_SESSION['lang'])) {
                                 <div id="buttons-header">
                                         <a href="./formulario_registro.php" class="text-button"><button class="buttons-header"><span class="translateHeader"> Registrarse</span></button></a>
                                         <a href="./formulario_inicio-sesion.php" class="text-button"><button class="buttons-header"><span class="translateHeader">Iniciar sesión</span></button></a>
+                                        <a href="./formulario_inicio-sesion.php"><img src="/LEAFING/Crea-J-2022/client/public/assets/iconos/login_register.png " class="iconRegisterLogin"></a>
                                 </div>
                         <?php } else {
                                 $IDuserdata = $_SESSION['dataID'];
@@ -194,7 +196,7 @@ if (!isset($_SESSION['lang'])) {
                         ?>
                                 <div id="buttons-header">
                                         <ul class="menu-header-perfil">
-                                                <p><?php echo $datauser[0]['user_name']; ?></p>
+                                                <p class="usernamexD"><?php echo $datauser[0]['user_name']; ?></p>
                                                 <div class="dropdown-toggle notificationxD" data-toggle="notification-menu">
                                                         <span class="number_notification"><?php echo count($arrayNotifications); ?></span>
                                                         <ul id="notification-menu" class="dropdown-menu notification-menu notificationUl">
