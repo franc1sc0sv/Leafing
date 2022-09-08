@@ -64,9 +64,10 @@ footer {
 
 .img-profile {
     border-radius: 50%;
-    width: 100%;
-    max-width: 13rem;
     margin: 0.7rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 .nombre-usuario {
@@ -78,7 +79,8 @@ footer {
     line-height: 32px;
     margin-top: 15px;
 }
-.menu-nombre-usuario{
+
+.menu-nombre-usuario {
     align-self: center;
 }
 
@@ -253,7 +255,7 @@ footer {
     cursor: pointer;
 }
 
-.forget:hover{
+.forget:hover {
     color: #93D0A1;
 }
 

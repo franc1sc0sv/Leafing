@@ -18,11 +18,11 @@ export const translateGeneralEN = [
     //8 = footer
     ["About us", "Community", "Become aware", "Events", "©2022 All rights reserved"],
     //9 = Contraseña
-    ["Account", "Password", "My events", "Registered events", "Log out ", "Password settings.", "Old password", "New password", "Confirm new password", "Forgot your password?", "Save"],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Drag or drop your image", "Choose a file", "Password settings.", "Old password", "New password", "Confirm new password", "Forgot your password?", "Save"],
     //10 = Mis eventos
-    ["Account", "Password", "My events", "Registered events", "Log out ", "My events"],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Drag or drop your image", "Choose a file", "My events"],
     //11 = Eventos inscritos
-    ["Account", "Password", "My events", "Registered events", "Log out ", "Registered events "],
+    ["Account", "Password", "My events", "Registered events", "Log out ", "Drag or drop your image", "Choose a file", "Registered events"],
     //12 = comunity
     ["Submit", "Submit"],
     //13 = comunity
@@ -51,9 +51,9 @@ export const translateGeneralES = [
     //Contraseña
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "¿Olvidaste tu contraseña?", "Guardar"],
     //Mis eventos
-    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Mis eventos"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos registrados", "Cerrar sesión", "Arrastrar o soltar su imagen", "Elegir un archivo", "Mis eventos"],
     //Eventos inscritos
-    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Eventos inscritos"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos registrados", "Cerrar sesión", "Arrastrar o soltar su imagen", "Elegir un archivo", "Eventos registrados"],
     //comunity
     ["Enviar", "Enviar"],
     //

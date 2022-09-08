@@ -10,7 +10,7 @@ $objconexionEvnt = new conection();
 $dataInscriptions = $objconexionEvnt->consultar("SELECT events.id_events, events.name_event, events.img_event, user_data.user_name, user_data.img_path FROM `inscriptions`
 INNER JOIN events ON inscriptions.id_event = events.id_events
 INNER JOIN user_data ON events.id_user_data =  user_data.id_user_data 
-WHERE id_persona_inscrita = 1");
+WHERE id_persona_inscrita = $id");
 
 
 include_once('../templates/header.php'); ?>
