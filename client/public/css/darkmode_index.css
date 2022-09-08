@@ -156,3 +156,7 @@ body.darkmode .li_menu-despleagble {
 body.darkmode .notificationxD {
     filter: invert();
 }
+
+body.darkmode ul.notification-menu {
+    filter: invert(1);
+}

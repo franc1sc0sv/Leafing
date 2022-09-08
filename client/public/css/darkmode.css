@@ -304,8 +304,12 @@ body.darkmode .dragfile_container label {
     background-color: #616069;
 }
 
-body.darkmode .notificationxD {
+body.darkmode div.notificationxD {
     filter: invert();
+}
+
+body.darkmode ul.notification-menu {
+    filter: invert(1);
 }
 
 body.darkmode .modal {
