@@ -42,7 +42,7 @@ formComents.addEventListener('submit', function (e) {
                 alertcoments.innerHTML = msg;
                 showNotification()
                 setTimeout(() => {
-                   location.reload();
+                    location.reload();
                 }, 1500);
             }
 

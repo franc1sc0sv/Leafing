@@ -62,8 +62,8 @@ if (!$error) {
             </div>
 
             <div class="followsInfo">
-                <p><span id="followers"></span> Seguidores</p>
-                <p><span id="following"></span> Seguidos</p>
+                <p id="followers_model" class="followsInfo"><span id="followers"></span> Seguidores</p>
+                <p id="following_model" class="followsInfo"><span id="following"></span> Seguidos</p>
             </div>
             <div class="about">
                 <p class="about-me">"<?php echo $user[0][7] ?>"</p>
@@ -99,7 +99,7 @@ if (!$error) {
                         foreach ($events as $event) { ?>
 
                             <div class="card" id="">
-                                <a href="./evento-especifico.php?estiben=<?php echo $event['0'] ?>" class="img_link">
+                                <a href="./specific_test.php?estiben=<?php echo $event['0'] ?>" class="img_link" target="_blank">
                                     <img src="../assets/user_images/events_images/<?php echo $event['img_event'] ?>" alt="">
                                 </a>
                                 <div class="card-clock"></div>
@@ -109,7 +109,6 @@ if (!$error) {
                         <?php } ?>
                     </div>
                 </div>
-
 
             </div>
         </div>
@@ -123,10 +122,42 @@ if (!$error) {
         </div>
     </div>
 
+    <div id="modal_container_followers" class="modal-container">
+        <div class="modal" id="modal">
+            <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+                <div class="header_modal">
+                    <h1>Seguidores</h1>
+                    <img src="../assets/iconos/close.svg" alt="" class="close_modal_svg" onclick=closeModalFollowers()>
+                </div>
+                <div class="container_general">
+                    <div class="followingContainer" id="containerFollowers">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_container_following" class="modal-container">
+        <div class="modal" id="modal">
+            <div class="contenidoModalInscripcion" id="contenidoModalInscripcion">
+                <div class="header_modal">
+                    <h1>Seguidos</h1>
+                    <img src="../assets/iconos/close.svg" alt="" class="close_modal_svg" onclick=closeModalFollowing()>
+                </div>
+                <div class="container_general">
+                    <div class="followingContainer" id="containerFollowing">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="alertProfile">
 
     </div>
 <?php } ?>
-
+<script src="../js/followers_following.js"></script>
 <script src="../js/followers.js"></script>
 <?php include_once('./templates/footer.php'); ?>
