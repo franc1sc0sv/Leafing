@@ -58,14 +58,14 @@ if (!isset($_SESSION['lang'])) {
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php") { ?>
                 <!--Estilos para el perfil - cuenta -->
-                
+
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css">
                 <!-- <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/crear_evento.css"> -->
         <?php } ?>
 
         <?php if ($_SERVER['SCRIPT_NAME'] == "/LEAFING/Crea-J-2022/client/public/php/public_account.php") { ?>
-                
+
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/cuenta-style.css">
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/mis_eventos.css">
                 <link rel="stylesheet" href="/LEAFING/Crea-J-2022/client/public/css/followInfo.css">
@@ -187,11 +187,8 @@ if (!isset($_SESSION['lang'])) {
                                 foreach ($arrayNotifications as $key => $row) {
                                         $fechasArray[$key] = $row['date_following'];
                                 }
-
                                 // print_r($fechasArray);
-
                                 array_multisort($fechasArray, SORT_DESC, $arrayNotifications);
-                                // $resverseArray = array_reverse($arrayNotifications);
                                 // print_r($arrayNotifications);
 
                         ?>
@@ -241,7 +238,7 @@ if (!isset($_SESSION['lang'])) {
                                                                 </div>
                                                         </ul>
                                                 </div>
-                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;">
+                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;background-position: center;">
                                                         <ul id="user-menu" class="dropdown-menu">
                                                                 <li class="dropdown-menu-item data_user">
                                                                         <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="" class="img_perfil_menu">
