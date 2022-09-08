@@ -10,7 +10,7 @@ body {
 
 header {
     font-family: 'Montserrat';
-    overflow: hidden;
+    /* overflow: hidden; */
     /* margin-bottom: 8%; */
 }
 
