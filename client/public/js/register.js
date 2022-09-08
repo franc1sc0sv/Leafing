@@ -60,7 +60,7 @@ formEmail.addEventListener('submit', function (e) {
                     alertRegister.innerHTML = msg;
                     showNotification();
                 } else {
-                    getCode(data)
+                    // getCode(data)
                     getEmail(email, passsword)
                     correoEnviado.innerHTML = email;
                     containerinfo1.style.transform = "translateX(-33%)"
@@ -70,9 +70,6 @@ formEmail.addEventListener('submit', function (e) {
 })
 
 //funciones para obtener datos privados de un addeventlisener - voy a sacar codigo de verificacion, email y correo
-function getCode(code) {
-    codeVerification = code;
-}
 function getEmail(email, password) {
     Dataemail = email;
     Datapassword = password;
@@ -83,17 +80,10 @@ formCode.addEventListener('submit', function (e) {
     e.preventDefault();
     let data = new FormData(formCode);
     let codeEmail = data.get('codeEmail');
+
     if (codeEmail != '') {
 
-        if (codeEmail == codeVerification) {
-            console.log("Codigo correcto");
-            containerinfo1.style.transform = "translateX(-66%)"
-            codigoCorrecto = true;
-            let completeInfo = document.getElementById('completeInfo')
-            completeInfo.style.marginBottom = '2rem'
-            completeInfo.style.marginTop = '0rem'
-        }
-        else if (codeEmail.length !== 4) {
+        if (codeEmail.length !== 4) {
             let msg;
             if (html.lang == "es") {
                 msg = alertf("Numero de digitos invalidos")
@@ -102,18 +92,33 @@ formCode.addEventListener('submit', function (e) {
             }
             alertRegister.innerHTML = msg;
             showNotification();
+        } else {
+            fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage3&code=${codeEmail}`, {
+                method: 'post',
+                body: data
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data == 'incorrect') {
+                        let msg;
+                        if (html.lang == "es") {
+                            msg = alertf("Codigo Incorrecto")
+                        } else {
+                            msg = alertf("Incorrect code")
+                        }
+                        alertRegister.innerHTML = msg;
+                        showNotification();
+                    } else if (data == 'correct') {
+                        console.log("Codigo correcto");
+                        containerinfo1.style.transform = "translateX(-66%)"
+                        codigoCorrecto = true;
+                        let completeInfo = document.getElementById('completeInfo')
+                        completeInfo.style.marginBottom = '2rem'
+                        completeInfo.style.marginTop = '0rem'
+                    }
+                })
         }
-        else {
-            let msg;
-            if (html.lang == "es") {
-                msg = alertf("Codigo incorrecto")
-            } else {
-                msg = alertf("Incorrect code")
-            }
-            alertRegister.innerHTML = msg;
-            showNotification();
-        }
-
     } else {
         let msg;
         if (html.lang == "es") {

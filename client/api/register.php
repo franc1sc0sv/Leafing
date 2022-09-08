@@ -11,16 +11,17 @@ if ($_GET['estatus'] == "stage1") {
     if ($emailrepetido != 1) {
         $code = $objconexion->sendcode($email);
         $_SESSION['codeValidation'] = $code;
-        echo json_encode($code);
+        $_SESSION['codeStatus'] = false;
+        echo json_encode('nice');
     } else {
         echo json_encode('repetido');
     }
 } else if ($_GET['estatus'] == "stage2") {
     //print_r($_SESSION);
-    if (isset($_SESSION['codeValidation'])) {
+    if (isset($_SESSION['codeStatus'])) {
         $codeVerification = $_GET['codeVerification'];
 
-        if ($codeVerification == $_SESSION['codeValidation']) {
+        if ($_SESSION['codeStatus'] == true) {
             $objconexion = new conection();
 
             $Dataemail = $_GET['Dataemail'];
@@ -44,10 +45,20 @@ if ($_GET['estatus'] == "stage1") {
             $objconexion->ejecutar($sql);
             echo json_encode('niceYourAreLogin');
             unset($_SESSION['codeValidation']);
+            unset($_SESSION['codeStatus']);
         } else {
             echo "nice try zaz x2";
         }
     } else {
         echo "nice try zaz";
+    }
+} else if ($_GET['estatus'] == "stage3") {
+    $codxd = $_SESSION['codeValidation'];
+    $codigouser = $_GET['code'];
+    if ($codxd == $codigouser) {
+        echo json_encode('correct');
+        $_SESSION['codeStatus'] = true;
+    } else {
+        echo json_encode('incorrect');
     }
 }
