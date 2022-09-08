@@ -374,3 +374,41 @@ p {
 .RevisaCorreo{
     width: 100%;
 }
+
+@media screen and (max-width: 604px) {
+    .container-form {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .alreadysignup {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login {
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 18.0526px;
+        line-height: 27px;
+        border: #000 solid 1px;
+        border-radius: 20px;
+        padding: 5px;
+    
+        text-decoration: none;
+        color: #000;
+
+        position: absolute;
+        bottom: 6.5rem;
+    }
+
+    .question span {
+        display: none;
+    }
+    
+    
+}
+
