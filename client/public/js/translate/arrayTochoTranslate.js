@@ -49,7 +49,7 @@ export const translateGeneralES = [
     //footer
     ["Nosotros", "Comunidad", "Concientízate", "Eventos", "©2022 Todos los derechos reservados"],
     //Contraseña
-    ["Cuenta", "Contraseña", "Mis eventos", "Eventos inscritos", "Cerrar sesión", "Configuración de la contraseña", "Antigua contraseña", "Nueva contraseña", "Confirmar nueva contraseña", "¿Olvidaste tu contraseña?", "Guardar"],
+    ["Cuenta", "Contraseña", "Mis eventos", "Eventos registrados", "Cerrar sesión", "Arrastrar o soltar su imagen", "Elegir un archivo", "Configuración de la contraseña", "Contraseña antigua", "Contraseña nueva", "Confirmar contraseña nueva", "¿Ha olvidado su contraseña?", "Guardar"],
     //Mis eventos
     ["Cuenta", "Contraseña", "Mis eventos", "Eventos registrados", "Cerrar sesión", "Arrastrar o soltar su imagen", "Elegir un archivo", "Mis eventos"],
     //Eventos inscritos
