@@ -19,6 +19,7 @@ function consultas(sql, id) {
 }
 
 function dashboradData(data) {
+    console.log(data);
     let element = '';
     for (let i = 0; i < data.length; i++) {
         element += `

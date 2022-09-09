@@ -16,9 +16,10 @@ function arrayActualizado() {
 arrayActualizado()
 
 function arhiveEvents(data) {
-    console.log(arrayDataEvents[data - 1][0], arrayDataEvents[data - 1][1])
-    console.log(data)
-    console.log(arrayDataEvents)
+    // console.log(arrayDataEvents[data - 1][0], arrayDataEvents[data - 1][1])
+    // console.log(data)
+    // console.log(arrayDataEvents[idxD])
+
     if (arrayDataEvents[data - 1][1] == "Activo") {
         sql = "UPDATE `events` SET `id_state_events` = 2 WHERE `events`.`id_events` = " + data;
         fetch(`/LEAFING/Crea-J-2022/admin/api/ejecutar.php?sql=${sql}`)
