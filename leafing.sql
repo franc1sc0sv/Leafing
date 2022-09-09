@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 08-09-2022 a las 04:44:58
+-- Tiempo de generación: 09-09-2022 a las 04:14:40
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -81,11 +81,7 @@ INSERT INTO `coments` (`id`, `coment`, `id_publisher`, `id_event`, `date`) VALUE
 (10, 'mmm interesante', 1, 7, '2022-09-01 14:06:54'),
 (11, 'Que bonito se ve el evento\r\n\r\n', 1, 2, '2022-09-01 14:45:48'),
 (12, 'El evento se ve muy interesante', 1, 6, '2022-09-05 02:33:11'),
-(13, 'ojito amo a las tortugas', 1, 15, '2022-09-07 15:29:16'),
-(14, 'El evento se ve muy interesante', 1, 15, '2022-09-07 16:08:12'),
-(15, 'A la las tortugas son hermosas', 1, 15, '2022-09-07 16:13:28'),
-(16, 'Que hermosas las tortugas', 2, 15, '2022-09-07 22:31:04'),
-(17, 'Es cierto apopa es muy sucio', 1, 6, '2022-09-08 00:06:27');
+(13, 'Es cierto apopa es muy sucio', 1, 6, '2022-09-08 00:06:27');
 
 -- --------------------------------------------------------
 
@@ -123,14 +119,14 @@ INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event
 (9, 'Salva a Añañin', '1661782853_Captura de pantalla (1).png', 'La increíble salvación de Añañin aña', 6, 'Mi casa en Apopa', '2022-08-29 08:00:00', '2022-08-30 02:00:00', 1, 3, 2),
 (10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2),
 (11, 'la esquizofremia pego rico bro', '1662044397_87099079dd04b5ac5a840b9d42ec0857.jpg', 'afawfafafAfAFAF', 8, 'El colegio don Bosco', '2022-09-28 08:52:00', '2022-09-29 08:52:00', 2, 1, 2),
-(15, 'Liberacion de tortugas', '1662504175_liberar-tortugas.jpg', 'Unete a nosotros a realizar esta actividad que beneficiara a muchas tortugitas', 5, 'Surf city, playa el tunco', '2022-09-21 16:40:00', '2022-09-22 16:40:00', 14, 1, 1),
-(16, 'Plantacion de arboles', '1662505176_plantación-árboles-scaled.jpg', 'Acompañanos a esta plantacion de arboles en la torre futura', 10, 'Colonia Escalon, Torre Futura', '2022-09-29 16:58:00', '2022-09-30 16:58:00', 5, 1, 1);
+(12, 'Liberamiento de tortugas', '1662687619_B2MtQ6uCQAA50tr.jpg', 'acompañanos en la gran liberacion de tortugas las cuales beneficiaran a muchas tortugas en la zona costera de la libertad', 5, 'Surf city, playa el tunco', '2022-10-03 06:00:00', '2022-10-03 15:00:00', 14, 1, 1),
+(13, 'Conoce todo sobre los animales en peligro de extincion el El Salvador', '1662692198_animales_en_peligro_de_extincion_en_el_salvador_3226_orig.jpg', 'Capacitacion el la cual daremos a conocer informacion muy importante sobre como cuidar a los animales que estan en peligro de existion y saber identificarlos', 8, 'Lourdes Colon, Parque Central', '2022-09-22 20:55:00', '2022-09-22 23:17:00', 8, 1, 1);
 
 --
 -- Disparadores `events`
 --
 DELIMITER $$
-CREATE TRIGGER `logs_notifications_events` AFTER INSERT ON `events` FOR EACH ROW INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_event`) VALUES (NULL, NEW.id_events, NOW())
+CREATE TRIGGER `logs_notifications_events` AFTER INSERT ON `events` FOR EACH ROW INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_following`) VALUES (NULL, NEW.id_events, NOW())
 $$
 DELIMITER ;
 
@@ -188,7 +184,10 @@ INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`
 (7, 2, 4, '2022-09-01 13:51:46'),
 (8, 11, 1, '2022-09-01 16:15:54'),
 (9, 1, 1, '2022-09-04 23:31:40'),
-(13, 5, 1, '2022-09-07 16:33:10');
+(13, 5, 1, '2022-09-07 16:33:10'),
+(14, 12, 2, '2022-09-09 03:24:40'),
+(15, 12, 1, '2022-09-09 03:40:08'),
+(16, 12, 3, '2022-09-09 03:44:28');
 
 -- --------------------------------------------------------
 
@@ -207,8 +206,8 @@ CREATE TABLE `notifications_events` (
 --
 
 INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_following`) VALUES
-(1, 15, '2022-09-06 23:21:57'),
-(2, 16, '2022-09-06 23:22:10');
+(4, 12, '2022-09-09 01:40:19'),
+(5, 13, '2022-09-09 02:56:38');
 
 -- --------------------------------------------------------
 
@@ -415,7 +414,7 @@ INSERT INTO `state_events` (`id_state_events`, `state`) VALUES
 --
 
 CREATE TABLE `user_credentials` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) NOT NULL,
   `mail_user` varchar(500) NOT NULL,
   `password_user` varchar(500) NOT NULL,
   `token` varchar(32) NOT NULL,
@@ -429,7 +428,7 @@ CREATE TABLE `user_credentials` (
 INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES
 (1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$Kn4qYZ0bSsGGnf28M2UNeOd6taTNRSNioymuQtkFcmHDkzKLIQp06', '981a30900a63c647eeefd74da68c4504', 1),
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
-(3, 'escobaralberto381@gmail.com', '$2y$10$bg9D0PH5fsVbBc9LU6P7kuEon33ZqDqtW92iCLkBMm9svL8zu6KNS', 'b5c1364ee324ed0b224c55e3c0b96d01', 1),
+(3, 'escobaralberto381@gmail.com', '$2y$10$S07VUxvtW5/TpXQzFSxnZedXZAhcIQcxxZAcWld3JGkfnEz96RN32', 'ec1329627b47789e5515ac1e9a53a33f', 1),
 (4, 'aniapancakes6@gmail.com', '$2y$10$XVBDcfsGADU0ialOjwrNbuYmy.Ml4AYsxZ.bXanEW/J0qiD3BJBZC', '11fbb9c5d923bc560772c96f6ba937e4', 2),
 (5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2),
 (6, 'yelmidepsu@vusra.com', '$2y$10$CviQ3nw4iLsKID409eAuMeTppp03vdV8wOJJS.OKFWIOlKw7uLfIe', '8eb782aa5731cdc9bc38705a0bc525cb', 2),
@@ -457,7 +456,7 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
-(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662596429_nuevo-anuncio-de-Komi-San-min.jpg', 'Me gusta el arroz con nato'),
+(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662615210_0b53ece2268f6571dab282ede8f0500e.jpg', 'Me gusta el arroz con nato'),
 (2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', '1662502764_307c607b1ff349fbe30a7776f68a4b72.jpg', ''),
 (3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
 (4, 'Esteban', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', 'aFAfAFa'),
@@ -589,13 +588,13 @@ ALTER TABLE `categories_events`
 -- AUTO_INCREMENT de la tabla `coments`
 --
 ALTER TABLE `coments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `followers`
@@ -607,13 +606,13 @@ ALTER TABLE `followers`
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `notifications_events`
 --
 ALTER TABLE `notifications_events`
-  MODIFY `id_notifications_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_notifications_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
@@ -661,7 +660,7 @@ ALTER TABLE `state_events`
 -- AUTO_INCREMENT de la tabla `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `user_data`
@@ -701,7 +700,7 @@ ALTER TABLE `followers`
 --
 ALTER TABLE `inscriptions`
   ADD CONSTRAINT `events_inscriptions` FOREIGN KEY (`id_event`) REFERENCES `events` (`id_events`),
-  ADD CONSTRAINT `user_data_events_inscriptions` FOREIGN KEY (`id_persona_inscrita`) REFERENCES `user_data` (`id_user_data`);
+  ADD CONSTRAINT `id_user_data` FOREIGN KEY (`id_persona_inscrita`) REFERENCES `user_data` (`id_user_data`);
 
 --
 -- Filtros para la tabla `notifications_events`

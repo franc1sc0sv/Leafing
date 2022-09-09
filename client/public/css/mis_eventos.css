@@ -253,3 +253,73 @@ footer {
 .archivedEvent {
     opacity: .3;
 }
+
+.buttonMyevents {
+    background-color: #93D0A1;
+    border: none;
+    /* padding: 10px 60px; */
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.eventsButtons {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 2px;
+}
+
+.mesajeusu {
+    width: 100%;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #EAEAEA;
+    color: #666;
+    line-height: 1.7;
+    height: 176px;
+    transition: 0.2s;
+    border-radius: 4px;
+    outline: 0;
+    resize: vertical;
+}
+
+.butonesFormsMyEvents {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#xD {
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.buttonMyEventsForm {
+    color: white;
+    background-color: #93D0A1;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icons_myEvents {
+    height: auto !important;
+    width: auto !important;
+    object-fit: unset !important;
+    border-radius: none !important;
+    background-color: azure;
+}
