@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 09-09-2022 a las 04:14:40
+-- Tiempo de generación: 10-09-2022 a las 05:38:35
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -120,7 +120,18 @@ INSERT INTO `events` (`id_events`, `name_event`, `img_event`, `description_event
 (10, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '1661788121_Captura de pantalla (2).png', 'llllllllllllllllllllllllllllllllllllllllllllllllll', 1, 'Colegio Don Bosco', '2022-09-23 03:21:00', '2022-12-31 03:21:00', 2, 3, 2),
 (11, 'la esquizofremia pego rico bro', '1662044397_87099079dd04b5ac5a840b9d42ec0857.jpg', 'afawfafafAfAFAF', 8, 'El colegio don Bosco', '2022-09-28 08:52:00', '2022-09-29 08:52:00', 2, 1, 2),
 (12, 'Liberamiento de tortugas', '1662687619_B2MtQ6uCQAA50tr.jpg', 'acompañanos en la gran liberacion de tortugas las cuales beneficiaran a muchas tortugas en la zona costera de la libertad', 5, 'Surf city, playa el tunco', '2022-10-03 06:00:00', '2022-10-03 15:00:00', 14, 1, 1),
-(13, 'Conoce todo sobre los animales en peligro de extincion el El Salvador', '1662692198_animales_en_peligro_de_extincion_en_el_salvador_3226_orig.jpg', 'Capacitacion el la cual daremos a conocer informacion muy importante sobre como cuidar a los animales que estan en peligro de existion y saber identificarlos', 8, 'Lourdes Colon, Parque Central', '2022-09-22 20:55:00', '2022-09-22 23:17:00', 8, 1, 1);
+(13, 'Conoce todo sobre los animales en peligro de extincion el El Salvador', '1662692198_animales_en_peligro_de_extincion_en_el_salvador_3226_orig.jpg', 'Capacitacion el la cual daremos a conocer informacion muy importante sobre como cuidar a los animales que estan en peligro de existion y saber identificarlos', 8, 'Lourdes Colon, Parque Central', '2022-09-22 20:55:00', '2022-09-22 23:17:00', 8, 1, 1),
+(14, 'afAfAfAWF', '1662699764_descarga.jpg', 'AWfAWfAfAfAfAfAF', 3, 'afAWfAWfAWf', '2022-09-21 23:00:00', '2022-09-22 23:01:00', 4, 1, 2),
+(15, 'Limpieza del rio de ilopango', '1662783739_descarga (1).jpg', 'Limpieza del rio de ilopango', 10, 'Lago de ilopango', '2022-09-21 22:21:00', '2022-10-28 22:21:00', 6, 1, 1),
+(16, 'Recoleccion de basura', '1662785829_reciclaje_basura.jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad.', 3, 'Parque Central de la Paz', '2022-09-23 22:47:00', '2022-09-23 22:47:00', 1, 1, 2),
+(17, 'Recolecion de basura', '1662786181_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 3, 'McDonalds Escalón', '2022-09-30 22:58:00', '2022-09-30 22:58:00', 4, 1, 2),
+(18, 'Recolecion de basura', '1662786319_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 3, 'Cojutepeque, Parque central', '2022-09-30 22:58:00', '2022-09-30 22:58:00', 3, 1, 2),
+(19, 'Recolecion de basura', '1662786352_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 3, 'Cojutepeque, Parque central', '2022-09-30 22:58:00', '2022-09-30 22:58:00', 3, 1, 2),
+(20, 'Recolecion de basura', '1662786367_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 3, 'Cojutepeque, Parque central', '2022-09-30 22:58:00', '2022-09-30 23:55:00', 3, 1, 2),
+(21, 'Recolecion de basura', '1662786938_reciclaje_basura.jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 11, 'McDonalds  Escalón', '2022-09-30 22:58:00', '2022-09-30 22:58:00', 3, 1, 2),
+(22, 'Recolecion de basura', '1662787039_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 4, 'McDonalds  Escalón', '2022-09-30 22:58:00', '2022-09-30 22:58:00', 3, 1, 2),
+(23, 'Recolecion de basura', '1662787281_descarga (1).jpg', 'Reunión para hacer una colecta con la ayuda de la comunidad', 4, 'Cojutepeque, Parque central', '2022-09-15 09:00:00', '2022-09-16 09:47:00', 1, 1, 2),
+(24, 'Capacitacion de Botanica', '1662787393_Botanica-330x205.webp', 'Capacitacion de Botanica', 10, 'El colegio don Bosco', '2022-09-23 18:26:00', '2022-09-23 19:27:00', 1, 1, 2);
 
 --
 -- Disparadores `events`
@@ -187,7 +198,8 @@ INSERT INTO `inscriptions` (`id_inscriptions`, `id_event`, `id_persona_inscrita`
 (13, 5, 1, '2022-09-07 16:33:10'),
 (14, 12, 2, '2022-09-09 03:24:40'),
 (15, 12, 1, '2022-09-09 03:40:08'),
-(16, 12, 3, '2022-09-09 03:44:28');
+(16, 12, 3, '2022-09-09 03:44:28'),
+(17, 2, 1, '2022-09-09 04:52:26');
 
 -- --------------------------------------------------------
 
@@ -207,7 +219,18 @@ CREATE TABLE `notifications_events` (
 
 INSERT INTO `notifications_events` (`id_notifications_events`, `id_events`, `date_following`) VALUES
 (4, 12, '2022-09-09 01:40:19'),
-(5, 13, '2022-09-09 02:56:38');
+(5, 13, '2022-09-09 02:56:38'),
+(6, 14, '2022-09-09 05:02:44'),
+(7, 15, '2022-09-10 04:22:19'),
+(8, 16, '2022-09-10 04:57:09'),
+(9, 17, '2022-09-10 05:03:01'),
+(10, 18, '2022-09-10 05:05:19'),
+(11, 19, '2022-09-10 05:05:52'),
+(12, 20, '2022-09-10 05:06:07'),
+(13, 21, '2022-09-10 05:15:38'),
+(14, 22, '2022-09-10 05:17:19'),
+(15, 23, '2022-09-10 05:21:21'),
+(16, 24, '2022-09-10 05:23:13');
 
 -- --------------------------------------------------------
 
@@ -426,13 +449,14 @@ CREATE TABLE `user_credentials` (
 --
 
 INSERT INTO `user_credentials` (`id`, `mail_user`, `password_user`, `token`, `rol_id`) VALUES
-(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$Kn4qYZ0bSsGGnf28M2UNeOd6taTNRSNioymuQtkFcmHDkzKLIQp06', '981a30900a63c647eeefd74da68c4504', 1),
+(1, 'franc1sc0.sv.xd@gmail.com', '$2y$10$C47lHevEgRKOyHaXnJYekOaU3xsV7nCGQ431IM7TqIbEhEPF1hfZG', '95df65c6cdc88bd2c9013bfbc39563f6', 1),
 (2, 'rodri123pineda@gmail.com', '$2y$10$hJqJ72fv2diDqC4tNNefUepnK81COQ8O0yTUS2FccAkvAyzIngIdC', 'cee8a1800ea3ecff8e888867a8331528', 1),
 (3, 'escobaralberto381@gmail.com', '$2y$10$S07VUxvtW5/TpXQzFSxnZedXZAhcIQcxxZAcWld3JGkfnEz96RN32', 'ec1329627b47789e5515ac1e9a53a33f', 1),
 (4, 'aniapancakes6@gmail.com', '$2y$10$XVBDcfsGADU0ialOjwrNbuYmy.Ml4AYsxZ.bXanEW/J0qiD3BJBZC', '11fbb9c5d923bc560772c96f6ba937e4', 2),
 (5, 'juandanieljimenez302@gmail.com', '$2y$10$Krycp4P32EzVtwjrIt2CBug1JW8uAlC5uOLPbBL7FWhZybZWXFc7a', 'b63e46081d8fa5766d2a5fd227a5b9e8', 2),
 (6, 'yelmidepsu@vusra.com', '$2y$10$CviQ3nw4iLsKID409eAuMeTppp03vdV8wOJJS.OKFWIOlKw7uLfIe', '8eb782aa5731cdc9bc38705a0bc525cb', 2),
-(7, 'rdzynns013@roco.lol', '$2y$10$hwb/4dUXW3623HDkOlfQ8.2gaDlfvFGyFXrpLGRyQNCRtC5QJTSFm', '71645c92448b22f3f587a58734d3a07f', 2);
+(7, 'rdzynns013@roco.lol', '$2y$10$hwb/4dUXW3623HDkOlfQ8.2gaDlfvFGyFXrpLGRyQNCRtC5QJTSFm', '71645c92448b22f3f587a58734d3a07f', 2),
+(8, 'wesod79769@nicoimg.com ', '$2y$10$Pl0CMMPnWB8DLLAgoHFYy.zYcN5XVPEfFLl0c2GPwtrRRgvhuJ.xC', 'b3d30a00eaf3d072205d0cb23f779690', 2);
 
 -- --------------------------------------------------------
 
@@ -456,13 +480,14 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`id_user_data`, `name`, `lastname`, `borndate`, `user_name`, `gender`, `img_path`, `about_me`) VALUES
-(1, 'Francisco', 'Josue ', '2006-08-06', 'franc1sc0_sv', 'M', '1662615210_0b53ece2268f6571dab282ede8f0500e.jpg', 'Me gusta el arroz con nato'),
+(1, 'Francisco', 'Josue', '2006-08-06', 'franc1sc0_sv', 'M', '1662784830_1bcefe9201469c9fbbd932e4c5ab971d.gif', 'Me gusta el arroz con nato'),
 (2, 'Rodrigo Daniel', 'Pineda Ardon', '2006-06-08', 'Rodrogas UwU', 'M', '1662502764_307c607b1ff349fbe30a7776f68a4b72.jpg', ''),
 (3, 'Leandro Alberto', 'Escobar Valencia ', '2003-05-06', 'Añañin', 'M', '1661787620_1661756324_kato.jpg', 'hola soy leandro'),
 (4, 'Esteban', 'Villeda', '2011-02-06', 'pepitOn60hz', 'M', 'defaultImage.png', 'aFAfAFa'),
 (5, 'Adrian', 'Lopez Bonilla', '2004-04-08', 'chepeZD', 'F', 'defaultImage.png', ''),
 (6, 'Juan Carlos', 'Quinteros', '2022-09-21', 'snark98', 'M', 'defaultImage.png', ''),
-(7, 'Cristian Lebí', 'Gonsales', '2003-05-07', 'lebigaming', 'M', '1662607939_bandera-lgbt-comunidad-lesbica-gay-bisexual-transgenero_102583-3212.jpg', 'me gusta rodrigo :)');
+(7, 'Cristian Lebí', 'Gonsales', '2003-05-07', 'lebigaming', 'M', '1662607939_bandera-lgbt-comunidad-lesbica-gay-bisexual-transgenero_102583-3212.jpg', 'me gusta rodrigo :)'),
+(8, 'Francisco ', 'Josue ', '2004-09-10', 'franc1sc0_sv2 ', 'M ', 'defaultImage.png', '');
 
 --
 -- Índices para tablas volcadas
@@ -594,7 +619,7 @@ ALTER TABLE `coments`
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `followers`
@@ -606,13 +631,13 @@ ALTER TABLE `followers`
 -- AUTO_INCREMENT de la tabla `inscriptions`
 --
 ALTER TABLE `inscriptions`
-  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_inscriptions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `notifications_events`
 --
 ALTER TABLE `notifications_events`
-  MODIFY `id_notifications_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_notifications_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `place_events`
@@ -660,13 +685,13 @@ ALTER TABLE `state_events`
 -- AUTO_INCREMENT de la tabla `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user_data` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
