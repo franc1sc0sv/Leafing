@@ -126,7 +126,7 @@ function cardsData(dataEvents) {
         element += `
     <div class="cards_new">
     <a href="./specific_test.php?estiben=${dataEvents[i][0]}" target="_blank">
-        <div class="img_container_cards img_background" style="background-image: url(../assets/user_images/events_images/${dataEvents[i][1]});"></div>
+        <div class="img_container_cards img_background" style="background-image: url('../assets/user_images/events_images/${dataEvents[i][1]}');"></div>
     </a>
 
 

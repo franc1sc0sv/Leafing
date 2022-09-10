@@ -35,13 +35,28 @@ formEmail.addEventListener('submit', function (e) {
     let email = data.get('email')
     let passsword = data.get('password')
     let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    let expPassword = /^[a-zA-Z0-9_.+-]{8,24}$/;
 
     if (!expRegEmail.test(email)) {
-        invalidData();
-        console.log("correo")
-    } else if (passsword.length < 6 || passsword.length > 30) {
-        invalidData();
-        console.log("pass")
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Correo invalido")
+        } else {
+            msg = alertf("Invalid email")
+        }
+        //console.log(msg)
+        alertRegister.innerHTML = msg;
+        showNotification();
+    } else if (!expPassword.test(passsword)) {
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Contraseña Invalida")
+        } else {
+            msg = alertf("Invalid Passoword")
+        }
+        //console.log(msg)
+        alertRegister.innerHTML = msg;
+        showNotification();
     } else {
         fetch('/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage1', {
             method: 'post',
@@ -140,9 +155,16 @@ formData.addEventListener('submit', function (e) {
     let borndate = data.get('borndate');
     let gender = data.get('gender');
     let user = data.get('user');
+    // console.log(borndate)
+
+    let date = new Date(borndate)
+    // console.log(date)
+    let datePast = new Date();
+    datePast.setFullYear(datePast.getFullYear() - 18);
 
     // let expRegUser = /^[a-zA-Z0-9\_\-]{4,16}$/;
     let expRegName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    let userRegex = /^[a-zA-Z0-9_.+-]{4,24}$/;
 
     if (Datapassword == undefined || Dataemail == undefined || codigoCorrecto == undefined) {
         let msg;
@@ -167,9 +189,46 @@ formData.addEventListener('submit', function (e) {
         }
         alertRegister.innerHTML = msg;
         showNotification();
+    } else if (!expRegName.test(lastname)) {
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Apellido invalido")
+        } else {
+            msg = alertf("Invalid lastname")
+        }
+        alertRegister.innerHTML = msg;
+        showNotification();
+    } else if (!userRegex.test(user)) {
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Nombre de usuario invalido")
+        } else {
+            msg = alertf("Invalid user name")
+        }
+        alertRegister.innerHTML = msg;
+        showNotification();
+
+    } else if (!expRegName.test(gender)) {
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Genero invalido")
+        } else {
+            msg = alertf("Invalid gender")
+        }
+        alertRegister.innerHTML = msg;
+        showNotification();
+    } else if (date >= datePast) {
+        let msg;
+        if (html.lang == "es") {
+            msg = alertf("Debes ser mayor de 18 años")
+        } else {
+            msg = alertf("You must be at least 18 years old")
+        }
+        alertRegister.innerHTML = msg;
+        showNotification();
     } else {
         //console.log("nice");
-        fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}& gender=${gender}& user=${user}& Dataemail=${Dataemail}& Datapassword=${Datapassword}&codeVerification=${codeVerification}`)
+        fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage2&name=${name} & lastname=${lastname} & borndate=${borndate} & gender=${gender} & user=${user} & Dataemail=${Dataemail} & Datapassword=${Datapassword} & codeVerification=${codeVerification}`)
         let msg;
         if (html.lang == "es") {
             msg = nice("Tu cuenta ha sido creada")
@@ -197,3 +256,8 @@ eye.addEventListener('click', function () {
     }
 })
 
+
+// let datePast = new Date();
+// datePast.setFullYear(datePast.getFullYear() - 18);
+
+// let past = datePast.toLocaleDateString();

@@ -93,17 +93,25 @@ formC.addEventListener('submit', function (e) {
                 alertLogin.innerHTML = msg;
                 showNotification()
 
-            }
-            else if (data == "Nice") {
+            } else if (data == "timeEvent") {
+
+                let msg;
+                if (html.lang == "es") {
+                    msg = alertf("Tiempo del evento invalido")
+                } else {
+                    msg = alertf("Invalid event time")
+                }
+                alertLogin.innerHTML = msg;
+                showNotification()
+            } else if (data == "Nice") {
                 modal_container.classList.add('show');
                 let contenidoModalInscripcionES = `
                 <h1>Tu evento ha sido creado con éxito</h1>
-                <div class=""container_imgCreated><img src="../img/iconos/comprobado.png" class="imgCreated"></div>
+                <div class=""container_imgCreated><img src="../assets/iconos/comprobado.png" class="imgCreated"></div>
                 <div class="BotonesRegistroInicio">
                         <a href="../php/comunity.php" class="question">Ir a los eventos</a>
                 </div>
-                <button id="close" class="buttonxd">Cerrar</button>
-                `
+                <button id="close" class="buttonxd" onclick="closeModal()">Cerrar</button>                `
                 contenidoModalInscripcion.innerHTML = contenidoModalInscripcionES;
 
                 let close = document.getElementById('close');
@@ -115,4 +123,3 @@ formC.addEventListener('submit', function (e) {
 
         })
 })
-

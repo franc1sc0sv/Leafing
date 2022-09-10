@@ -26,7 +26,15 @@ if ($_POST) {
 
     $DateAndTime = date('Y-m-d h:i:s', time()); //ver zona horaria
 
+    $fecgaEvent1 = new DateTime($dateS);
+    $fecgaEvent2 = new DateTime($dateE);
 
+    $fecgaEvent1->modify('+1 hours');
+    // echo $fecgaEvent1->format('d-m-Y H:i:s');
+    // echo $fecgaEvent2->format('d-m-Y H:i:s');
+    // if ($fecgaEvent1 >= $fecgaEvent2) {
+    //     echo "xD";
+    // }
     if (empty($title) || empty($description) || empty($place) || empty($address) || empty($dateS) || empty($dateE) || empty($category) || empty($image)) {
         echo json_encode('EmptyFields'); //Arreglar empty image
     } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9_,.' -]{5,80}$/", $title)) {
@@ -39,6 +47,8 @@ if ($_POST) {
         echo json_encode('DateStartNotMatched');
     } else if ($dateS > $dateE) {
         echo json_encode('DateEndNotMatched');
+    } else if ($fecgaEvent1 >= $fecgaEvent2) {
+        echo json_encode('timeEvent');
     } else if (!in_array($ext, $allowed)) {
         echo json_encode('FilesNotMatched');
     } else {
@@ -53,3 +63,4 @@ if ($_POST) {
         // header("location:crear_evento.php");
     }
 }
+?>

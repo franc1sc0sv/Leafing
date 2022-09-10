@@ -119,6 +119,8 @@ $dataa = $objconexion->consultar("SELECT * FROM `user_credentials` WHERE id = $i
             </form>
         </div>
     </div>
+
+    <div id="alertt"></div>
 </div>
 
 <div id="modal_container" class="modal-container">

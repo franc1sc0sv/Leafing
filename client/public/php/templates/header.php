@@ -247,11 +247,11 @@ if (!isset($_SESSION['lang'])) {
                                                                         <p class="name_perfil"><?php echo $datauser[0]['name'], " ", $datauser[0]['lastname']; ?></p>
                                                                         <p class="correo_perfil"><?php echo $dataemail[0]['mail_user']; ?></p>
                                                                         <a href="/LEAFING/Crea-J-2022/client/public/php/account/cuenta.php">
-                                                                                <button class="button_perfil"> Gestionar tu cuenta </button>
+                                                                                <button class="button_perfil translateHeader"> Gestionar tu cuenta </button>
                                                                         </a>
                                                                 </li>
                                                                 <li class="dropdown-menu-item close_session">
-                                                                        <a href="/LEAFING/Crea-J-2022/client/public/php/templates/close.php" class="dropdown-menu-link link_close">
+                                                                        <a href="/LEAFING/Crea-J-2022/client/public/php/templates/close.php" class="dropdown-menu-link link_close translateHeader">
                                                                                 Cerrar Sesion
                                                                         </a>
                                                                 </li>

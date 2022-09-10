@@ -94,7 +94,7 @@ if (!$error) {
                     </div>
                     <div class="eventos-grid">
                         <?php
-                        $events = $objconexion->consultar("SELECT * FROM `events` WHERE id_user_data = $iduser");
+                        $events = $objconexion->consultar("SELECT * FROM `events` WHERE id_user_data = $iduser AND id_state_events = 1");
 
                         foreach ($events as $event) { ?>
 
