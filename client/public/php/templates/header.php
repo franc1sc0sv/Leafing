@@ -240,7 +240,7 @@ if (!isset($_SESSION['lang'])) {
                                                                 </div>
                                                         </ul>
                                                 </div>
-                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url(/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>);background-size: contain;background-size: cover;background-repeat: no-repeat;background-position: center;">
+                                                <div class="dropdown-toggle" data-toggle="user-menu" style="background-image: url('/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>');background-size: contain;background-size: cover;background-repeat: no-repeat;background-position: center;">
                                                         <ul id="user-menu" class="dropdown-menu">
                                                                 <li class="dropdown-menu-item data_user">
                                                                         <img src="/LEAFING/Crea-J-2022/client/public/assets/user_images/profile_images/<?php echo $datauser[0]['img_path'] ?>" alt="" class="img_perfil_menu">
