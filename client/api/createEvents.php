@@ -37,11 +37,11 @@ if ($_POST) {
     // }
     if (empty($title) || empty($description) || empty($place) || empty($address) || empty($dateS) || empty($dateE) || empty($category) || empty($image)) {
         echo json_encode('EmptyFields'); //Arreglar empty image
-    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9_,.' -]{5,80}$/", $title)) {
+    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0_,.' -]{5,80}$/", $title)) {
         echo json_encode('TitleNotMatched');
-    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9_,.()' -]{15,500}$/", $description)) {
+    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0_,.()' -]{15,500}$/", $description)) {
         echo json_encode('DescriptionNotMatched');
-    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9_,.&'()# -]{8,60}$/", $address)) {
+    } else if (!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0_,.&'()# -]{8,60}$/", $address)) {
         echo json_encode('AddressNotMatched');
     } else if ($DateAndTime > $dateS) {
         echo json_encode('DateStartNotMatched');

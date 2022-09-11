@@ -35,8 +35,8 @@ formEmail.addEventListener('submit', function (e) {
     let email = data.get('email')
     let passsword = data.get('password')
     let expRegEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    let expPassword = /^[a-zA-Z0-9_.+-]{8,24}$/;
-
+    let expPassword = /^[a-zA-Z0-9_.-]{8,24}$/;
+    console.log(passsword);
     if (!expRegEmail.test(email)) {
         let msg;
         if (html.lang == "es") {
@@ -163,7 +163,7 @@ formData.addEventListener('submit', function (e) {
     datePast.setFullYear(datePast.getFullYear() - 18);
 
     // let expRegUser = /^[a-zA-Z0-9\_\-]{4,16}$/;
-    let expRegName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    let expRegName = /^[a-zA-ZÀ-ÿ\s]{3,40}$/;
     let userRegex = /^[a-zA-Z0-9_.+-]{4,24}$/;
 
     if (Datapassword == undefined || Dataemail == undefined || codigoCorrecto == undefined) {
@@ -228,7 +228,7 @@ formData.addEventListener('submit', function (e) {
         showNotification();
     } else {
         //console.log("nice");
-        fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage2&name=${name} & lastname=${lastname} & borndate=${borndate} & gender=${gender} & user=${user} & Dataemail=${Dataemail} & Datapassword=${Datapassword} & codeVerification=${codeVerification}`)
+        fetch(`/LEAFING/Crea-J-2022/client/api/register.php?estatus=stage2&name=${name}&lastname=${lastname}&borndate=${borndate}&gender=${gender}&user=${user}&Dataemail=${Dataemail}&Datapassword=${Datapassword}&codeVerification=${codeVerification}`)
         let msg;
         if (html.lang == "es") {
             msg = nice("Tu cuenta ha sido creada")
